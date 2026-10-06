@@ -246,7 +246,39 @@ dialog,#image-scroll{border:0;border-radius:6px}
 
 /* Give summary figures their units and explain what each one refers to. */
 .stat{flex-direction:column;gap:8px;text-align:center;min-width:0;padding:0 8px}
-.stat strong{font-family:var(--font);font-size:clamp(1.125rem,2vw,1.5rem);line-height:1.5;white-space:nowrap}
+.stat strong{font-family:var(--font);font-size:clamp(1.125rem,2vw,1.5rem);line-height:1.5;white-space:normal}
 .hero-stats .stat span{font-size:.875rem;line-height:1.7}
 @media(max-width:700px){.stat{padding:0;gap:6px}.hero-stats .stat span{font-size:.8125rem}}
 @media(max-width:360px){.stat{flex-direction:row;text-align:left;gap:14px}.stat strong{min-width:110px}.hero-stats .stat span{text-align:left}}
+
+/* Make entering a mission an explicit action, visible before hover or touch. */
+:root{--mission-action:#ab431e;--mission-action-text:#fff}
+:root[data-theme=dark]{--mission-action:#ef9554;--mission-action-text:#172c43}
+.hero-actions .btn.primary,.mission-card-action{background:var(--mission-action);color:var(--mission-action-text);box-shadow:0 3px 0 #0004}
+.hero-actions .btn{min-height:56px;font-size:1rem;padding:16px 24px}
+.btn.secondary{background:#246ca2;color:#fff;box-shadow:0 3px 0 #0004}
+.btn.secondary:hover{background:#1a5684}
+.mission-card{cursor:pointer;gap:18px}
+.mission-card-action{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:52px;padding:12px 14px;border-radius:6px;font-size:.875rem;line-height:1.5;font-weight:800;margin-top:6px}
+.mission-card-action>span:first-child{min-width:0}
+.mission-card-action>span:last-child{flex-shrink:0;font-size:1.25rem}
+.mission-card:hover .mission-card-action,.mission-card:focus-visible .mission-card-action{filter:brightness(1.08)}
+.mission-card:active .mission-card-action{box-shadow:none;transform:translateY(2px)}
+.sidebar-list a{background:var(--panel)}
+.sidebar-list a:after{content:'›';font-size:1.25rem;flex-shrink:0}
+.sidebar-list a:hover{background:var(--panel2)}
+@media(max-width:600px){.missions-grid{grid-template-columns:minmax(0,1fr)}.mission-card{padding:22px;gap:16px}.hero-actions .btn{width:100%}.mission-card h3{font-size:1.125rem}}
+
+/* Give the site identity more presence in the compact fixed header. */
+.brand{font-size:22px;gap:12px}
+.brand img{width:44px;height:48px;padding:4px;border-radius:8px}
+.brand-sub{font-size:12px;letter-spacing:2.8px;margin-top:7px}
+@media(max-width:700px){.brand{font-size:18px;gap:10px}.brand img{width:38px;height:42px}.brand-sub{font-size:10px;letter-spacing:2.3px;margin-top:6px}}
+
+/* Keep the identity on the left, centered vertically across the header rows. */
+.site-header{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:4px 24px}
+.site-header .brand{grid-column:1;grid-row:1 / 3;justify-self:start;align-self:center}
+.site-header nav{grid-column:2;grid-row:1;justify-self:end;flex-wrap:wrap;justify-content:flex-end}
+.site-header .theme-switch{grid-column:2;grid-row:2;justify-self:end;flex-basis:auto}
+@media(max-width:700px){.site-header{gap:4px 12px}.site-header .theme-switch{gap:5px}.theme-switch .theme-label{display:none}.site-header .theme-switch>span{font-size:.6875rem}}
+@media(max-width:360px){.brand{font-size:16px;gap:7px}.brand img{width:32px;height:38px}.brand-sub{font-size:9px;letter-spacing:1.8px}.site-header{gap:4px 8px;padding-left:16px;padding-right:16px}}
