@@ -317,3 +317,11 @@ dialog,#image-scroll{border:0;border-radius:6px}
 .mission-picker[open]>summary>span{transform:rotate(180deg)}
 .mission-picker .sidebar-list{padding-top:12px}
 @media(max-width:1023px){.mobile-missions{padding:12px;margin-bottom:24px}}
+
+/* A compact footer with balanced spacing in the primary phone viewport. */
+@media(max-width:700px){
+  .site-footer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:8px 16px;padding-top:16px;padding-bottom:max(16px,env(safe-area-inset-bottom));margin-top:0;line-height:1.6}
+  .site-footer .footer-brand{grid-column:1;grid-row:1;font-size:.6875rem;letter-spacing:1px;line-height:1.5;min-width:0}
+  .site-footer>a:last-child{grid-column:2;grid-row:1;justify-content:flex-end;text-align:right;font-size:.75rem;min-width:0}
+  .site-footer>p{grid-column:1 / -1;grid-row:2;font-size:.75rem}
+}
