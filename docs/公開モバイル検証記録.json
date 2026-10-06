@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-06T04:23:08.887Z",
+  "base": "https://cyber-first-step-ctf.vercel.app",
+  "physicalDevices": false,
+  "engines": [
+    {
+      "name": "android",
+      "version": "151.0.7922.34",
+      "cookieAttributes": {
+        "httpOnly": true,
+        "secure": true,
+        "sameSiteHeader": "Strict",
+        "sameSiteInspection": "Strict"
+      },
+      "checks": [
+        "full-width answer",
+        "touch submission",
+        "keyboard blur",
+        "cookie and reload",
+        "image zoom",
+        "rotation and close",
+        "tablet layout"
+      ]
+    },
+    {
+      "name": "iphone",
+      "version": "26.5",
+      "cookieAttributes": {
+        "httpOnly": true,
+        "secure": true,
+        "sameSiteHeader": "Strict",
+        "sameSiteInspection": "None"
+      },
+      "checks": [
+        "full-width answer",
+        "touch submission",
+        "keyboard blur",
+        "cookie and reload",
+        "image zoom",
+        "rotation and close",
+        "tablet layout"
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,52 @@
+{
+  "project": "CYBER FIRST STEP",
+  "verified_on": "2026-10-06",
+  "source_directory": "C:\\Users\\yukij\\Desktop\\-CTF-main",
+  "public_url": "https://cyber-first-step-ctf.vercel.app",
+  "hosting": "Vercel",
+  "project_id": "prj_fqLroAMr0negvMLUmRA6GvS9zsuN",
+  "deployment_id": "dpl_2DSqrKUZJbE59jo9xcY22hE7M12x",
+  "deployment_status": "READY",
+  "framework": "HTML・CSS・JavaScript、Node.jsのVercel Function",
+  "questions": 8,
+  "implemented": [
+    "登録不要・Android、iOS、タブレットの縦横画面を想定したUI",
+    "暗号２問・画像２問・証拠探索２問・時系列総合２問",
+    "独自制作の調査画像・架空の記録",
+    "全問２段階の無料ヒント・解説・学習内容",
+    "サーバー側の回答判定と入力正規化",
+    "署名付きCookieで30日の進捗保存",
+    "正解と解説による学習の区別",
+    "練習を必須にしない公式大会案内へのリンク",
+    "学校・X・イベント別の利用イベント出力",
+    "設定ファイルでの問題更新と運用手順"
+  ],
+  "verification": {
+    "automated_tests_passed": 9,
+    "local_browser": "８問すべての回答・正解・結果表示、画像拡大、前後比較、証拠選択、並べ替えを確認。",
+    "responsive_widths_checked_css_px": [320, 360, 390, 430, 768, 800, 844, 1024, 1280, 1440],
+    "mobile_automated_checks_passed": 146,
+    "mobile_engines": ["Chromium", "WebKit"],
+    "mobile_matrix": "13条件×11画面。縦横・文字200%・キーボード表示を想定した低いビューポート、44px以上の主要操作、画像拡大と回転。",
+    "mobile_interactions": "回答・日本語IME変換・ヒント・解説・進捗復元・前後比較・証拠選択・並べ替え・リセット、通信切断・12秒のタイムアウト後の再操作・画面切り替え中の応答・dialog代替表示。",
+    "mobile_detail": "docs/モバイル検証記録.json。実機試験ではなくWindows上のブラウザエンジン検証。",
+    "published_browser": "公開版をChromium・WebKitのタッチ操作で確認。全角英字で第１問の正解、入力欄からのフォーカス移動、再読み込み後の進捗復元、第３問の画像拡大・回転後の閉じる操作・タブレット配置を確認。アプリのJavaScript・CSPエラーなし。詳細はdocs/公開モバイル検証記録.json。",
+    "anonymous_http": "トップ・API・画像・JavaScriptを認証なしで取得できることを確認。APIは８問を返す。",
+    "private_source": "公開URLの/server/challenges.mjsは404。",
+    "headers": "HTTPS、Content-Security-Policy、X-Content-Type-Options等を確認。"
+  },
+  "not_yet_performed": [
+    "物理iPhoneのSafariと物理AndroidのChromeによる検証",
+    "初心者10〜20人による所要時間と操作性の実測",
+    "想定同時利用数を定めた負荷試験",
+    "３年の集計を行うためのログ保存先・保存期間の整備",
+    "政府公式サービスとしての契約・承認・調達"
+  ],
+  "notes": [
+    "体験用の学生企画プロトタイプとして公開した。防衛省の公式サービスではない。",
+    "所要時間は目安。実績や保証ではない。",
+    "サーバーのイベントログによる集計方式で、独自の管理画面・集計ダッシュボード・データベースは追加していない。",
+    "旧AI読み込み用JSONは計画資料として保存し、この記録は実装後の状態を表す。",
+    "ユーザーが指定した既存フォルダ『防衛省スマホCTF』とテキストファイルは保持した。"
+  ]
+}
