@@ -1,7 +1,10 @@
 (() => {
   const key = 'ctf-background-theme';
-  let theme = 'light';
-  try { if (localStorage.getItem(key) === 'dark') theme = 'dark'; } catch { /* Storage may be unavailable in private or restricted browsers. */ }
+  let theme = 'dark';
+  try {
+    const saved = localStorage.getItem(key);
+    if (saved === 'light' || saved === 'dark') theme = saved;
+  } catch { /* Storage may be unavailable in private or restricted browsers. */ }
 
   function applyTheme(value) {
     theme = value;
