@@ -2,6 +2,21 @@ const main = document.querySelector('#main');
 const official = 'https://www.mod.go.jp/j/approach/defense/cyber/c_contest/';
 const escape = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const icons = { cipher: '⌘', ascii: '01', image: '⊡', compare: '◫', logs: '≡', records: '⊞', order: '⇅', final: '⚑' };
+const mascot = (name, extra = '') => `<span class="mascot mascot-${name} ${extra}" role="img" aria-label="${name === 'rai' ? 'ライ' : 'リイ'}"></span>`;
+
+function animateResult(correct) {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const target = document.querySelector(correct ? '#explanation .result-visual' : '#answer-form');
+  target?.getAnimations().forEach(animation => animation.cancel());
+  target?.animate(correct
+    ? [{ opacity: 0, transform: 'translateY(14px) scale(.96)' }, { opacity: 1, transform: 'translateY(-3px) scale(1.01)', offset: .7 }, { opacity: 1, transform: 'none' }]
+    : [{ transform: 'translateX(0)' }, { transform: 'translateX(-5px)' }, { transform: 'translateX(5px)' }, { transform: 'translateX(-3px)' }, { transform: 'translateX(0)' }],
+  { duration: correct ? 650 : 360, easing: 'ease-out' });
+  if (correct) {
+    const character = target?.querySelector('.mascot');
+    character?.animate([{ transform: 'translateY(0)' }, { transform: 'translateY(-12px)', offset: .4 }, { transform: 'translateY(0)' }], { duration: 650, iterations: 2, easing: 'ease-out' });
+  }
+}
 let data;
 let progress;
 let renderId = 0;
@@ -45,11 +60,11 @@ function progressPanel() {
 function home() {
   const resume = nextId() || 1;
   const hasProgress = progress.solved.length || progress.learned.length || progress.viewed.length;
-  main.innerHTML = `<div class="container"><section class="hero"><div><p class="eyebrow">SMARTPHONE CTF / BEGINNER'S EDITION</p><h1><span class="line">そのひらめきが、</span><span class="line">はじめの一歩。</span></h1><p class="hero-copy">スマホで、サイバー宝探し。<br>暗号・画像・記録に隠された「フラグ」を見つけよう。<br>専門知識がなくても、ヒントを使えば大丈夫。</p><div class="hero-actions"><a class="btn primary" href="#mission-${resume}">${hasProgress ? 'つづきから挑戦する' : '最初のミッションへ'} <span class="arrow" aria-hidden="true">→</span></a><a class="text-link" href="${official}" target="_blank" rel="noopener noreferrer">大会の公式案内を見る ↗</a></div><p class="hero-note">登録・インストール不要。１問だけの挑戦でもOK。</p></div><div class="hero-art"><span class="mini-tag">YOUR FIRST FLAG</span><img src="/assets/hero.svg" alt="調査の手がかりをつないでフラグを見つけるイラスト" width="460" height="460"><span class="art-label">OBSERVE. DECODE. DISCOVER.</span></div></section><div class="hero-stats"><div class="stat"><strong>08</strong><span>４ジャンルの<br>体験ミッション</span></div><div class="stat"><strong>1–3</strong><span>分で最初の１問<br>所要時間の目安</span></div><div class="stat"><strong>FREE</strong><span>無料ヒント<br>全問解説付き</span></div></div><section id="missions-section"><div class="section-head"><div><p class="eyebrow">CHOOSE YOUR MISSION</p><h2>８つの小さな謎を、解き明かそう。</h2></div><p>順番に進めても、気になる問題からでも。</p></div><div class="missions-grid">${missionCards()}</div></section><section class="intro-strip"><div><p class="eyebrow">HOW TO PLAY</p><h3>CTFは、答えを探す宝探し。</h3></div><div class="steps"><div><span class="step-num">01</span><strong>手がかりを調べる</strong><p>画像や記録から、隠された情報を探します。</p></div><div><span class="step-num">02</span><strong>フラグを提出する</strong><p>見つけた合言葉を回答欄に入力します。</p></div><div><span class="step-num">03</span><strong>解説で発見する</strong><p>解けなくても、ヒントと解説で学べます。</p></div></div></section>${officialCta()}</div>`;
+  main.innerHTML = `<div class="container"><section class="hero"><div><p class="eyebrow">スマホで体験・はじめてのサイバー宝探し</p><h1><span class="line">そのひらめきが、</span><span class="line">はじめの一歩。</span></h1><p class="hero-copy">スマホで、サイバー宝探し。<br>暗号・画像・記録から、答えの合言葉を探そう。<br>この合言葉を「フラグ」と呼びます。<br>専門知識は不要。各問題の「ヒントを見る」から手助けを受けられます。</p><div class="hero-actions"><a class="btn primary" href="#mission-${resume}">${hasProgress ? 'つづきから挑戦する' : '最初のミッションへ'} <span class="arrow" aria-hidden="true">→</span></a><a class="text-link" href="${official}" target="_blank" rel="noopener noreferrer">大会の公式案内を見る ↗</a></div><p class="hero-note">登録・インストール不要。１問だけの挑戦でもOK。</p></div><div class="mascot-welcome"><div class="mascot-duo">${mascot('rai')}${mascot('rii')}</div><p class="mascot-greeting">ひらめきを、一緒に見つけよう。</p><p class="mascot-caption">防衛省サイバーコンテストの<br>マスコット「ライ」「リイ」</p><p class="mascot-caption">この体験は学生企画・非公式です。</p></div></section><div class="hero-stats"><div class="stat"><strong>08</strong><span>４ジャンルの<br>体験ミッション</span></div><div class="stat"><strong>1–3</strong><span>分で最初の１問<br>所要時間の目安</span></div><div class="stat"><strong>FREE</strong><span>無料ヒント<br>全問解説付き</span></div></div><section class="intro-strip"><div><p class="eyebrow">はじめての方へ</p><h3>遊び方は、３ステップ。</h3></div><div class="steps"><div><span class="step-num">01</span><strong>手がかりを調べる</strong><p>画像や記録から、隠された情報を探します。</p></div><div><span class="step-num">02</span><strong>困ったらヒントを見る</strong><p>問題文のすぐ下にあるボタンから、２段階のヒントを表示。無料・減点なしです。</p></div><div><span class="step-num">03</span><strong>合言葉を入力する</strong><p>回答欄に入力して「フラグを提出」を押します。解けなくても解説を見て進めます。</p></div></div></section><section id="missions-section"><div class="section-head"><div><p class="eyebrow">挑戦する問題を選ぶ</p><h2>８つの小さな謎を、解き明かそう。</h2></div><p>迷ったら「01 消えた合言葉」から。１問だけでもOK。</p></div><div class="missions-grid">${missionCards()}</div></section>${officialCta()}</div>`;
 }
 function material(c) {
   const m = c.material;
-  const label = `<p class="material-label">EVIDENCE / 調査素材</p>`;
+  const label = `<p class="material-label">手がかりを調べよう</p>`;
   const alphabet = `<div class="alphabet" aria-label="アルファベット対応表">${[...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'].map(l => `<span>${l}</span>`).join('')}</div>`;
   const cipher = text => `<div class="cipher" aria-label="暗号 ${escape(text)}">${[...text].map(l => `<span>${l}</span>`).join('')}</div>`;
   const imageButton = (src, alt) => `<button class="image-open" data-image="${escape(src)}" data-alt="${escape(alt)}" aria-label="調査画像を拡大する"><img src="${escape(src)}" alt="${escape(alt)}"></button><p class="image-action">⊕ タップして拡大・調査</p>`;
@@ -67,7 +82,7 @@ function material(c) {
 async function mission(id, token) {
   const c = data.find(c => c.id === id);
   if (!c) { location.hash = '#home'; return; }
-  main.innerHTML = `<div class="container"><div class="workspace"><aside class="mission-sidebar" aria-label="ミッション一覧">${progressPanel()}${sidebarList(id)}<div class="sidebar-footer"><a href="#result">結果・復習を見る →</a><p class="notice">ヒントは無料。<br>１問だけの挑戦でもOK。</p></div></aside><article class="challenge"><details class="mobile-missions"><summary>ミッション ${String(id).padStart(2, '0')} / 08 <span>${progress.solved.length}問正解</span></summary>${sidebarList(id)}<a class="text-link" href="#result">結果・復習を見る →</a></details><header class="challenge-header"><div class="challenge-topline"><span class="challenge-number">MISSION ${String(id).padStart(2, '0')}</span><span>${escape(c.category)}</span><span>／ ${escape(c.difficulty)}</span></div><h1>${escape(c.title)}</h1><p class="subtitle">${escape(c.subtitle)} ／ 目安 ${escape(c.time)}</p></header><p class="story">${escape(c.story)}</p><div class="mission-instruction">${escape(c.instruction)}</div><section class="material-box" aria-label="調査素材">${material(c)}</section><form id="answer-form" class="answer-panel"><label for="flag-input">見つけたフラグ（合言葉）</label><div class="answer-row"><input id="flag-input" name="flag" type="text" placeholder="合言葉を入力" maxlength="100" autocomplete="off" autocapitalize="characters" spellcheck="false" required aria-describedby="input-note"><button id="submit-answer" class="btn primary" type="submit">フラグを提出 <span aria-hidden="true">→</span></button></div><p id="input-note" class="input-note">大文字・小文字、全角英数字の違いは気にしなくてOK。</p><p id="feedback" class="feedback" role="status" aria-live="polite"></p></form><section class="hints-panel" aria-label="ヒント"><div class="hint-actions"><p>行き詰まったら、ヒントを使おう。減点なし。</p><button id="hint-button" class="btn small">ヒントを見る（0 / 2）</button></div><div id="hint-items"></div></section><button id="explanation-button" class="explanation-link">解けなくても、解説を見て進む →</button><section id="explanation" class="explanation hidden" aria-label="問題の解説" tabindex="-1"></section><p class="notice">練習のクリアは参加条件ではありません。<a href="${official}" target="_blank" rel="noopener noreferrer">大会の公式案内を見る ↗</a></p></article></div></div>`;
+  main.innerHTML = `<div class="container"><div class="workspace"><aside class="mission-sidebar" aria-label="ミッション一覧">${progressPanel()}${sidebarList(id)}<div class="sidebar-footer"><a href="#result">結果・復習を見る →</a><p class="notice">ヒントは無料。<br>１問だけの挑戦でもOK。</p></div></aside><article class="challenge"><details class="mobile-missions"><summary>ミッション ${String(id).padStart(2, '0')} / 08 <span>${progress.solved.length}問正解</span></summary>${sidebarList(id)}<a class="text-link" href="#result">結果・復習を見る →</a></details><header class="challenge-header"><div class="challenge-topline"><span class="challenge-number">MISSION ${String(id).padStart(2, '0')}</span><span>${escape(c.category)}</span><span>／ ${escape(c.difficulty)}</span></div><h1>${escape(c.title)}</h1><p class="subtitle">${escape(c.subtitle)} ／ 目安 ${escape(c.time)}</p></header><p class="story">${escape(c.story)}</p><div class="mission-instruction">${escape(c.instruction)}</div><section class="hints-panel" aria-labelledby="hints-title"><div class="hint-actions"><div class="hint-guide">${mascot('rii')}<div><h2 id="hints-title">困ったら、ここでヒント</h2><p>２段階のヒントでお手伝い。無料・減点なしです。</p></div></div><button id="hint-button" class="btn small" aria-controls="hint-items">ヒントを見る（0 / 2）</button></div><div id="hint-items" aria-live="polite" aria-atomic="true"></div><p id="hint-feedback" class="hint-feedback" role="status"></p></section><section class="material-box" aria-label="調査素材">${material(c)}</section><form id="answer-form" class="answer-panel"><label for="flag-input">見つけたフラグ（合言葉）</label><div class="answer-row"><input id="flag-input" name="flag" type="text" placeholder="合言葉を入力" maxlength="100" autocomplete="off" autocapitalize="characters" spellcheck="false" required aria-describedby="input-note feedback"><button id="submit-answer" class="btn primary" type="submit">フラグを提出 <span aria-hidden="true">→</span></button></div><p id="input-note" class="input-note">大文字・小文字、全角英数字の違いは気にしなくてOK。</p><div id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true"></div></form><button id="explanation-button" class="explanation-link">解けなくても、解説を見て進む →</button><section id="explanation" class="explanation hidden" aria-label="問題の解説" tabindex="-1"></section><p class="notice">練習のクリアは参加条件ではありません。<a href="${official}" target="_blank" rel="noopener noreferrer">大会の公式案内を見る ↗</a></p></article></div></div>`;
   setupMaterials(c);
   const input = document.querySelector('#flag-input');
   input.setAttribute('inputmode', 'text');
@@ -86,21 +101,28 @@ async function mission(id, token) {
     if (composing || button.disabled) return;
     const feedback = document.querySelector('#feedback');
     const value = document.querySelector('#flag-input').value;
-    button.disabled = true; button.textContent = '確認しています…'; feedback.className = 'feedback';
+    button.disabled = true; button.textContent = '確認しています…'; feedback.className = 'feedback'; feedback.textContent = '回答を確認しています…';
+    document.querySelector('#answer-form').classList.remove('answer-correct', 'answer-incorrect');
+    input.removeAttribute('aria-invalid');
     try {
       const result = await api('answer', id, { answer: value });
       if (token !== renderId) return;
-      feedback.textContent = result.correct ? (result.assisted ? '✓ 答えを確認できました。解説で学習した問題です。' : '✓ 正解！フラグを発見しました。') : 'もう一度、手がかりを確認してみよう。ヒントも使えます。';
-      feedback.className = result.correct ? 'feedback' : 'feedback error';
+      feedback.textContent = result.correct ? (result.assisted ? '✓ 答えを確認できました。解説で学習した問題です。' : '✓ 正解！フラグを発見しました。') : '';
+      feedback.className = result.correct ? 'feedback success' : 'feedback retry';
+      if (!result.correct) feedback.innerHTML = `${mascot('rii')}<span><strong>もう一歩！ 今回は不正解です。</strong><span>入力した合言葉と手がかりを、もう一度見比べてみよう。上のヒントも使えます。</span></span>`;
+      document.querySelector('#answer-form').classList.add(result.correct ? 'answer-correct' : 'answer-incorrect');
+      if (!result.correct) input.setAttribute('aria-invalid', 'true');
       refreshProgress(id);
       if (result.correct) { input.blur(); showExplanation(c, result, true); }
+      animateResult(result.correct);
     } catch (error) { if (token === renderId) { feedback.textContent = error.message; feedback.className = 'feedback error'; } }
     finally { if (token === renderId) { button.disabled = false; button.innerHTML = 'フラグを提出 <span aria-hidden="true">→</span>'; } }
   });
   document.querySelector('#hint-button').addEventListener('click', async () => {
     const button = document.querySelector('#hint-button'); button.disabled = true;
+    document.querySelector('#hint-feedback').textContent = '';
     try { const result = await api('hint', id); if (token === renderId) showHints(result.hints); }
-    catch (error) { if (token === renderId) document.querySelector('#feedback').textContent = error.message; }
+    catch (error) { if (token === renderId) document.querySelector('#hint-feedback').textContent = error.message; }
     finally { if (token === renderId) button.disabled = progress.hints[id - 1] >= 2; }
   });
   document.querySelector('#explanation-button').addEventListener('click', async () => {
@@ -126,7 +148,7 @@ function refreshProgress(id) {
   if (mobile) { const open = mobile.open; mobile.innerHTML = `<summary>ミッション ${String(id).padStart(2, '0')} / 08 <span>${progress.solved.length}問正解</span></summary>${sidebarList(id)}<a class="text-link" href="#result">結果・復習を見る →</a>`; mobile.open = open; }
 }
 function showHints(hints) {
-  document.querySelector('#hint-items').innerHTML = hints.map((hint, i) => `<p class="hint-item"><strong>HINT ${String(i + 1).padStart(2, '0')}</strong>${escape(hint)}</p>`).join('');
+  document.querySelector('#hint-items').innerHTML = hints.map((hint, i) => `<p class="hint-item"><strong>ヒント ${i + 1}</strong>${escape(hint)}</p>`).join('');
   const button = document.querySelector('#hint-button');
   button.textContent = hints.length >= 2 ? 'すべてのヒントを表示中' : `ヒントを見る（${hints.length} / 2）`;
   button.disabled = hints.length >= 2;
@@ -135,7 +157,7 @@ function showExplanation(c, result, shouldFocus) {
   const el = document.querySelector('#explanation');
   const next = nextId(c.id);
   el.classList.remove('hidden');
-  el.innerHTML = `<p class="eyebrow">${result.assisted ? 'LEARNED / 解説で学習' : 'FLAG FOUND / 正解'}</p><h2>${result.assisted ? '新しい発見を、次の一歩へ。' : 'フラグを発見！'}</h2><div class="answer-display">${escape(result.answer)}</div><p>${escape(result.explanation)}</p><p class="learning"><strong>この問題で学べること</strong><br>${escape(result.learning)}</p><div class="next-actions">${next ? `<a class="btn primary" href="#mission-${next}">次のミッションへ →</a>` : '<a class="btn primary" href="#result">体験の結果を見る →</a>'}<a class="btn" href="#result">結果・復習</a></div>`;
+  el.innerHTML = `<div class="result-visual ${result.assisted ? 'is-learned' : 'is-correct'}">${mascot(result.assisted ? 'rii' : 'rai')}<div><span class="result-symbol" aria-hidden="true">${result.assisted ? '◇' : '✓'}</span><p class="eyebrow">${result.assisted ? '解説で学習' : '正解！'}</p><h2>${result.assisted ? '新しい発見を、次の一歩へ。' : 'フラグを発見！'}</h2><p>${result.assisted ? '答えの理由を、一緒に確認しよう。' : '手がかりをつなげられたね！'}</p></div>${shouldFocus && !result.assisted ? '<div class="confetti" aria-hidden="true">' + '<i></i>'.repeat(12) + '</div>' : ''}</div><div class="answer-display">${escape(result.answer)}</div><p>${escape(result.explanation)}</p><p class="learning"><strong>この問題で学べること</strong><br>${escape(result.learning)}</p><div class="next-actions">${next ? `<a class="btn primary" href="#mission-${next}">次のミッションへ →</a>` : '<a class="btn primary" href="#result">体験の結果を見る →</a>'}<a class="btn" href="#result">結果・復習</a></div>`;
   if (shouldFocus) { el.focus({ preventScroll: true }); el.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }); }
 }
 function setupMaterials(c) {
@@ -247,7 +269,7 @@ function results() {
   });
 }
 function about() {
-  main.innerHTML = `<div class="container"><article class="about"><p class="eyebrow">ABOUT THIS EXPERIENCE</p><h1>サイバーへの一歩を、もっと身近に。</h1><p>このサイトは「初心者向けWeb練習CTFによる防衛省サイバーコンテスト参加促進プロジェクト」の体験用プロトタイプです。防衛省の公式サービスではありません。掲載した問題・画像・記録は、この体験のために独自に制作した架空の素材です。</p><h2>CTFって何？</h2><p>CTF（Capture The Flag）は、データや画面から手がかりを調べ、答えとなる「フラグ」を探す形式の競技です。この体験では、短い英字の合言葉をフラグとして提出します。コードを書く必要はありません。</p><h2>解けなくても、大丈夫。</h2><p>すべての問題に無料の段階ヒントと解説があります。解説を先に見た問題は「解説で学習」として記録し、自分で解いた正解数と分けます。１問だけの体験でも、未正解でも、大会の案内へ進めます。</p><h2>大会への参加について</h2><p>練習は予選や参加資格の判定ではありません。大会への応募、参加条件、開催日や募集状況は、<a href="${official}" target="_blank" rel="noopener noreferrer">防衛省の公式サイト</a>でご確認ください。このサイトでは応募や個人情報の受付を行いません。</p><h2>進捗とデータについて</h2><p>氏名・メールアドレスの入力は求めません。同じブラウザで再開できるよう、正解・学習・ヒントの状態を必要なCookieに30日間保存します。結果ページからリセットできます。Cookie削除や別の端末では進捗は引き継がれません。アクセスに伴い、ホスティングサービスがIPアドレスなどの運用ログを扱う場合があります。この版では広告や個人を追跡するアクセス解析は導入していません。</p><h2>安全な練習環境</h2><p>調査は、このサイトに用意された画像と架空の記録の中だけで完結します。実在する第三者サイトへのアクセスや攻撃を課題にすることはありません。</p><h2>制作時に参考にした公開資料</h2><ul><li><a href="https://cadets.ctfd.io/how-it-works" target="_blank" rel="noopener noreferrer">Army Cadets CTFの運営FAQ</a>：初心者問題の大部分をスマホのブラウザで解けると説明しています。</li><li><a href="https://ctf.bogus.jp/" target="_blank" rel="noopener noreferrer">おうちCTF</a>：小さな問題とヒントの提示方法を参考にしました。全問題のスマホ対応を確認したものではありません。</li><li><a href="https://www.mod.go.jp/j/approach/defense/cyber/c_contest/previous_exam.html" target="_blank" rel="noopener noreferrer">防衛省サイバーコンテストの過去問紹介</a>：問題の分野と学習内容の説明を参考にしました。</li></ul><p>資料確認日：2026年10月6日。既存問題の文章・画像・フラグは転載していません。</p><a class="btn primary" href="#mission-1">最初のミッションへ →</a></article></div>`;
+  main.innerHTML = `<div class="container"><article class="about"><p class="eyebrow">ABOUT THIS EXPERIENCE</p><h1>サイバーへの一歩を、もっと身近に。</h1><p>このサイトは「初心者向けWeb練習CTFによる防衛省サイバーコンテスト参加促進プロジェクト」の体験用プロトタイプです。防衛省の公式サービスではありません。問題と調査用の画像・記録は、この体験のために独自に制作した架空の素材です。</p><h2>CTFって何？</h2><p>CTF（Capture The Flag）は、データや画面から手がかりを調べ、答えとなる「フラグ」を探す形式の競技です。この体験では、短い英字の合言葉をフラグとして提出します。コードを書く必要はありません。</p><h2>解けなくても、大丈夫。</h2><p>すべての問題に無料の段階ヒントと解説があります。解説を先に見た問題は「解説で学習」として記録し、自分で解いた正解数と分けます。１問だけの体験でも、未正解でも、大会の案内へ進めます。</p><h2>大会への参加について</h2><p>練習は予選や参加資格の判定ではありません。大会への応募、参加条件、開催日や募集状況は、<a href="${official}" target="_blank" rel="noopener noreferrer">防衛省の公式サイト</a>でご確認ください。このサイトでは応募や個人情報の受付を行いません。</p><h2>進捗とデータについて</h2><p>氏名・メールアドレスの入力は求めません。同じブラウザで再開できるよう、正解・学習・ヒントの状態を必要なCookieに30日間保存します。結果ページからリセットできます。Cookie削除や別の端末では進捗は引き継がれません。アクセスに伴い、ホスティングサービスがIPアドレスなどの運用ログを扱う場合があります。この版では広告や個人を追跡するアクセス解析は導入していません。</p><h2>安全な練習環境</h2><p>調査は、このサイトに用意された画像と架空の記録の中だけで完結します。実在する第三者サイトへのアクセスや攻撃を課題にすることはありません。</p><h2>マスコットについて</h2><p>ライ・リイは、<a href="${official}" target="_blank" rel="noopener noreferrer">防衛省サイバーコンテストのマスコットキャラクター</a>です。本サイトでは提供画像をもとに背景透過加工した素材を使用しています。吹き出しや応援メッセージは、この学生企画のために作成したものです。防衛省の公式サービス・公認を示すものではありません。</p><h2>制作時に参考にした公開資料</h2><ul><li><a href="https://cadets.ctfd.io/how-it-works" target="_blank" rel="noopener noreferrer">Army Cadets CTFの運営FAQ</a>：初心者問題の大部分をスマホのブラウザで解けると説明しています。</li><li><a href="https://ctf.bogus.jp/" target="_blank" rel="noopener noreferrer">おうちCTF</a>：小さな問題とヒントの提示方法を参考にしました。全問題のスマホ対応を確認したものではありません。</li><li><a href="https://www.mod.go.jp/j/approach/defense/cyber/c_contest/previous_exam.html" target="_blank" rel="noopener noreferrer">防衛省サイバーコンテストの過去問紹介</a>：問題の分野と学習内容の説明を参考にしました。</li></ul><p>資料確認日：2026年10月6日。既存問題の文章・画像・フラグは転載していません。</p><a class="btn primary" href="#mission-1">最初のミッションへ →</a></article></div>`;
 }
 async function render() {
   if (!data) return;

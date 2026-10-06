@@ -5,7 +5,7 @@ import { randomBytes } from 'node:crypto';
 import handler from '../server/game.mjs';
 process.env.CTF_SESSION_SECRET ||= randomBytes(32).toString('hex');
 const publicRoot = resolve('public');
-const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.json': 'application/json' };
+const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.json': 'application/json' };
 const config = JSON.parse(await readFile(resolve('vercel.json'), 'utf8'));
 createServer(async (req, res) => {
   for (const { key, value } of config.headers[0].headers) res.setHeader(key, value);
