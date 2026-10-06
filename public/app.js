@@ -1,7 +1,18 @@
 const main = document.querySelector('#main');
 const official = 'https://www.mod.go.jp/j/approach/defense/cyber/c_contest/';
 const escape = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const icons = { cipher: '⌘', ascii: '01', image: '⊡', compare: '◫', logs: '≡', records: '⊞', order: '⇅', final: '⚑' };
+// Consistent SVG symbols describe each task without depending on symbol fonts.
+const iconPaths = {
+  cipher: '<circle cx="8" cy="8" r="5"/><path d="m11.5 11.5 9 9M16 16l3-3m0 6 3-3"/><circle cx="7" cy="7" r=".6" fill="currentColor" stroke="none"/>',
+  ascii: '<g fill="currentColor" stroke="none" font-family="Arial,sans-serif" font-weight="700"><text x="2" y="10" font-size="10">65</text><text x="13" y="22" font-size="12">A</text></g><path d="M17 4h4v9m-3-3 3 3 2-3M3 14v6h5"/>',
+  image: '<path d="M11 20H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 15l5-5 4 4"/><circle cx="14" cy="7" r="1.5"/><circle cx="16" cy="16" r="4"/><path d="m19 19 3 3"/>',
+  compare: '<rect x="2" y="3" width="8" height="12" rx="1.5"/><rect x="14" y="9" width="8" height="12" rx="1.5"/><path d="M14 3h6l-2-2m2 2-2 2M10 21H4l2-2m-2 2 2 2M5 7h2m10 6h2m-2 4h2"/>',
+  logs: '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4M12 7v4"/><circle cx="12" cy="14" r=".7" fill="currentColor" stroke="none"/>',
+  records: '<path d="M10 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2v3M3 9h9"/><circle cx="16" cy="16" r="4"/><path d="m19 19 3 3"/>',
+  order: '<circle cx="10" cy="10" r="7"/><path d="M10 6v4l3 2M20 9v12m-3-3 3 3 3-3M3 20h10"/>',
+  final: '<rect x="4" y="10" width="16" height="12" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0"/><circle cx="12" cy="15" r="1.5"/><path d="M12 16.5V19"/>'
+};
+const icons = Object.fromEntries(Object.entries(iconPaths).map(([kind, paths]) => [kind, `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">${paths}</svg>`]));
 const mascot = (name, extra = '') => `<span class="mascot mascot-${name} ${extra}" role="img" aria-label="${name === 'rai' ? 'ライ' : 'リイ'}"></span>`;
 
 function animateResult(correct) {
@@ -49,7 +60,7 @@ function missionCards() {
   return data.map(c => `<a class="mission-card ${progress.solved.includes(c.id) ? 'done' : ''} ${progress.learned.includes(c.id) ? 'learned' : ''}" href="#mission-${c.id}" aria-label="ミッション${c.id} ${escape(c.title)} ${stateLabel(c.id)}"><div class="card-top"><span class="card-number">MISSION ${String(c.id).padStart(2, '0')}</span><span class="card-icon" aria-hidden="true">${icons[c.kind]}</span></div><div><h3>${escape(c.title)}</h3><p>${escape(c.subtitle)}</p></div><div class="card-bottom"><span class="category-label">${escape(c.category)}</span><span class="card-status">${stateLabel(c.id)}</span></div></a>`).join('');
 }
 function officialCta() {
-  return `<section class="official-cta" aria-label="公式大会の案内"><div><p class="eyebrow">YOUR NEXT CHALLENGE</p><h2>そのひらめきを、次の挑戦へ。</h2><p>防衛省サイバーコンテストは、暗号やネットワークなどの問題から答えを探す大会です。開催情報・参加条件・募集状況は公式サイトで確認できます。練習のクリアは参加条件ではありません。</p></div><a class="btn primary" href="${official}" target="_blank" rel="noopener noreferrer">大会の公式案内を見る <span aria-hidden="true">↗</span></a></section>`;
+  return `<section class="official-cta" aria-label="公式大会の案内"><h2>防衛省サイバーコンテストのご案内</h2><div class="official-body"><p>暗号やネットワークなど、情報セキュリティに関する問題に挑戦するコンテストです。</p><p>開催情報・参加条件・募集状況は、防衛省ホームページをご確認ください。</p><a class="official-link" href="${official}" target="_blank" rel="noopener noreferrer"><span class="official-link-text">防衛省サイバーコンテスト<span class="official-domain">防衛省ホームページ ／ www.mod.go.jp</span></span><span class="official-external">外部サイト <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M14 3h7v7m0-7L10 14M10 5H4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-6"/></svg></span></a><p class="official-note">この練習のクリアは、大会の参加条件ではありません。<br>本サイトは学生企画の体験サイトです。</p></div></section>`;
 }
 function sidebarList(id) {
   return `<ol class="sidebar-list">${data.map(c => `<li><a class="${c.id === id ? 'active' : ''}" href="#mission-${c.id}" ${c.id === id ? 'aria-current="page"' : ''}><span class="num">${String(c.id).padStart(2, '0')}</span><span>${escape(c.title)}</span><span class="tick" aria-label="${stateLabel(c.id)}">${progress.solved.includes(c.id) ? '✓' : progress.learned.includes(c.id) ? '◇' : '·'}</span></a></li>`).join('')}</ol>`;

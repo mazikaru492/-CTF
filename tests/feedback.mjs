@@ -22,7 +22,8 @@ for (const engine of [chromium, webkit]) {
       });
       await page.goto(`${base}/#home`);
       await page.locator('.mascot-duo').waitFor();
-      await page.locator(`[data-theme-choice=${theme}]`).click();
+      const themeToggle = page.locator('#theme-toggle');
+      if (await themeToggle.getAttribute('aria-checked') !== String(theme === 'dark')) await themeToggle.click();
       const asset = await page.request.get(`${base}/assets/rai-rii-cutout.png`);
       assert.equal(asset.status(), 200);
       assert.match(asset.headers()['content-type'], /image\/png/);

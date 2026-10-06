@@ -10,20 +10,21 @@
     theme = value;
     document.documentElement.dataset.theme = theme;
     document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#122031' : '#f5f7fa';
-    document.querySelectorAll('[data-theme-choice]').forEach(button => {
-      button.setAttribute('aria-pressed', String(button.dataset.themeChoice === theme));
-    });
+    document.querySelector('#theme-toggle')?.setAttribute('aria-checked', String(theme === 'dark'));
   }
 
   // Restore before the body is painted, without waiting for the game API.
   applyTheme(theme);
   document.addEventListener('DOMContentLoaded', () => {
     applyTheme(theme);
-    document.querySelectorAll('[data-theme-choice]').forEach(button => {
-      button.addEventListener('click', () => {
-        applyTheme(button.dataset.themeChoice);
-        try { localStorage.setItem(key, theme); } catch { /* The current page can still switch themes. */ }
-      });
+    const header = document.querySelector('.site-header');
+    const updateHeaderHeight = () => document.documentElement.style.setProperty('--header-height', `${header.getBoundingClientRect().height}px`);
+    updateHeaderHeight();
+    if (typeof ResizeObserver === 'function') new ResizeObserver(updateHeaderHeight).observe(header);
+    else window.addEventListener('resize', updateHeaderHeight);
+    document.querySelector('#theme-toggle').addEventListener('click', () => {
+      applyTheme(theme === 'dark' ? 'light' : 'dark');
+      try { localStorage.setItem(key, theme); } catch { /* The current page can still switch themes. */ }
     });
   });
 })();
