@@ -205,9 +205,15 @@ html{scroll-padding-top:calc(var(--header-height,190px) + 16px)}
 .stat{border:0}
 .intro-strip,.mission-card,.progress-panel,.mobile-missions,.material-box,.answer-panel,.explanation,.official-cta{border:0;border-radius:6px}
 .intro-strip{background:var(--panel2);margin-bottom:48px}
+[data-theme=light] .hero-stats,[data-theme=light] .intro-strip{background:#ccd7e4}
+[data-theme=light] .hero-stats .stat span,[data-theme=light] .intro-strip .steps p,[data-theme=light] .intro-strip .step-num{color:#304b65}
 .missions-grid{gap:20px}
 .mission-card{background:var(--panel);padding:24px;transition:background .15s;box-shadow:none}
 .mission-card:hover{background:var(--panel2);transform:none;box-shadow:none}
+[data-theme=light] .mission-card{background:#d1dce8}
+[data-theme=light] .mission-card:hover{background:#c3d2e2}
+[data-theme=light] .mission-card p,[data-theme=light] .mission-card .card-number,[data-theme=light] .mission-card .category-label{color:#304b65}
+[data-theme=light] .mission-card .card-icon,[data-theme=light] .mission-card .category-label{background:#fff}
 .mission-card.done .card-status{color:#176342}
 [data-theme=dark] .mission-card.done .card-status{color:#a0e8bc}
 .category-label{border:0;border-radius:3px;background:var(--bg);padding:3px 8px}
@@ -320,8 +326,24 @@ dialog,#image-scroll{border:0;border-radius:6px}
 
 /* A compact footer with balanced spacing in the primary phone viewport. */
 @media(max-width:700px){
-  .site-footer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:8px 16px;padding-top:16px;padding-bottom:max(16px,env(safe-area-inset-bottom));margin-top:0;line-height:1.6}
+  .site-footer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:4px 12px;padding-top:10px;padding-bottom:max(10px,env(safe-area-inset-bottom));margin-top:0;line-height:1.5}
   .site-footer .footer-brand{grid-column:1;grid-row:1;font-size:.6875rem;letter-spacing:1px;line-height:1.5;min-width:0}
   .site-footer>a:last-child{grid-column:2;grid-row:1;justify-content:flex-end;text-align:right;font-size:.75rem;min-width:0}
   .site-footer>p{grid-column:1 / -1;grid-row:2;font-size:.75rem}
+}
+
+/* Give the problem more space by fitting phone header controls into one row. */
+.hero .eyebrow{display:block;font-size:1.0625rem;font-weight:800;line-height:1.7;letter-spacing:.03em}
+.hero .eyebrow:before{display:inline-block;vertical-align:middle;margin-right:10px;width:22px}
+@media(max-width:700px){
+  .site-header{grid-template-columns:auto minmax(0,1fr) auto;gap:8px;padding:8px 16px}
+  .site-header .brand{grid-column:1;grid-row:1;font-size:14px;gap:6px;min-height:44px;letter-spacing:1px}
+  .site-header .brand img{width:28px;height:32px;padding:3px}
+  .site-header .brand-sub{font-size:8px;letter-spacing:1.5px;margin-top:4px}
+  .site-header nav{grid-column:2;grid-row:1;font-size:.6875rem;gap:0;min-width:0}
+  .site-header .header-result{gap:4px;flex-wrap:wrap;justify-content:flex-end;line-height:1.4}
+  .site-header .theme-switch{grid-column:3;grid-row:1;gap:3px;min-height:44px}
+  .site-header .theme-switch>span:nth-child(2){display:none}
+  .site-header .theme-switch #theme-toggle{width:44px}
+  #theme-toggle[aria-checked=true] .theme-knob{transform:translateX(16px)}
 }
