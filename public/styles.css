@@ -282,3 +282,38 @@ dialog,#image-scroll{border:0;border-radius:6px}
 .site-header .theme-switch{grid-column:2;grid-row:2;justify-self:end;flex-basis:auto}
 @media(max-width:700px){.site-header{gap:4px 12px}.site-header .theme-switch{gap:5px}.theme-switch .theme-label{display:none}.site-header .theme-switch>span{font-size:.6875rem}}
 @media(max-width:360px){.brand{font-size:16px;gap:7px}.brand img{width:32px;height:38px}.brand-sub{font-size:9px;letter-spacing:1.8px}.site-header{gap:4px 8px;padding-left:16px;padding-right:16px}}
+
+/* Keep the question, evidence and submission flow easy to follow on touch screens. */
+.flow-heading{display:flex;align-items:center;gap:10px;font-size:1.125rem;letter-spacing:0;line-height:1.6}
+.flow-number{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--panel2);color:var(--text);font-family:Arial,sans-serif;font-size:1rem}
+.question-heading{margin:24px 0 12px}
+.challenge .mission-instruction{font-size:1.25rem;font-weight:800;line-height:1.9;letter-spacing:.02em;padding:24px;overflow-wrap:anywhere}
+.material-box .flow-heading{margin-bottom:20px;color:var(--text)}
+.answer-panel{border-top:5px solid var(--mission-action);padding:24px}
+.answer-panel .flow-number{background:var(--mission-action);color:var(--mission-action-text)}
+.answer-panel label{font-size:1rem;margin:20px 0 10px}
+.answer-row{gap:14px}
+.answer-row input{min-height:56px;background:var(--bg)}
+.answer-row #submit-answer{min-height:56px;background:var(--mission-action);color:var(--mission-action-text);font-size:1rem;box-shadow:0 3px 0 #0004}
+.answer-row #submit-answer:hover{filter:brightness(1.08)}
+.answer-back{display:block;min-height:48px;border:0;background:transparent;color:var(--muted);text-decoration:underline;text-underline-offset:4px;padding:8px 0;font-size:.875rem;text-align:left}
+.answer-panel .feedback:empty{min-height:0;margin:0}
+@media(max-width:700px){.challenge .mission-instruction{font-size:1.125rem;padding:20px 16px}.answer-panel{padding:20px 16px}.answer-row{flex-direction:column}.answer-row #submit-answer{width:100%;justify-content:space-between;padding:16px 20px}}
+
+/* Switch directly between adjacent missions without opening the list. */
+.mission-nav-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:12px}
+.mission-nav-controls{display:flex;gap:6px;justify-self:end}
+.mission-nav-arrow{width:44px;min-width:44px;min-height:44px;padding:10px;background:var(--panel2);color:var(--text)}
+.mission-nav-arrow svg{width:20px;height:20px;flex-shrink:0}
+.mission-nav-arrow:hover{background:#1a5684;color:#fff}
+.mission-nav-arrow:disabled{opacity:.4;background:var(--panel2);color:var(--muted)}
+.mission-nav-current{text-align:left;min-width:0;line-height:1.6}
+.mission-nav-current strong{display:block;font-size:1rem}
+.mission-nav-current>span{display:block;font-size:.75rem;color:var(--muted)}
+.mission-picker{margin-top:12px}
+.mission-picker>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;padding:10px 14px;cursor:pointer;list-style:none;background:var(--panel2);border-radius:4px;font-size:.875rem}
+.mission-picker>summary::-webkit-details-marker{display:none}
+.mission-picker>summary>span{font-size:1.25rem;line-height:1}
+.mission-picker[open]>summary>span{transform:rotate(180deg)}
+.mission-picker .sidebar-list{padding-top:12px}
+@media(max-width:1023px){.mobile-missions{padding:12px;margin-bottom:24px}}

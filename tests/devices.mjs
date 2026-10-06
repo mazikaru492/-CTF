@@ -17,7 +17,7 @@ const profiles = [
 ];
 async function route(page, hash) {
   await page.goto(`${base}/${hash}`);
-  if (hash.startsWith('#mission-')) await page.locator('.challenge-number').filter({ hasText: `MISSION ${hash.split('-')[1].padStart(2, '0')}` }).waitFor();
+  if (hash.startsWith('#mission-')) await page.locator('.challenge-number').filter({ hasText: `問題 ${hash.split('-')[1]} / 全8問` }).waitFor();
   else await page.locator(hash === '#about' ? '.about' : hash === '#result' ? '.result-hero' : '.hero').waitFor();
 }
 async function layout(page, name) {
