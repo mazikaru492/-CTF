@@ -18,6 +18,8 @@
   --card-hover: #c3d2e2;
   --section-description: #304b65;
   --hero-label-size: 1.0625rem;
+  --about-heading-text: #000;
+  --about-heading-marker: #0069bb;
 }
 :root[data-theme='dark'] {
   color-scheme: dark;
@@ -31,4 +33,6 @@
   --control-border: #8ca5be;
   --mission-action: #ef9554;
   --mission-action-text: #172c43;
+  --about-heading-text: #fff;
+  --about-heading-marker: #62b3ef;
 }
