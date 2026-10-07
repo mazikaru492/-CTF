@@ -2491,7 +2491,6 @@ html {
 }
 
 .official-cta {
-  border: 2px solid var(--control-border);
   border-radius: 0;
   overflow: hidden;
 }
