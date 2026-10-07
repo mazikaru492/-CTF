@@ -74,7 +74,7 @@
 
 ## 配色・文字サイズ・配置を変更する
 
-- `public/theme.css`：明るい・暗い背景の共通色、カードの色、フォント、トップの小見出しサイズ。`--hero-label-size` の `1.0625rem` は通常17px相当です。
+- `public/theme.css`：白い背景の共通色、カードの色、フォント、トップの小見出しサイズ。`--hero-label-size` の `1.0625rem` は通常17px相当です。背景の切り替えはありません。
 - `public/styles.css`：余白、各欄やボタンの大きさ、スマホの配置。スマホは `@media (max-width: 700px)`、問題一覧の開閉表示は1023px以下です。
 - `public/index.html`：ヘッダー・フッターと固定ダイアログの文章。
 - `public/scripts/pages.js`：トップ・問題・結果・紹介ページの表示。HTMLは改行して整形しています。

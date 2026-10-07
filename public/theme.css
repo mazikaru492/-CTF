@@ -1,6 +1,7 @@
 /* 色・文字フォントの共通設定。画面の配色を変えるときはここを編集します。 */
 :root {
-  --bg: #f5f7fa;
+  color-scheme: light;
+  --bg: #fff;
   --panel: #fff;
   --panel2: #e3eaf2;
   --text: #172c43;
@@ -20,19 +21,4 @@
   --hero-label-size: 1.0625rem;
   --about-heading-text: #000;
   --about-heading-marker: #0069bb;
-}
-:root[data-theme='dark'] {
-  color-scheme: dark;
-  --bg: #122031;
-  --panel: #20344a;
-  --panel2: #2b4560;
-  --text: #fff;
-  --muted: #b6c3d1;
-  --accent: #d0653b;
-  --line: #53677e;
-  --control-border: #8ca5be;
-  --mission-action: #ef9554;
-  --mission-action-text: #172c43;
-  --about-heading-text: #fff;
-  --about-heading-marker: #62b3ef;
 }

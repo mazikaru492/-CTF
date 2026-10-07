@@ -1,6 +1,6 @@
 import { chromium, webkit } from 'playwright';
 import assert from 'node:assert/strict';
-import { challenges } from '../server/challenges.mjs';
+import { challenges, challengeCount } from '../server/challenges.mjs';
 import { mkdir } from 'node:fs/promises';
 
 const base = process.env.CTF_TEST_URL || 'http://127.0.0.1:3000';
@@ -13,23 +13,29 @@ for (const engine of [chromium, webkit]) {
         const page = await browser.newPage({
           viewport: { width: 390, height: 844 },
           reducedMotion,
+          colorScheme: theme,
         });
         page.setDefaultTimeout(12000);
         const errors = [];
         page.on('pageerror', (error) => errors.push(error.message));
-        await page.addInitScript(() => {
+        await page.addInitScript((savedTheme) => {
+          // Legacy dark preferences must not override the fixed white background.
+          localStorage.setItem('ctf-background-theme', savedTheme);
           window.resultAnimationCount = 0;
           const animate = Element.prototype.animate;
           Element.prototype.animate = function (...args) {
             window.resultAnimationCount++;
             return animate.apply(this, args);
           };
-        });
+        }, theme);
         await page.goto(`${base}/#home`);
         await page.locator('.mascot-duo').waitFor();
-        const themeToggle = page.locator('#theme-toggle');
-        if ((await themeToggle.getAttribute('aria-checked')) !== String(theme === 'dark'))
-          await themeToggle.click();
+        assert.equal(await page.locator('#theme-toggle').count(), 0);
+        assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
+        assert.equal(
+          await page.locator('body').evaluate((el) => getComputedStyle(el).backgroundColor),
+          'rgb(255, 255, 255)',
+        );
         const asset = await page.request.get(`${base}/assets/rai-rii-cutout.png`);
         assert.equal(asset.status(), 200);
         assert.match(asset.headers()['content-type'], /image\/png/);
@@ -52,7 +58,7 @@ for (const engine of [chromium, webkit]) {
         await page.locator('#flag-input').fill(challenges[0].answer);
         await page.locator('#submit-answer').click();
         await page.locator('.result-visual.is-correct').waitFor();
-        assert.equal(await page.locator('#header-score').textContent(), '1 / 8');
+        assert.equal(await page.locator('#header-score').textContent(), `1 / ${challengeCount}`);
         assert.equal(await page.locator('#flag-input').getAttribute('aria-invalid'), null);
         assert.ok((await page.locator('.feedback.retry').count()) === 0);
         assert.equal(
@@ -84,7 +90,7 @@ for (const engine of [chromium, webkit]) {
         await page.locator('#explanation-button').click();
         await page.locator('#confirm-ok').click();
         await page.locator('.result-visual.is-learned').waitFor();
-        assert.equal(await page.locator('#header-score').textContent(), '1 / 8');
+        assert.equal(await page.locator('#header-score').textContent(), `1 / ${challengeCount}`);
         assert.equal(
           await page.locator('.confetti').count(),
           0,
@@ -92,7 +98,7 @@ for (const engine of [chromium, webkit]) {
         );
         assert.deepEqual(errors, []);
         console.log(
-          `PASS ${engine.name()} ${theme} ${reducedMotion}: wrong/correct, motion, restore, assisted learning, layout`,
+          `PASS ${engine.name()} saved-${theme} ${reducedMotion}: white background, no switch, wrong/correct, motion, restore, assisted learning, layout`,
         );
         await page.close();
       }
