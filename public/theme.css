@@ -1,0 +1,34 @@
+/* 色・文字フォントの共通設定。画面の配色を変えるときはここを編集します。 */
+:root {
+  --bg: #f5f7fa;
+  --panel: #fff;
+  --panel2: #e3eaf2;
+  --text: #172c43;
+  --muted: #4b6076;
+  --accent: #ab431e;
+  --line: #bcc9d7;
+  --radius: 18px;
+  --font: 'Yu Gothic', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  --control-border: #62788e;
+  --section-gap: 32px;
+  --mission-action: #ab431e;
+  --mission-action-text: #fff;
+  --summary-background: #ccd7e4;
+  --card-background: #d1dce8;
+  --card-hover: #c3d2e2;
+  --section-description: #304b65;
+  --hero-label-size: 1.0625rem;
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #122031;
+  --panel: #20344a;
+  --panel2: #2b4560;
+  --text: #fff;
+  --muted: #b6c3d1;
+  --accent: #d0653b;
+  --line: #53677e;
+  --control-border: #8ca5be;
+  --mission-action: #ef9554;
+  --mission-action-text: #172c43;
+}

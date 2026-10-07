@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.vercel/
+test-results/
+public/assets/
+package-lock.json
+docs/*記録.json

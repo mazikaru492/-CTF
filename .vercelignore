@@ -2,3 +2,4 @@ tests/
 test-results/
 docs/
 README.md
+.env*

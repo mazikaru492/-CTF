@@ -4,15 +4,22 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node scripts/dev.mjs",
+    "dev": "node --watch --env-file-if-exists=.env.local scripts/dev.mjs",
+    "start": "node --env-file-if-exists=.env.local scripts/dev.mjs",
+    "check": "node scripts/check.mjs",
     "build": "node scripts/build.mjs",
-    "test": "node --test tests/game.test.mjs",
-    "test:devices": "node tests/devices.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "test:mobile": "node tests/devices.mjs --mobile",
+    "test:devices": "node tests/devices.mjs",
+    "test:feedback": "node tests/feedback.mjs",
+    "format": "prettier --write public server api scripts tests content package.json vercel.json README.md docs/maintenance.md .prettierrc.json",
+    "format:check": "prettier --check public server api scripts tests content package.json vercel.json README.md docs/maintenance.md .prettierrc.json"
   },
   "engines": {
     "node": "24.x"
   },
   "devDependencies": {
-    "playwright": "1.62.1"
+    "playwright": "1.62.1",
+    "prettier": "3.9.9"
   }
 }
