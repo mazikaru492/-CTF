@@ -1,6 +1,7 @@
 import { escape, icons, mascot } from './ui.js';
 import { material } from './materials.js';
 export const official = 'https://www.mod.go.jp/j/approach/defense/cyber/c_contest/';
+const previousExam = `${official}previous_exam.html`;
 
 export function stateLabel(id, progress) {
   return progress.solved.includes(id)
@@ -49,30 +50,51 @@ function missionCards(data, progress) {
     .join('');
 }
 function officialCta() {
+  const links = [
+    {
+      href: official,
+      title: '防衛省サイバーコンテスト',
+      description: '防衛省ホームページ ／ www.mod.go.jp',
+    },
+    {
+      href: previousExam,
+      title: '過去の問題に挑戦する',
+      description: '防衛省の過去問紹介 ／ www.mod.go.jp',
+    },
+  ];
   return /* HTML */ `<section class="official-cta" aria-label="公式大会の案内">
     <h2>防衛省サイバーコンテストのご案内</h2>
     <div class="official-body">
       <p>暗号やネットワークなど、情報セキュリティに関する問題に挑戦するコンテストです。</p>
       <p>開催情報・参加条件・募集状況は、防衛省ホームページをご確認ください。</p>
-      <a class="official-link" href="${official}" target="_blank" rel="noopener noreferrer"
-        ><span class="official-link-text"
-          >防衛省サイバーコンテスト<span class="official-domain"
-            >防衛省ホームページ ／ www.mod.go.jp</span
-          ></span
-        ><span class="official-external"
-          >外部サイト
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <path
-              d="M14 3h7v7m0-7L10 14M10 5H4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-6"
-            /></svg></span
-      ></a>
+      <div class="official-links">
+        ${links
+          .map(
+            (link) =>
+              /* HTML */ `<a
+                class="official-link"
+                href="${link.href}"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span class="official-link-text"
+                  >${link.title}<span class="official-domain">${link.description}</span></span
+                ><span class="official-external"
+                  >外部サイト
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      d="M14 3h7v7m0-7L10 14M10 5H4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-6"
+                    /></svg></span
+              ></a>`,
+          )
+          .join('')}
+      </div>
       <p class="official-note">
         この練習のクリアは、大会の参加条件ではありません。<br />本サイトは学生企画の体験サイトです。
       </p>
@@ -424,10 +446,7 @@ export function aboutPage() {
           >：小さな問題とヒントの提示方法を参考にしました。全問題のスマホ対応を確認したものではありません。
         </li>
         <li>
-          <a
-            href="https://www.mod.go.jp/j/approach/defense/cyber/c_contest/previous_exam.html"
-            target="_blank"
-            rel="noopener noreferrer"
+          <a href="${previousExam}" target="_blank" rel="noopener noreferrer"
             >防衛省サイバーコンテストの過去問紹介</a
           >：問題の分野と学習内容の説明を参考にしました。
         </li>

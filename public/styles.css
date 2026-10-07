@@ -2292,6 +2292,14 @@ body {
 .official-body > p + p {
   margin-top: 8px;
 }
+.official-links {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+}
+.official-links .official-link {
+  margin: 0;
+}
 .official-link {
   display: flex;
   align-items: center;
