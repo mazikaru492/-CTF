@@ -287,7 +287,7 @@ async function render() {
   const token = ++renderId;
   const route = location.hash || '#home';
   closeAll();
-  window.scrollTo(0, 0);
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   if (/^#mission-\d+$/.test(route)) {
     const id = Number(route.split('-')[1]);
     document.title = `${data.find((c) => c.id === id)?.title || 'ミッション'} — CYBER FIRST STEP`;
