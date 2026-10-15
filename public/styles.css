@@ -632,10 +632,10 @@ main:focus {
   border-radius: 6px;
 }
 .ascii-cell b {
-  font: 700 18px monospace;
+  font: 700 18px var(--font);
 }
 .ascii-cell small {
-  font: 700 10px monospace;
+  font: 700 10px var(--font);
   color: var(--muted);
 }
 .image-open {
