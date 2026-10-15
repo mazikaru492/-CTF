@@ -1,9 +1,9 @@
 export function createDialogs(getRenderId) {
   // Native dialogs plus a small fallback for older browser versions.
   let modalState;
-  function showDialog(dialog) {
+  function showDialog(dialog, opener = document.activeElement) {
     if (dialog.open) return;
-    modalState = { top: window.scrollY, opener: document.activeElement, token: getRenderId() };
+    modalState = { top: window.scrollY, opener, token: getRenderId() };
     document.body.style.top = `-${modalState.top}px`;
     document.body.classList.add('is-modal-open');
     dialog.returnValue = '';
@@ -62,7 +62,7 @@ export function createDialogs(getRenderId) {
     }
   });
   let zoom = 1;
-  function openImage(src, alt) {
+  function openImage(src, alt, opener) {
     const image = document.querySelector('#zoom-image');
     image.src = src;
     image.alt = alt;
@@ -71,7 +71,7 @@ export function createDialogs(getRenderId) {
     const scroll = document.querySelector('#image-scroll');
     scroll.scrollTop = 0;
     scroll.scrollLeft = 0;
-    showDialog(document.querySelector('#image-dialog'));
+    showDialog(document.querySelector('#image-dialog'), opener);
   }
   function setZoom() {
     document.querySelector('#zoom-image').style.width = `${zoom * 100}%`;
@@ -90,7 +90,7 @@ export function createDialogs(getRenderId) {
     zoom = Math.max(1, zoom - 0.5);
     setZoom();
   });
-  function confirmAction(title, description, label) {
+  function confirmAction(title, description, label, opener) {
     return new Promise((resolve) => {
       const dialog = document.querySelector('#confirm-dialog');
       document.querySelector('#confirm-title').textContent = title;
@@ -99,7 +99,7 @@ export function createDialogs(getRenderId) {
       document.querySelector('#confirm-ok').onclick = () => closeDialog(dialog, 'ok');
       document.querySelector('#confirm-cancel').onclick = () => closeDialog(dialog, 'cancel');
       dialog.addEventListener('close', () => resolve(dialog.returnValue === 'ok'), { once: true });
-      showDialog(dialog);
+      showDialog(dialog, opener);
     });
   }
 

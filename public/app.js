@@ -20,7 +20,7 @@ let renderId = 0;
 const { openImage, confirmAction, closeAll } = createDialogs(() => renderId);
 let queue = Promise.resolve();
 async function api(action, id, extra = {}) {
-  const task = queue.then(async () => {
+  const request = async () => {
     const source = new URLSearchParams(location.search).get('source');
     const url =
       '/api/game' +
@@ -55,7 +55,10 @@ async function api(action, id, extra = {}) {
     } finally {
       clearTimeout(timeout);
     }
-  });
+  };
+  const task = queue.then(() =>
+    navigator.locks ? navigator.locks.request('ctf-progress', request) : request(),
+  );
   queue = task.catch(() => {});
   return task;
 }
@@ -128,7 +131,7 @@ async function mission(id, token) {
         : '';
       feedback.className = result.correct ? 'feedback success' : 'feedback retry';
       if (!result.correct)
-        feedback.innerHTML = `${mascot('rii')}<span><strong>もう一歩！ 今回は不正解です。</strong><span>入力した合言葉と手がかりを、もう一度見比べてみよう。上のヒントも使えます。</span></span>`;
+        feedback.innerHTML = `${mascot('rii')}<span><strong>もう一歩！ 今回は不正解です。</strong><span>入力した合言葉と手がかりを、もう一度見比べてみよう。下のヒントも使えます。</span></span>`;
       document
         .querySelector('#answer-form')
         .classList.add(result.correct ? 'answer-correct' : 'answer-incorrect');
@@ -164,7 +167,7 @@ async function mission(id, token) {
       if (token === renderId) button.disabled = progress.hints[id - 1] >= 2;
     }
   });
-  document.querySelector('#explanation-button').addEventListener('click', async () => {
+  document.querySelector('#explanation-button').addEventListener('click', async (event) => {
     const alreadySolved = progress.solved.includes(id);
     if (
       !alreadySolved &&
@@ -172,6 +175,7 @@ async function mission(id, token) {
         '解説を見ますか？',
         '答えと解き方を表示します。この問題は「解説で学習」として記録され、自分で解いた正解数には含めません。',
         '解説を見る',
+        event.currentTarget,
       ))
     )
       return;
@@ -187,11 +191,11 @@ async function mission(id, token) {
     }
   });
   try {
-    await api('view', id);
-    const saved = await api('restore', id);
+    const [, saved] = await Promise.all([api('view', id), api('restore', id)]);
     if (token !== renderId) return;
     showHints(saved.hints || []);
-    if (saved.explanation) showExplanation(c, saved, false);
+    if (saved.explanation && document.querySelector('#explanation').classList.contains('hidden'))
+      showExplanation(c, saved, false);
     refreshProgress(id);
   } catch (error) {
     if (token === renderId) document.querySelector('#feedback').textContent = error.message;
@@ -259,12 +263,13 @@ function showExplanation(c, result, shouldFocus) {
 function results() {
   const token = renderId;
   main.innerHTML = resultPage(data, progress);
-  document.querySelector('#reset-progress').addEventListener('click', async () => {
+  document.querySelector('#reset-progress').addEventListener('click', async (event) => {
     if (
       !(await confirmAction(
         '進捗をリセットしますか？',
         'このブラウザの正解・学習・ヒントの記録を消し、最初から挑戦できる状態に戻します。',
         'リセットする',
+        event.currentTarget,
       ))
     )
       return;
@@ -287,11 +292,11 @@ async function render() {
   const token = ++renderId;
   const route = location.hash || '#home';
   closeAll();
-  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  let pendingMission;
   if (/^#mission-\d+$/.test(route)) {
     const id = Number(route.split('-')[1]);
     document.title = `${data.find((c) => c.id === id)?.title || 'ミッション'} — CYBER FIRST STEP`;
-    await mission(id, token);
+    pendingMission = mission(id, token);
   } else if (route === '#result') {
     document.title = '結果・復習 — CYBER FIRST STEP';
     results();
@@ -303,6 +308,11 @@ async function render() {
     main.innerHTML = homePage(data, progress);
     if (route === '#missions') document.querySelector('#missions-section').scrollIntoView();
   }
+  if (route !== '#missions')
+    requestAnimationFrame(() => {
+      if (token === renderId) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    });
+  await pendingMission;
 }
 window.addEventListener('hashchange', render);
 document.addEventListener('click', (event) => {
@@ -312,6 +322,18 @@ document.addEventListener('click', (event) => {
     main.focus({ preventScroll: true });
     main.scrollIntoView({ behavior: 'auto' });
     return;
+  }
+  if (
+    link?.getAttribute('href') === location.hash &&
+    event.button === 0 &&
+    !event.ctrlKey &&
+    !event.metaKey &&
+    !event.shiftKey &&
+    !event.altKey
+  ) {
+    event.preventDefault();
+    if (location.hash === '#missions') document.querySelector('#missions-section').scrollIntoView();
+    else window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }
   if (link?.href === official) api('official').catch(() => {});
 });

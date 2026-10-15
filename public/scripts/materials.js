@@ -84,7 +84,9 @@ export function setupMaterials(c, main, openImage) {
   main
     .querySelectorAll('[data-image]')
     .forEach((button) =>
-      button.addEventListener('click', () => openImage(button.dataset.image, button.dataset.alt)),
+      button.addEventListener('click', () =>
+        openImage(button.dataset.image, button.dataset.alt, button),
+      ),
     );
   if (c.kind === 'compare') {
     main.querySelectorAll('[data-compare]').forEach((button) =>
