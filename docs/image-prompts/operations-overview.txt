@@ -1,0 +1,21 @@
+Mode: built-in image_gen
+Asset: docs/images/operations-overview.png
+Purpose: Generated conceptual illustration for the README; no live API integration.
+Created: 2026-10-17 (Asia/Tokyo)
+
+Use case: infographic-diagram
+Asset type: A landscape generated explanatory illustration for the Japanese README of CYBER FIRST STEP, a beginner CTF learning website; aimed at staff who manage the site.
+Primary request: Create a polished, readable, restrained editorial infographic showing the daily operational cycle, not a screenshot. Wide landscape layout, 4 numbered panels left to right connected in a cycle: preparation, publishing and experience, monitoring, updates. Generous white space, warm off-white paper background, navy typography, muted blue-grey and terracotta accent. Refined isometric mini-illustrations: editable question cards and checklist; learner smartphone and laptop; server log sheet with small status indicator; versioned document and circular update arrow. Keep all text large and Japanese typesetting clear.
+Text (verbatim):
+Top title: "CYBER FIRST STEP"
+Subtitle: "運用の全体像"
+Panel 01 title: "準備"
+Panel 01 caption: "問題・画像・設定を確認"
+Panel 02 title: "公開・体験"
+Panel 02 caption: "ブラウザから学習"
+Panel 03 title: "監視"
+Panel 03 caption: "API・ログ・費用を確認"
+Panel 04 title: "更新"
+Panel 04 caption: "検証して再公開"
+Small footer: "非公式の学習サイト｜運用説明用イメージ"
+Constraints: No real organizational insignia, ministry seal, government logos, uniforms, weapons, flags, real people, actual addresses, private information, credential strings, QR codes, answer strings, or watermark. Do not imply official endorsement. This is a conceptual operation illustration; do not show a login, AI API, database, or analytics dashboard as an existing feature. No additional explanatory text beyond exact specified Japanese and panel numbers. Professional calm documentation style, excellent legibility.
