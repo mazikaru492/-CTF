@@ -1,4 +1,4 @@
-import test from 'node:test';
+import test, { beforeEach, after } from 'node:test';
 import assert from 'node:assert/strict';
 import { Readable } from 'node:stream';
 import { randomBytes } from 'node:crypto';
@@ -11,10 +11,29 @@ import {
   normalizeAnswer,
 } from '../server/challenges.mjs';
 process.env.CTF_SESSION_SECRET = randomBytes(32).toString('hex');
+process.env.NODE_ENV = 'test';
+for (const name of [
+  'VERCEL',
+  'UPSTASH_REDIS_REST_URL',
+  'UPSTASH_REDIS_REST_TOKEN',
+  'CTF_PUBLIC_ORIGIN',
+])
+  delete process.env[name];
+const realNow = Date.now;
+let testTime = realNow();
+Date.now = () => testTime;
+beforeEach(() => {
+  testTime += 60001;
+});
+after(() => {
+  Date.now = realNow;
+});
 
-async function request({ method = 'GET', body, cookie = '', headers = {} } = {}) {
+async function request({ method = 'GET', body, cookie = '', headers = {}, advance = 1000 } = {}) {
+  testTime += advance;
   const req = Readable.from(body === undefined ? [] : [JSON.stringify(body)]);
   req.method = method;
+  req.socket = { remoteAddress: '127.0.0.1' };
   req.headers = {
     host: 'localhost:3000',
     ...(body !== undefined ? { 'content-type': 'application/json' } : {}),
@@ -73,21 +92,17 @@ test('wrong answer is rejected; correct answer is recorded once and restored', a
   });
   assert.equal(wrong.body.correct, false);
   assert.deepEqual(wrong.body.progress.solved, []);
-  const waitState = decodeState(wrong.cookie.split('=')[1]);
-  waitState.last = 0;
   const right = await request({
     method: 'POST',
     body: { action: 'answer', id: 1, answer: challenges[0].answer.toLowerCase() },
-    cookie: `ctf_progress=${encodeState(waitState)}`,
+    cookie: wrong.cookie,
   });
   assert.equal(right.body.correct, true);
   assert.deepEqual(right.body.progress.solved, [1]);
-  const state = decodeState(right.cookie.split('=')[1]);
-  state.last = 0;
   const repeat = await request({
     method: 'POST',
     body: { action: 'answer', id: 1, answer: challenges[0].answer },
-    cookie: `ctf_progress=${encodeState(state)}`,
+    cookie: right.cookie,
   });
   assert.deepEqual(repeat.body.progress.solved, [1]);
   const restored = await request({
@@ -175,6 +190,7 @@ test('rapid resubmissions are limited and reset clears progress', async () => {
     method: 'POST',
     body: { action: 'answer', id: 1, answer: challenges[0].answer },
     cookie: first.cookie,
+    advance: 0,
   });
   assert.equal(rapid.status, 429);
   const reset = await request({ method: 'POST', body: { action: 'reset' }, cookie: first.cookie });

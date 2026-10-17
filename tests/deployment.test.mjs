@@ -15,6 +15,7 @@ test('deployment file export includes the catalog and preserves binary images wi
   for (const path of [
     'content/questions.json',
     'server/validate-content.mjs',
+    'server/rate-limit.mjs',
     'scripts/check.mjs',
     'public/assets/desk-photo.png',
     'public/assets/rai-rii-cutout.png',

@@ -3,7 +3,7 @@
 確認日：2026年10月17日（Asia/Tokyo）  
 対象コミット：`993c499c2196a97a2d58415a47b871a10d9bdc8a`  
 実行環境：Windows / Node.js `v24.12.0`  
-状態：監査結果。アプリケーションの修正・本番環境の設定変更は未実施。
+状態：修正前の監査記録。以下の再現結果・行番号・コマンドは対象コミット時点のものです。後続の修正と再検査は [修正後の再検査](security-recheck.md) を参照してください。
 
 ## 結果
 
@@ -138,10 +138,10 @@ URLの解析とデコードをリクエスト単位の例外処理に含め、�
 3. 開発サーバーのURL例外処理、Originの構文エラー、Content-Typeの判定を修正します。
 4. ローカルと本番のNode.jsパッチバージョンを確認・更新し、本番のCookie・ヘッダー・プロキシ動作を確認します。
 
-今回のローカル検証スクリプトと、秘密値を含まない観測結果は `test-results/api-security-audit.mjs` と `test-results/api-security-audit.json` に保存しています。`test-results/` はGit管理対象外です。再実行はリポジトリのルートで次のコマンドを使います。専用のローカル子プロセスを起動・終了し、不具合も再現する検証です。
+修正前のローカル検証スクリプトと、秘密値を含まない観測結果は `test-results/api-security-audit.mjs` と `test-results/api-security-audit.json` に保存しています。`test-results/` はGit管理対象外です。このスクリプトは旧版の不具合を期待するため、修正後の合否確認には使いません。現在の回帰検査は次のコマンドです。
 
 ```sh
-node test-results/api-security-audit.mjs
+npm run test:security
 npm test
 npm audit --json
 ```

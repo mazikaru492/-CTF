@@ -11,6 +11,15 @@ import { validateCatalog } from '../server/validate-content.mjs';
 import { checkContent } from '../scripts/check.mjs';
 import { homePage, missionPage, resultPage } from '../public/scripts/pages.js';
 
+process.env.NODE_ENV = 'test';
+for (const name of [
+  'VERCEL',
+  'UPSTASH_REDIS_REST_URL',
+  'UPSTASH_REDIS_REST_TOKEN',
+  'CTF_PUBLIC_ORIGIN',
+])
+  delete process.env[name];
+
 // Keep invalid-input fixtures independent of the questions being authored.
 const sampleQuestion = {
   id: 1,
@@ -138,6 +147,7 @@ test('a ninth question needs no hardcoded counts in UI, API or progress', async 
     const ask = async (body, cookie = '') => {
       const req = Readable.from(body ? [JSON.stringify(body)] : []);
       req.method = body ? 'POST' : 'GET';
+      req.socket = { remoteAddress: '127.0.0.1' };
       req.headers = {
         host: 'localhost',
         cookie,
