@@ -29,24 +29,9 @@ const mime = {
 const config = JSON.parse(await readFile(resolve('vercel.json'), 'utf8'));
 createServer(async (req, res) => {
   for (const { key, value } of config.headers[0].headers) res.setHeader(key, value);
-  let path;
-  let decoded;
-  try {
-    path = new URL(req.url, 'http://localhost').pathname;
-    decoded = decodeURIComponent(path === '/' ? '/index.html' : path);
-    if (/[\u0000-\u001f\u007f]/.test(decoded)) throw new Error('Invalid path');
-  } catch {
-    res.writeHead(400);
-    res.end('Bad request');
-    return;
-  }
+  const path = new URL(req.url, 'http://localhost').pathname;
   if (path === '/api/game') return handler(req, res);
-  if (!['GET', 'HEAD'].includes(req.method)) {
-    res.writeHead(405, { Allow: 'GET, HEAD' });
-    res.end('Method not allowed');
-    return;
-  }
-  const target = resolve(publicRoot, '.' + decoded);
+  const target = resolve(publicRoot, '.' + decodeURIComponent(path === '/' ? '/index.html' : path));
   if (!target.startsWith(publicRoot + '\\') && !target.startsWith(publicRoot + '/')) {
     res.writeHead(403);
     res.end();

@@ -1,5 +1,4 @@
 import { createHmac, timingSafeEqual, randomUUID } from 'node:crypto';
-import { rateLimit } from './rate-limit.mjs';
 import {
   challenges,
   challengeCount,
@@ -114,22 +113,11 @@ export default async function handler(req, res) {
   };
   try {
     secret();
-    const limited = async (sessionId) => {
-      const retryMs = await rateLimit(req, sessionId);
-      if (!retryMs) return false;
-      res.setHeader('Retry-After', String(Math.ceil(retryMs / 1000)));
-      send(429, { error: '少し待って、もう一度送信してください。' });
-      return true;
-    };
-    if (await limited()) return;
     let state = decodeState(cookieFromRequest(req)) || newState();
     const source = new URL(req.url || '/', 'http://localhost').searchParams.get('source');
     if (['school', 'x', 'event'].includes(source)) state.source = source;
     const setCookie = () => {
-      const secure =
-        process.env.VERCEL ||
-        req.socket?.encrypted ||
-        process.env.CTF_PUBLIC_ORIGIN?.startsWith('https://');
+      const secure = process.env.VERCEL || req.headers['x-forwarded-proto'] === 'https';
       res.setHeader(
         'Set-Cookie',
         `${cookieName}=${encodeState(state)}; HttpOnly; SameSite=Strict; Path=/; Max-Age=${maxAge}${secure ? '; Secure' : ''}`,
@@ -145,38 +133,14 @@ export default async function handler(req, res) {
       send(405, { error: 'この操作は利用できません。' });
       return;
     }
-    const contentType = req.headers['content-type'];
-    if (
-      typeof contentType !== 'string' ||
-      contentType.split(';', 1)[0].trim().toLowerCase() !== 'application/json'
-    ) {
+    if (!req.headers['content-type']?.startsWith('application/json')) {
       send(415, { error: '送信形式が正しくありません。' });
       return;
     }
     const origin = req.headers.origin;
-    if (origin !== undefined) {
-      let validOrigin = false;
-      try {
-        const actual = new URL(origin);
-        const protocol = process.env.VERCEL || req.socket?.encrypted ? 'https:' : 'http:';
-        const expected = new URL(
-          process.env.CTF_PUBLIC_ORIGIN || `${protocol}//${req.headers.host}`,
-        );
-        validOrigin =
-          ['http:', 'https:'].includes(actual.protocol) &&
-          !actual.username &&
-          !actual.password &&
-          actual.pathname === '/' &&
-          !actual.search &&
-          !actual.hash &&
-          actual.origin === expected.origin;
-      } catch {
-        // Invalid or opaque Origin values are client errors, not service failures.
-      }
-      if (!validOrigin) {
-        send(403, { error: 'この送信元からの操作は利用できません。' });
-        return;
-      }
+    if (origin && new URL(origin).host !== (req.headers['x-forwarded-host'] || req.headers.host)) {
+      send(403, { error: 'この送信元からの操作は利用できません。' });
+      return;
     }
     if (req.headers['sec-fetch-site'] === 'cross-site') {
       send(403, { error: 'この送信元からの操作は利用できません。' });
@@ -220,7 +184,10 @@ export default async function handler(req, res) {
         send(400, { error: 'フラグを100文字以内で入力してください。' });
         return;
       }
-      if (await limited(state.sid)) return;
+      if (Date.now() - state.last < 750) {
+        send(429, { error: '少し待って、もう一度送信してください。' });
+        return;
+      }
       state.last = Date.now();
       const correct = normalizeAnswer(body.answer) === challenge.answer;
       if (correct && !state.solved.includes(id) && !state.learned.includes(id)) {

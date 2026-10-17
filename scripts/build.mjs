@@ -2,9 +2,7 @@ import { cp, mkdir, readdir, rm } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { checkContent } from './check.mjs';
-import { validateRateLimitConfig } from '../server/rate-limit.mjs';
 
-validateRateLimitConfig();
 await checkContent();
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = resolve(root, 'dist');

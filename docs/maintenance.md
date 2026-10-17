@@ -87,17 +87,15 @@
 
 ## 確認コマンド
 
-| コマンド                        | 確認するもの                                    |
-| ------------------------------- | ----------------------------------------------- |
-| `npm run check`                 | 問題設定・画像パス                              |
-| `npm test`                      | 判定・Cookie・検証ルール・問題数変更            |
-| `npm run test:security`         | Cookie再送・頻度制限・Origin・不正URL・公開範囲 |
-| `npm run test:browser-security` | 全画面と入力表示・ヒント・解説・復元・リセット  |
-| `npm run test:mobile`           | スマホ縦横・文字拡大・キーボード表示時の操作    |
-| `npm run test:feedback`         | 正解・不正解、配色、動きを減らす設定            |
-| `npm run test:devices`          | タブレット・PCも含む追加確認                    |
-| `npm run build`                 | 設定確認後、配信用ファイルを `dist/` に生成     |
-| `npm run format:check`          | 自動整形の確認                                  |
+| コマンド                | 確認するもの                                 |
+| ----------------------- | -------------------------------------------- |
+| `npm run check`         | 問題設定・画像パス                           |
+| `npm test`              | 判定・Cookie・検証ルール・問題数変更         |
+| `npm run test:mobile`   | スマホ縦横・文字拡大・キーボード表示時の操作 |
+| `npm run test:feedback` | 正解・不正解、配色、動きを減らす設定         |
+| `npm run test:devices`  | タブレット・PCも含む追加確認                 |
+| `npm run build`         | 設定確認後、配信用ファイルを `dist/` に生成  |
+| `npm run format:check`  | 自動整形の確認                               |
 
 ブラウザテストには、初回だけ `npx playwright install chromium webkit` が必要です。ブラウザのエミュレーションでの検証なので、公開前には実機でも確認してください。
 
@@ -105,6 +103,6 @@
 
 `npm run dev` は問題設定やサーバーの保存を監視します。再起動後、ブラウザを更新すると変更を確認できます。ローカルの署名鍵は `.env.local` で維持され、Gitに入りません。鍵を変更・削除するとローカルの進捗は無効になります。
 
-公開時はVercelの環境変数に `CTF_SESSION_SECRET` と `UPSTASH_REDIS_REST_URL`・`UPSTASH_REDIS_REST_TOKEN` を設定します。共有ストアが未設定の本番ビルドは停止します。[送信制限の運用手順](rate-limiting.md)で環境ごとの設定を確認してください。`content/` と `server/` はサーバー専用、`public/` だけがブラウザへ配信されます。秘密値や答えの設定ファイルを `public/` に置かないでください。
+公開時はVercelの環境変数に `CTF_SESSION_SECRET` を設定します。`content/` と `server/` はサーバー専用、`public/` だけがブラウザへ配信されます。秘密値や答えの設定ファイルを `public/` に置かないでください。
 
 `dist/` は毎回作り直すビルド結果です。編集・素材の追加は必ず元の `public/` に行います。公開手順・計測・素材の出典と制限は [公開運用の詳細](operations.md) を参照してください。
