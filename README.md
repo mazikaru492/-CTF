@@ -383,6 +383,7 @@ npm run test:devices
 
 - [運用・編集ガイド](docs/maintenance.md)：問題設定の項目、素材形式、画像の更新手順。
 - [公開運用の詳細](docs/operations.md)：素材の出典、公開設定、計測、過去の検証と運用上の制限。
+- [APIセキュリティ監査](docs/api-security-audit.md)：確認範囲、再現した問題、対策の優先順位。
 - [運用イラストの生成記録](docs/image-prompts/operations-overview.txt)：生成方法、保存先、使用したプロンプト。
 
 本資料のAPI・構成の説明は、リポジトリ内の実装に基づいています。API・進捗方式・配信構成を変更した場合は、このREADMEと関連資料も更新してください。
