@@ -731,6 +731,23 @@ main:focus {
   font: 700 11px monospace;
   color: var(--muted);
 }
+.code-copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: 12px;
+}
+.code-copy .material-tip {
+  flex: 1 1 200px;
+  margin: 0;
+  text-align: left;
+}
+@media (max-width: 700px) {
+  .code-copy .btn {
+    width: 100%;
+  }
+}
 .record-list {
   display: flex;
   gap: 8px;
@@ -1897,14 +1914,14 @@ body.is-modal-open > :not(dialog) {
   aspect-ratio: 2/3;
   background-image: url('/assets/rai-rii-cutout.png');
   background-repeat: no-repeat;
-  background-size: auto 115%;
+  background-size: auto 100%;
   pointer-events: none;
 }
 .mascot-rai {
-  background-position: 17% 50%;
+  background-position: 14% 50%;
 }
 .mascot-rii {
-  background-position: 84% 50%;
+  background-position: 87% 50%;
 }
 .mascot-welcome {
   text-align: center;

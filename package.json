@@ -12,6 +12,8 @@
     "test:mobile": "node tests/devices.mjs --mobile",
     "test:devices": "node tests/devices.mjs",
     "test:feedback": "node tests/feedback.mjs",
+    "test:clipboard": "node tests/clipboard.mjs",
+    "test:compare": "node tests/compare.mjs",
     "format": "prettier --write public server api scripts tests content package.json vercel.json README.md docs/maintenance.md .prettierrc.json",
     "format:check": "prettier --check public server api scripts tests content package.json vercel.json README.md docs/maintenance.md .prettierrc.json"
   },

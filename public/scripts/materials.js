@@ -27,6 +27,15 @@ export function material(c) {
       <summary>${escape(m.textClue)}（画像が見づらいとき）</summary>
       <p>${escape(m.textDetail)}</p>
     </details>`;
+  const codeCopy = (subject) =>
+    /* HTML */ `<div class="code-copy">
+      <button id="copy-selected-code" class="btn secondary" type="button" disabled>
+        選んだコードをコピー
+      </button>
+      <p id="copy-code-status" class="material-tip" role="status">
+        ${subject}を選んでからコピーできます。
+      </p>
+    </div>`;
   if (c.kind === 'cipher')
     return /* HTML */ `${label}${cipher(m.cipher)}${alphabet}
       <p class="material-tip">文字を「１つ前」へ戻してみよう。</p>`;
@@ -46,7 +55,7 @@ export function material(c) {
         <button data-compare="before" aria-pressed="true">変更前</button
         ><button data-compare="after" aria-pressed="false">変更後</button>
       </div>
-      ${imageButton(m.before, m.beforeAlt || '３枚のカードが並んだ、変更前の掲示板')}
+      ${imageButton(m.before, m.beforeAlt || '変更前の掲示板')}
       <p id="compare-caption" class="material-tip" aria-live="polite">変更前の掲示板を表示中</p>
       ${textClue()}`;
   if (c.kind === 'logs')
@@ -57,7 +66,8 @@ export function material(c) {
       <div class="device-grid">
         ${m.devices.map((d) => /* HTML */ `<button class="device-btn" data-device="${escape(d.id)}" aria-pressed="false"><span>端末 ${escape(d.id)}</span><span class="device-code">コードを見る</span></button>`).join('')}
       </div>
-      <p id="device-detail" class="material-tip" aria-live="polite"></p>`;
+      <p id="device-detail" class="material-tip" aria-live="polite"></p>
+      ${codeCopy('端末')}`;
   if (c.kind === 'records')
     return /* HTML */ `${label}
       <p class="material-label">現在の一覧</p>
@@ -68,7 +78,8 @@ export function material(c) {
       <div class="device-grid">
         ${m.backup.map((d) => /* HTML */ `<button class="device-btn" data-record="${escape(d.id)}" aria-pressed="false"><span>${escape(d.id)}</span><span class="device-code">開いて調べる</span></button>`).join('')}
       </div>
-      <p id="record-detail" class="material-tip" aria-live="polite"></p>`;
+      <p id="record-detail" class="material-tip" aria-live="polite"></p>
+      ${codeCopy('カード')}`;
   if (c.kind === 'order')
     return /* HTML */ `${label}
       <div id="order-list" class="order-list"></div>
@@ -99,7 +110,7 @@ export function setupMaterials(c, main, openImage) {
         const src = before ? c.material.before : c.material.after;
         const alt = before
           ? c.material.beforeAlt || '変更前の掲示板'
-          : c.material.afterAlt || '変更後の掲示板。３つのカードに英字が追加されている。';
+          : c.material.afterAlt || '変更後の掲示板';
         image.dataset.image = src;
         image.dataset.alt = alt;
         image.querySelector('img').src = src;
@@ -109,6 +120,24 @@ export function setupMaterials(c, main, openImage) {
       }),
     );
   }
+  const copyButton = main.querySelector('#copy-selected-code');
+  const copyStatus = main.querySelector('#copy-code-status');
+  copyButton?.addEventListener('click', async () => {
+    const code = copyButton.dataset.code;
+    copyButton.disabled = true;
+    copyStatus.textContent = 'コピーしています…';
+    try {
+      await navigator.clipboard.writeText(code);
+      if (copyButton.dataset.code === code)
+        copyStatus.textContent = `${code} をコピーしました。下の入力欄に貼り付けてください。`;
+    } catch {
+      if (copyButton.dataset.code === code)
+        copyStatus.textContent =
+          'コピーできませんでした。上のコードを長押ししてコピーしてください。';
+    } finally {
+      if (copyButton.dataset.code === code) copyButton.disabled = false;
+    }
+  });
   const selectable =
     c.kind === 'logs'
       ? { attr: 'device', items: c.material.devices, output: '#device-detail' }
@@ -124,6 +153,11 @@ export function setupMaterials(c, main, openImage) {
           .forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
         main.querySelector(selectable.output).textContent = `${item.id} のコード：${item.code}`;
         button.querySelector('.device-code').textContent = item.code;
+        if (copyButton) {
+          copyButton.dataset.code = item.code;
+          copyButton.disabled = false;
+          copyStatus.textContent = '下の入力欄に貼り付けて使えます。';
+        }
       }),
     );
   if (c.kind === 'order') {
