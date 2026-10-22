@@ -85,6 +85,34 @@ export function material(c) {
       <div id="order-list" class="order-list"></div>
       <p class="material-tip">時刻順に並べ、文字を上から読もう。</p>
       <p class="order-result" id="order-result" aria-live="polite"></p>`;
+  if (c.kind === 'phishing')
+    return /* HTML */ `${label}
+      <div class="email-rule">
+        <strong>公式ドメイン：<code>${escape(m.officialDomain)}</code></strong>
+        <p>送信元とリンク先のドメインを、公式ドメインと見比べよう。</p>
+      </div>
+      <p class="email-note">すべて架空の練習用メールです。URLは開かず、文字を見比べて調べます。</p>
+      <ol class="email-list" role="list" aria-label="届いたメール">
+        ${m.emails
+          .map(
+            (mail) =>
+              /* HTML */ `<li class="email-card">
+                <h3>メール ${escape(mail.id)}</h3>
+                <p class="email-subject">大会事務局からのお知らせ</p>
+                <dl class="email-fields">
+                  <div>
+                    <dt>送信元</dt>
+                    <dd><code>${escape(mail.sender)}</code></dd>
+                  </div>
+                  <div>
+                    <dt>リンク先URL</dt>
+                    <dd><code>${escape(mail.url)}</code></dd>
+                  </div>
+                </dl>
+              </li>`,
+          )
+          .join('')}
+      </ol>`;
   if (c.kind === 'final')
     return /* HTML */ `${label}${imageButton(m.image, m.alt)}${textClue()}
       <p class="rule"><strong>調査記録</strong><br />${escape(m.rule)}</p>

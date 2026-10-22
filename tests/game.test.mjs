@@ -64,6 +64,36 @@ test('session signatures reject tampering and expire after the deadline', () => 
   assert.equal(decodeState(encoded.replace(/.$/, encoded.endsWith('a') ? 'b' : 'a')), null);
   assert.equal(decodeState(encoded, state.exp), null);
 });
+test('replacing question eight preserves earlier progress and clears only the old question', async () => {
+  const legacy = {
+    v: 1,
+    sid: 'before-phishing',
+    exp: Date.now() + 10000,
+    last: 0,
+    solved: [1, 7, 8],
+    learned: [2, 8],
+    viewed: [1, 2, 7, 8],
+    hints: Array(challengeCount).fill(1),
+  };
+  const cookie = `ctf_progress=${encodeState(legacy)}`;
+  const response = await request({ cookie });
+  assert.deepEqual(response.body.progress.solved, [1, 7]);
+  assert.deepEqual(response.body.progress.learned, [2]);
+  assert.deepEqual(response.body.progress.viewed, [1, 2, 7]);
+  assert.deepEqual(response.body.progress.hints, [...Array(7).fill(1), 0]);
+  const upgraded = decodeState(response.cookie.split('=')[1]);
+  assert.equal(upgraded.v, 2);
+  assert.equal(upgraded.sid, legacy.sid);
+  assert.equal(decodeState(encodeState(legacy), legacy.exp), null);
+  assert.equal(decodeState(encodeState({ ...legacy, hints: [99] })), null);
+  const restored = await request({
+    method: 'POST',
+    body: { action: 'restore', id: 8 },
+    cookie: response.cookie,
+  });
+  assert.equal(restored.body.answer, undefined, 'the old solve must not reveal the new answer');
+});
+
 test('wrong answer is rejected; correct answer is recorded once and restored', async () => {
   const initial = await request();
   const wrong = await request({

@@ -175,7 +175,7 @@ export function homePage(data, progress) {
     </section>
     <section class="hero-stats" aria-label="体験の概要">
       <div class="stat">
-        <strong>全${data.length}問</strong><span>暗号・画像・証拠・時系列の4分野</span>
+        <strong>全${data.length}問</strong><span>暗号・画像・記録・メールを調査</span>
       </div>
       <div class="stat"><strong>1〜3分</strong><span>最初の1問にかかる時間の目安</span></div>
       <div class="stat"><strong>ヒント無料</strong><span>全問にヒントと解説付き</span></div>

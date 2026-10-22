@@ -29,8 +29,9 @@ export function decodeState(cookie, now = Date.now()) {
     const received = Buffer.from(signature);
     if (received.length !== expected.length || !timingSafeEqual(received, expected)) return null;
     const state = JSON.parse(Buffer.from(payload, 'base64url').toString());
+    const replaceQuestion8 = progressVersion === 2 && state.v === 1;
     if (
-      state.v !== progressVersion ||
+      (state.v !== progressVersion && !replaceQuestion8) ||
       !Number.isFinite(state.exp) ||
       state.exp <= now ||
       !Number.isFinite(state.last) ||
@@ -51,6 +52,13 @@ export function decodeState(cookie, now = Date.now()) {
       state.hints.some((n) => !Number.isInteger(n) || n < 0 || n > 2)
     )
       return null;
+    if (replaceQuestion8) {
+      // Version 2 replaces only question 8; retain earlier progress after signature/schema checks.
+      state.v = progressVersion;
+      for (const name of ['solved', 'learned', 'viewed'])
+        state[name] = state[name].filter((id) => id !== 8);
+      state.hints[7] = 0;
+    }
     return state;
   } catch {
     return null;

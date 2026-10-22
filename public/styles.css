@@ -605,6 +605,54 @@ main:focus {
   margin-top: 14px;
   text-align: center;
 }
+.email-rule {
+  padding: 16px;
+  background: var(--panel2);
+  border-radius: 6px;
+}
+.email-rule p,
+.email-note,
+.email-subject,
+.email-fields dt {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.email-note {
+  margin: 12px 0 20px;
+}
+.email-list {
+  display: grid;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+.email-card {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+}
+.email-card h3 {
+  font-size: 1.125rem;
+}
+.email-subject {
+  margin: 4px 0 16px;
+}
+.email-fields {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+.email-fields dd {
+  margin: 4px 0 0;
+}
+.email-fields code,
+.email-rule code {
+  font-size: 1rem;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
 .number-strip {
   display: flex;
   justify-content: center;

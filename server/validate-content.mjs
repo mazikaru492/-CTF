@@ -1,4 +1,14 @@
-const kinds = new Set(['cipher', 'ascii', 'image', 'compare', 'logs', 'records', 'order', 'final']);
+const kinds = new Set([
+  'cipher',
+  'ascii',
+  'image',
+  'compare',
+  'logs',
+  'records',
+  'order',
+  'final',
+  'phishing',
+]);
 const textFields = [
   'category',
   'title',
@@ -18,6 +28,7 @@ const materialFields = {
   records: ['current', 'backup'],
   order: ['cards'],
   final: ['image', 'alt', 'textClue', 'textDetail', 'cipher', 'rule'],
+  phishing: ['officialDomain', 'emails'],
 };
 
 // Authoring errors fail before startup/build, with the exact question and field.
@@ -137,6 +148,38 @@ export function validateCatalog(catalog) {
       });
     }
     if (question.kind === 'final') text(material.rule, `${prefix}.rule`);
+    if (question.kind === 'phishing') {
+      const trainingDomain = /^(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+example$/;
+      text(material.officialDomain, `${prefix}.officialDomain`);
+      if (!trainingDomain.test(material.officialDomain))
+        fail(`${prefix}.officialDomain`, '.exampleで終わる架空のドメインを指定してください。');
+      items(material.emails, `${prefix}.emails`, ['id', 'sender', 'url']);
+      material.emails.forEach((mail, i) => {
+        const path = `${prefix}.emails[${i}]`;
+        const address = mail.sender.split('@');
+        if (
+          address.length !== 2 ||
+          !address[0] ||
+          /\s/.test(mail.sender) ||
+          !trainingDomain.test(address[1])
+        )
+          fail(`${path}.sender`, '.exampleのドメインを使うメールアドレスを指定してください。');
+        let url;
+        try {
+          url = new URL(mail.url);
+        } catch {
+          fail(`${path}.url`, '正しいURLを指定してください。');
+        }
+        if (
+          url.protocol !== 'https:' ||
+          !trainingDomain.test(url.hostname) ||
+          url.username ||
+          url.password ||
+          url.port
+        )
+          fail(`${path}.url`, '.exampleのドメインを使うHTTPSのURLを指定してください。');
+      });
+    }
   });
   return catalog;
 }

@@ -1,5 +1,5 @@
 {
-  "progressVersion": 1,
+  "progressVersion": 2,
   "questions": [
     {
       "id": 1,
@@ -211,26 +211,31 @@
     },
     {
       "id": 8,
-      "category": "時系列・総合",
-      "kind": "final",
-      "title": "最後の合言葉",
-      "subtitle": "いままでのひらめきを、ひとつに。",
-      "instruction": "画像のKEYの数字と記録のルールを使い、UCHGを元の英字に戻してください。アルファベットはZの次にAへ戻ります。",
+      "category": "メール調査",
+      "kind": "phishing",
+      "title": "偽の大会案内を見抜け",
+      "subtitle": "送信元とリンク先を、確かめよう。",
+      "instruction": "大会事務局から４通の案内が届きました。この問題の公式ドメインはctf.exampleです。送信元またはリンク先のドメインが公式と異なる、不審な２通を探してください。そのメールのIDをアルファベット順につなげて提出してください。",
       "material": {
-        "image": "/assets/key.svg",
-        "alt": "調査用の鍵カード。中央にKEYの数字が記されている。",
-        "textClue": "鍵カードの印字を読む",
-        "textDetail": "鍵カードにはKEY = 2と印字されています。",
-        "cipher": "UCHG",
-        "rule": "暗号化では、各文字をKEYの数だけアルファベット順に後ろへずらした。"
+        "officialDomain": "ctf.example",
+        "emails": [
+          { "id": "A", "sender": "info@ctf.example", "url": "https://ctf.example/entry" },
+          {
+            "id": "B",
+            "sender": "info@ctf.example",
+            "url": "https://ctf.example.account-check.example/entry"
+          },
+          { "id": "C", "sender": "news@ctf.example", "url": "https://ctf.example/guide" },
+          { "id": "D", "sender": "info@ctf-support.example", "url": "https://ctf.example/entry" }
+        ]
       },
-      "answer": "SAFE",
+      "answer": "BD",
       "hints": [
-        "画像に書かれたKEYは、ずらした文字数です。",
-        "KEYは２。復号では２文字前へ戻します。UはSに戻ります。"
+        "メールの表示名より、ドメインを確認しましょう。送信元は@の後ろ、リンク先はhttps://の後ろから次の/までを見比べます。",
+        "Bのリンク先はctf.exampleで始まっていますが、その後ろにも文字が続いています。もう１通は送信元のドメインを調べましょう。"
       ],
-      "explanation": "KEY=2なのでU→S、C→A、H→F、G→Eと２文字前へ戻します。最後のフラグはSAFEです。",
-      "learning": "異なる手がかりを組み合わせる力。復号は、鍵と暗号の規則を使って、隠された情報を元に戻す手法です。暗号技術はインターネット通信や保存データの保護に使われます。この問題は古典暗号の練習で、実際の保護には、より強い暗号と適切な鍵の管理が必要です。"
+      "explanation": "Bのリンク先はctf.example.account-check.exampleで、公式のctf.exampleとは別のドメインです。Dの送信元もctf-support.exampleで公式と異なります。不審なメールはBとDなので、IDを順につなげたBDがフラグです。",
+      "learning": "送信元とリンク先を照合する力。フィッシングは、信頼できる組織を装って偽のサイトなどへ誘導する手口です。公式に似た文字が含まれていても、ドメイン全体を確かめる必要があります。実際には送信元の表示も偽装されるため、ドメインの一致だけで安全とは断定せず、公式サイトを自分で開くなどして確認します。"
     }
   ]
 }

@@ -19,6 +19,7 @@ const iconPaths = {
   order: '<circle cx="10" cy="10" r="7"/><path d="M10 6v4l3 2M20 9v12m-3-3 3 3 3-3M3 20h10"/>',
   final:
     '<rect x="4" y="10" width="16" height="12" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0"/><circle cx="12" cy="15" r="1.5"/><path d="M12 16.5V19"/>',
+  phishing: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 5 10 8L22 5"/>',
 };
 export const icons = Object.fromEntries(
   Object.entries(iconPaths).map(([kind, paths]) => [
