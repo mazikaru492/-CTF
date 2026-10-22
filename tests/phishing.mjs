@@ -16,6 +16,32 @@ for (const engine of [chromium, webkit]) {
     assert.equal(await page.locator('.email-card').count(), 4);
     assert.equal(await page.locator('.email-card a,.cipher,.alphabet,.image-open').count(), 0);
     assert.equal(await page.locator('#flag-input').inputValue(), '');
+    assert.ok(
+      await page.locator('#email-flag-guide').isVisible(),
+      'flag format and destination are explained next to the evidence',
+    );
+    assert.ok((await page.locator('#email-flag-guide').textContent()).includes('AC'));
+    assert.equal(await page.locator('[data-email-select]').count(), 4);
+    const useFlag = page.locator('#use-email-flag');
+    assert.ok(await useFlag.isDisabled());
+    await page.locator('[data-email-select="C"]').tap();
+    await page.locator('[data-email-select="A"]').tap();
+    assert.equal(
+      await page.locator('#email-built-flag').textContent(),
+      'AC',
+      'IDs are sorted regardless of tap order',
+    );
+    await useFlag.tap();
+    assert.equal(await page.locator('#flag-input').inputValue(), 'AC');
+    assert.equal(
+      await page.locator('.result-visual').count(),
+      0,
+      'selection and transfer do not grade the answer',
+    );
+    await page.locator('[data-email-select="B"]').tap();
+    assert.ok(await useFlag.isDisabled(), 'three selected emails do not create a two-letter flag');
+    for (const id of ['A', 'B', 'C']) await page.locator(`[data-email-select="${id}"]`).tap();
+    assert.ok(await useFlag.isDisabled());
     assert.ok(!(await page.locator('#mission-material').textContent()).includes('BD'));
     for (const [width, height] of [
       [320, 640],
@@ -60,11 +86,32 @@ for (const engine of [chromium, webkit]) {
           .screenshot({ path: `test-results/phishing-${engine.name()}-${width}.png` });
     }
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.locator('#flag-input').fill('SAFE');
-    await page.locator('#submit-answer').tap();
-    await page.locator('.feedback.retry').waitFor();
-    await page.waitForTimeout(800);
-    await page.locator('#flag-input').fill('ｂｄ');
+    for (const wrong of ['SAFE', 'AC']) {
+      await page.locator('#flag-input').fill(wrong);
+      await page.locator('#submit-answer').tap();
+      await page.waitForFunction(
+        () => document.querySelector('#submit-answer')?.disabled === false,
+      );
+      await page.locator('.feedback.retry').waitFor();
+      await page.waitForTimeout(800);
+    }
+    await page.locator('[data-email-select="D"]').tap();
+    await page.locator('[data-email-select="B"]').tap();
+    assert.equal(await page.locator('#email-built-flag').textContent(), 'BD');
+    await page
+      .locator('#email-flag-guide')
+      .screenshot({ path: `test-results/phishing-flag-builder-${engine.name()}.png` });
+    await useFlag.tap();
+    assert.equal(await page.locator('#flag-input').inputValue(), 'BD');
+    assert.equal(await page.locator('#flag-input').getAttribute('aria-invalid'), null);
+    assert.equal(
+      await page.locator('.feedback.retry').count(),
+      0,
+      'new flag entry clears the previous rejection',
+    );
+    await page
+      .locator('#answer-form')
+      .screenshot({ path: `test-results/phishing-filled-answer-${engine.name()}.png` });
     await page.locator('#submit-answer').tap();
     await page.locator('.result-visual.is-correct').waitFor();
     await page.reload();
@@ -79,7 +126,7 @@ for (const engine of [chromium, webkit]) {
     assert.ok(await page.locator('#hint-button').isDisabled());
     assert.ok(await page.locator('#explanation').isHidden());
     console.log(
-      `PASS ${engine.name()}: 6 phone/tablet sizes, full addresses, no live links, old answer rejected, new answer/restoration, two hints`,
+      `PASS ${engine.name()}: 6 phone/tablet sizes, touch selection, sorted flag transfer, sample/old answers rejected, correct answer/restoration, two hints`,
     );
   } finally {
     await browser.close();

@@ -296,7 +296,7 @@ export function missionPage(c, data, progress) {
               id="flag-input"
               name="flag"
               type="text"
-              placeholder="合言葉を入力"
+              placeholder="${c.kind === 'phishing' ? '選んだ２通のID（例：AC）' : '合言葉を入力'}"
               maxlength="100"
               autocomplete="off"
               autocapitalize="characters"
@@ -308,6 +308,7 @@ export function missionPage(c, data, progress) {
             </button>
           </div>
           <p id="input-note" class="input-note">
+            ${c.kind === 'phishing' ? '不審なメールのIDをつなげた２文字を入力します。例：AとCならAC。スペースや記号は不要です。' : ''}
             大文字・小文字、全角英数字の違いは気にしなくてOK。
           </p>
           <button

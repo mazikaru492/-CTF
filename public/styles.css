@@ -610,9 +610,7 @@ main:focus {
   background: var(--panel2);
   border-radius: 6px;
 }
-.email-rule p,
 .email-note,
-.email-subject,
 .email-fields dt {
   font-size: 0.875rem;
   color: var(--muted);
@@ -633,11 +631,21 @@ main:focus {
   border-radius: 6px;
   background: var(--panel);
 }
-.email-card h3 {
+.email-card h3,
+.email-rule h3 {
   font-size: 1.125rem;
 }
-.email-subject {
-  margin: 4px 0 16px;
+.email-card h3 {
+  margin-bottom: 12px;
+}
+.email-card .btn,
+#email-flag-guide .btn {
+  width: 100%;
+  margin-top: 14px;
+}
+.email-card .btn[aria-pressed='true'] {
+  background: var(--accent);
+  color: var(--bg);
 }
 .email-fields {
   display: grid;

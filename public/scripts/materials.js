@@ -89,7 +89,7 @@ export function material(c) {
     return /* HTML */ `${label}
       <div class="email-rule">
         <strong>公式ドメイン：<code>${escape(m.officialDomain)}</code></strong>
-        <p>送信元とリンク先のドメインを、公式ドメインと見比べよう。</p>
+        <p>送信元とリンク先を見比べて、不審なメールを２通選びましょう。</p>
       </div>
       <p class="email-note">すべて架空の練習用メールです。URLは開かず、文字を見比べて調べます。</p>
       <ol class="email-list" role="list" aria-label="届いたメール">
@@ -97,8 +97,7 @@ export function material(c) {
           .map(
             (mail) =>
               /* HTML */ `<li class="email-card">
-                <h3>メール ${escape(mail.id)}</h3>
-                <p class="email-subject">大会事務局からのお知らせ</p>
+                <h3>メールID：${escape(mail.id)}</h3>
                 <dl class="email-fields">
                   <div>
                     <dt>送信元</dt>
@@ -109,10 +108,29 @@ export function material(c) {
                     <dd><code>${escape(mail.url)}</code></dd>
                   </div>
                 </dl>
+                <button
+                  class="btn secondary"
+                  type="button"
+                  data-email-select="${escape(mail.id)}"
+                  aria-pressed="false"
+                  aria-label="メールID ${escape(mail.id)}を選ぶ"
+                >
+                  このメールを選ぶ
+                </button>
               </li>`,
           )
           .join('')}
-      </ol>`;
+      </ol>
+      <section id="email-flag-guide" class="email-rule" aria-labelledby="email-flag-title">
+        <h3 id="email-flag-title">選んだIDがフラグになります</h3>
+        <p>２通のIDを順につなげた２文字を、下の入力欄に入れて提出します。</p>
+        <p>書き方の例：AとCなら <code>AC</code>（今回の正解ではありません）。</p>
+        <p id="email-selection-status" role="status">選択：0 / 2通。上のメールを選んでください。</p>
+        <p>作ったフラグ：<code id="email-built-flag">未作成</code></p>
+        <button id="use-email-flag" class="btn secondary" type="button" disabled>
+          このフラグを入力欄に入れる
+        </button>
+      </section>`;
   if (c.kind === 'final')
     return /* HTML */ `${label}${imageButton(m.image, m.alt)}${textClue()}
       <p class="rule"><strong>調査記録</strong><br />${escape(m.rule)}</p>
@@ -120,6 +138,42 @@ export function material(c) {
   return '';
 }
 export function setupMaterials(c, main, openImage) {
+  if (c.kind === 'phishing') {
+    const selected = new Set();
+    const useFlag = main.querySelector('#use-email-flag');
+    main.querySelectorAll('[data-email-select]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const id = button.dataset.emailSelect;
+        if (selected.has(id)) selected.delete(id);
+        else selected.add(id);
+        const pressed = selected.has(id);
+        button.setAttribute('aria-pressed', String(pressed));
+        button.setAttribute('aria-label', `メールID ${id}${pressed ? 'の選択を解除' : 'を選ぶ'}`);
+        button.textContent = pressed ? `選択中：メールID ${id}` : 'このメールを選ぶ';
+        const ids = [...selected].sort();
+        const ready = ids.length === 2;
+        main.querySelector('#email-built-flag').textContent = ready ? ids.join('') : '未作成';
+        main.querySelector('#email-selection-status').textContent =
+          `選択：${ids.length} / 2通。` +
+          (ready
+            ? `選んだIDは${ids.join('・')}です。下のボタンで入力欄に入れられます。`
+            : ids.length > 2
+              ? '選択中のメールをもう一度押して、２通に絞ってください。'
+              : '不審なメールをあと' + (2 - ids.length) + '通選んでください。');
+        useFlag.disabled = !ready;
+      });
+    });
+    useFlag.addEventListener('click', () => {
+      const input = main.querySelector('#flag-input');
+      input.value = [...selected].sort().join('');
+      input.removeAttribute('aria-invalid');
+      main.querySelector('#answer-form').classList.remove('answer-correct', 'answer-incorrect');
+      const feedback = main.querySelector('#feedback');
+      feedback.className = 'feedback';
+      feedback.textContent = '';
+      input.focus();
+    });
+  }
   main
     .querySelectorAll('[data-image]')
     .forEach((button) =>
