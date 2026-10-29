@@ -233,7 +233,13 @@ function showExplanation(c, result, shouldFocus) {
     >
       ${mascot(result.assisted ? 'rii' : 'rai')}
       <div>
-        <span class="result-symbol" aria-hidden="true">${result.assisted ? '◇' : '✓'}</span>
+        <span class="result-symbol" aria-hidden="true"
+          >${
+            result.assisted
+              ? '<img src="/assets/book-open.svg" width="28" height="28" alt="" />'
+              : '✓'
+          }</span
+        >
         <p class="eyebrow">${result.assisted ? '解説で学習' : '正解！'}</p>
         <h2>${result.assisted ? '新しい発見を、次の一歩へ。' : 'フラグを発見！'}</h2>
         <p>
