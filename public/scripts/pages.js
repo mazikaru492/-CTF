@@ -398,6 +398,9 @@ export function resultPage(data, progress) {
 export function aboutPage() {
   return /* HTML */ `<div class="container">
     <article class="about">
+      <div class="about-navigation">
+        <a class="btn" href="#home"><span aria-hidden="true">←</span>ホームに戻る</a>
+      </div>
       <p class="eyebrow">ABOUT THIS EXPERIENCE</p>
       <h1>サイバーへの一歩を、もっと身近に。</h1>
       <p>
@@ -453,7 +456,10 @@ export function aboutPage() {
         </li>
       </ul>
       <p>資料確認日：2026年10月6日。既存問題の文章・画像・フラグは転載していません。</p>
-      <a class="btn primary" href="#mission-1">最初のミッションへ →</a>
+      <div class="about-navigation">
+        <a class="btn" href="#home"><span aria-hidden="true">←</span>ホームに戻る</a>
+        <a class="btn primary" href="#mission-1">最初のミッションへ →</a>
+      </div>
     </article>
   </div>`;
 }

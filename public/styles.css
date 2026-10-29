@@ -1057,6 +1057,18 @@ main:focus {
 .about .btn {
   margin-top: 20px;
 }
+.about-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+.about-navigation:first-child {
+  margin-top: 0;
+}
+.about-navigation .btn {
+  margin-top: 0;
+}
 .reset-btn {
   background: transparent;
   border: 1px solid var(--line);
