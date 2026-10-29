@@ -1969,6 +1969,12 @@ body.is-modal-open > :not(dialog) {
   width: 116px;
   aspect-ratio: 2/3;
   background-image: url('/assets/rai-rii-cutout.png');
+  /* Pre-filter small versions so low-density screens keep smooth outlines. */
+  background-image: image-set(
+    url('/assets/rai-rii-174.webp') 1x,
+    url('/assets/rai-rii-348.webp') 2x,
+    url('/assets/rai-rii-cutout.png') 3x
+  );
   background-repeat: no-repeat;
   background-size: auto 100%;
   pointer-events: none;
@@ -1991,6 +1997,7 @@ body.is-modal-open > :not(dialog) {
 }
 .mascot-duo .mascot {
   width: min(44%, 220px);
+  background-image: url('/assets/rai-rii-cutout.png');
 }
 .mascot-greeting {
   font-weight: 700;
@@ -2010,6 +2017,14 @@ body.is-modal-open > :not(dialog) {
 }
 .hint-guide .mascot {
   width: 68px;
+}
+.hint-guide .mascot,
+.feedback.retry .mascot {
+  background-image: image-set(
+    url('/assets/rai-rii-126.webp') 1x,
+    url('/assets/rai-rii-252.webp') 2x,
+    url('/assets/rai-rii-cutout.png') 3x
+  );
 }
 .hint-guide > div {
   min-width: 0;
