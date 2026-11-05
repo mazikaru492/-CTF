@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { challenges } from '../server/challenges.mjs';
+import { challenges } from './fixtures/catalog.mjs';
 
 test('comparison evidence requires finding changed codes among unchanged cards', () => {
   const question = challenges.find((c) => c.id === 4);

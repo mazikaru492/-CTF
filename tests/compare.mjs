@@ -1,7 +1,7 @@
 import { chromium, webkit } from 'playwright';
 import assert from 'node:assert/strict';
 import { mkdir } from 'node:fs/promises';
-import { challenges } from '../server/challenges.mjs';
+import { challenges } from './live-catalog.mjs';
 
 const base = process.env.CTF_TEST_URL || 'http://127.0.0.1:3000';
 const question = challenges.find((c) => c.id === 4);

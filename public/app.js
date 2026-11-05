@@ -16,6 +16,7 @@ import {
 const main = document.querySelector('#main');
 let data;
 let progress;
+let catalogVersion;
 let renderId = 0;
 const { openImage, confirmAction, closeAll } = createDialogs(() => renderId);
 let queue = Promise.resolve();
@@ -35,12 +36,13 @@ async function api(action, id, extra = {}) {
               method: 'POST',
               keepalive: action === 'official',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ action, id, ...extra }),
+              body: JSON.stringify({ action, id, catalogVersion, ...extra }),
             }
           : {}),
       });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || '接続できませんでした。');
+      if (result.catalogVersion !== undefined) catalogVersion = result.catalogVersion;
       if (result.progress) {
         progress = result.progress;
         updateScore();

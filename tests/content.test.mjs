@@ -1,14 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtemp, mkdir, cp, writeFile, rm } from 'node:fs/promises';
-import { tmpdir } from 'node:os';
-import { join, resolve, sep, basename } from 'node:path';
-import { pathToFileURL } from 'node:url';
 import { Readable } from 'node:stream';
 import { randomBytes } from 'node:crypto';
-import catalog from '../content/questions.json' with { type: 'json' };
+import catalog from './fixtures/questions.json' with { type: 'json' };
 import { validateCatalog } from '../server/validate-content.mjs';
 import { checkContent } from '../scripts/check.mjs';
+import * as game from '../server/game.mjs';
 import { homePage, missionPage, resultPage } from '../public/scripts/pages.js';
 
 // Keep invalid-input fixtures independent of the questions being authored.
@@ -31,7 +28,7 @@ const sampleCatalog = () => ({
 });
 
 test('all configured questions have valid materials and existing images', async () => {
-  assert.deepEqual(await checkContent(), catalog);
+  assert.deepEqual(await checkContent(catalog), catalog);
 });
 
 test('authoring errors identify the question and field', () => {
@@ -126,62 +123,50 @@ test('a ninth question needs no hardcoded counts in UI, API or progress', async 
   assert.match(missionPage(copy.questions[8], copy.questions, progress), /問題 9 \/ 全9問/);
   assert.match(resultPage(copy.questions, progress), /未完了：9問/);
 
-  const directory = await mkdtemp(join(tmpdir(), 'ctf-catalog-'));
-  try {
-    await cp(new URL('../server/', import.meta.url), join(directory, 'server'), {
-      recursive: true,
-    });
-    await mkdir(join(directory, 'content'));
-    await writeFile(join(directory, 'content', 'questions.json'), JSON.stringify(copy));
-    process.env.CTF_SESSION_SECRET ||= randomBytes(32).toString('hex');
-    const module = await import(pathToFileURL(join(directory, 'server', 'game.mjs')).href);
-    const ask = async (body, cookie = '') => {
-      const req = Readable.from(body ? [JSON.stringify(body)] : []);
-      req.method = body ? 'POST' : 'GET';
-      req.headers = {
-        host: 'localhost',
-        cookie,
-        ...(body ? { 'content-type': 'application/json' } : {}),
-      };
-      const response = { headers: {} };
-      await module.default(req, {
-        setHeader(k, v) {
-          response.headers[k] = v;
-        },
-        end(value) {
-          response.status = this.statusCode;
-          response.body = JSON.parse(value);
-        },
-      });
-      response.cookie = response.headers['Set-Cookie']?.split(';')[0];
-      return response;
+  process.env.CTF_SESSION_SECRET ||= randomBytes(32).toString('hex');
+  const handler = game.createGameHandler(async () => copy);
+  const ask = async (body, cookie = '') => {
+    const req = Readable.from(body ? [JSON.stringify(body)] : []);
+    req.method = body ? 'POST' : 'GET';
+    req.headers = {
+      host: 'localhost',
+      cookie,
+      ...(body ? { 'content-type': 'application/json' } : {}),
     };
-    const initial = await ask();
-    assert.equal(initial.body.challenges.length, 9);
-    assert.equal(initial.body.progress.hints.length, 9);
-    assert.ok(
-      initial.body.challenges.every(
-        (c) => !('answer' in c) && !('hints' in c) && !('learning' in c),
-      ),
-    );
-    const solved = await ask(
-      { action: 'answer', id: 9, answer: copy.questions[8].answer },
-      initial.cookie,
-    );
-    assert.equal(solved.body.correct, true);
-    assert.deepEqual(solved.body.progress.solved, [9]);
-    const state = module.decodeState(solved.cookie.split('=')[1]);
-    assert.equal(state.v, copy.progressVersion);
-    assert.equal(
-      module.decodeState(module.encodeState({ ...state, v: copy.progressVersion + 1 })),
-      null,
-    );
-  } finally {
-    if (
-      !resolve(directory).startsWith(resolve(tmpdir()) + sep) ||
-      !basename(directory).startsWith('ctf-catalog-')
-    )
-      throw new Error('Unexpected test temporary directory');
-    await rm(directory, { recursive: true, force: true });
-  }
+    const response = { headers: {} };
+    await handler(req, {
+      setHeader(k, v) {
+        response.headers[k] = v;
+      },
+      end(value) {
+        response.status = this.statusCode;
+        response.body = JSON.parse(value);
+      },
+    });
+    response.cookie = response.headers['Set-Cookie']?.split(';')[0];
+    return response;
+  };
+  const initial = await ask();
+  assert.equal(initial.body.challenges.length, 9);
+  assert.equal(initial.body.progress.hints.length, 9);
+  assert.ok(
+    initial.body.challenges.every((c) => !('answer' in c) && !('hints' in c) && !('learning' in c)),
+  );
+  const solved = await ask(
+    {
+      action: 'answer',
+      id: 9,
+      answer: copy.questions[8].answer,
+      catalogVersion: copy.progressVersion,
+    },
+    initial.cookie,
+  );
+  assert.equal(solved.body.correct, true);
+  assert.deepEqual(solved.body.progress.solved, [9]);
+  const state = game.decodeState(solved.cookie.split('=')[1], Date.now(), copy);
+  assert.equal(state.v, copy.progressVersion);
+  assert.equal(
+    game.decodeState(game.encodeState({ ...state, v: copy.progressVersion + 1 }), Date.now(), copy),
+    null,
+  );
 });

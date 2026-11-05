@@ -1,0 +1,9 @@
+{
+  "progressVersion": 2,
+  "sha256": "9cc11c700408031681a275986071e9ea321418c21c8f42cae745bdb2b1ad04d6",
+  "localImages": [
+    "/assets/desk-photo.png",
+    "/assets/board-before-photo.png",
+    "/assets/board-after-photo.png"
+  ]
+}

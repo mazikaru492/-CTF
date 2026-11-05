@@ -1,7 +1,7 @@
 import { chromium, webkit } from 'playwright';
 import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
-import { challenges, challengeCount } from '../server/challenges.mjs';
+import { challenges, challengeCount } from './live-catalog.mjs';
 
 const base = process.env.CTF_TEST_URL || 'http://127.0.0.1:3000';
 const label = new URL(base).hostname === '127.0.0.1' ? 'local' : 'published';

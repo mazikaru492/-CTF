@@ -5,7 +5,7 @@ import { promisify } from 'node:util';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
-test('deployment file export includes the catalog and preserves binary images without secrets', async () => {
+test('deployment export excludes question fixtures and preserves images and CMS runtime files', async () => {
   const root = fileURLToPath(new URL('../', import.meta.url));
   const { stdout } = await promisify(execFile)(process.execPath, ['scripts/deployment-files.mjs'], {
     cwd: root,
@@ -13,7 +13,9 @@ test('deployment file export includes the catalog and preserves binary images wi
   });
   const files = JSON.parse(stdout);
   for (const path of [
-    'content/questions.json',
+    'server/content-baseline.json',
+    'server/catalog.mjs',
+    'server/microcms-catalog.mjs',
     'server/validate-content.mjs',
     'scripts/check.mjs',
     'public/assets/desk-photo.png',
@@ -28,6 +30,11 @@ test('deployment file export includes the catalog and preserves binary images wi
     );
   }
   assert.ok(
-    files.every((file) => !file.file.startsWith('.env') && !file.file.startsWith('test-results/')),
+    files.every(
+      (file) =>
+        !['.env', 'test-results/', 'tests/', 'content/', 'migration/'].some((prefix) =>
+          file.file.startsWith(prefix),
+        ),
+    ),
   );
 });

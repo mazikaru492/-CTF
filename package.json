@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "node --watch --env-file-if-exists=.env.local scripts/dev.mjs",
     "start": "node --env-file-if-exists=.env.local scripts/dev.mjs",
-    "check": "node scripts/check.mjs",
-    "build": "node scripts/build.mjs",
+    "check": "node --env-file-if-exists=.env.local scripts/check.mjs",
+    "check:microcms": "node --env-file-if-exists=.env.local scripts/check-microcms.mjs",
+    "check:microcms:content": "node --env-file-if-exists=.env.local scripts/check-microcms-content.mjs",
+    "build": "node --env-file-if-exists=.env.local scripts/build.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:mobile": "node tests/devices.mjs --mobile",
     "test:devices": "node tests/devices.mjs",
@@ -15,8 +17,8 @@
     "test:clipboard": "node tests/clipboard.mjs",
     "test:compare": "node tests/compare.mjs",
     "test:phishing": "node tests/phishing.mjs",
-    "format": "prettier --write public server api scripts tests content package.json vercel.json README.md docs/maintenance.md .prettierrc.json",
-    "format:check": "prettier --check public server api scripts tests content package.json vercel.json README.md docs/maintenance.md .prettierrc.json"
+    "format": "prettier --write public server api scripts tests package.json vercel.json README.md docs/maintenance.md .prettierrc.json",
+    "format:check": "prettier --check public server api scripts tests package.json vercel.json README.md docs/maintenance.md .prettierrc.json"
   },
   "engines": {
     "node": "24.x"

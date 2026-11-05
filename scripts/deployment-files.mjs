@@ -12,7 +12,7 @@ async function collect(directory) {
     else await addFile(path);
   }
 }
-for (const directory of ['public', 'api', 'server', 'content']) await collect(directory);
+for (const directory of ['public', 'api', 'server']) await collect(directory);
 for (const file of [
   'package.json',
   'package-lock.json',

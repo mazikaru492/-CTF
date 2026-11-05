@@ -5,7 +5,6 @@ import { randomBytes } from 'node:crypto';
 import handler from '../server/game.mjs';
 import { checkContent } from './check.mjs';
 
-await checkContent();
 if (!process.env.CTF_SESSION_SECRET) {
   process.env.CTF_SESSION_SECRET = randomBytes(32).toString('hex');
   await appendFile('.env.local', `\nCTF_SESSION_SECRET=${process.env.CTF_SESSION_SECRET}\n`, {
@@ -13,6 +12,7 @@ if (!process.env.CTF_SESSION_SECRET) {
   });
   console.log('Local session key saved in .env.local (not committed).');
 }
+await checkContent();
 const publicRoot = resolve('public');
 const mime = {
   '.html': 'text/html; charset=utf-8',

@@ -2,17 +2,23 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { Readable } from 'node:stream';
 import { randomBytes } from 'node:crypto';
-import handler, { encodeState, decodeState } from '../server/game.mjs';
+import { createGameHandler, encodeState, decodeState as decodeProgress } from '../server/game.mjs';
+import catalog from './fixtures/catalog.mjs';
 import {
   challenges,
   challengeCount,
   progressVersion,
   publicChallenges,
   normalizeAnswer,
-} from '../server/challenges.mjs';
+} from './fixtures/catalog.mjs';
 process.env.CTF_SESSION_SECRET = randomBytes(32).toString('hex');
+const handler = createGameHandler(async () => catalog);
+const decodeState = (cookie, now) => decodeProgress(cookie, now, catalog);
 
 async function request({ method = 'GET', body, cookie = '', headers = {} } = {}) {
+  if (body && typeof body === 'object' && !Array.isArray(body)) {
+    body = { catalogVersion: catalog.progressVersion, ...body };
+  }
   const req = Readable.from(body === undefined ? [] : [JSON.stringify(body)]);
   req.method = method;
   req.headers = {
@@ -36,8 +42,8 @@ async function request({ method = 'GET', body, cookie = '', headers = {} } = {})
   return result;
 }
 test('public challenge data excludes final answers, hints and explanations', () => {
-  assert.equal(publicChallenges().length, challengeCount);
-  for (const c of publicChallenges()) {
+  assert.equal(publicChallenges(challenges).length, challengeCount);
+  for (const c of publicChallenges(challenges)) {
     assert.ok(!('answer' in c));
     assert.ok(!('explanation' in c));
     assert.ok(!('hints' in c));

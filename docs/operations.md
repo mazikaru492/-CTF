@@ -61,7 +61,7 @@ Chromium・WebKitで、13条件×11画面、画像拡大・縦横切り替え、
 
 公開後は `node tests/published.mjs` で、公開URLの匿名アクセス、公開APIの回答非公開、Chromium・WebKitのタッチ回答・全角入力・進捗復元・画像の拡大・回転・タブレット配置を再確認できます。2026-10-06の公開版で合格しています。検証記録は `docs/公開モバイル検証記録.json` です。Windows WebKitのCookie検査はSameSiteをNoneと報告するため、SameSite=Strictは実際のHTTPS応答ヘッダーとChromiumのCookie検査で確認しています。
 
-公開素材は `public/`、公開ビルドは `dist/`、問題と正解の管理は `content/questions.json`、判定は `server/game.mjs`、Vercel Function入口は `api/game.js` です。
+公開素材は `public/`、公開ビルドは `dist/`、問題と正解の管理はmicroCMS、判定は `server/game.mjs`、Vercel Function入口は `api/game.js` です。
 
 ## Vercel
 
@@ -77,13 +77,11 @@ Chromium・WebKitで、13条件×11画面、画像拡大・縦横切り替え、
 
 ## 更新方法
 
-1. `content/questions.json` の問題・ヒント・解説を編集する。
-2. 画像を `public/assets/` で更新する。SVGは独自制作した素材。
-3. `npm run check` で設定を確認し、正解と素材の整合性を確認して `npm test` を実行する。
-4. ローカルでスマホサイズの操作を確認し、`npm run build` を実行する。
-5. Vercelへ再公開する。問題のIDは既存の進捗に結びつくため、同じIDで別問題に入れ替える場合は `progressVersion` も１増やす。
+1. microCMSの「問題」で文章・正解・ヒント・解説・画像を編集し、公開する。
+2. `npm run check` で入力形式と既存画像を確認する。
+3. スマホで素材・ヒント・正答・誤答・解説・進捗を確認する。
 
-最初の版は管理者向けWeb編集画面を追加せず、設定ファイルの編集で運用します。８問の内容や所要時間は初心者テストで調整してください。表示した時間は目安で、10〜20人による実測はまだ行っていません。
+問題データの変更は参照先のサイトに通常30秒程度で反映されます。問題内容の変更時には既存進捗が自動でリセットされます。表示コードの変更時はテスト・ビルド・再公開を行います。問題の内容や所要時間は初心者テストで調整してください。表示した時間は目安で、10〜20人による実測はまだ行っていません。
 
 ## 広報別の計測
 

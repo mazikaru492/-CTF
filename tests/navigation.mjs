@@ -1,6 +1,6 @@
 import { chromium, webkit } from 'playwright';
 import assert from 'node:assert/strict';
-import { challenges } from '../server/challenges.mjs';
+import { challenges } from './live-catalog.mjs';
 
 const base = process.env.CTF_TEST_URL || 'http://127.0.0.1:3000';
 for (const engine of [chromium, webkit]) {

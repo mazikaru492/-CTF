@@ -1,7 +1,7 @@
 import { chromium, webkit } from 'playwright';
 import assert from 'node:assert/strict';
 import { writeFile } from 'node:fs/promises';
-import { challenges, challengeCount } from '../server/challenges.mjs';
+import { challenges, challengeCount } from './live-catalog.mjs';
 
 const base = process.env.CTF_TEST_URL || 'https://cyber-first-step-ctf.vercel.app';
 const report = {

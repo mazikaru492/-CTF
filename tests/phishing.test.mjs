@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { challenges } from '../server/challenges.mjs';
+import { challenges } from './fixtures/catalog.mjs';
 import { validateCatalog } from '../server/validate-content.mjs';
 import { material } from '../public/scripts/materials.js';
 

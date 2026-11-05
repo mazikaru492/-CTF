@@ -37,14 +37,33 @@ export function validateCatalog(catalog) {
     throw new Error(`${path}: ${message}`);
   };
   const text = (value, path) => {
-    if (typeof value !== 'string' || !value.trim())
-      fail(path, '空ではない文字列を入力してください。');
+    if (typeof value !== 'string' || !value.trim() || value.length > 16000)
+      fail(path, '16000文字以内の空ではない文字列を入力してください。');
   };
   const array = (value, path) => {
     if (!Array.isArray(value) || !value.length) fail(path, '１件以上の配列が必要です。');
   };
   const image = (value, path) => {
     text(value, path);
+    if (value.startsWith('https://')) {
+      const url = new URL(value);
+      if (
+        url.protocol !== 'https:' ||
+        url.hostname !== 'images.microcms-assets.io' ||
+        url.username ||
+        url.password ||
+        url.port ||
+        url.search ||
+        url.hash ||
+        /[\s\\]/.test(value) ||
+        /%(?:2f|5c|2e)/i.test(url.pathname) ||
+        !/^\/assets\/[A-Za-z0-9_-]+\/[A-Za-z0-9_-]+\/[^/]+\.(?:png|jpe?g|webp|avif)$/i.test(
+          url.pathname,
+        )
+      )
+        fail(path, 'microCMSの正規画像URLを指定してください。');
+      return;
+    }
     if (
       !value.startsWith('/assets/') ||
       /[\\?#%\u0000-\u001f]/.test(value) ||

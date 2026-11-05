@@ -1,20 +1,20 @@
-import { stat, readFile } from 'node:fs/promises';
+import { stat } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { resolve, sep, extname } from 'node:path';
 import { validateCatalog } from '../server/validate-content.mjs';
+import { getCatalog } from '../server/catalog.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 
 export async function checkContent(catalog) {
-  catalog ??= JSON.parse(
-    await readFile(new URL('../content/questions.json', import.meta.url), 'utf8'),
-  );
+  catalog ??= await getCatalog();
   validateCatalog(catalog);
   const publicRoot = resolve(root, 'public');
   for (const question of catalog.questions) {
     for (const field of ['image', 'before', 'after']) {
       const path = question.material[field];
       if (!path) continue;
+      if (path.startsWith('https://')) continue;
       const target = resolve(publicRoot, `.${path}`);
       if (!target.startsWith(`${publicRoot}${sep}`))
         throw new Error(`問題${question.id}: 画像はpublic/assets内に配置してください。`);
