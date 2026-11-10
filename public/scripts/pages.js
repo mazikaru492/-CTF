@@ -369,18 +369,32 @@ export function resultPage(data, progress) {
   const solved = progress.solved.length;
   const learned = progress.learned.length;
   const resume = nextId(data, progress);
+  const complete = data.length > 0 && solved === data.length;
   return /* HTML */ `<div class="container">
-    <section class="result-hero">
-      <p class="eyebrow">YOUR DISCOVERIES</p>
-      <h1>
-        ${solved === data.length ? `${data.length === 8 ? '８' : data.length}つのフラグを、発見。` : solved || learned ? 'その一歩が、あなたの発見。' : '最初のフラグを、見つけに行こう。'}
-      </h1>
-      <div class="result-score">${solved}<span> / ${data.length} 正解</span></div>
-      <p>
-        解説で学習：${learned}問 ／ 未完了：${data.length - solved - learned}問<br />ヒントを使って解いた問題も正解に含みます。
-      </p>
-      <div class="hero-actions">
-        ${resume ? /* HTML */ `<a class="btn primary" href="#mission-${resume}">挑戦をつづける →</a>` : '<a class="btn" href="#mission-1">最初の問題を復習する →</a>'}
+    <section class="result-hero${complete ? ' is-complete' : ''}">
+      <div class="result-characters">
+        ${
+          complete
+            ? '<img class="result-duo" src="/assets/mascots/duo-clear.png" srcset="/assets/mascots/duo-clear-480.png 480w, /assets/mascots/duo-clear.png 960w" sizes="(max-width: 700px) 85vw, 480px" width="960" height="640" alt="笑顔でハイタッチして全問正解を祝うライとリイ" />'
+            : '<img src="/assets/mascots/official/c-contest-03.png" width="300" height="400" alt="パソコンを開いて次の挑戦を応援するライとリイ" />'
+        }
+        ${complete ? '<div class="confetti" aria-hidden="true">' + '<i></i>'.repeat(12) + '</div>' : ''}
+      </div>
+      <div class="result-copy">
+        <p class="eyebrow">${complete ? 'ALL FLAGS FOUND' : 'YOUR DISCOVERIES'}</p>
+        <h1>
+          ${complete ? `${data.length === 8 ? '８' : data.length}つのフラグを、発見。` : solved || learned ? 'その一歩が、あなたの発見。' : '最初のフラグを、見つけに行こう。'}
+        </h1>
+        <p class="result-cheer">
+          ${complete ? '全問正解、おめでとう！ ライとリイも大喜び。' : 'ライとリイと、自分のペースで進もう。'}
+        </p>
+        <div class="result-score">${solved}<span> / ${data.length} 正解</span></div>
+        <p>
+          解説で学習：${learned}問 ／ 未完了：${data.length - solved - learned}問<br />ヒントを使って解いた問題も正解に含みます。
+        </p>
+        <div class="hero-actions">
+          ${resume ? /* HTML */ `<a class="btn primary" href="#mission-${resume}">挑戦をつづける →</a>` : '<a class="btn" href="#mission-1">最初の問題を復習する →</a>'}
+        </div>
       </div>
     </section>
     <div class="result-list">
@@ -436,7 +450,7 @@ export function aboutPage() {
       <p>
         ライ・リイは、<a href="${official}" target="_blank" rel="noopener noreferrer"
           >防衛省サイバーコンテストのマスコットキャラクター</a
-        >です。本サイトでは提供画像をもとに背景透過加工した素材を使用しています。吹き出しや応援メッセージは、この学生企画のために作成したものです。防衛省の公式サービス・公認を示すものではありません。
+        >です。本サイトでは公式サイトの公開画像と、提供画像・公式画像を参考にAIで背景透過や表情・ポーズを加工した素材を使用しています。加工した表情・ポーズや応援メッセージは、この学生企画のために作成したものです。防衛省の公式サービス・公認を示すものではありません。
       </p>
       <h2>制作時に参考にした公開資料</h2>
       <ul>

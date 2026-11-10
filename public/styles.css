@@ -2009,6 +2009,76 @@ body.is-modal-open > :not(dialog) {
   color: var(--muted);
   line-height: 1.8;
 }
+.result-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 64px);
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: left;
+}
+.result-characters {
+  position: relative;
+  min-width: 0;
+  isolation: isolate;
+}
+.result-characters > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 310px;
+  object-fit: contain;
+}
+.is-complete .result-characters > img {
+  max-height: none;
+}
+.result-copy {
+  min-width: 0;
+}
+.result-hero .eyebrow {
+  justify-content: flex-start;
+}
+.result-hero .result-cheer {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.8;
+}
+.result-hero.is-complete .result-score {
+  color: #216a49;
+}
+.result-hero .hero-actions {
+  justify-content: flex-start;
+}
+@media (max-width: 700px) {
+  .result-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    text-align: center;
+    padding-top: 24px;
+  }
+  .result-characters {
+    width: min(100%, 380px);
+    margin: auto;
+  }
+  .result-characters > img {
+    max-height: 190px;
+  }
+  .is-complete .result-characters > img {
+    max-height: 250px;
+  }
+  .result-hero .eyebrow,
+  .result-hero .hero-actions {
+    justify-content: center;
+  }
+  .result-hero h1 {
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+    line-height: 1.55;
+  }
+  .result-hero .result-score {
+    margin: 12px 0;
+  }
+}
 .hint-guide {
   display: flex;
   gap: 12px;
@@ -2039,7 +2109,18 @@ body.is-modal-open > :not(dialog) {
   color: #75450d;
 }
 .feedback.retry .mascot {
-  width: 76px;
+  width: 92px;
+}
+.mascot.mascot-success,
+.feedback.retry .mascot.mascot-retry {
+  background-position: center;
+  background-size: contain;
+}
+.mascot.mascot-success {
+  background-image: url('/assets/mascots/rai-success.png');
+}
+.feedback.retry .mascot.mascot-retry {
+  background-image: url('/assets/mascots/rii-retry.png');
 }
 .feedback.retry > span:not(.mascot) {
   min-width: 0;

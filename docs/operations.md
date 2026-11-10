@@ -22,6 +22,8 @@
 
 ライ・リイの紹介元は [防衛省サイバーコンテスト](https://www.mod.go.jp/j/approach/defense/cyber/c_contest/) です。`public/assets/rai-rii-cutout.png` はユーザー提供画像をもとに imagegen で背景と説明文字を除いた加工素材で、公式配布の透過データそのものではありません。サイト内の応援メッセージは学生企画で作成したものです。非公式の表記と素材の説明をトップ・紹介ページに掲載しています。
 
+2026年11月10日、公式サイトの4点を `public/assets/mascots/official/` に原本のまま保存しました。出典・追加素材の制作条件は [マスコット素材一覧](mascot-assets.md) に記録しています。正解時は喜ぶライ、不正解時は一緒に考えるリイ、全問正解の結果画面ではハイタッチする2人を表示します。これら3点の表情・ポーズは公式画像を参考にしたAI加工です。途中の結果画面には公式のパソコンを使う2人を表示し、「解説で学習」が含まれる場合は全問正解の祝福に切り替えません。
+
 ## 起動
 
 Node.js 24を用意し、このフォルダで初回に `npm ci` を実行します。実行時依存パッケージはありません。
@@ -53,6 +55,7 @@ npm ci
 npx playwright install chromium webkit
 npm run test:devices
 node tests/feedback.mjs
+node tests/mascots.mjs
 ```
 
 Chromium・WebKitで、13条件×11画面、画像拡大・縦横切り替え、回答・ヒント・解説・復元・リセット、通信切断後の復帰を検証します。結果は `test-results/device-report.json` に保存します。ローカルサーバーでも公開環境と同じCSP等のヘッダーを使用します。WebKitのスクリーンショット取得はテストツール自身が一時的なインラインCSSを注入するため、CSPエラーの検証から分けています。

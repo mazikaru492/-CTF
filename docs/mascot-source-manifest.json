@@ -1,0 +1,1392 @@
+{
+  "retrieved_on": "2026-11-10",
+  "access": "public_without_login",
+  "full_timeline_verified": false,
+  "unique_image_files": 59,
+  "x_unique_images": 52,
+  "assets": [
+    {
+      "file": "public/assets/mascots/official/c-contest-01.png",
+      "source_page": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/",
+      "source_image": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/images/c_contest_01.png",
+      "retrieved_on": "2026-11-10",
+      "dimensions": [400, 600],
+      "bytes": 184214,
+      "sha256": "0e075fcc68579cafa9c2d31f36b9deda389648501c924b0c3561960320c25b82",
+      "modified": false,
+      "contains_mascot": true
+    },
+    {
+      "file": "public/assets/mascots/official/c-contest-02.png",
+      "source_page": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/",
+      "source_image": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/images/c_contest_02.png",
+      "retrieved_on": "2026-11-10",
+      "dimensions": [400, 600],
+      "bytes": 213290,
+      "sha256": "89e3c5c6b58886624a99c1a3631cab520af96b3f94c5690c7f2a4cb24e49923f",
+      "modified": false,
+      "contains_mascot": true
+    },
+    {
+      "file": "public/assets/mascots/official/c-contest-03.png",
+      "source_page": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/",
+      "source_image": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/images/c_contest_03.png",
+      "retrieved_on": "2026-11-10",
+      "dimensions": [300, 400],
+      "bytes": 162528,
+      "sha256": "b68a5e13c5f93e2047df274ea32d64e7258255de8d984a622023705930733e8b",
+      "modified": false,
+      "contains_mascot": true
+    },
+    {
+      "file": "public/assets/mascots/official/c-contest-04.png",
+      "source_page": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/",
+      "source_image": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/images/c_contest_04.png",
+      "retrieved_on": "2026-11-10",
+      "dimensions": [300, 400],
+      "bytes": 91648,
+      "sha256": "03556a48d161892c318b82f57acd098934890896e3403bb8bd340c4dfd607695",
+      "modified": false,
+      "contains_mascot": true
+    },
+    {
+      "file": "public/assets/mascots/official/collabo-image-04.jpg",
+      "source_page": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/collaboration.html",
+      "source_image": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/images/collabo_image_04.jpg",
+      "retrieved_on": "2026-11-10",
+      "dimensions": [720, 1018],
+      "bytes": 300886,
+      "sha256": "4154b1ed8608a35c8822815d0de077d0b145e78c6051091450b38c0e138d29c0",
+      "modified": false
+    },
+    {
+      "file": "public/assets/mascots/official/collabo-image-06.png",
+      "source_page": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/collaboration.html",
+      "source_image": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/images/collabo_image_06.png",
+      "retrieved_on": "2026-11-10",
+      "dimensions": [840, 582],
+      "bytes": 611724,
+      "sha256": "fad5d34f6c3a1b16720eb6a9445610790a60d5166bcc54102b119e7ac6b218b2",
+      "modified": false
+    },
+    {
+      "file": "public/assets/mascots/official/collabo-image-07.png",
+      "source_page": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/collaboration.html",
+      "source_image": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/images/collabo_image_07.png",
+      "retrieved_on": "2026-11-10",
+      "dimensions": [840, 582],
+      "bytes": 595679,
+      "sha256": "cb30720dbba5b24bad0514be407764b201edacf22d36c69cc6a2844ce428003c",
+      "modified": false
+    },
+    {
+      "file": "public/assets/mascots/official/x/efp_official-2101122100182294554-1.jpg",
+      "source_page": "https://x.com/efp_official/status/2101122100182294554",
+      "source_image": "https://pbs.twimg.com/media/HSiumYkbkAARtf5?format=jpg&name=orig",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2101122100182294554&lang=ja&token=0",
+      "account": "efp_official",
+      "posted_at": "2026-09-19T01:32:00.000Z",
+      "retrieved_on": "2026-11-10",
+      "dimensions": [849, 1200],
+      "bytes": 227760,
+      "sha256": "271195a8b98aa0195e53774a03155b271f7b174a70382c917a87878fa047fa45",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2101122100182294554",
+          "account": "efp_official",
+          "posted_at": "2026-09-19T01:32:00.000Z",
+          "source_page": "https://x.com/efp_official/status/2101122100182294554",
+          "source_image": "https://pbs.twimg.com/media/HSiumYkbkAARtf5?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2101122100182294554&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "efp_official",
+      "posted_at": "2026-09-19T01:35:00.000Z",
+      "source_page": "https://x.com/efp_official/status/2101122855044030835",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2101122855044030835&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HSiuvHKawAAMwJF?format=jpg&name=orig",
+      "dimensions": [1200, 1200],
+      "bytes": 346970,
+      "sha256": "fbc6a02397f54285944822a8105242aabbf5b0ec20b1be5262b012edcc96b870",
+      "file": "public/assets/mascots/official/x/efp_official-2101122855044030835-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2101122855044030835",
+          "account": "efp_official",
+          "posted_at": "2026-09-19T01:35:00.000Z",
+          "source_page": "https://x.com/efp_official/status/2101122855044030835",
+          "source_image": "https://pbs.twimg.com/media/HSiuvHKawAAMwJF?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2101122855044030835&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-26T02:45:07.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2004382943301787930",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2004382943301787930&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 135282,
+      "sha256": "092054ac6ad734ae03f2575444962b4f62ed82b4dd7e8f921226114e51ab3f4f",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2004382943301787930-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2004382943301787930",
+          "account": "ModJapan_jp",
+          "posted_at": "2025-12-26T02:45:07.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2004382943301787930",
+          "source_image": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2004382943301787930&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-26T09:24:25.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2004483430478909660",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2004483430478909660&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/G9FbDXva4AEXEYr?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 181960,
+      "sha256": "ca44ed8e4df555a92fb45a659fab71adc84d34cc7e1d9262de73955e67ce543a",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2004483430478909660-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2004483430478909660",
+          "account": "ModJapan_jp",
+          "posted_at": "2025-12-26T09:24:25.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2004483430478909660",
+          "source_image": "https://pbs.twimg.com/media/G9FbDXva4AEXEYr?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2004483430478909660&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-26T09:29:48.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2004484782055669831",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2004484782055669831&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/G9FcSAaa8AAAhrp?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 203956,
+      "sha256": "1cde9105d10b908a29f535b3035dc0a96b05823cdfa230f52073cdf9adb87a2a",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2004484782055669831-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2004484782055669831",
+          "account": "ModJapan_jp",
+          "posted_at": "2025-12-26T09:29:48.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2004484782055669831",
+          "source_image": "https://pbs.twimg.com/media/G9FcSAaa8AAAhrp?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2004484782055669831&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-05T02:44:13.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2008006591778595103",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2008006591778595103&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/G93fBYqbkAAk4g_?format=jpg&name=orig",
+      "dimensions": [637, 899],
+      "bytes": 141015,
+      "sha256": "0f2f26849bae2670b8cadb5ec59420b0520bbc7e01d7e28cd7d8263cd61ea5a9",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2008006591778595103-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2008006591778595103",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-01-05T02:44:13.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2008006591778595103",
+          "source_image": "https://pbs.twimg.com/media/G93fBYqbkAAk4g_?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2008006591778595103&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-05T03:03:24.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2008011419573530745",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2008011419573530745&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/G93jvRVa0AAB2tA?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 219593,
+      "sha256": "9f4a4c28714797bed0fd566a9a637ef361cdb615ae3db8e74490795deea953c7",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2008011419573530745-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2008011419573530745",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-01-05T03:03:24.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2008011419573530745",
+          "source_image": "https://pbs.twimg.com/media/G93jvRVa0AAB2tA?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2008011419573530745&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "file": "public/assets/mascots/official/x/modjapan_jp-2009467589622419731-1.jpg",
+      "source_page": "https://x.com/ModJapan_jp/status/2009467589622419731",
+      "source_image": "https://pbs.twimg.com/media/G-MQDkAa0AYSS6p?format=jpg&name=orig",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2009467589622419731&lang=ja&token=0",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-09T03:29:42.000Z",
+      "retrieved_on": "2026-11-10",
+      "dimensions": [1040, 720],
+      "bytes": 205515,
+      "sha256": "745a48b6f60da5b77fccadd82f7d5af47735f1b9a1168a81332dc93a699b4055",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2009467589622419731",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-01-09T03:29:42.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2009467589622419731",
+          "source_image": "https://pbs.twimg.com/media/G-MQDkAa0AYSS6p?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2009467589622419731&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "file": "public/assets/mascots/official/x/modjapan_jp-2009467589622419731-2.jpg",
+      "source_page": "https://x.com/ModJapan_jp/status/2009467589622419731",
+      "source_image": "https://pbs.twimg.com/media/G-MQDkCa0AEdeK5?format=jpg&name=orig",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2009467589622419731&lang=ja&token=0",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-09T03:29:42.000Z",
+      "retrieved_on": "2026-11-10",
+      "dimensions": [1040, 720],
+      "bytes": 197429,
+      "sha256": "d7a6f55fd35ca884ad532666de54a96ce7be01b91028338097b2eafb774512a9",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2009467589622419731",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-01-09T03:29:42.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2009467589622419731",
+          "source_image": "https://pbs.twimg.com/media/G-MQDkCa0AEdeK5?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2009467589622419731&lang=ja&token=0",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "file": "public/assets/mascots/official/x/modjapan_jp-2009467589622419731-3.jpg",
+      "source_page": "https://x.com/ModJapan_jp/status/2009467589622419731",
+      "source_image": "https://pbs.twimg.com/media/G-MQDkBboAACMro?format=jpg&name=orig",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2009467589622419731&lang=ja&token=0",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-09T03:29:42.000Z",
+      "retrieved_on": "2026-11-10",
+      "dimensions": [1040, 720],
+      "bytes": 200133,
+      "sha256": "2be5ee3ca0073b93fe17175343e07411f5bac955079ff9576c1b2efed91850ef",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2009467589622419731",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-01-09T03:29:42.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2009467589622419731",
+          "source_image": "https://pbs.twimg.com/media/G-MQDkBboAACMro?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2009467589622419731&lang=ja&token=0",
+          "number": 3
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-09T08:18:49.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2009540351204446587",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2009540351204446587&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/G-NSS3xb0AA6wYM?format=jpg&name=orig",
+      "dimensions": [720, 1040],
+      "bytes": 164719,
+      "sha256": "1d0b42897ad22cf46e5954e889465c2634bcec2ba9c3cf3277809948e402e794",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2009540351204446587-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2009540351204446587",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-01-09T08:18:49.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2009540351204446587",
+          "source_image": "https://pbs.twimg.com/media/G-NSS3xb0AA6wYM?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2009540351204446587&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-13T10:46:32.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2011027073494892753",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011027073494892753&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/G-iadnGbQAArFCt?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 190150,
+      "sha256": "d40bc580880aa5d605adb36cca76e55e3c52428ffba6cb52a281b149bd0f4487",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2011027073494892753-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2011027073494892753",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-01-13T10:46:32.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2011027073494892753",
+          "source_image": "https://pbs.twimg.com/media/G-iadnGbQAArFCt?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011027073494892753&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-14T05:11:45.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2011305213190394177",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011305213190394177&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/G-mXbWEbQAE67QI?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 160374,
+      "sha256": "35ba3c9009a877fcecd78531a0e0678e848a87e98d0adc70e35daf7245015cbd",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2011305213190394177-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2011305213190394177",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-01-14T05:11:45.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2011305213190394177",
+          "source_image": "https://pbs.twimg.com/media/G-mXbWEbQAE67QI?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011305213190394177&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-14T10:33:24.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2011386157943439619",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011386157943439619&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/G-nhC1ubUAAGVdc?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 258143,
+      "sha256": "14ccb4bf9a67ed3440fd7159138758d2677540158c30a8f634dbbef4439cc0b2",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2011386157943439619-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2011386157943439619",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-01-14T10:33:24.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2011386157943439619",
+          "source_image": "https://pbs.twimg.com/media/G-nhC1ubUAAGVdc?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011386157943439619&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-14T10:33:24.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2011386157943439619",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011386157943439619&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/G-nhC1yawAAu_1Q?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 264323,
+      "sha256": "211c3df7f2a6717f9554e81761b44d8b8f7512e7d69be0d5cc0edaf03a5fd49e",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2011386157943439619-2.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2011386157943439619",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-01-14T10:33:24.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2011386157943439619",
+          "source_image": "https://pbs.twimg.com/media/G-nhC1yawAAu_1Q?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011386157943439619&lang=ja&token=0",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-14T10:33:24.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2011386157943439619",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011386157943439619&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/G-nhC1vasAI6vKJ?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 254696,
+      "sha256": "a0eff94d7ae53c04f8d5b979ac649a9134d27a1dffb10d1de7a9344f41990f54",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2011386157943439619-3.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2011386157943439619",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-01-14T10:33:24.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2011386157943439619",
+          "source_image": "https://pbs.twimg.com/media/G-nhC1vasAI6vKJ?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011386157943439619&lang=ja&token=0",
+          "number": 3
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-15T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2099682866359644667",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2099682866359644667&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HSJ0_p3aAAAS3wP?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 140356,
+      "sha256": "3b8fd342f98418c965fbd37fe7f9c49aac7f6a924ae2e2605eff4a6303de2b40",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2099682866359644667-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2099682866359644667",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-09-15T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2099682866359644667",
+          "source_image": "https://pbs.twimg.com/media/HSJ0_p3aAAAS3wP?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2099682866359644667&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-16T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2100045254129074687",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2100045254129074687&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HSTMhWvbwAARp2Z?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 212603,
+      "sha256": "7cffa40ccc036b73c7d240aad59584b8c9ef2b4bc1af942c17a749ebc4879852",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2100045254129074687-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2100045254129074687",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-09-16T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2100045254129074687",
+          "source_image": "https://pbs.twimg.com/media/HSTMhWvbwAARp2Z?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2100045254129074687&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "file": "public/assets/mascots/official/x/modjapan_jp-2100407642179166379-1.jpg",
+      "source_page": "https://x.com/ModJapan_jp/status/2100407642179166379",
+      "source_image": "https://pbs.twimg.com/media/HSYiv5-acAAylXt?format=jpg&name=orig",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2100407642179166379&lang=ja&token=0",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-17T02:13:00.000Z",
+      "retrieved_on": "2026-11-10",
+      "dimensions": [1040, 720],
+      "bytes": 185626,
+      "sha256": "9a929f6c79329e2bb3cf4b28852e4d0e13967dc7ee38f470dae919b52ac6cb80",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2100407642179166379",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-09-17T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2100407642179166379",
+          "source_image": "https://pbs.twimg.com/media/HSYiv5-acAAylXt?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2100407642179166379&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-18T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2100770029818228921",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2100770029818228921&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HSdKgFZbwAASKaV?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 186293,
+      "sha256": "aac7aec3581894d1124064bf9104b426805c0603bfe35a27699089feb4cddcd6",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2100770029818228921-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2100770029818228921",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-09-18T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2100770029818228921",
+          "source_image": "https://pbs.twimg.com/media/HSdKgFZbwAASKaV?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2100770029818228921&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-19T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2101132417893380582",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2101132417893380582&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HSegks6aEAAc3Mf?format=jpg&name=orig",
+      "dimensions": [1450, 2048],
+      "bytes": 481714,
+      "sha256": "79658531d6881e3a09fd472c10f0bf22553bfabda4d5bad544136d2e63db496f",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2101132417893380582-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2101132417893380582",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-09-19T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2101132417893380582",
+          "source_image": "https://pbs.twimg.com/media/HSegks6aEAAc3Mf?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2101132417893380582&lang=ja&token=0",
+          "number": 1
+        },
+        {
+          "post_id": "2102944357179674943",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-09-24T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2102944357179674943",
+          "source_image": "https://pbs.twimg.com/media/HS8PhnraQAAlA1T?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2102944357179674943&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-24T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2102944357179674943",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2102944357179674943&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HS8PhnsbEAAVVrF?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 203087,
+      "sha256": "e63a24bd025165a5bb42ef6cdb5239201e5aad99944962fb3626d02f13fa4018",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2102944357179674943-2.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2102944357179674943",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-09-24T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2102944357179674943",
+          "source_image": "https://pbs.twimg.com/media/HS8PhnsbEAAVVrF?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2102944357179674943&lang=ja&token=0",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-24T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2102944357179674943",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2102944357179674943&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HS8PhpObEAEfTJP?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 198412,
+      "sha256": "534220336df66eec9c4536cb42aa62614117f30468300dbf7dd64c8c41d4874c",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2102944357179674943-3.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2102944357179674943",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-09-24T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2102944357179674943",
+          "source_image": "https://pbs.twimg.com/media/HS8PhpObEAEfTJP?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2102944357179674943&lang=ja&token=0",
+          "number": 3
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-25T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2103306745179255009",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2103306745179255009&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HTBqkiJawAAdZPc?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 209756,
+      "sha256": "9bea36bb9124e00422d6d052224712ca106495cd18a5640e3fc7a86f439a2c54",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2103306745179255009-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2103306745179255009",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-09-25T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2103306745179255009",
+          "source_image": "https://pbs.twimg.com/media/HTBqkiJawAAdZPc?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2103306745179255009&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-01T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2105481072435970332",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2105481072435970332&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HTcqw_bakAAVlrh?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 168791,
+      "sha256": "02e9ae83223709c481b86b4607cc90f7ba03dcc1d51a7676eaf4b0464782dff9",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2105481072435970332-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2105481072435970332",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-01T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2105481072435970332",
+          "source_image": "https://pbs.twimg.com/media/HTcqw_bakAAVlrh?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2105481072435970332&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-01T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2105481072435970332",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2105481072435970332&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HTcqw_dbkAAumYj?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 175149,
+      "sha256": "5c8dbc2aa8ab29c50aa673fb5983556cf7ee5c6d8c46eef64903f76aae8e1883",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2105481072435970332-2.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2105481072435970332",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-01T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2105481072435970332",
+          "source_image": "https://pbs.twimg.com/media/HTcqw_dbkAAumYj?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2105481072435970332&lang=ja&token=0",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-05T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2106930624141615357",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2106930624141615357&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HTmeklKbwAAHgO8?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 179110,
+      "sha256": "7a8e70c1514bf82341c15552d4dbd9712b508c00fe0938854fdfe59be0a7ef00",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2106930624141615357-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2106930624141615357",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-05T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2106930624141615357",
+          "source_image": "https://pbs.twimg.com/media/HTmeklKbwAAHgO8?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2106930624141615357&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-16T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2110916891065622624",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2110916891065622624&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HUt5dA_bsAAzFbE?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 208982,
+      "sha256": "098309cf3eff9e3202031f17703bccdbbf0df68f1492a4168584d092109fd304",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2110916891065622624-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2110916891065622624",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-16T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2110916891065622624",
+          "source_image": "https://pbs.twimg.com/media/HUt5dA_bsAAzFbE?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2110916891065622624&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-19T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2112004053681275143",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112004053681275143&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HU9W91dbQAAyr1R?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 187230,
+      "sha256": "e31870c02a9a353fdc133474801302d31a1c1e5a0b078141b87efed0e551f505",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2112004053681275143-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2112004053681275143",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-19T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2112004053681275143",
+          "source_image": "https://pbs.twimg.com/media/HU9W91dbQAAyr1R?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112004053681275143&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-20T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2112366441617879477",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112366441617879477&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HVCXFbmaYAAtdNF?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 220301,
+      "sha256": "edece84ab4de309e8e52edf3b47e076bbf32cc664838c9dd514d61cd650de951",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2112366441617879477-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2112366441617879477",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-20T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2112366441617879477",
+          "source_image": "https://pbs.twimg.com/media/HVCXFbmaYAAtdNF?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112366441617879477&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-21T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2112728829605433530",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112728829605433530&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HVHpDK0aoAAW2SS?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 202558,
+      "sha256": "99d528f21102cfe6b99ffb114a56efbaee6f4272534a94f2777523bc2da86e8c",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2112728829605433530-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2112728829605433530",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-21T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2112728829605433530",
+          "source_image": "https://pbs.twimg.com/media/HVHpDK0aoAAW2SS?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112728829605433530&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-21T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2112728829605433530",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112728829605433530&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HVHpDKpaEAAkoxr?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 222917,
+      "sha256": "5ee8914741e3b0426ca1c9f7e5dc25c7aa2aed0105f95b05add174764f8f088f",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2112728829605433530-2.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2112728829605433530",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-21T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2112728829605433530",
+          "source_image": "https://pbs.twimg.com/media/HVHpDKpaEAAkoxr?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112728829605433530&lang=ja&token=0",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-22T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2113091217424863510",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2113091217424863510&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HVMqAYqagAM8Tqf?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 225851,
+      "sha256": "f1afcf570b60567f5d8e4c0fcd27693f01f46bffc021851f29fee95c37260bdf",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2113091217424863510-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2113091217424863510",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-22T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2113091217424863510",
+          "source_image": "https://pbs.twimg.com/media/HVMqAYqagAM8Tqf?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2113091217424863510&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-23T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2113453605219160373",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2113453605219160373&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HVRvrfLaQAAFsGE?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 221145,
+      "sha256": "68e73bbd06ad1d0399218f59c83d042dfe8acf2ef5d11180e028a10df798f0ea",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2113453605219160373-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2113453605219160373",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-23T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2113453605219160373",
+          "source_image": "https://pbs.twimg.com/media/HVRvrfLaQAAFsGE?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2113453605219160373&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-26T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2114540768874688945",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2114540768874688945&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HVhbDgCaMAA-fOn?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 193667,
+      "sha256": "95538030bd10550af87efad78ea805aca205c05e72f2eb15579948b10b4ec0e9",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2114540768874688945-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2114540768874688945",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-26T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2114540768874688945",
+          "source_image": "https://pbs.twimg.com/media/HVhbDgCaMAA-fOn?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2114540768874688945&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-28T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115265544731676921",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115265544731676921&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HVrnLIEbsAAEqkC?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 189965,
+      "sha256": "a2a790f33b2e8e6d6cb21e4fec61440b803a41bbd915818557282563ed43cd48",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2115265544731676921-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2115265544731676921",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-28T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2115265544731676921",
+          "source_image": "https://pbs.twimg.com/media/HVrnLIEbsAAEqkC?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115265544731676921&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-29T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115627932400209929",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115627932400209929&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HVwrp-2bMAANYWl?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 200431,
+      "sha256": "f878ff172883fd13491d4a5b01b6ac3b5d38169968dc54c45245715465bd0374",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2115627932400209929-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2115627932400209929",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-29T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2115627932400209929",
+          "source_image": "https://pbs.twimg.com/media/HVwrp-2bMAANYWl?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115627932400209929&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-30T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115990320383226046",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115990320383226046&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HV16zA-bwAAGV1P?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 211988,
+      "sha256": "d9c3a56116698c643938d9d46d8d53cfe82c2535b9d19a969c0048d5bbb75238",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2115990320383226046-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2115990320383226046",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-30T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2115990320383226046",
+          "source_image": "https://pbs.twimg.com/media/HV16zA-bwAAGV1P?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115990320383226046&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-30T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115990320383226046",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115990320383226046&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HV16zA9bIAAT_i9?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 204146,
+      "sha256": "bd0da1789b4589452db36bb1dc7b689a447839d24acb0397444dffdf629a84c4",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2115990320383226046-2.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2115990320383226046",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-10-30T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2115990320383226046",
+          "source_image": "https://pbs.twimg.com/media/HV16zA9bIAAT_i9?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115990320383226046&lang=ja&token=0",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-04T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2117802259744694422",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2117802259744694422&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HWPCZREaAAAIOF5?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 206303,
+      "sha256": "b5236992013049b3c3682298209e09944559fbd4d331f95704b31c99b377873e",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2117802259744694422-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2117802259744694422",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-11-04T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2117802259744694422",
+          "source_image": "https://pbs.twimg.com/media/HWPCZREaAAAIOF5?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2117802259744694422&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-04T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2117802259744694422",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2117802259744694422&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HWPCZQ2asAAga_e?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 187625,
+      "sha256": "feb65e08ca522578738fca55ca23fd17f2e39a0a57a247dbab0d40713b290c1a",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2117802259744694422-2.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2117802259744694422",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-11-04T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2117802259744694422",
+          "source_image": "https://pbs.twimg.com/media/HWPCZQ2asAAga_e?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2117802259744694422&lang=ja&token=0",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-05T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2118164647534600421",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2118164647534600421&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HWUyt-xbkAAqUFh?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 197242,
+      "sha256": "8929708785c5a4c10e44d5c25612ea61e8c9fd0d188073fa508a16ee745f0e1b",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2118164647534600421-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2118164647534600421",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-11-05T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2118164647534600421",
+          "source_image": "https://pbs.twimg.com/media/HWUyt-xbkAAqUFh?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2118164647534600421&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-05T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2118164647534600421",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2118164647534600421&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HWUyt-xa8AAIzro?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 183464,
+      "sha256": "77e498a1f18ec954052211bd09d435f0321c183f4441ca7e138ecabb0a02050b",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2118164647534600421-2.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2118164647534600421",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-11-05T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2118164647534600421",
+          "source_image": "https://pbs.twimg.com/media/HWUyt-xa8AAIzro?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2118164647534600421&lang=ja&token=0",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-05T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2118164647534600421",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2118164647534600421&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HWUyt-yaUAAigeW?format=jpg&name=orig",
+      "dimensions": [1450, 2048],
+      "bytes": 481522,
+      "sha256": "994defd5c2474fa79b0b1fef767fb16049ca225f4956b8af0ee05d1126fae86e",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2118164647534600421-3.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2118164647534600421",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-11-05T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2118164647534600421",
+          "source_image": "https://pbs.twimg.com/media/HWUyt-yaUAAigeW?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2118164647534600421&lang=ja&token=0",
+          "number": 3
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-06T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2118527035391791585",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2118527035391791585&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HWZ2DuNacAAQZwl?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 196317,
+      "sha256": "45b173b828b665422816feb0db7c7e6ef21be3419b20cfa83227544269f8e12c",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2118527035391791585-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2118527035391791585",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-11-06T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2118527035391791585",
+          "source_image": "https://pbs.twimg.com/media/HWZ2DuNacAAQZwl?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2118527035391791585&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-06T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2118527035391791585",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2118527035391791585&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HWZ2DuMaIAEyNHS?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 180676,
+      "sha256": "045aaeea0a67725e11e5035a8c7d62dc513d728abfd480ff624e4927082eb92a",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2118527035391791585-2.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2118527035391791585",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-11-06T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2118527035391791585",
+          "source_image": "https://pbs.twimg.com/media/HWZ2DuMaIAEyNHS?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2118527035391791585&lang=ja&token=0",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-09T02:13:12.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2119614252394889636",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2119614252394889636&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HWph4CZaoAAO_-V?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 207326,
+      "sha256": "8d16eecf7584bae81bf6e80e659dfc27ef4c006ef219336f092423ce53a87600",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2119614252394889636-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2119614252394889636",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-11-09T02:13:12.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2119614252394889636",
+          "source_image": "https://pbs.twimg.com/media/HWph4CZaoAAO_-V?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2119614252394889636&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-09T02:13:12.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2119614252394889636",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2119614252394889636&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HWph4CWacAA6dFS?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 201388,
+      "sha256": "770de4ce6366b6ef39bd59a1fcde3439b6c63433988664c0ac211fb64294cc7f",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2119614252394889636-2.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2119614252394889636",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-11-09T02:13:12.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2119614252394889636",
+          "source_image": "https://pbs.twimg.com/media/HWph4CWacAA6dFS?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2119614252394889636&lang=ja&token=0",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-09T02:13:12.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2119614252394889636",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2119614252394889636&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HWph4CebIAAYlG1?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 231518,
+      "sha256": "c173fcb06feb8f04f441ff4978df335e4e05c00fd4a046f047f0986108dfcb10",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2119614252394889636-3.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2119614252394889636",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-11-09T02:13:12.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2119614252394889636",
+          "source_image": "https://pbs.twimg.com/media/HWph4CebIAAYlG1?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2119614252394889636&lang=ja&token=0",
+          "number": 3
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-10T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2119976586984255870",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2119976586984255870&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HWuiq4Aa0AAA7by?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 190757,
+      "sha256": "8bb772902ada08e22ad05812dbcade86ec17897cc670220c8a775989b65ea7d6",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2119976586984255870-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2119976586984255870",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-11-10T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2119976586984255870",
+          "source_image": "https://pbs.twimg.com/media/HWuiq4Aa0AAA7by?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2119976586984255870&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-10T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2119976586984255870",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2119976586984255870&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HWuiq2WbsAAaFF7?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 190038,
+      "sha256": "6b1f89b432ac745fb17b5273bf1192d8b1ac3534cbec6bf369558982ad4986b0",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2119976586984255870-2.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2119976586984255870",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-11-10T02:13:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2119976586984255870",
+          "source_image": "https://pbs.twimg.com/media/HWuiq2WbsAAaFF7?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2119976586984255870&lang=ja&token=0",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-10T11:26:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2120115753852825966",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2120115753852825966&lang=ja&token=0",
+      "source_image": "https://pbs.twimg.com/media/HWwUagAaMAATwjd?format=jpg&name=orig",
+      "dimensions": [1040, 720],
+      "bytes": 209988,
+      "sha256": "30a30182dae68f5911b6c85f00a44f3d844cdae224f7f83235226f8ad3c45918",
+      "file": "public/assets/mascots/official/x/modjapan_jp-2120115753852825966-1.jpg",
+      "retrieved_on": "2026-11-10",
+      "modified": false,
+      "contains_mascot": true,
+      "source_posts": [
+        {
+          "post_id": "2120115753852825966",
+          "account": "ModJapan_jp",
+          "posted_at": "2026-11-10T11:26:00.000Z",
+          "source_page": "https://x.com/ModJapan_jp/status/2120115753852825966",
+          "source_image": "https://pbs.twimg.com/media/HWwUagAaMAATwjd?format=jpg&name=orig",
+          "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2120115753852825966&lang=ja&token=0",
+          "number": 1
+        }
+      ]
+    }
+  ]
+}

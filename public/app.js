@@ -133,7 +133,7 @@ async function mission(id, token) {
         : '';
       feedback.className = result.correct ? 'feedback success' : 'feedback retry';
       if (!result.correct)
-        feedback.innerHTML = `${mascot('rii')}<span><strong>もう一歩！ 今回は不正解です。</strong><span>入力した合言葉と手がかりを、もう一度見比べてみよう。下のヒントも使えます。</span></span>`;
+        feedback.innerHTML = `${mascot('rii', 'mascot-retry')}<span><strong>もう一歩！</strong><span>今回は不正解です。入力した合言葉と手がかりを、もう一度見比べてみよう。下のヒントも使えます。</span></span>`;
       document
         .querySelector('#answer-form')
         .classList.add(result.correct ? 'answer-correct' : 'answer-incorrect');
@@ -233,7 +233,7 @@ function showExplanation(c, result, shouldFocus) {
   el.innerHTML = /* HTML */ `<div
       class="result-visual ${result.assisted ? 'is-learned' : 'is-correct'}"
     >
-      ${mascot(result.assisted ? 'rii' : 'rai')}
+      ${mascot(result.assisted ? 'rii' : 'rai', result.assisted ? '' : 'mascot-success')}
       <div>
         <span class="result-symbol" aria-hidden="true"
           >${

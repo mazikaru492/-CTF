@@ -46,6 +46,12 @@ for (const engine of [chromium, webkit]) {
         await page.locator('#flag-input').fill(challenges[0].answer + '_WRONG');
         await page.locator('#submit-answer').click();
         await page.locator('.feedback.retry').waitFor();
+        assert.match(
+          await page
+            .locator('.feedback.retry .mascot')
+            .evaluate((el) => getComputedStyle(el).backgroundImage),
+          /rii-retry\.png/,
+        );
         assert.equal(await page.locator('#flag-input').getAttribute('aria-invalid'), 'true');
         assert.match(await page.locator('#feedback').textContent(), /不正解/);
         const retryAnimations = await page.evaluate(() => window.resultAnimationCount);
@@ -58,6 +64,12 @@ for (const engine of [chromium, webkit]) {
         await page.locator('#flag-input').fill(challenges[0].answer);
         await page.locator('#submit-answer').click();
         await page.locator('.result-visual.is-correct').waitFor();
+        assert.match(
+          await page
+            .locator('.is-correct .mascot')
+            .evaluate((el) => getComputedStyle(el).backgroundImage),
+          /rai-success\.png/,
+        );
         assert.equal(await page.locator('#header-score').textContent(), `1 / ${challengeCount}`);
         assert.equal(await page.locator('#flag-input').getAttribute('aria-invalid'), null);
         assert.ok((await page.locator('.feedback.retry').count()) === 0);
@@ -90,6 +102,7 @@ for (const engine of [chromium, webkit]) {
         await page.locator('#explanation-button').click();
         await page.locator('#confirm-ok').click();
         await page.locator('.result-visual.is-learned').waitFor();
+        assert.equal(await page.locator('.is-learned .mascot-success').count(), 0);
         assert.equal(await page.locator('#header-score').textContent(), `1 / ${challengeCount}`);
         assert.equal(
           await page.locator('.confetti').count(),

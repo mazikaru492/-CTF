@@ -1,0 +1,4238 @@
+{
+  "retrieved_on": "2026-11-10",
+  "access": "public_without_login",
+  "full_timeline_verified": false,
+  "search_request_count": 36,
+  "candidate_post_count": 119,
+  "downloaded_attachment_count": 172,
+  "unique_images_reviewed": 168,
+  "retained_x_unique_images": 52,
+  "retained_x_post_count": 37,
+  "browser_run_url": "https://agent.tinyfish.ai/runs/236fc3c0-d90c-4c1c-901c-4233a80465de",
+  "browser_run_steps": 53,
+  "limitations": [
+    "X search and media pages redirected to sign-in.",
+    "Public keyword search and reference closure were checked; complete account timeline coverage is unverified.",
+    "Deleted, private, unindexed and image-only unmentioned posts may be missing.",
+    "Only static images and video thumbnails were reviewed; video frames were not extracted."
+  ],
+  "searches": [
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "page": 0
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2110916891065622624",
+          "thumbnail": "https://pbs.twimg.com/media/HUt5dA_bsAAzFbE?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2112728829605433530",
+          "thumbnail": "https://pbs.twimg.com/media/HVHpDK0aoAAW2SS?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008857895400833123",
+          "thumbnail": "https://pbs.twimg.com/media/G-DlmrUb0AAPIY6?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2105481072435970332",
+          "thumbnail": "https://pbs.twimg.com/media/HTcqw_bakAAVlrh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1668184032323178496",
+          "thumbnail": "https://pbs.twimg.com/profile_images/1182494221720145920/1f6PGrY1_400x400.jpg"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003073723813986387",
+          "thumbnail": "https://pbs.twimg.com/media/G8xY7nSaYAE3QVr?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2113453605219160373",
+          "thumbnail": "https://pbs.twimg.com/media/HVRvrfLaQAAFsGE?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2115627932400209929",
+          "thumbnail": "https://pbs.twimg.com/media/HVwrp-2bMAANYWl?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2099682866359644667",
+          "thumbnail": "https://pbs.twimg.com/media/HSJ0_p3aAAAS3wP?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2100770029818228921",
+          "thumbnail": "https://pbs.twimg.com/media/HSdKgFZbwAASKaV?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"ライ\" \"リイ\"",
+        "page": 0
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004483430478909660",
+          "thumbnail": "https://pbs.twimg.com/media/G9FbDXva4AEXEYr?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2118164647534600421",
+          "thumbnail": "https://pbs.twimg.com/media/HWUyt-xbkAAqUFh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2009467589622419731",
+          "thumbnail": "https://pbs.twimg.com/media/G-MQDkAa0AYSS6p?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2102944357179674943",
+          "thumbnail": "https://pbs.twimg.com/media/HS8PhnraQAAlA1T?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930?lang=hu",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2102944357179674943?lang=es",
+          "thumbnail": "https://pbs.twimg.com/media/HS8PhnraQAAlA1T?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2100407642179166379",
+          "thumbnail": "https://pbs.twimg.com/media/HSYiv5-acAAylXt?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2103306745179255009",
+          "thumbnail": "https://pbs.twimg.com/media/HTBqkiJawAAdZPc?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2103306745179255009?lang=da",
+          "thumbnail": "https://pbs.twimg.com/media/HTBqkiJawAAdZPc?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/efp_official/status \"ライ\" \"リイ\"",
+        "page": 0
+      },
+      "returned": 2,
+      "results": [
+        {
+          "url": "https://x.com/efp_official/status/2019637385173287270",
+          "thumbnail": "https://pbs.twimg.com/profile_images/1987098129888608256/zX2ZWQmx_400x400.jpg"
+        },
+        {
+          "url": "https://x.com/efp_official/status/2101122100182294554",
+          "thumbnail": "https://pbs.twimg.com/media/HSiumYkbkAARtf5?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "page": 3
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2112366441617879477",
+          "thumbnail": "https://pbs.twimg.com/media/HVCXFbmaYAAtdNF?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2101132417893380582",
+          "thumbnail": "https://pbs.twimg.com/media/HSegks6aEAAc3Mf?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008752896926679186",
+          "thumbnail": "https://pbs.twimg.com/media/G-CGHAWbcAIpOte?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1831977479160132044",
+          "thumbnail": "https://pbs.twimg.com/media/GWx9zgjawAAtTRM?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2011305213190394177",
+          "thumbnail": "https://pbs.twimg.com/media/G-mXbWEbQAE67QI?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003768500792496142",
+          "thumbnail": "https://pbs.twimg.com/media/G87Q04bbEAA5tOi?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1728953146091999705",
+          "thumbnail": "https://pbs.twimg.com/media/F_55uMDbwAAR0pj?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2009583468334961141",
+          "thumbnail": "https://pbs.twimg.com/media/G-N5gnubUAE8F_i?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2102944357179674943?lang=es",
+          "thumbnail": "https://pbs.twimg.com/media/HS8PhnraQAAlA1T?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "page": 1
+      },
+      "returned": 9,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2117802259744694422",
+          "thumbnail": "https://pbs.twimg.com/media/HWPCZREaAAAIOF5?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2099682866359644667",
+          "thumbnail": "https://pbs.twimg.com/media/HSJ0_p3aAAAS3wP?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2118527035391791585",
+          "thumbnail": "https://pbs.twimg.com/media/HWZ2DuNacAAQZwl?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2118164647534600421",
+          "thumbnail": "https://pbs.twimg.com/media/HWUyt-xbkAAqUFh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004441592485253494",
+          "thumbnail": "https://pbs.twimg.com/media/G9E0_5nawAEJlyh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2100770029818228921?lang=ar",
+          "thumbnail": "https://pbs.twimg.com/media/HSdKgFZbwAASKaV?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2115990320383226046",
+          "thumbnail": "https://pbs.twimg.com/media/HV16zA-bwAAGV1P?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2112004053681275143",
+          "thumbnail": "https://pbs.twimg.com/media/HU9W91dbQAAyr1R?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2105481072435970332?lang=ar",
+          "thumbnail": "https://pbs.twimg.com/media/HTcqw_bakAAVlrh?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"マスコット\" サイバー",
+        "page": 0
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2009467589622419731",
+          "thumbnail": "https://pbs.twimg.com/media/G-MQDkAa0AYSS6p?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2118164647534600421",
+          "thumbnail": "https://pbs.twimg.com/media/HWUyt-xbkAAqUFh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930?lang=hu",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2100045254129074687",
+          "thumbnail": "https://pbs.twimg.com/media/HSTMhWvbwAARp2Z?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2100407642179166379",
+          "thumbnail": "https://pbs.twimg.com/media/HSYiv5-acAAylXt?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2103306745179255009",
+          "thumbnail": "https://pbs.twimg.com/media/HTBqkiJawAAdZPc?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2102944357179674943",
+          "thumbnail": "https://pbs.twimg.com/media/HS8PhnraQAAlA1T?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004483430478909660",
+          "thumbnail": "https://pbs.twimg.com/media/G9FbDXva4AEXEYr?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2102944357179674943?lang=es",
+          "thumbnail": "https://pbs.twimg.com/media/HS8PhnraQAAlA1T?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "page": 2
+      },
+      "returned": 7,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2114540768874688945",
+          "thumbnail": "https://pbs.twimg.com/media/HVhbDgCaMAA-fOn?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2115265544731676921",
+          "thumbnail": "https://pbs.twimg.com/media/HVrnLIEbsAAEqkC?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/modjapan_jp/status/2101132417893380582",
+          "thumbnail": "https://pbs.twimg.com/media/HSegks6aEAAc3Mf?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2112728829605433530",
+          "thumbnail": "https://pbs.twimg.com/media/HVHpDK0aoAAW2SS?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2106930624141615357",
+          "thumbnail": "https://pbs.twimg.com/media/HTmeklKbwAAHgO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2118164647534600421",
+          "thumbnail": "https://pbs.twimg.com/media/HWUyt-xbkAAqUFh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2112366441617879477",
+          "thumbnail": "https://pbs.twimg.com/media/HVCXFbmaYAAtdNF?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "page": 7
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008379193214853293",
+          "thumbnail": "https://pbs.twimg.com/media/G98yNdzbwAAmHxi?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008701798375453168",
+          "thumbnail": "https://pbs.twimg.com/media/G-BXolDaQAAivrU?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1883796388670320877",
+          "thumbnail": "https://pbs.twimg.com/media/GiSW09jb0AA1LsK?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004484782055669831",
+          "thumbnail": "https://pbs.twimg.com/media/G9FcSAaa8AAAhrp?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003074015611809981?lang=el",
+          "thumbnail": "https://pbs.twimg.com/media/G8xZMr1agAARKPq?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2016771323863933114",
+          "thumbnail": "https://pbs.twimg.com/media/G_0C0wwbUAEB3tB?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2009540351204446587",
+          "thumbnail": "https://pbs.twimg.com/media/G-NSS3xb0AA6wYM?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008520777927438491?lang=da",
+          "thumbnail": "https://pbs.twimg.com/media/G9-y_h8bcAgcQt4?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004071063979020602",
+          "thumbnail": "https://pbs.twimg.com/media/G8_kAb_b0AEE1WN?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1735057012470252027",
+          "thumbnail": "https://pbs.twimg.com/media/GAtjuoIaQAABvf5?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "page": 9
+      },
+      "returned": 0,
+      "results": []
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "page": 10
+      },
+      "returned": 0,
+      "results": []
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "page": 4
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2011386157943439619",
+          "thumbnail": "https://pbs.twimg.com/media/G-nhC1ubUAAGVdc?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2103306745179255009?lang=da",
+          "thumbnail": "https://pbs.twimg.com/media/HTBqkiJawAAdZPc?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003402607679926370",
+          "thumbnail": "https://pbs.twimg.com/media/G82ECFaagAUhfe6?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2011027073494892753",
+          "thumbnail": "https://pbs.twimg.com/media/G-iadnGbQAArFCt?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1885253858357895412",
+          "thumbnail": "https://pbs.twimg.com/media/GinEY_gbYAIq-d8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2102944357179674943",
+          "thumbnail": "https://pbs.twimg.com/media/HS8PhnraQAAlA1T?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1552567059980374016",
+          "thumbnail": "https://pbs.twimg.com/profile_images/1182494221720145920/1f6PGrY1_400x400.jpg"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1836967586145390886",
+          "thumbnail": "https://pbs.twimg.com/media/GX44SJDbQAAKkAA?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003407969137098973",
+          "thumbnail": "https://pbs.twimg.com/media/G82I7NJagAQJ2Be?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2100407642179166379",
+          "thumbnail": "https://pbs.twimg.com/media/HSYiv5-acAAylXt?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "page": 6
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/1836334062065135616",
+          "thumbnail": "https://pbs.twimg.com/media/GXv4F5na4AAeOqa?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1679776980072554496",
+          "thumbnail": "https://pbs.twimg.com/profile_images/1182494221720145920/1f6PGrY1_400x400.jpg"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008520777927438491",
+          "thumbnail": "https://pbs.twimg.com/media/G9-y_h8bcAgcQt4?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003745926838628650",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2003745809477869568/img/qHh_hpVChoCQ7qA1?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1866050250919842300",
+          "thumbnail": "https://pbs.twimg.com/media/GeWKz9uaoAAI1Oh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004484782055669831?lang=bg",
+          "thumbnail": "https://pbs.twimg.com/media/G9FcSAaa8AAAhrp?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008011419573530745?lang=ro",
+          "thumbnail": "https://pbs.twimg.com/media/G93jvRVa0AAB2tA?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1986992125284917577",
+          "thumbnail": "https://pbs.twimg.com/media/G5M2y8TbIAIQbax?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004438285696041420",
+          "thumbnail": "https://pbs.twimg.com/media/G9Ex_otb0AA6XL5?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2009540351204446587",
+          "thumbnail": "https://pbs.twimg.com/media/G-NSS3xb0AA6wYM?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "page": 8
+      },
+      "returned": 7,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2085290051119042857",
+          "thumbnail": "https://pbs.twimg.com/profile_images/1182494221720145920/1f6PGrY1_400x400.jpg"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2108478301924966660",
+          "thumbnail": "https://pbs.twimg.com/media/HULR1wKasAE8wyW?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1575102719182131200",
+          "thumbnail": "https://pbs.twimg.com/media/FdvjkbuacAE65lZ?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2112117976719933776",
+          "thumbnail": "https://pbs.twimg.com/media/HU_AGuGb0AAdPqa?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2115371870531002873",
+          "thumbnail": "https://pbs.twimg.com/media/HVtPfYTbUAAaCyE?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2112499499230998668",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2112499131352743936/img/UOFd79aItBjodOHu?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2108544101050384565",
+          "thumbnail": "https://pbs.twimg.com/media/HUMNrhZa8AAGzxJ?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "page": 5
+      },
+      "returned": 7,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2115791545014325654",
+          "thumbnail": "https://pbs.twimg.com/media/HVzNMQHaMAA4f77?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2115010100146438585",
+          "thumbnail": "https://pbs.twimg.com/media/HVoGeYKaIAAGwHU?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2117106552981319855",
+          "thumbnail": "https://pbs.twimg.com/media/HWF5MDbbgAArhsx?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2115443949179654196",
+          "thumbnail": "https://pbs.twimg.com/media/HVuRDc1acAEKt9H?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2112117015796404684",
+          "thumbnail": "https://pbs.twimg.com/media/HU-_OvjbwAA_K_V?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2108500030340624818",
+          "thumbnail": "https://pbs.twimg.com/media/HULllb5bQAAHhHb?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2103446249261432882",
+          "thumbnail": "https://pbs.twimg.com/media/HTDxNmRaAAAoQpL?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/efp_official/status \"防衛省\"",
+        "page": 0
+      },
+      "returned": 4,
+      "results": [
+        {
+          "url": "https://x.com/efp_official/status/2101122100182294554",
+          "thumbnail": "https://pbs.twimg.com/media/HSiumYkbkAARtf5?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/efp_official/status/2101122855044030835",
+          "thumbnail": "https://pbs.twimg.com/media/HSiuvHKawAAMwJF?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/efp_official/status/2019637385173287270",
+          "thumbnail": "https://pbs.twimg.com/profile_images/1987098129888608256/zX2ZWQmx_400x400.jpg"
+        },
+        {
+          "url": "https://x.com/efp_official/status/2101122855044030835?lang=bn",
+          "thumbnail": "https://pbs.twimg.com/media/HSiuvHKawAAMwJF?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"modccu25\"",
+        "page": 0
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2113091217424863510",
+          "thumbnail": "https://pbs.twimg.com/media/HVMqAYqagAM8Tqf?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2115990320383226046",
+          "thumbnail": "https://pbs.twimg.com/media/HV16zA-bwAAGV1P?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2117802259744694422",
+          "thumbnail": "https://pbs.twimg.com/media/HWPCZREaAAAIOF5?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2118527035391791585",
+          "thumbnail": "https://pbs.twimg.com/media/HWZ2DuNacAAQZwl?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2119976586984255870",
+          "thumbnail": "https://pbs.twimg.com/media/HWuiq4Aa0AAA7by?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2119614252394889636",
+          "thumbnail": "https://pbs.twimg.com/media/HWph4CZaoAAO_-V?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2118164647534600421",
+          "thumbnail": "https://pbs.twimg.com/media/HWUyt-xbkAAqUFh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2113453605219160373",
+          "thumbnail": "https://pbs.twimg.com/media/HVRvrfLaQAAFsGE?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2115627932400209929",
+          "thumbnail": "https://pbs.twimg.com/media/HVwrp-2bMAANYWl?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2114540768874688945",
+          "thumbnail": "https://pbs.twimg.com/media/HVhbDgCaMAA-fOn?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "after_date": "2024-01-01",
+        "before_date": "2025-01-01",
+        "page": 0
+      },
+      "returned": 5,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/1831977479160132044",
+          "thumbnail": "https://pbs.twimg.com/media/GWx9zgjawAAtTRM?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1836967586145390886",
+          "thumbnail": "https://pbs.twimg.com/media/GX44SJDbQAAKkAA?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1854807035067744648",
+          "thumbnail": "https://pbs.twimg.com/media/Gb2ZKg0bcAACxfS?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1866050250919842300",
+          "thumbnail": "https://pbs.twimg.com/media/GeWKz9uaoAAI1Oh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1836334062065135616",
+          "thumbnail": "https://pbs.twimg.com/media/GXv4F5na4AAeOqa?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"ライ\" \"リイ\"",
+        "page": 2
+      },
+      "returned": 0,
+      "results": []
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"modcc2026\"",
+        "page": 0
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2011386157943439619",
+          "thumbnail": "https://pbs.twimg.com/media/G-nhC1ubUAAGVdc?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008006591778595103",
+          "thumbnail": "https://pbs.twimg.com/media/G93fBYqbkAAk4g_?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004484782055669831",
+          "thumbnail": "https://pbs.twimg.com/media/G9FcSAaa8AAAhrp?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008011419573530745",
+          "thumbnail": "https://pbs.twimg.com/media/G93jvRVa0AAB2tA?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003073723813986387",
+          "thumbnail": "https://pbs.twimg.com/media/G8xY7nSaYAE3QVr?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2113091217424863510",
+          "thumbnail": "https://pbs.twimg.com/media/HVMqAYqagAM8Tqf?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003745926838628650",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2003745809477869568/img/qHh_hpVChoCQ7qA1?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004483430478909660",
+          "thumbnail": "https://pbs.twimg.com/media/G9FbDXva4AEXEYr?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003768500792496142",
+          "thumbnail": "https://pbs.twimg.com/media/G87Q04bbEAA5tOi?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2011292742224396606",
+          "thumbnail": "https://pbs.twimg.com/media/G-mMEidbsAA4RTh?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"ライ\" \"リイ\"",
+        "page": 1
+      },
+      "returned": 2,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2105481072435970332",
+          "thumbnail": "https://pbs.twimg.com/media/HTcqw_bakAAVlrh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2105481072435970332?lang=ar",
+          "thumbnail": "https://pbs.twimg.com/media/HTcqw_bakAAVlrh?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "after_date": "2025-01-01",
+        "before_date": "2026-01-01",
+        "page": 0
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003073723813986387",
+          "thumbnail": "https://pbs.twimg.com/media/G8xY7nSaYAE3QVr?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1986992125284917577",
+          "thumbnail": "https://pbs.twimg.com/media/G5M2y8TbIAIQbax?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1885253858357895412",
+          "thumbnail": "https://pbs.twimg.com/media/GinEY_gbYAIq-d8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004441592485253494",
+          "thumbnail": "https://pbs.twimg.com/media/G9E0_5nawAEJlyh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003407969137098973",
+          "thumbnail": "https://pbs.twimg.com/media/G82I7NJagAQJ2Be?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004483430478909660",
+          "thumbnail": "https://pbs.twimg.com/media/G9FbDXva4AEXEYr?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003745926838628650",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2003745809477869568/img/qHh_hpVChoCQ7qA1?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003074015611809981",
+          "thumbnail": "https://pbs.twimg.com/media/G8xZMr1agAARKPq?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003768500792496142",
+          "thumbnail": "https://pbs.twimg.com/media/G87Q04bbEAA5tOi?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003402607679926370",
+          "thumbnail": "https://pbs.twimg.com/media/G82ECFaagAUhfe6?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "after_date": "2023-01-01",
+        "before_date": "2024-01-01",
+        "page": 0
+      },
+      "returned": 3,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/1728953146091999705",
+          "thumbnail": "https://pbs.twimg.com/media/F_55uMDbwAAR0pj?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1668184032323178496",
+          "thumbnail": "https://pbs.twimg.com/profile_images/1182494221720145920/1f6PGrY1_400x400.jpg"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1735057012470252027",
+          "thumbnail": "https://pbs.twimg.com/media/GAtjuoIaQAABvf5?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"modccu25\"",
+        "page": 2
+      },
+      "returned": 0,
+      "results": []
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"modcc2026\"",
+        "page": 3
+      },
+      "returned": 3,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930?lang=hu",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008520777927438491?lang=da",
+          "thumbnail": "https://pbs.twimg.com/media/G9-y_h8bcAgcQt4?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003074015611809981?lang=el",
+          "thumbnail": "https://pbs.twimg.com/media/G8xZMr1agAARKPq?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "after_date": "2025-01-01",
+        "before_date": "2026-01-01",
+        "page": 2
+      },
+      "returned": 0,
+      "results": []
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"サイバーコンテスト\"",
+        "after_date": "2025-01-01",
+        "before_date": "2026-01-01",
+        "page": 1
+      },
+      "returned": 5,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004484782055669831",
+          "thumbnail": "https://pbs.twimg.com/media/G9FcSAaa8AAAhrp?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1883796388670320877",
+          "thumbnail": "https://pbs.twimg.com/media/GiSW09jb0AA1LsK?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004438285696041420",
+          "thumbnail": "https://pbs.twimg.com/media/G9Ex_otb0AA6XL5?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004071063979020602",
+          "thumbnail": "https://pbs.twimg.com/media/G8_kAb_b0AEE1WN?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"ライ\"",
+        "page": 0
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004483430478909660",
+          "thumbnail": "https://pbs.twimg.com/media/G9FbDXva4AEXEYr?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2118164647534600421",
+          "thumbnail": "https://pbs.twimg.com/media/HWUyt-xbkAAqUFh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2009467589622419731",
+          "thumbnail": "https://pbs.twimg.com/media/G-MQDkAa0AYSS6p?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2103306745179255009",
+          "thumbnail": "https://pbs.twimg.com/media/HTBqkiJawAAdZPc?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2100407642179166379",
+          "thumbnail": "https://pbs.twimg.com/media/HSYiv5-acAAylXt?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2102944357179674943?lang=es",
+          "thumbnail": "https://pbs.twimg.com/media/HS8PhnraQAAlA1T?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930?lang=hu",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2102944357179674943",
+          "thumbnail": "https://pbs.twimg.com/media/HS8PhnraQAAlA1T?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/1550043112596475904",
+          "thumbnail": "https://pbs.twimg.com/media/FYLb_q-aUAAXJE3?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"modcc2026\"",
+        "page": 2
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2011027073494892753?lang=vi",
+          "thumbnail": "https://pbs.twimg.com/media/G-iadnGbQAArFCt?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2009583468334961141",
+          "thumbnail": "https://pbs.twimg.com/media/G-N5gnubUAE8F_i?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004438285696041420",
+          "thumbnail": "https://pbs.twimg.com/media/G9Ex_otb0AA6XL5?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003407969137098973",
+          "thumbnail": "https://pbs.twimg.com/media/G82I7NJagAQJ2Be?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008379193214853293",
+          "thumbnail": "https://pbs.twimg.com/media/G98yNdzbwAAmHxi?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003768500792496142?lang=ja",
+          "thumbnail": "https://pbs.twimg.com/media/G87Q04bbEAA5tOi?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003402607679926370",
+          "thumbnail": "https://pbs.twimg.com/media/G82ECFaagAUhfe6?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2003074015611809981",
+          "thumbnail": "https://pbs.twimg.com/media/G8xZMr1agAARKPq?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008011419573530745?lang=ro",
+          "thumbnail": "https://pbs.twimg.com/media/G93jvRVa0AAB2tA?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008701798375453168",
+          "thumbnail": "https://pbs.twimg.com/media/G-BXolDaQAAivrU?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"modccu25\"",
+        "page": 1
+      },
+      "returned": 1,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2115265544731676921",
+          "thumbnail": "https://pbs.twimg.com/media/HVrnLIEbsAAEqkC?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"modcc2026\"",
+        "page": 1
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008752896926679186",
+          "thumbnail": "https://pbs.twimg.com/media/G-CGHAWbcAIpOte?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004071063979020602",
+          "thumbnail": "https://pbs.twimg.com/media/G8_kAb_b0AEE1WN?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008857895400833123",
+          "thumbnail": "https://pbs.twimg.com/media/G-DlmrUb0AAPIY6?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2011305213190394177",
+          "thumbnail": "https://pbs.twimg.com/media/G-mXbWEbQAE67QI?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2009467589622419731",
+          "thumbnail": "https://pbs.twimg.com/media/G-MQDkAa0AYSS6p?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004441592485253494",
+          "thumbnail": "https://pbs.twimg.com/media/G9E0_5nawAEJlyh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008478709800706329",
+          "thumbnail": "https://pbs.twimg.com/media/G9-MvRZbcAITwP3?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2009540351204446587",
+          "thumbnail": "https://pbs.twimg.com/media/G-NSS3xb0AA6wYM?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2008520777927438491",
+          "thumbnail": "https://pbs.twimg.com/media/G9-y_h8bcAgcQt4?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_en/status \"cyber contest\"",
+        "page": 0
+      },
+      "returned": 0,
+      "results": []
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"ライ\"",
+        "page": 1
+      },
+      "returned": 3,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2103306745179255009?lang=da",
+          "thumbnail": "https://pbs.twimg.com/media/HTBqkiJawAAdZPc?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2105481072435970332?lang=ar",
+          "thumbnail": "https://pbs.twimg.com/media/HTcqw_bakAAVlrh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2105481072435970332",
+          "thumbnail": "https://pbs.twimg.com/media/HTcqw_bakAAVlrh?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"リイ\"",
+        "page": 1
+      },
+      "returned": 2,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2105481072435970332?lang=ar",
+          "thumbnail": "https://pbs.twimg.com/media/HTcqw_bakAAVlrh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2105481072435970332",
+          "thumbnail": "https://pbs.twimg.com/media/HTcqw_bakAAVlrh?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com/ModJapan_jp/status \"リイ\"",
+        "page": 0
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004483430478909660",
+          "thumbnail": "https://pbs.twimg.com/media/G9FbDXva4AEXEYr?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2118164647534600421",
+          "thumbnail": "https://pbs.twimg.com/media/HWUyt-xbkAAqUFh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2009467589622419731",
+          "thumbnail": "https://pbs.twimg.com/media/G-MQDkAa0AYSS6p?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2103306745179255009",
+          "thumbnail": "https://pbs.twimg.com/media/HTBqkiJawAAdZPc?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2100407642179166379",
+          "thumbnail": "https://pbs.twimg.com/media/HSYiv5-acAAylXt?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2102944357179674943?lang=es",
+          "thumbnail": "https://pbs.twimg.com/media/HS8PhnraQAAlA1T?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2102944357179674943",
+          "thumbnail": "https://pbs.twimg.com/media/HS8PhnraQAAlA1T?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2103306745179255009?lang=da",
+          "thumbnail": "https://pbs.twimg.com/media/HTBqkiJawAAdZPc?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930?lang=hu",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "site:x.com \"ライ\" \"リイ\" サイバー",
+        "page": 0
+      },
+      "returned": 10,
+      "results": [
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004483430478909660",
+          "thumbnail": "https://pbs.twimg.com/media/G9FbDXva4AEXEYr?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2118164647534600421",
+          "thumbnail": "https://pbs.twimg.com/media/HWUyt-xbkAAqUFh?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2009467589622419731",
+          "thumbnail": "https://pbs.twimg.com/media/G-MQDkAa0AYSS6p?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2004382943301787930?lang=hu",
+          "thumbnail": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2102944357179674943",
+          "thumbnail": "https://pbs.twimg.com/media/HS8PhnraQAAlA1T?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2100407642179166379",
+          "thumbnail": "https://pbs.twimg.com/media/HSYiv5-acAAylXt?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/ModJapan_jp/status/2103306745179255009",
+          "thumbnail": "https://pbs.twimg.com/media/HTBqkiJawAAdZPc?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/efp_official/status/2101122100182294554",
+          "thumbnail": "https://pbs.twimg.com/media/HSiumYkbkAARtf5?format=webp&name=large"
+        },
+        {
+          "url": "https://x.com/efp_official/status/2019637385173287270",
+          "thumbnail": "https://pbs.twimg.com/profile_images/1987098129888608256/zX2ZWQmx_400x400.jpg"
+        }
+      ]
+    },
+    {
+      "request": {
+        "query": "\"Rai\" \"Rii\" \"cyber\" mascot",
+        "page": 0
+      },
+      "returned": 9,
+      "results": [
+        {
+          "url": "https://www.anime.com/news/expelled-from-paradise-resonance-defense-ministry-cyber-contest",
+          "thumbnail": null
+        },
+        {
+          "url": "https://virtualyoutuber.fandom.com/wiki/Kanae",
+          "thumbnail": null
+        },
+        {
+          "url": "https://www.scribd.com/document/882887300/Tokyo-Otherscape-Setting-Book",
+          "thumbnail": null
+        },
+        {
+          "url": "https://aquarius.riversideca.gov/clerkdb/DocView.aspx?id=221166&dbid=0&repo=Clerk",
+          "thumbnail": null
+        },
+        {
+          "url": "https://www.usmodernist.org/aiaca/aiaca-1996-11.pdf",
+          "thumbnail": null
+        },
+        {
+          "url": "https://tvtropes.org/pmwiki/pmwiki.php/DubNameChange/JapaneseToEnglish",
+          "thumbnail": null
+        },
+        {
+          "url": "https://www.facebook.com/groups/2179153535643170/posts/4739836559574842/",
+          "thumbnail": null
+        },
+        {
+          "url": "https://archive.org/stream/GameFan9700/GameFan%20Vol.%208%20-%2009%20%28Sep%202000%29%20SegaNet_djvu.txt",
+          "thumbnail": null
+        },
+        {
+          "url": "https://repositories.lib.utexas.edu/server/api/core/bitstreams/edbbecba-0ecc-42a3-9492-0939d0f05204/content",
+          "thumbnail": null
+        }
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "id": "1544202073033822208",
+      "account": "ModJapan_jp",
+      "posted_at": "2022-07-05T06:10:38.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1544202073033822208",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1544202073033822208&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1544202076854820869",
+      "account": "ModJapan_jp",
+      "posted_at": "2022-07-05T06:10:39.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1544202076854820869",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1544202076854820869&lang=ja&token=0",
+      "references": [
+        {
+          "id": "1544202073033822208",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 0,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1550043112596475904",
+      "account": "ModJapan_jp",
+      "posted_at": "2022-07-21T09:00:51.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1550043112596475904",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1550043112596475904&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1552567059980374016",
+      "account": "ModJapan_jp",
+      "posted_at": "2022-07-28T08:10:07.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1552567059980374016",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1552567059980374016&lang=ja&token=0",
+      "references": [
+        {
+          "id": "1544202073033822208",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 0,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1575102719182131200",
+      "account": "ModJapan_jp",
+      "posted_at": "2022-09-28T12:38:46.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1575102719182131200",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1575102719182131200&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 4,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1668183790378967040",
+      "account": "ModJapan_jp",
+      "posted_at": "2023-06-12T09:09:43.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1668183790378967040",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1668183790378967040&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1668184032323178496",
+      "account": "ModJapan_jp",
+      "posted_at": "2023-06-12T09:10:41.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1668184032323178496",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1668184032323178496&lang=ja&token=0",
+      "references": [
+        {
+          "id": "1668183790378967040",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 0,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1679776980072554496",
+      "account": "ModJapan_jp",
+      "posted_at": "2023-07-14T08:56:55.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1679776980072554496",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1679776980072554496&lang=ja&token=0",
+      "references": [
+        {
+          "id": "1668183790378967040",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 0,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1728953137795608796",
+      "account": "ModJapan_jp",
+      "posted_at": "2023-11-27T01:45:25.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1728953137795608796",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1728953137795608796&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1728953146091999705",
+      "account": "ModJapan_jp",
+      "posted_at": "2023-11-27T01:45:27.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1728953146091999705",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1728953146091999705&lang=ja&token=0",
+      "references": [
+        {
+          "id": "1728953137795608796",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1735057012470252027",
+      "account": "ModJapan_jp",
+      "posted_at": "2023-12-13T22:00:02.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1735057012470252027",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1735057012470252027&lang=ja&token=0",
+      "references": [
+        {
+          "id": "1728953137795608796",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1754772897036706067",
+      "account": "ModJapan_jp",
+      "posted_at": "2024-02-06T07:43:55.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1754772897036706067",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1754772897036706067&lang=ja&token=0",
+      "references": [
+        {
+          "id": "1728953137795608796",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 0,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1831977479160132044",
+      "account": "ModJapan_jp",
+      "posted_at": "2024-09-06T08:47:22.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1831977479160132044",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1831977479160132044&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1836334062065135616",
+      "account": "ModJapan_jp",
+      "posted_at": "2024-09-18T09:18:52.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1836334062065135616",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1836334062065135616&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1836967586145390886",
+      "account": "ModJapan_jp",
+      "posted_at": "2024-09-20T03:16:16.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1836967586145390886",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1836967586145390886&lang=ja&token=0",
+      "references": [
+        {
+          "id": "1836334062065135616",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1854807035067744648",
+      "account": "ModJapan_jp",
+      "posted_at": "2024-11-08T08:43:52.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1854807035067744648",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1854807035067744648&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1862331500714500574",
+      "account": "ModJapan_jp",
+      "posted_at": "2024-11-29T03:03:24.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1862331500714500574",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1862331500714500574&lang=ja&token=0",
+      "references": [
+        {
+          "id": "1854807035067744648",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1866050250919842300",
+      "account": "ModJapan_jp",
+      "posted_at": "2024-12-09T09:20:24.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1866050250919842300",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1866050250919842300&lang=ja&token=0",
+      "references": [
+        {
+          "id": "1862331500714500574",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1883796388670320877",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-01-27T08:37:12.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1883796388670320877",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1883796388670320877&lang=ja&token=0",
+      "references": [
+        {
+          "id": "1831977479160132044",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1885253858357895412",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-01-31T09:08:40.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1885253858357895412",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1885253858357895412&lang=ja&token=0",
+      "references": [
+        {
+          "id": "1883796388670320877",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "1986992125284917577",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-11-08T03:00:13.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/1986992125284917577",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=1986992125284917577&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2003073723813986387",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-22T12:02:45.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2003073723813986387",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2003073723813986387&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2003074015611809981",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-22T12:03:55.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2003074015611809981",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2003074015611809981&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 3,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2003402607679926370",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-23T09:49:37.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2003402607679926370",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2003402607679926370&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 4,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2003407969137098973",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-23T10:10:56.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2003407969137098973",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2003407969137098973&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2003745926838628650",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-24T08:33:51.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2003745926838628650",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2003745926838628650&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2003768500792496142",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-24T10:03:33.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2003768500792496142",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2003768500792496142&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2004071063979020602",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-25T06:05:50.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2004071063979020602",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2004071063979020602&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2003745926838628650",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2004382943301787930",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-26T02:45:07.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2004382943301787930",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2004382943301787930&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2004438285696041420",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-26T06:25:02.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2004438285696041420",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2004438285696041420&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 3,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2004441592485253494",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-26T06:38:11.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2004441592485253494",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2004441592485253494&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 3,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2004483430478909660",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-26T09:24:25.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2004483430478909660",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2004483430478909660&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2004382943301787930",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2004484782055669831",
+      "account": "ModJapan_jp",
+      "posted_at": "2025-12-26T09:29:48.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2004484782055669831",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2004484782055669831&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2008006591778595103",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-05T02:44:13.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2008006591778595103",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2008006591778595103&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2008011419573530745",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-05T03:03:24.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2008011419573530745",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2008011419573530745&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2008379193214853293",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-06T03:24:48.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2008379193214853293",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2008379193214853293&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 3,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2008478709800706329",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-06T10:00:14.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2008478709800706329",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2008478709800706329&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2008379193214853293",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 3,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2008520777927438491",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-06T12:47:24.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2008520777927438491",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2008520777927438491&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 4,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2008701798375453168",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-07T00:46:43.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2008701798375453168",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2008701798375453168&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2008478709800706329",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 3,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2008752896926679186",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-07T04:09:46.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2008752896926679186",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2008752896926679186&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2008857895400833123",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-07T11:06:59.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2008857895400833123",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2008857895400833123&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2009467589622419731",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-09T03:29:42.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2009467589622419731",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2009467589622419731&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 3,
+      "retained_attachments": 3
+    },
+    {
+      "id": "2009540351204446587",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-09T08:18:49.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2009540351204446587",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2009540351204446587&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2009583468334961141",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-09T11:10:09.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2009583468334961141",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2009583468334961141&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2011027073494892753",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-13T10:46:32.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2011027073494892753",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011027073494892753&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2011292742224396606",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-14T04:22:12.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2011292742224396606",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011292742224396606&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 4,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2011305213190394177",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-14T05:11:45.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2011305213190394177",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011305213190394177&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2011386157943439619",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-14T10:33:24.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2011386157943439619",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2011386157943439619&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 3,
+      "retained_attachments": 3
+    },
+    {
+      "id": "2016771323863933114",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-01-29T07:12:08.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2016771323863933114",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2016771323863933114&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2019637385173287270",
+      "account": "efp_official",
+      "posted_at": "2026-02-06T05:00:50.000Z",
+      "source_page": "https://x.com/efp_official/status/2019637385173287270",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2019637385173287270&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2009467589622419731",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 0,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2038783763753353506",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-03-31T01:01:42.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2038783763753353506",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2038783763753353506&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2047149084197417006",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-04-23T03:02:30.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2047149084197417006",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2047149084197417006&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2038783763753353506",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 0,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2047246677028036790",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-04-23T09:30:18.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2047246677028036790",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2047246677028036790&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2047149084197417006",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2049054193818948055",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-04-28T09:12:44.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2049054193818948055",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2049054193818948055&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2047246677028036790",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2049783979973435778",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-04-30T09:32:38.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2049783979973435778",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2049783979973435778&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2049054193818948055",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2052321063028359615",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-05-07T09:34:06.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2052321063028359615",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2052321063028359615&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2049783979973435778",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2054124754974699752",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-05-12T09:01:20.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2054124754974699752",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2054124754974699752&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2052321063028359615",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2054854786613452952",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-05-14T09:22:13.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2054854786613452952",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2054854786613452952&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2054124754974699752",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2056671051338408310",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-05-19T09:39:24.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2056671051338408310",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2056671051338408310&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2054854786613452952",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2059207500893995226",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-05-26T09:38:21.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2059207500893995226",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2059207500893995226&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2056671051338408310",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2059938056736817457",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-05-28T10:01:19.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2059938056736817457",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2059938056736817457&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2059207500893995226",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2061741074503303430",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-06-02T09:25:52.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2061741074503303430",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2061741074503303430&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2059938056736817457",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2062477036611145844",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-06-04T10:10:19.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2062477036611145844",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2062477036611145844&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2061741074503303430",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2064317771685699894",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-06-09T12:04:44.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2064317771685699894",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2064317771685699894&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2062477036611145844",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2065030150891471002",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-06-11T11:15:29.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2065030150891471002",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2065030150891471002&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2064317771685699894",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2066831838937801131",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-06-16T10:34:44.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2066831838937801131",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2066831838937801131&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2065030150891471002",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2067543106753605713",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-06-18T09:41:04.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2067543106753605713",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2067543106753605713&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2066831838937801131",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2069362411954635175",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-06-23T10:10:20.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2069362411954635175",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2069362411954635175&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2067543106753605713",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2081940872967672068",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-07-28T03:12:39.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2081940872967672068",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2081940872967672068&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2069362411954635175",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2084572787369472020",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-08-04T09:30:56.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2084572787369472020",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2084572787369472020&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2081940872967672068",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2085289945972031574",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-08-06T09:00:40.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2085289945972031574",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2085289945972031574&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2084572787369472020",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2085289964976377870",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-08-06T09:00:45.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2085289964976377870",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2085289964976377870&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2085289945972031574",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 0,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2085290051119042857",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-08-06T09:01:05.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2085290051119042857",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2085290051119042857&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2085289964976377870",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 0,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2099682866359644667",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-15T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2099682866359644667",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2099682866359644667&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2100045254129074687",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-16T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2100045254129074687",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2100045254129074687&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2099682866359644667",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2100407642179166379",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-17T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2100407642179166379",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2100407642179166379&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2100770029818228921",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-18T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2100770029818228921",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2100770029818228921&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2101122100182294554",
+      "account": "efp_official",
+      "posted_at": "2026-09-19T01:32:00.000Z",
+      "source_page": "https://x.com/efp_official/status/2101122100182294554",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2101122100182294554&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2101122855044030835",
+      "account": "efp_official",
+      "posted_at": "2026-09-19T01:35:00.000Z",
+      "source_page": "https://x.com/efp_official/status/2101122855044030835",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2101122855044030835&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2101132417893380582",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-19T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2101132417893380582",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2101132417893380582&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2102944357179674943",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-24T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2102944357179674943",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2102944357179674943&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 3,
+      "retained_attachments": 3
+    },
+    {
+      "id": "2103306745179255009",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-25T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2103306745179255009",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2103306745179255009&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2103446249261432882",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-09-25T11:27:20.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2103446249261432882",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2103446249261432882&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2105481072435970332",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-01T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2105481072435970332",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2105481072435970332&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2103306745179255009",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 2,
+      "retained_attachments": 2
+    },
+    {
+      "id": "2106930624141615357",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-05T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2106930624141615357",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2106930624141615357&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2108478301924966660",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-09T08:42:55.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2108478301924966660",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2108478301924966660&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2108500030340624818",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-09T10:09:15.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2108500030340624818",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2108500030340624818&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2108544101050384565",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-09T13:04:23.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2108544101050384565",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2108544101050384565&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2110916891065622624",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-16T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2110916891065622624",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2110916891065622624&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2112004053681275143",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-19T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2112004053681275143",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112004053681275143&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2110916891065622624",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2112117015796404684",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-19T09:41:52.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2112117015796404684",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112117015796404684&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2112117976719933776",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-19T09:45:41.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2112117976719933776",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112117976719933776&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2112185670110433319",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-19T14:14:40.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2112185670110433319",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112185670110433319&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2112190381987344528",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-19T14:33:24.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2112190381987344528",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112190381987344528&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2112185670110433319",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2112366441617879477",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-20T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2112366441617879477",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112366441617879477&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2112004053681275143",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2112499499230998668",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-20T11:01:43.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2112499499230998668",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112499499230998668&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2112190381987344528",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2112728829605433530",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-21T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2112728829605433530",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2112728829605433530&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 2
+    },
+    {
+      "id": "2113091217424863510",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-22T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2113091217424863510",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2113091217424863510&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2113453605219160373",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-23T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2113453605219160373",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2113453605219160373&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2112728829605433530",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2114540768874688945",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-26T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2114540768874688945",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2114540768874688945&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2115010100146438585",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-27T09:17:57.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115010100146438585",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115010100146438585&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2115265544731676921",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-28T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115265544731676921",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115265544731676921&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2115371870531002873",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-28T09:15:30.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115371870531002873",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115371870531002873&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2115384560263516629",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-28T10:05:55.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115384560263516629",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115384560263516629&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2115387374721188261",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-28T10:17:06.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115387374721188261",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115387374721188261&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2115384560263516629",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2115423353628659876",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-28T12:40:04.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115423353628659876",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115423353628659876&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2115387374721188261",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 3,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2115427428843790585",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-28T12:56:16.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115427428843790585",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115427428843790585&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2115423353628659876",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2115443949179654196",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-28T14:01:55.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115443949179654196",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115443949179654196&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2115427428843790585",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2115627932400209929",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-29T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115627932400209929",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115627932400209929&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    },
+    {
+      "id": "2115791545014325654",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-29T13:03:08.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115791545014325654",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115791545014325654&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 3,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2115990320383226046",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-10-30T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2115990320383226046",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2115990320383226046&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 2
+    },
+    {
+      "id": "2117106552981319855",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-02T04:08:30.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2117106552981319855",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2117106552981319855&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2117802259744694422",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-04T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2117802259744694422",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2117802259744694422&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2115265544731676921",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 2,
+      "retained_attachments": 2
+    },
+    {
+      "id": "2118164647534600421",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-05T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2118164647534600421",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2118164647534600421&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2115265544731676921",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 3,
+      "retained_attachments": 3
+    },
+    {
+      "id": "2118527035391791585",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-06T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2118527035391791585",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2118527035391791585&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2117802259744694422",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 2,
+      "retained_attachments": 2
+    },
+    {
+      "id": "2119614252394889636",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-09T02:13:12.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2119614252394889636",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2119614252394889636&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 3,
+      "retained_attachments": 3
+    },
+    {
+      "id": "2119976586984255870",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-10T02:13:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2119976586984255870",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2119976586984255870&lang=ja&token=0",
+      "references": [
+        {
+          "id": "2119614252394889636",
+          "account": "ModJapan_jp"
+        }
+      ],
+      "inspected_attachments": 2,
+      "retained_attachments": 2
+    },
+    {
+      "id": "2120113649033601191",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-10T11:17:38.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2120113649033601191",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2120113649033601191&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 2,
+      "retained_attachments": 0
+    },
+    {
+      "id": "2120115753852825966",
+      "account": "ModJapan_jp",
+      "posted_at": "2026-11-10T11:26:00.000Z",
+      "source_page": "https://x.com/ModJapan_jp/status/2120115753852825966",
+      "metadata_source": "https://cdn.syndication.twimg.com/tweet-result?id=2120115753852825966&lang=ja&token=0",
+      "references": [],
+      "inspected_attachments": 1,
+      "retained_attachments": 1
+    }
+  ],
+  "images": [
+    {
+      "post_id": "2110916891065622624",
+      "source_page": "https://x.com/ModJapan_jp/status/2110916891065622624",
+      "source_image": "https://pbs.twimg.com/media/HUt5dA_bsAAzFbE?format=jpg&name=orig",
+      "sha256": "098309cf3eff9e3202031f17703bccdbbf0df68f1492a4168584d092109fd304",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2105481072435970332",
+      "source_page": "https://x.com/ModJapan_jp/status/2105481072435970332",
+      "source_image": "https://pbs.twimg.com/media/HTcqw_dbkAAumYj?format=jpg&name=orig",
+      "sha256": "5c8dbc2aa8ab29c50aa673fb5983556cf7ee5c6d8c46eef64903f76aae8e1883",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2008857895400833123",
+      "source_page": "https://x.com/ModJapan_jp/status/2008857895400833123",
+      "source_image": "https://pbs.twimg.com/media/G-DlmrUb0AAPIY6?format=jpg&name=orig",
+      "sha256": "21d80102c2871faa407788dd9d1ffdde327d5018b8b9e330cebe4cafe39a08ac",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2105481072435970332",
+      "source_page": "https://x.com/ModJapan_jp/status/2105481072435970332",
+      "source_image": "https://pbs.twimg.com/media/HTcqw_bakAAVlrh?format=jpg&name=orig",
+      "sha256": "02e9ae83223709c481b86b4607cc90f7ba03dcc1d51a7676eaf4b0464782dff9",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2113453605219160373",
+      "source_page": "https://x.com/ModJapan_jp/status/2113453605219160373",
+      "source_image": "https://pbs.twimg.com/media/HVRvrfLaQAAFsGE?format=jpg&name=orig",
+      "sha256": "68e73bbd06ad1d0399218f59c83d042dfe8acf2ef5d11180e028a10df798f0ea",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2112728829605433530",
+      "source_page": "https://x.com/ModJapan_jp/status/2112728829605433530",
+      "source_image": "https://pbs.twimg.com/media/HVHpDK0aoAAW2SS?format=jpg&name=orig",
+      "sha256": "99d528f21102cfe6b99ffb114a56efbaee6f4272534a94f2777523bc2da86e8c",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2003073723813986387",
+      "source_page": "https://x.com/ModJapan_jp/status/2003073723813986387",
+      "source_image": "https://pbs.twimg.com/media/G8xY7nRbMAAhfMJ?format=jpg&name=orig",
+      "sha256": "341350e22707a734fc4d339bd2e2ef2222e5859482cb7305dd44f1dc845ce521",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2112728829605433530",
+      "source_page": "https://x.com/ModJapan_jp/status/2112728829605433530",
+      "source_image": "https://pbs.twimg.com/media/HVHpDKpaEAAkoxr?format=jpg&name=orig",
+      "sha256": "5ee8914741e3b0426ca1c9f7e5dc25c7aa2aed0105f95b05add174764f8f088f",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2115627932400209929",
+      "source_page": "https://x.com/ModJapan_jp/status/2115627932400209929",
+      "source_image": "https://pbs.twimg.com/media/HVwrp-2bMAANYWl?format=jpg&name=orig",
+      "sha256": "f878ff172883fd13491d4a5b01b6ac3b5d38169968dc54c45245715465bd0374",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2003073723813986387",
+      "source_page": "https://x.com/ModJapan_jp/status/2003073723813986387",
+      "source_image": "https://pbs.twimg.com/media/G8xY7nSaYAE3QVr?format=jpg&name=orig",
+      "sha256": "b05ea5a6da1206114ae98ee3d69bbad6883e1513c81c20041a702ef1356a52b5",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2118164647534600421",
+      "source_page": "https://x.com/ModJapan_jp/status/2118164647534600421",
+      "source_image": "https://pbs.twimg.com/media/HWUyt-xbkAAqUFh?format=jpg&name=orig",
+      "sha256": "8929708785c5a4c10e44d5c25612ea61e8c9fd0d188073fa508a16ee745f0e1b",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2118164647534600421",
+      "source_page": "https://x.com/ModJapan_jp/status/2118164647534600421",
+      "source_image": "https://pbs.twimg.com/media/HWUyt-xa8AAIzro?format=jpg&name=orig",
+      "sha256": "77e498a1f18ec954052211bd09d435f0321c183f4441ca7e138ecabb0a02050b",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2100770029818228921",
+      "source_page": "https://x.com/ModJapan_jp/status/2100770029818228921",
+      "source_image": "https://pbs.twimg.com/media/HSdKgFZbwAASKaV?format=jpg&name=orig",
+      "sha256": "aac7aec3581894d1124064bf9104b426805c0603bfe35a27699089feb4cddcd6",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2004483430478909660",
+      "source_page": "https://x.com/ModJapan_jp/status/2004483430478909660",
+      "source_image": "https://pbs.twimg.com/media/G9FbDXva4AEXEYr?format=jpg&name=orig",
+      "sha256": "ca44ed8e4df555a92fb45a659fab71adc84d34cc7e1d9262de73955e67ce543a",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2009467589622419731",
+      "source_page": "https://x.com/ModJapan_jp/status/2009467589622419731",
+      "source_image": "https://pbs.twimg.com/media/G-MQDkAa0AYSS6p?format=jpg&name=orig",
+      "sha256": "745a48b6f60da5b77fccadd82f7d5af47735f1b9a1168a81332dc93a699b4055",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2118164647534600421",
+      "source_page": "https://x.com/ModJapan_jp/status/2118164647534600421",
+      "source_image": "https://pbs.twimg.com/media/HWUyt-yaUAAigeW?format=jpg&name=orig",
+      "sha256": "994defd5c2474fa79b0b1fef767fb16049ca225f4956b8af0ee05d1126fae86e",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2009467589622419731",
+      "source_page": "https://x.com/ModJapan_jp/status/2009467589622419731",
+      "source_image": "https://pbs.twimg.com/media/G-MQDkCa0AEdeK5?format=jpg&name=orig",
+      "sha256": "d7a6f55fd35ca884ad532666de54a96ce7be01b91028338097b2eafb774512a9",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2009467589622419731",
+      "source_page": "https://x.com/ModJapan_jp/status/2009467589622419731",
+      "source_image": "https://pbs.twimg.com/media/G-MQDkBboAACMro?format=jpg&name=orig",
+      "sha256": "2be5ee3ca0073b93fe17175343e07411f5bac955079ff9576c1b2efed91850ef",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2004382943301787930",
+      "source_page": "https://x.com/ModJapan_jp/status/2004382943301787930",
+      "source_image": "https://pbs.twimg.com/media/G9D_qMiaEAAXZO8?format=jpg&name=orig",
+      "sha256": "092054ac6ad734ae03f2575444962b4f62ed82b4dd7e8f921226114e51ab3f4f",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2099682866359644667",
+      "source_page": "https://x.com/ModJapan_jp/status/2099682866359644667",
+      "source_image": "https://pbs.twimg.com/media/HSJ0_p3aAAAS3wP?format=jpg&name=orig",
+      "sha256": "3b8fd342f98418c965fbd37fe7f9c49aac7f6a924ae2e2605eff4a6303de2b40",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2100407642179166379",
+      "source_page": "https://x.com/ModJapan_jp/status/2100407642179166379",
+      "source_image": "https://pbs.twimg.com/media/HSYiv5-acAAylXt?format=jpg&name=orig",
+      "sha256": "9a929f6c79329e2bb3cf4b28852e4d0e13967dc7ee38f470dae919b52ac6cb80",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2102944357179674943",
+      "source_page": "https://x.com/ModJapan_jp/status/2102944357179674943",
+      "source_image": "https://pbs.twimg.com/media/HS8PhpObEAEfTJP?format=jpg&name=orig",
+      "sha256": "534220336df66eec9c4536cb42aa62614117f30468300dbf7dd64c8c41d4874c",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2102944357179674943",
+      "source_page": "https://x.com/ModJapan_jp/status/2102944357179674943",
+      "source_image": "https://pbs.twimg.com/media/HS8PhnraQAAlA1T?format=jpg&name=orig",
+      "sha256": "79658531d6881e3a09fd472c10f0bf22553bfabda4d5bad544136d2e63db496f",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2102944357179674943",
+      "source_page": "https://x.com/ModJapan_jp/status/2102944357179674943",
+      "source_image": "https://pbs.twimg.com/media/HS8PhnsbEAAVVrF?format=jpg&name=orig",
+      "sha256": "e63a24bd025165a5bb42ef6cdb5239201e5aad99944962fb3626d02f13fa4018",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2101122100182294554",
+      "source_page": "https://x.com/efp_official/status/2101122100182294554",
+      "source_image": "https://pbs.twimg.com/media/HSiumYkbkAARtf5?format=jpg&name=orig",
+      "sha256": "271195a8b98aa0195e53774a03155b271f7b174a70382c917a87878fa047fa45",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2103306745179255009",
+      "source_page": "https://x.com/ModJapan_jp/status/2103306745179255009",
+      "source_image": "https://pbs.twimg.com/media/HTBqkiJawAAdZPc?format=jpg&name=orig",
+      "sha256": "9bea36bb9124e00422d6d052224712ca106495cd18a5640e3fc7a86f439a2c54",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2101132417893380582",
+      "source_page": "https://x.com/ModJapan_jp/status/2101132417893380582",
+      "source_image": "https://pbs.twimg.com/media/HSegks6aEAAc3Mf?format=jpg&name=orig",
+      "sha256": "79658531d6881e3a09fd472c10f0bf22553bfabda4d5bad544136d2e63db496f",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "1831977479160132044",
+      "source_page": "https://x.com/ModJapan_jp/status/1831977479160132044",
+      "source_image": "https://pbs.twimg.com/media/GWx9zgjawAAtTRM?format=jpg&name=orig",
+      "sha256": "1db992c7cc9c1a9f0862a49a77244cffd7673c2cb26a50e0f947be107604555e",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2112366441617879477",
+      "source_page": "https://x.com/ModJapan_jp/status/2112366441617879477",
+      "source_image": "https://pbs.twimg.com/media/HVCXFbmaYAAtdNF?format=jpg&name=orig",
+      "sha256": "edece84ab4de309e8e52edf3b47e076bbf32cc664838c9dd514d61cd650de951",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2011305213190394177",
+      "source_page": "https://x.com/ModJapan_jp/status/2011305213190394177",
+      "source_image": "https://pbs.twimg.com/media/G-mXbWEbQAE67QI?format=jpg&name=orig",
+      "sha256": "35ba3c9009a877fcecd78531a0e0678e848a87e98d0adc70e35daf7245015cbd",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2003768500792496142",
+      "source_page": "https://x.com/ModJapan_jp/status/2003768500792496142",
+      "source_image": "https://pbs.twimg.com/media/G87Q04bbEAA5tOi?format=jpg&name=orig",
+      "sha256": "c47a08a743a17bdf9aa3b3f6116e4e14953425618e24dcc67a2b08a545b7371b",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2009583468334961141",
+      "source_page": "https://x.com/ModJapan_jp/status/2009583468334961141",
+      "source_image": "https://pbs.twimg.com/media/G-N5gnubUAE8F_i?format=jpg&name=orig",
+      "sha256": "56417d859f5dc96b52d18215b2ebe550ac0101de6418a6dbecd93813106c8726",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2008752896926679186",
+      "source_page": "https://x.com/ModJapan_jp/status/2008752896926679186",
+      "source_image": "https://pbs.twimg.com/media/G-CGHAWbcAIpOte?format=jpg&name=orig",
+      "sha256": "b561413a6e0611144676b139f64fb61bd9c43f630174790de1414a7463fa648f",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1728953146091999705",
+      "source_page": "https://x.com/ModJapan_jp/status/1728953146091999705",
+      "source_image": "https://pbs.twimg.com/media/F_55uMDbwAAR0pj?format=jpg&name=orig",
+      "sha256": "b9a25e4239a68937695caa71d6fdd54659ef8c9b8b2e237d59be587462a8eaf0",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2118527035391791585",
+      "source_page": "https://x.com/ModJapan_jp/status/2118527035391791585",
+      "source_image": "https://pbs.twimg.com/media/HWZ2DuNacAAQZwl?format=jpg&name=orig",
+      "sha256": "45b173b828b665422816feb0db7c7e6ef21be3419b20cfa83227544269f8e12c",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2009583468334961141",
+      "source_page": "https://x.com/ModJapan_jp/status/2009583468334961141",
+      "source_image": "https://pbs.twimg.com/media/G-N5gnnacAEJCxz?format=jpg&name=orig",
+      "sha256": "4f71dd977b77c26af71708e5cbccb9bd8a357b7f6cb9888a078e3a0ea4c4818a",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2118527035391791585",
+      "source_page": "https://x.com/ModJapan_jp/status/2118527035391791585",
+      "source_image": "https://pbs.twimg.com/media/HWZ2DuMaIAEyNHS?format=jpg&name=orig",
+      "sha256": "045aaeea0a67725e11e5035a8c7d62dc513d728abfd480ff624e4927082eb92a",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "1728953146091999705",
+      "source_page": "https://x.com/ModJapan_jp/status/1728953146091999705",
+      "source_image": "https://pbs.twimg.com/media/F_55uMAbAAAp2O2?format=jpg&name=orig",
+      "sha256": "06141ce8418fdd5f88a59b215e842d44f1c96ae222ca231eb70aae495e9e7cd1",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2117802259744694422",
+      "source_page": "https://x.com/ModJapan_jp/status/2117802259744694422",
+      "source_image": "https://pbs.twimg.com/media/HWPCZREaAAAIOF5?format=jpg&name=orig",
+      "sha256": "b5236992013049b3c3682298209e09944559fbd4d331f95704b31c99b377873e",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2117802259744694422",
+      "source_page": "https://x.com/ModJapan_jp/status/2117802259744694422",
+      "source_image": "https://pbs.twimg.com/media/HWPCZQ2asAAga_e?format=jpg&name=orig",
+      "sha256": "feb65e08ca522578738fca55ca23fd17f2e39a0a57a247dbab0d40713b290c1a",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2003768500792496142",
+      "source_page": "https://x.com/ModJapan_jp/status/2003768500792496142",
+      "source_image": "https://pbs.twimg.com/media/G87Q04WbMAAiNNu?format=jpg&name=orig",
+      "sha256": "cb1071efa0b413e29e09f3c4cdd28cca3387cc917f89087709775fbde21a57fd",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2004441592485253494",
+      "source_page": "https://x.com/ModJapan_jp/status/2004441592485253494",
+      "source_image": "https://pbs.twimg.com/media/G9E0_5pbUAE1qk8?format=jpg&name=orig",
+      "sha256": "6090b734a4e1c406ebc07f53dd29712a2bf342698064e6ec7c01fd252220f4ef",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2004441592485253494",
+      "source_page": "https://x.com/ModJapan_jp/status/2004441592485253494",
+      "source_image": "https://pbs.twimg.com/media/G9E0_5nawAEJlyh?format=jpg&name=orig",
+      "sha256": "7412aed77a7cfe2f9d71d160f77933584b696f85768567fbb24936104cf76f41",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2112004053681275143",
+      "source_page": "https://x.com/ModJapan_jp/status/2112004053681275143",
+      "source_image": "https://pbs.twimg.com/media/HU9W91dbQAAyr1R?format=jpg&name=orig",
+      "sha256": "e31870c02a9a353fdc133474801302d31a1c1e5a0b078141b87efed0e551f505",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2115990320383226046",
+      "source_page": "https://x.com/ModJapan_jp/status/2115990320383226046",
+      "source_image": "https://pbs.twimg.com/media/HV16zA9bIAAT_i9?format=jpg&name=orig",
+      "sha256": "bd0da1789b4589452db36bb1dc7b689a447839d24acb0397444dffdf629a84c4",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2100045254129074687",
+      "source_page": "https://x.com/ModJapan_jp/status/2100045254129074687",
+      "source_image": "https://pbs.twimg.com/media/HSTMhWvbwAARp2Z?format=jpg&name=orig",
+      "sha256": "7cffa40ccc036b73c7d240aad59584b8c9ef2b4bc1af942c17a749ebc4879852",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2115265544731676921",
+      "source_page": "https://x.com/ModJapan_jp/status/2115265544731676921",
+      "source_image": "https://pbs.twimg.com/media/HVrnLIEbsAAEqkC?format=jpg&name=orig",
+      "sha256": "a2a790f33b2e8e6d6cb21e4fec61440b803a41bbd915818557282563ed43cd48",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2004441592485253494",
+      "source_page": "https://x.com/ModJapan_jp/status/2004441592485253494",
+      "source_image": "https://pbs.twimg.com/media/G9E0_5tb0AEnWM3?format=jpg&name=orig",
+      "sha256": "d0b7b5f3dd9115ad3d2d532b6bb8fdefc9aa7efdabdfac1b2433c021f88bb294",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115990320383226046",
+      "source_page": "https://x.com/ModJapan_jp/status/2115990320383226046",
+      "source_image": "https://pbs.twimg.com/media/HV16zA-bwAAGV1P?format=jpg&name=orig",
+      "sha256": "d9c3a56116698c643938d9d46d8d53cfe82c2535b9d19a969c0048d5bbb75238",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2008379193214853293",
+      "source_page": "https://x.com/ModJapan_jp/status/2008379193214853293",
+      "source_image": "https://pbs.twimg.com/media/G98yNdzbwAAmHxi?format=jpg&name=orig",
+      "sha256": "516ae78e543e43d7330d15c6c34cd9294ec6aa81c350baed6e496fa1152d14aa",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2114540768874688945",
+      "source_page": "https://x.com/ModJapan_jp/status/2114540768874688945",
+      "source_image": "https://pbs.twimg.com/media/HVhbDgCaMAA-fOn?format=jpg&name=orig",
+      "sha256": "95538030bd10550af87efad78ea805aca205c05e72f2eb15579948b10b4ec0e9",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2106930624141615357",
+      "source_page": "https://x.com/ModJapan_jp/status/2106930624141615357",
+      "source_image": "https://pbs.twimg.com/media/HTmeklKbwAAHgO8?format=jpg&name=orig",
+      "sha256": "7a8e70c1514bf82341c15552d4dbd9712b508c00fe0938854fdfe59be0a7ef00",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2008379193214853293",
+      "source_page": "https://x.com/ModJapan_jp/status/2008379193214853293",
+      "source_image": "https://pbs.twimg.com/media/G98yNd2bkAAMWC1?format=jpg&name=orig",
+      "sha256": "06db3396271e9eaad2f9f8ff2f0fa451ef4e986b4e00137472be304b0a95f47f",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1883796388670320877",
+      "source_page": "https://x.com/ModJapan_jp/status/1883796388670320877",
+      "source_image": "https://pbs.twimg.com/media/GiSW09jb0AA1LsK?format=jpg&name=orig",
+      "sha256": "bb3b37857c458b1a3186f430606f18ea805bd32d5497fe69de1a3877be50e037",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2004484782055669831",
+      "source_page": "https://x.com/ModJapan_jp/status/2004484782055669831",
+      "source_image": "https://pbs.twimg.com/media/G9FcSAaa8AAAhrp?format=jpg&name=orig",
+      "sha256": "1cde9105d10b908a29f535b3035dc0a96b05823cdfa230f52073cdf9adb87a2a",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2008701798375453168",
+      "source_page": "https://x.com/ModJapan_jp/status/2008701798375453168",
+      "source_image": "https://pbs.twimg.com/media/G-BXolJbcAAeccu?format=jpg&name=orig",
+      "sha256": "6dae65b80e17f1819edc390c76bdef9d641d7610871ba899c94abf872b9bbe5a",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2008701798375453168",
+      "source_page": "https://x.com/ModJapan_jp/status/2008701798375453168",
+      "source_image": "https://pbs.twimg.com/media/G-BXolDaQAAivrU?format=jpg&name=orig",
+      "sha256": "4410652acf9a22ea566a2ec6270936c05aee5b125877462362a1e687ee7ff1f9",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2008379193214853293",
+      "source_page": "https://x.com/ModJapan_jp/status/2008379193214853293",
+      "source_image": "https://pbs.twimg.com/media/G98yNjvawAAYgNf?format=jpg&name=orig",
+      "sha256": "0a94b79da90df70908f8b989f226a4ad8065781ccd19cfde97bf378d9e2cf28d",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2008701798375453168",
+      "source_page": "https://x.com/ModJapan_jp/status/2008701798375453168",
+      "source_image": "https://pbs.twimg.com/media/G-BXolDbcAAQBRJ?format=jpg&name=orig",
+      "sha256": "069e5b8d274949bcf8089bd038e90e4133e960f6e8f9f7f27f210d78fc45a229",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2009540351204446587",
+      "source_page": "https://x.com/ModJapan_jp/status/2009540351204446587",
+      "source_image": "https://pbs.twimg.com/media/G-NSS3xb0AA6wYM?format=jpg&name=orig",
+      "sha256": "1d0b42897ad22cf46e5954e889465c2634bcec2ba9c3cf3277809948e402e794",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2016771323863933114",
+      "source_page": "https://x.com/ModJapan_jp/status/2016771323863933114",
+      "source_image": "https://pbs.twimg.com/media/G_0C0wwbUAEB3tB?format=jpg&name=orig",
+      "sha256": "750bebaa22280bffa6c01617a1db887d7b6d50a2e183e5f761bc74651791232e",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2003074015611809981",
+      "source_page": "https://x.com/ModJapan_jp/status/2003074015611809981",
+      "source_image": "https://pbs.twimg.com/media/G8xZMr2aoAATErw?format=jpg&name=orig",
+      "sha256": "60ee4e5035e6485c409ee0d7fa1cecaeb6985143bb5c42f39a0079d1284ae5f6",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2003074015611809981",
+      "source_page": "https://x.com/ModJapan_jp/status/2003074015611809981",
+      "source_image": "https://pbs.twimg.com/media/G8xZMr1agAARKPq?format=jpg&name=orig",
+      "sha256": "a3d8fb39a48b9d61b4ad95639754cb18f1a9bd3ba119bd8046ff6f4dfb86e3ea",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2008520777927438491",
+      "source_page": "https://x.com/ModJapan_jp/status/2008520777927438491",
+      "source_image": "https://pbs.twimg.com/media/G9-y_h8bcAgcQt4?format=jpg&name=orig",
+      "sha256": "28c776bc38c9725896e6329e9fc2b886aa327569af9639f0eae5942c2575ba2c",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2008520777927438491",
+      "source_page": "https://x.com/ModJapan_jp/status/2008520777927438491",
+      "source_image": "https://pbs.twimg.com/media/G9-y_h2bcAETV9f?format=jpg&name=orig",
+      "sha256": "56c693c89a3c507ffc8bc48bed1b5d8921c70b4de33f41d03792f29d501d2a40",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2003074015611809981",
+      "source_page": "https://x.com/ModJapan_jp/status/2003074015611809981",
+      "source_image": "https://pbs.twimg.com/media/G8xZMr0bEAAdR4l?format=jpg&name=orig",
+      "sha256": "d6b87f4281777f317436647bf3b822ef7772d37225f50e8d53e82367af9e71bf",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2008520777927438491",
+      "source_page": "https://x.com/ModJapan_jp/status/2008520777927438491",
+      "source_image": "https://pbs.twimg.com/media/G9-y_h8bcAATliK?format=jpg&name=orig",
+      "sha256": "39aea2453d834cd19c24d51edf79d98365925c7bd8869cfabda8d7f1e1ba81fd",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1735057012470252027",
+      "source_page": "https://x.com/ModJapan_jp/status/1735057012470252027",
+      "source_image": "https://pbs.twimg.com/media/GAtjuoIaQAABvf5?format=jpg&name=orig",
+      "sha256": "52d5554af92e814da363dc5a5eb963993c3bd4cabb1abf212313b062cba673d1",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2003402607679926370",
+      "source_page": "https://x.com/ModJapan_jp/status/2003402607679926370",
+      "source_image": "https://pbs.twimg.com/media/G82ECEHagAELTr2?format=jpg&name=orig",
+      "sha256": "271e28957058005e67c5016fe095b9b22a728c89c94a3425a305573bb58111e7",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2008520777927438491",
+      "source_page": "https://x.com/ModJapan_jp/status/2008520777927438491",
+      "source_image": "https://pbs.twimg.com/media/G9-y_h7bcAIg7lz?format=jpg&name=orig",
+      "sha256": "b4ab8b17c9900134d08d53d5863873c6540a0ec3e6ed92018595026750f92b4e",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2003402607679926370",
+      "source_page": "https://x.com/ModJapan_jp/status/2003402607679926370",
+      "source_image": "https://pbs.twimg.com/media/G82ECFaagAUhfe6?format=jpg&name=orig",
+      "sha256": "d140344536bf26fa8c4b416eea20c539fd2b0e57fa661fc5b5afa1101b32df28",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2004071063979020602",
+      "source_page": "https://x.com/ModJapan_jp/status/2004071063979020602",
+      "source_image": "https://pbs.twimg.com/media/G8_kAb_b0AEE1WN?format=jpg&name=orig",
+      "sha256": "1151dfee7119d91b3dd24f5cd25c969ac2c595a064c17b1ca6943d6c8ccc0f1e",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2003402607679926370",
+      "source_page": "https://x.com/ModJapan_jp/status/2003402607679926370",
+      "source_image": "https://pbs.twimg.com/media/G82ECD_aIAAahig?format=jpg&name=orig",
+      "sha256": "d4ec7915ec5a4a44fe78ccce4b370f9ac5d18bd566fece50777e1ba0f5b7b1dc",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2011386157943439619",
+      "source_page": "https://x.com/ModJapan_jp/status/2011386157943439619",
+      "source_image": "https://pbs.twimg.com/media/G-nhC1ubUAAGVdc?format=jpg&name=orig",
+      "sha256": "14ccb4bf9a67ed3440fd7159138758d2677540158c30a8f634dbbef4439cc0b2",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2003402607679926370",
+      "source_page": "https://x.com/ModJapan_jp/status/2003402607679926370",
+      "source_image": "https://pbs.twimg.com/media/G82ECEEboAA-SGc?format=jpg&name=orig",
+      "sha256": "383a89396fa79ad272ba0f3b67d0b691d719470d7c290a40a329740dc519aa75",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2011386157943439619",
+      "source_page": "https://x.com/ModJapan_jp/status/2011386157943439619",
+      "source_image": "https://pbs.twimg.com/media/G-nhC1vasAI6vKJ?format=jpg&name=orig",
+      "sha256": "a0eff94d7ae53c04f8d5b979ac649a9134d27a1dffb10d1de7a9344f41990f54",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2011027073494892753",
+      "source_page": "https://x.com/ModJapan_jp/status/2011027073494892753",
+      "source_image": "https://pbs.twimg.com/media/G-iadnGbQAArFCt?format=jpg&name=orig",
+      "sha256": "d40bc580880aa5d605adb36cca76e55e3c52428ffba6cb52a281b149bd0f4487",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "1885253858357895412",
+      "source_page": "https://x.com/ModJapan_jp/status/1885253858357895412",
+      "source_image": "https://pbs.twimg.com/media/GinEY_gbYAIq-d8?format=jpg&name=orig",
+      "sha256": "8d973af1734f0e8212cf1493f0f166812e9d9078ca7e9e4030ffe4da0e2745d8",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2011386157943439619",
+      "source_page": "https://x.com/ModJapan_jp/status/2011386157943439619",
+      "source_image": "https://pbs.twimg.com/media/G-nhC1yawAAu_1Q?format=jpg&name=orig",
+      "sha256": "211c3df7f2a6717f9554e81761b44d8b8f7512e7d69be0d5cc0edaf03a5fd49e",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "1836967586145390886",
+      "source_page": "https://x.com/ModJapan_jp/status/1836967586145390886",
+      "source_image": "https://pbs.twimg.com/media/GX44SJDbQAAKkAA?format=jpg&name=orig",
+      "sha256": "1db992c7cc9c1a9f0862a49a77244cffd7673c2cb26a50e0f947be107604555e",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2003745926838628650",
+      "source_page": "https://x.com/ModJapan_jp/status/2003745926838628650",
+      "source_image": "https://pbs.twimg.com/amplify_video_thumb/2003745809477869568/img/qHh_hpVChoCQ7qA1.jpg",
+      "sha256": "1c8ff8c2312e9b43d9d913039c05a51ab9b92de947cd658cd5fd6f4b85a4f572",
+      "kind": "video-thumbnail",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1836334062065135616",
+      "source_page": "https://x.com/ModJapan_jp/status/1836334062065135616",
+      "source_image": "https://pbs.twimg.com/media/GXv4F5na4AAeOqa?format=jpg&name=orig",
+      "sha256": "3d48361acaa9069413735c8e7678d43a8415ac39fab20f67c9cd0950d395dfd3",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1866050250919842300",
+      "source_page": "https://x.com/ModJapan_jp/status/1866050250919842300",
+      "source_image": "https://pbs.twimg.com/media/GeWKz9uaoAAI1Oh?format=jpg&name=orig",
+      "sha256": "3d48361acaa9069413735c8e7678d43a8415ac39fab20f67c9cd0950d395dfd3",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2003407969137098973",
+      "source_page": "https://x.com/ModJapan_jp/status/2003407969137098973",
+      "source_image": "https://pbs.twimg.com/media/G82I7NJagAQJ2Be?format=jpg&name=orig",
+      "sha256": "5399393e180dc6749b238a2833e7cf133be4d2d0bf836385aa5f9ad157de1311",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2004438285696041420",
+      "source_page": "https://x.com/ModJapan_jp/status/2004438285696041420",
+      "source_image": "https://pbs.twimg.com/media/G9Ex_otb0AA6XL5?format=jpg&name=orig",
+      "sha256": "a4520209e2fc8af0ec08b398f060f1e4313acae61e0933ad8c9ac0463ce3c7e7",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2008011419573530745",
+      "source_page": "https://x.com/ModJapan_jp/status/2008011419573530745",
+      "source_image": "https://pbs.twimg.com/media/G93jvRVa0AAB2tA?format=jpg&name=orig",
+      "sha256": "9f4a4c28714797bed0fd566a9a637ef361cdb615ae3db8e74490795deea953c7",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "1986992125284917577",
+      "source_page": "https://x.com/ModJapan_jp/status/1986992125284917577",
+      "source_image": "https://pbs.twimg.com/media/G5M2y8TbIAIQbax?format=jpg&name=orig",
+      "sha256": "12a11e36acfba0a702c080d7445763c7c42eb60f331702d91b971f35edd6abde",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2108478301924966660",
+      "source_page": "https://x.com/ModJapan_jp/status/2108478301924966660",
+      "source_image": "https://pbs.twimg.com/media/HULR1wKasAE8wyW?format=jpg&name=orig",
+      "sha256": "cee5cae9e8e42939917aa7d3f7ebb55ec4250645127e8af8ca1aca156df2f112",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2004438285696041420",
+      "source_page": "https://x.com/ModJapan_jp/status/2004438285696041420",
+      "source_image": "https://pbs.twimg.com/media/G9Ex_oAaUAAMLZn?format=jpg&name=orig",
+      "sha256": "969a12b4cf5df1fc797340f7c364fd1572cb4f50249d84d8c56218119fe03631",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2108478301924966660",
+      "source_page": "https://x.com/ModJapan_jp/status/2108478301924966660",
+      "source_image": "https://pbs.twimg.com/media/HULR1wLbEAAAykA?format=jpg&name=orig",
+      "sha256": "4c2a004e73f4c94503c93c7654bd920f742ee55cecc8cb08fa10cae0747319f1",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1575102719182131200",
+      "source_page": "https://x.com/ModJapan_jp/status/1575102719182131200",
+      "source_image": "https://pbs.twimg.com/media/FdvjkbuaEAAwvKo?format=jpg&name=orig",
+      "sha256": "d58d1b14c038da9462fd2d7223aa050e580094e4a054c4f8716c49bf5d4a4c9a",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1575102719182131200",
+      "source_page": "https://x.com/ModJapan_jp/status/1575102719182131200",
+      "source_image": "https://pbs.twimg.com/media/FdvjkbuacAE65lZ?format=jpg&name=orig",
+      "sha256": "2712743fc32c1e0c677425f57e1d6236066098fe5fd97cab135b44300a824764",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1575102719182131200",
+      "source_page": "https://x.com/ModJapan_jp/status/1575102719182131200",
+      "source_image": "https://pbs.twimg.com/media/FdvjkbuaIAAgDGw?format=jpg&name=orig",
+      "sha256": "76ae77933fb889aba048d82068698c752a1542a86e99d8ae98903f27e089235f",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2004438285696041420",
+      "source_page": "https://x.com/ModJapan_jp/status/2004438285696041420",
+      "source_image": "https://pbs.twimg.com/media/G9Ex_n7agAAHdZ2?format=jpg&name=orig",
+      "sha256": "e254136a2529836eea00e8b468a04b57d3062febcf8d86a8d114c2f9d8473e60",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2112117976719933776",
+      "source_page": "https://x.com/ModJapan_jp/status/2112117976719933776",
+      "source_image": "https://pbs.twimg.com/media/HU_AGt-bYAEqwBu?format=jpg&name=orig",
+      "sha256": "b7e3f5fbf8bb7030f9cb95c91485ef48cba2e9bad82d2bfb8ce7e52635262658",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1575102719182131200",
+      "source_page": "https://x.com/ModJapan_jp/status/1575102719182131200",
+      "source_image": "https://pbs.twimg.com/media/FdvjkbsaUAA_XTF?format=jpg&name=orig",
+      "sha256": "46a5c5a6458613383cc3af6161ec029509d762f361c5cfda71cb082590fde898",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2112499499230998668",
+      "source_page": "https://x.com/ModJapan_jp/status/2112499499230998668",
+      "source_image": "https://pbs.twimg.com/amplify_video_thumb/2112499131352743936/img/UOFd79aItBjodOHu.jpg",
+      "sha256": "5761958c3fcccef597e38eafd9828cd6cd896accf506b3e9a19ba1073fed1e7f",
+      "kind": "video-thumbnail",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115371870531002873",
+      "source_page": "https://x.com/ModJapan_jp/status/2115371870531002873",
+      "source_image": "https://pbs.twimg.com/media/HVtPfYTbUAAaCyE?format=jpg&name=orig",
+      "sha256": "ced9a443e8abd853e463aab614675235aafd42c1a13b38fd769f1dc299bd679f",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115010100146438585",
+      "source_page": "https://x.com/ModJapan_jp/status/2115010100146438585",
+      "source_image": "https://pbs.twimg.com/media/HVoGeYKaIAAGwHU?format=jpg&name=orig",
+      "sha256": "b888aed4810eadb03d2b87579eea007eb24dd123f2703ada6e84b22003ec8d15",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115371870531002873",
+      "source_page": "https://x.com/ModJapan_jp/status/2115371870531002873",
+      "source_image": "https://pbs.twimg.com/media/HVtPfYsasAAerP1?format=jpg&name=orig",
+      "sha256": "24f48d2e12c12f366561b334409b681d8a28a13aa2484ae57e3ba95edce36888",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2108544101050384565",
+      "source_page": "https://x.com/ModJapan_jp/status/2108544101050384565",
+      "source_image": "https://pbs.twimg.com/media/HUMNrhZa8AAGzxJ?format=jpg&name=orig",
+      "sha256": "877e978136ace2b2c0574d1ace97d27ba8f0d371285e693ce477b46b2e4eb37a",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115010100146438585",
+      "source_page": "https://x.com/ModJapan_jp/status/2115010100146438585",
+      "source_image": "https://pbs.twimg.com/media/HVoGeY4asAAh3hH?format=jpg&name=orig",
+      "sha256": "09e8e7d3079f079210a988f94848f5f8b618aeb4ae6b710d6e75dfb372b94a35",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2112117976719933776",
+      "source_page": "https://x.com/ModJapan_jp/status/2112117976719933776",
+      "source_image": "https://pbs.twimg.com/media/HU_AGuGb0AAdPqa?format=jpg&name=orig",
+      "sha256": "436451d368d0ff6f3bb5a0238118a18f2638e27f8b7886282b81f026ff41fcd8",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2108544101050384565",
+      "source_page": "https://x.com/ModJapan_jp/status/2108544101050384565",
+      "source_image": "https://pbs.twimg.com/media/HUMNrhjbkAAryCy?format=jpg&name=orig",
+      "sha256": "f26c2a415aa4258e2ceb4f9e5581b71bc25831e1d806b88a9a2ca90a598bd321",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2117106552981319855",
+      "source_page": "https://x.com/ModJapan_jp/status/2117106552981319855",
+      "source_image": "https://pbs.twimg.com/media/HWF5MDbbgAArhsx?format=jpg&name=orig",
+      "sha256": "847d5b8359b523cc3b2b472ea9bd1e6e72c21a069f24e8a5c8284e3acc610208",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115791545014325654",
+      "source_page": "https://x.com/ModJapan_jp/status/2115791545014325654",
+      "source_image": "https://pbs.twimg.com/media/HVzNMQHaUAIC9TX?format=jpg&name=orig",
+      "sha256": "e018f242a06ae0b46e24d464798ea0ee096080e4d6bcc23a12c889d55052534d",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115791545014325654",
+      "source_page": "https://x.com/ModJapan_jp/status/2115791545014325654",
+      "source_image": "https://pbs.twimg.com/media/HVzNMQHaMAA4f77?format=jpg&name=orig",
+      "sha256": "f28ebaf8879d4f8684c96f721b8208d48d5115b9ac658f7b6f163f42c5155cb6",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115791545014325654",
+      "source_page": "https://x.com/ModJapan_jp/status/2115791545014325654",
+      "source_image": "https://pbs.twimg.com/media/HVzNMQFacAARmTq?format=jpg&name=orig",
+      "sha256": "075f56f516cb8cf2c3b0d99bb0cc8634976243dcc33cb46d936e9f7129511265",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2112117015796404684",
+      "source_page": "https://x.com/ModJapan_jp/status/2112117015796404684",
+      "source_image": "https://pbs.twimg.com/media/HU-_OvjbwAA_K_V?format=jpg&name=orig",
+      "sha256": "ce311192239cd289b76a2e09eb15ab076e168de8a0def21bdeb4e993a508535d",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115443949179654196",
+      "source_page": "https://x.com/ModJapan_jp/status/2115443949179654196",
+      "source_image": "https://pbs.twimg.com/media/HVuRDcxaoAA65pw?format=jpg&name=orig",
+      "sha256": "fc89260f5c2196087449720a2a152a2ccec35f330b9d1a616b7d7f7ca0010d63",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115443949179654196",
+      "source_page": "https://x.com/ModJapan_jp/status/2115443949179654196",
+      "source_image": "https://pbs.twimg.com/media/HVuRDc1acAEKt9H?format=jpg&name=orig",
+      "sha256": "53f1ca95e2c573fa5a8a175b0e6d95115e13cc1d03e156b1b90d19c96d4aa72e",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2112117015796404684",
+      "source_page": "https://x.com/ModJapan_jp/status/2112117015796404684",
+      "source_image": "https://pbs.twimg.com/media/HU-_OveaoAAqGr-?format=jpg&name=orig",
+      "sha256": "301d87036a25f4b738c7ddc60b92fb237cffe0eabdb25aa14a71d938743afcd9",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2108500030340624818",
+      "source_page": "https://x.com/ModJapan_jp/status/2108500030340624818",
+      "source_image": "https://pbs.twimg.com/media/HULllb5bQAAHhHb?format=jpg&name=orig",
+      "sha256": "d97898444836f2c1a56eb1cf25927b7d3add3d875e379bd66575fbd229bcebda",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2103446249261432882",
+      "source_page": "https://x.com/ModJapan_jp/status/2103446249261432882",
+      "source_image": "https://pbs.twimg.com/media/HTDxNmRaAAAoQpL?format=jpg&name=orig",
+      "sha256": "06c71f7e6943e55bbbaac6de09a8e995fc8268bba07c6d563459697898bdbfe9",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2108500030340624818",
+      "source_page": "https://x.com/ModJapan_jp/status/2108500030340624818",
+      "source_image": "https://pbs.twimg.com/media/HULllb1bsAA1oHH?format=jpg&name=orig",
+      "sha256": "8e08a1087d367aee83fee6a78f7aef8342604421054a4323d4d9a2591c0968dc",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2103446249261432882",
+      "source_page": "https://x.com/ModJapan_jp/status/2103446249261432882",
+      "source_image": "https://pbs.twimg.com/media/HTDxNmTbEAAy4eU?format=jpg&name=orig",
+      "sha256": "3916129efd97e79d4e3c52e45846b2eb3f54a59e0ba9ad7f110efd6e13901f76",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2119976586984255870",
+      "source_page": "https://x.com/ModJapan_jp/status/2119976586984255870",
+      "source_image": "https://pbs.twimg.com/media/HWuiq4Aa0AAA7by?format=jpg&name=orig",
+      "sha256": "8bb772902ada08e22ad05812dbcade86ec17897cc670220c8a775989b65ea7d6",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2119976586984255870",
+      "source_page": "https://x.com/ModJapan_jp/status/2119976586984255870",
+      "source_image": "https://pbs.twimg.com/media/HWuiq2WbsAAaFF7?format=jpg&name=orig",
+      "sha256": "6b1f89b432ac745fb17b5273bf1192d8b1ac3534cbec6bf369558982ad4986b0",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2101122855044030835",
+      "source_page": "https://x.com/efp_official/status/2101122855044030835",
+      "source_image": "https://pbs.twimg.com/media/HSiuvHKawAAMwJF?format=jpg&name=orig",
+      "sha256": "fbc6a02397f54285944822a8105242aabbf5b0ec20b1be5262b012edcc96b870",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2119614252394889636",
+      "source_page": "https://x.com/ModJapan_jp/status/2119614252394889636",
+      "source_image": "https://pbs.twimg.com/media/HWph4CZaoAAO_-V?format=jpg&name=orig",
+      "sha256": "8d16eecf7584bae81bf6e80e659dfc27ef4c006ef219336f092423ce53a87600",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2119614252394889636",
+      "source_page": "https://x.com/ModJapan_jp/status/2119614252394889636",
+      "source_image": "https://pbs.twimg.com/media/HWph4CWacAA6dFS?format=jpg&name=orig",
+      "sha256": "770de4ce6366b6ef39bd59a1fcde3439b6c63433988664c0ac211fb64294cc7f",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2113091217424863510",
+      "source_page": "https://x.com/ModJapan_jp/status/2113091217424863510",
+      "source_image": "https://pbs.twimg.com/media/HVMqAYqagAM8Tqf?format=jpg&name=orig",
+      "sha256": "f1afcf570b60567f5d8e4c0fcd27693f01f46bffc021851f29fee95c37260bdf",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2119614252394889636",
+      "source_page": "https://x.com/ModJapan_jp/status/2119614252394889636",
+      "source_image": "https://pbs.twimg.com/media/HWph4CebIAAYlG1?format=jpg&name=orig",
+      "sha256": "c173fcb06feb8f04f441ff4978df335e4e05c00fd4a046f047f0986108dfcb10",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2008006591778595103",
+      "source_page": "https://x.com/ModJapan_jp/status/2008006591778595103",
+      "source_image": "https://pbs.twimg.com/amplify_video_thumb/2008006223787167744/img/FCQBAyYFdgye9kAK.jpg",
+      "sha256": "526f21b21459ce4a5be9a2eaa3db5aeaecd1e236fa2e1220a5ed9be7129e2ef7",
+      "kind": "video-thumbnail",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2008006591778595103",
+      "source_page": "https://x.com/ModJapan_jp/status/2008006591778595103",
+      "source_image": "https://pbs.twimg.com/media/G93fBYqbkAAk4g_?format=jpg&name=orig",
+      "sha256": "0f2f26849bae2670b8cadb5ec59420b0520bbc7e01d7e28cd7d8263cd61ea5a9",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2011292742224396606",
+      "source_page": "https://x.com/ModJapan_jp/status/2011292742224396606",
+      "source_image": "https://pbs.twimg.com/media/G-mMEiYaoAALxEM?format=jpg&name=orig",
+      "sha256": "4f22a824f01d9d6b532038c8aecd1c2f713a99a25a2109d56077f3311c21bdcd",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1854807035067744648",
+      "source_page": "https://x.com/ModJapan_jp/status/1854807035067744648",
+      "source_image": "https://pbs.twimg.com/media/Gb2ZKg0bcAACxfS?format=jpg&name=orig",
+      "sha256": "3d48361acaa9069413735c8e7678d43a8415ac39fab20f67c9cd0950d395dfd3",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2011292742224396606",
+      "source_page": "https://x.com/ModJapan_jp/status/2011292742224396606",
+      "source_image": "https://pbs.twimg.com/media/G-mMEidbsAA4RTh?format=jpg&name=orig",
+      "sha256": "2af96eac9471bc33202de3a423ce2850e268919ea90ee1d5671ce128eefa3afc",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2120115753852825966",
+      "source_page": "https://x.com/ModJapan_jp/status/2120115753852825966",
+      "source_image": "https://pbs.twimg.com/media/HWwUagAaMAATwjd?format=jpg&name=orig",
+      "sha256": "30a30182dae68f5911b6c85f00a44f3d844cdae224f7f83235226f8ad3c45918",
+      "kind": "photo",
+      "retained": true,
+      "reason": "mascot_visible"
+    },
+    {
+      "post_id": "2011292742224396606",
+      "source_page": "https://x.com/ModJapan_jp/status/2011292742224396606",
+      "source_image": "https://pbs.twimg.com/media/G-mMEoRbQAIGu0y?format=jpg&name=orig",
+      "sha256": "f88d49928bd69450b8fe564ba7a2b69404f3e9751b80a9904eb50be79f16da8b",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2008478709800706329",
+      "source_page": "https://x.com/ModJapan_jp/status/2008478709800706329",
+      "source_image": "https://pbs.twimg.com/media/G9-MvRZbcAITwP3?format=jpg&name=orig",
+      "sha256": "019e6de78f58dc0802d9b4d0c102dda2b5f53762650d5206a9bdccfc9cfd33d0",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2011292742224396606",
+      "source_page": "https://x.com/ModJapan_jp/status/2011292742224396606",
+      "source_image": "https://pbs.twimg.com/media/G-mMEidbQAAGoqJ?format=jpg&name=orig",
+      "sha256": "69d0ec98353c1c695f61b9f850fb91cf8f2234b329691814705fd3a091628b96",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1728953137795608796",
+      "source_page": "https://x.com/ModJapan_jp/status/1728953137795608796",
+      "source_image": "https://pbs.twimg.com/media/F_55tlDbgAAX11Y?format=jpg&name=orig",
+      "sha256": "1a1a72fb1e3b0d1621cf14f816be29a16e391db22b543e747714efe807cea51b",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2008478709800706329",
+      "source_page": "https://x.com/ModJapan_jp/status/2008478709800706329",
+      "source_image": "https://pbs.twimg.com/media/G9-MvRXasAAXs72?format=jpg&name=orig",
+      "sha256": "2f77ee63962cba204eeddc1ebb5ae77a5d44ccb438ca7ed946cd0f03ca68cab7",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1668183790378967040",
+      "source_page": "https://x.com/ModJapan_jp/status/1668183790378967040",
+      "source_image": "https://pbs.twimg.com/media/FyaUTkMaYAEb7OS?format=jpg&name=orig",
+      "sha256": "7a2cbb537b4a1b98875c1cf26a394eb1595d4a79a052e94a40f97baa3abd9579",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1862331500714500574",
+      "source_page": "https://x.com/ModJapan_jp/status/1862331500714500574",
+      "source_image": "https://pbs.twimg.com/media/GdhUoMmboAUqBt-?format=jpg&name=orig",
+      "sha256": "0b09e0ce98e1eab09af06b235771345047ddbd6d68c826abf0ec24de559f4a74",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2008478709800706329",
+      "source_page": "https://x.com/ModJapan_jp/status/2008478709800706329",
+      "source_image": "https://pbs.twimg.com/media/G9-MvRVagAAoHA2?format=jpg&name=orig",
+      "sha256": "111e9aa6da47e36d6eb8f0b318655689ed7c3921bcd2a9668f1295d0c91e9e67",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2112190381987344528",
+      "source_page": "https://x.com/ModJapan_jp/status/2112190381987344528",
+      "source_image": "https://pbs.twimg.com/amplify_video_thumb/2112188941449515008/img/GWGzWQoJIcaKvYqS.jpg",
+      "sha256": "20b1c125c7d91c2624688b697ad920fd6fbc0ffb8d000f2f0204c7d22ef1720e",
+      "kind": "video-thumbnail",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115427428843790585",
+      "source_page": "https://x.com/ModJapan_jp/status/2115427428843790585",
+      "source_image": "https://pbs.twimg.com/media/HVuCBlHaoAAlP2Y?format=jpg&name=orig",
+      "sha256": "5b94347a9c2bc2ada3283c604b00d3dc1d65a6fc830be1d618b67b3fbf63d00f",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115427428843790585",
+      "source_page": "https://x.com/ModJapan_jp/status/2115427428843790585",
+      "source_image": "https://pbs.twimg.com/media/HVuCBlSbcAA_6uw?format=jpg&name=orig",
+      "sha256": "adee06cd426d715d5c0c9b549c8ace2b1cac174c00e3eb5c784d4d5e8a4af3c2",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115423353628659876",
+      "source_page": "https://x.com/ModJapan_jp/status/2115423353628659876",
+      "source_image": "https://pbs.twimg.com/media/HVt-UjDaEAA82Xx?format=jpg&name=orig",
+      "sha256": "b169457bceeb21f5a2efc9d37ec0590eae64126ad86854442a8b4d4c0d913e21",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115423353628659876",
+      "source_page": "https://x.com/ModJapan_jp/status/2115423353628659876",
+      "source_image": "https://pbs.twimg.com/media/HVt-UjgakAAT__F?format=jpg&name=orig",
+      "sha256": "375c1730d667b3bbac3702ef788b490686e9c0d35a10667b57e37b736a033069",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1544202073033822208",
+      "source_page": "https://x.com/ModJapan_jp/status/1544202073033822208",
+      "source_image": "https://pbs.twimg.com/media/FW4bmUhaAAArRrf?format=jpg&name=orig",
+      "sha256": "f50e949afecf49b2b28f03ebaf26d456b84e8773c90fcb13b5777bd574fa5639",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2112185670110433319",
+      "source_page": "https://x.com/ModJapan_jp/status/2112185670110433319",
+      "source_image": "https://pbs.twimg.com/media/HU_9qTUbEAA17Ih?format=jpg&name=orig",
+      "sha256": "3d610dbe459f16f5dcf33514a20b27a33f9b06bdc815ba150d704591794b40e9",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115387374721188261",
+      "source_page": "https://x.com/ModJapan_jp/status/2115387374721188261",
+      "source_image": "https://pbs.twimg.com/amplify_video_thumb/2115387298925940737/img/AcZz3m4rVUYekpVL.jpg",
+      "sha256": "8b3bf09e371877d4eaad0d094d4553049fb41c7d46d83f8b05a7309b20e95945",
+      "kind": "video-thumbnail",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2112185670110433319",
+      "source_page": "https://x.com/ModJapan_jp/status/2112185670110433319",
+      "source_image": "https://pbs.twimg.com/media/HU_9qTTb0AAaJHB?format=jpg&name=orig",
+      "sha256": "890fbc1cb4eb9c7fd5363bb776e9cd1faa454e163715cdf3bb54d12a6caac610",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115423353628659876",
+      "source_page": "https://x.com/ModJapan_jp/status/2115423353628659876",
+      "source_image": "https://pbs.twimg.com/media/HVt-UjRbAAAxvnz?format=jpg&name=orig",
+      "sha256": "183d405478034de5a329d0aa9505e468b1bfc24d3c4a7c0b1722bbdf88688c69",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2085289945972031574",
+      "source_page": "https://x.com/ModJapan_jp/status/2085289945972031574",
+      "source_image": "https://pbs.twimg.com/media/HPBwHgcbwAAGBfA?format=jpg&name=orig",
+      "sha256": "ec5803bd2c7072c2ffd1644e847f139bcc2bed001c2cd8fccd82934464232e40",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2084572787369472020",
+      "source_page": "https://x.com/ModJapan_jp/status/2084572787369472020",
+      "source_image": "https://pbs.twimg.com/media/HO3j5V0bUAAcj46?format=jpg&name=orig",
+      "sha256": "1c06f77588eac81c2248b5b579f99f056abec037de0bf4fdafeacf338c2fb889",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2081940872967672068",
+      "source_page": "https://x.com/ModJapan_jp/status/2081940872967672068",
+      "source_image": "https://pbs.twimg.com/media/HOSKDfQaIAAKVel?format=jpg&name=orig",
+      "sha256": "22b6bbefe004dbb5639b34c9fb5cc4eda66a5a5f9a8090c8007c69b6fda29bdc",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115384560263516629",
+      "source_page": "https://x.com/ModJapan_jp/status/2115384560263516629",
+      "source_image": "https://pbs.twimg.com/media/HVtbCeIaUAALcCj?format=jpg&name=orig",
+      "sha256": "841a851a1ca7772dca6546944fd7d046c35c33bb887a8bb622d4816ef3282651",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2115384560263516629",
+      "source_page": "https://x.com/ModJapan_jp/status/2115384560263516629",
+      "source_image": "https://pbs.twimg.com/media/HVtbCd7aIAAPE0U?format=jpg&name=orig",
+      "sha256": "5d9c539b11b6e97d6abf0a94c8fdcafd2234264d030e9b614acb2af726a9cd1c",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2069362411954635175",
+      "source_page": "https://x.com/ModJapan_jp/status/2069362411954635175",
+      "source_image": "https://pbs.twimg.com/media/HLfaJNaasAAGOZB?format=jpg&name=orig",
+      "sha256": "9894758893b3f32750674cf3dc4e7d1565c0677eba1925d4fe3ef76871cb4a4d",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2067543106753605713",
+      "source_page": "https://x.com/ModJapan_jp/status/2067543106753605713",
+      "source_image": "https://pbs.twimg.com/media/HLFjf0DaoAALh9O?format=jpg&name=orig",
+      "sha256": "a836bb1df244cdc4f8d9b8c950a4a39834bdc140e77eee0f20294d3038187eb3",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2066831838937801131",
+      "source_page": "https://x.com/ModJapan_jp/status/2066831838937801131",
+      "source_image": "https://pbs.twimg.com/media/HK7cmkAbUAAt-Wb?format=jpg&name=orig",
+      "sha256": "48399f82f388c5c997b32c9b3842d5bfe50d3775ec672fed288ae91a8197d96d",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2065030150891471002",
+      "source_page": "https://x.com/ModJapan_jp/status/2065030150891471002",
+      "source_image": "https://pbs.twimg.com/media/HKh1-fHaUAIwAFQ?format=jpg&name=orig",
+      "sha256": "57acc9d3a28d704f088fc96ad87ab2f2d06979014208e4feb5bda3c8cffcf350",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2059938056736817457",
+      "source_page": "https://x.com/ModJapan_jp/status/2059938056736817457",
+      "source_image": "https://pbs.twimg.com/media/HJZevgFbIAAFhG2?format=jpg&name=orig",
+      "sha256": "f685a69c4ed25e45dbbdb3321385e025c23425e0834b75901e65d1715f576116",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2061741074503303430",
+      "source_page": "https://x.com/ModJapan_jp/status/2061741074503303430",
+      "source_image": "https://pbs.twimg.com/media/HJzGk8cb0AA87jo?format=jpg&name=orig",
+      "sha256": "597faeb54a6faf5d1d20c86acd04bf61623d936cc62e070e4a3e3db1215ca76b",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2062477036611145844",
+      "source_page": "https://x.com/ModJapan_jp/status/2062477036611145844",
+      "source_image": "https://pbs.twimg.com/media/HJ9j7RhbcAA9rqT?format=jpg&name=orig",
+      "sha256": "c56c96e4789ef445f031ff58652d88b6379b6b2dbca397f48238d0fd9d655ce0",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2064317771685699894",
+      "source_page": "https://x.com/ModJapan_jp/status/2064317771685699894",
+      "source_image": "https://pbs.twimg.com/media/HKXuEfwaYAAltLR?format=jpg&name=orig",
+      "sha256": "ec2091827d25c5f310482223af9eb2dddb7a46230dca24582737029c21a6f0c6",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2056671051338408310",
+      "source_page": "https://x.com/ModJapan_jp/status/2056671051338408310",
+      "source_image": "https://pbs.twimg.com/media/HIrDak7akAAhZln?format=jpg&name=orig",
+      "sha256": "d06fde39829f6a118951d05e34ab4ad06a2aa14809467e1169cde82066016956",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2059207500893995226",
+      "source_page": "https://x.com/ModJapan_jp/status/2059207500893995226",
+      "source_image": "https://pbs.twimg.com/media/HJPGTqebUAAUr4v?format=jpg&name=orig",
+      "sha256": "0a8addecb59ed3bdbc7830daa70ecac2556df7e85023face49276ac313df97bc",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2054854786613452952",
+      "source_page": "https://x.com/ModJapan_jp/status/2054854786613452952",
+      "source_image": "https://pbs.twimg.com/media/HIRPhtUbAAAlfPj?format=jpg&name=orig",
+      "sha256": "aa5e4a006ad5f63260dc0cdcf3b2a4eb259bc04a26e78e542d7be519ef4e818c",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2052321063028359615",
+      "source_page": "https://x.com/ModJapan_jp/status/2052321063028359615",
+      "source_image": "https://pbs.twimg.com/media/HHtPIGtb0AAqQCW?format=jpg&name=orig",
+      "sha256": "90ff37fc94675042436d2c49361d55175e54b3cf5f391bb9aa134df06ddc9c69",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2054124754974699752",
+      "source_page": "https://x.com/ModJapan_jp/status/2054124754974699752",
+      "source_image": "https://pbs.twimg.com/media/HIG3kwbbIAAlJXY?format=jpg&name=orig",
+      "sha256": "f889e00999aa671fbc292ed6e0e32f69216cec479edee53b4997b081ec43a7e2",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2049783979973435778",
+      "source_page": "https://x.com/ModJapan_jp/status/2049783979973435778",
+      "source_image": "https://pbs.twimg.com/media/HHJLqQva4AALwit?format=jpg&name=orig",
+      "sha256": "f1090fd1694832822ff770a7f6b6d14414d3c72005519da56f0e33c6280eee68",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2038783763753353506",
+      "source_page": "https://x.com/ModJapan_jp/status/2038783763753353506",
+      "source_image": "https://pbs.twimg.com/media/HEtRzy7bQAA3nCZ.jpg",
+      "sha256": "ae562f726939f4cf2da7f1c9dce49668258b4470495e5a8eee2dc676096f055e",
+      "kind": "video-thumbnail",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2049054193818948055",
+      "source_page": "https://x.com/ModJapan_jp/status/2049054193818948055",
+      "source_image": "https://pbs.twimg.com/media/HG-z7TEbAAAgHSB?format=jpg&name=orig",
+      "sha256": "d702a19a6508030730db1f44cbc208eff50a66af3c5e55f3902a762814c22c11",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2047246677028036790",
+      "source_page": "https://x.com/ModJapan_jp/status/2047246677028036790",
+      "source_image": "https://pbs.twimg.com/media/HGlH_9XaoAAvokd?format=jpg&name=orig",
+      "sha256": "6f17d5a9e16bece4b7f09e2762d0d9b114e539ba0743b87d6ff2824136ee7618",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2120113649033601191",
+      "source_page": "https://x.com/ModJapan_jp/status/2120113649033601191",
+      "source_image": "https://pbs.twimg.com/media/HWwoH7JbsAAG1X5?format=jpg&name=orig",
+      "sha256": "2ea0956cb4c27b3061de659249cf52188a47c2bb99328ee044b97f14cca241f6",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "2120113649033601191",
+      "source_page": "https://x.com/ModJapan_jp/status/2120113649033601191",
+      "source_image": "https://pbs.twimg.com/media/HWwoH65bEAElJpg?format=jpg&name=orig",
+      "sha256": "66b36dd73a70fb43e17a1308dbf303ced6981368f6a752424825c6c4087355ca",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    },
+    {
+      "post_id": "1550043112596475904",
+      "source_page": "https://x.com/ModJapan_jp/status/1550043112596475904",
+      "source_image": "https://pbs.twimg.com/media/FYLb_q-aUAAXJE3?format=jpg&name=orig",
+      "sha256": "0ce7fcfc3fc4c604eeba7c8fb7a3479fa26a5e97600c64d86322050917f80804",
+      "kind": "photo",
+      "retained": false,
+      "reason": "mascot_not_visible_in_reviewed_image"
+    }
+  ],
+  "unresolved_failures": []
+}

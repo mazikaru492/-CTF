@@ -9,7 +9,8 @@ test('deployment export excludes question fixtures and preserves images and CMS 
   const root = fileURLToPath(new URL('../', import.meta.url));
   const { stdout } = await promisify(execFile)(process.execPath, ['scripts/deployment-files.mjs'], {
     cwd: root,
-    maxBuffer: 32 * 1024 * 1024,
+    // The official mascot image collection is included as base64 in the export.
+    maxBuffer: 64 * 1024 * 1024,
   });
   const files = JSON.parse(stdout);
   for (const path of [

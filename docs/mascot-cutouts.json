@@ -1,0 +1,283 @@
+{
+  "prepared_on": "2026-11-10",
+  "processing": "built-in imagegen; background extraction and AI refinement; transparent_background=true; web resize via System.Drawing",
+  "official_originals_unchanged": true,
+  "pixel_identical_extraction": false,
+  "count": 9,
+  "excluded_candidates": [
+    {
+      "key": "duo-lineart-jump",
+      "reason": "Outer cyan fringe remained visible on dark background; excluded from website-ready delivery."
+    },
+    {
+      "key": "duo-lineart-rest",
+      "reason": "Outer cyan fringe remained visible on dark background; excluded from website-ready delivery."
+    }
+  ],
+  "assets": [
+    {
+      "key": "rai-wave",
+      "label": "ライ・手を振る",
+      "prompt": "Use case: background-extraction. Edit target: the supplied official mascot image. This is precise background removal and character cutout preparation for a website, NOT a redesign. Preserve the selected character's original facial expression, pose, proportions, line colour and illustration style, clothing colours and small garment details. Remove all page background, panels, borders, promotional text, captions, logos, QR codes and unrelated subjects. Keep white clothing, skin and white hair opaque. Preserve the fine outlines, hair tips, ears, fingertips, sleeves and tail with clean antialiased edges. No white matte, no dark fringe, no glow, no drop shadow, no translucent mist or remaining background. All space outside the selected subject must be genuinely transparent alpha. Show only the subject centered, at useful large resolution with about 5% transparent padding on every side, no clipping. Do not add text, objects, expressions, body parts or clothing details not in the selected source. Do not turn this into a new illustration. Extract the ONE full-body boy Rai, with navy hair and green/blue/cyan fringe, open smile, raised waving hand, white hoodie with the exact purple '1337' on the chest. Keep his full original body and shoes, unchanged. Remove only the surrounding white background.",
+      "source_file": "public/assets/mascots/official/c-contest-01.png",
+      "source_page": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/",
+      "source_image": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/images/c_contest_01.png",
+      "crop": "full_visible_group",
+      "master": {
+        "file": "docs/mascot-cutout-masters/rai/rai-smile-wave.png",
+        "dimensions": [1024, 1536],
+        "bytes": 1417190,
+        "sha256": "faa1f42122fdc0e941eeaf74d991fab3785341e91ca2e0d21f246232b7beb74b",
+        "alpha_range": [0, 254],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [54, 24, 960, 1521],
+        "desktop_file": "高解像度PNG/ライ/ライ_笑顔_手を振る.png"
+      },
+      "web": {
+        "file": "public/assets/mascots/cutouts/rai/rai-smile-wave.png",
+        "dimensions": [512, 768],
+        "bytes": 349995,
+        "sha256": "f658a758794456a814a3d288193f429f0c2564f979a8853028e961098a0bca36",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [27, 12, 480, 761],
+        "desktop_file": "サイト用PNG/ライ/ライ_笑顔_手を振る.png"
+      }
+    },
+    {
+      "key": "rii-wave",
+      "label": "リイ・手を振る",
+      "prompt": "Use case: background-extraction. Edit target: the supplied official mascot image. This is precise background removal and character cutout preparation for a website, NOT a redesign. Preserve the selected character's original facial expression, pose, proportions, line colour and illustration style, clothing colours and small garment details. Remove all page background, panels, borders, promotional text, captions, logos, QR codes and unrelated subjects. Keep white clothing, skin and white hair opaque. Preserve the fine outlines, hair tips, ears, fingertips, sleeves and tail with clean antialiased edges. No white matte, no dark fringe, no glow, no drop shadow, no translucent mist or remaining background. All space outside the selected subject must be genuinely transparent alpha. Show only the subject centered, at useful large resolution with about 5% transparent padding on every side, no clipping. Do not add text, objects, expressions, body parts or clothing details not in the selected source. Do not turn this into a new illustration. Extract the ONE full-body white-haired cat-eared girl Rii in the supplied standing/waving pose. Keep her original blue/cyan eyes, small neutral mouth, light blue hoodie, dark blue skirt, striped white/cyan tail and legs. Remove only the background. Preserve complete cat ears and curled forelock.",
+      "source_file": "public/assets/mascots/official/c-contest-02.png",
+      "source_page": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/",
+      "source_image": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/images/c_contest_02.png",
+      "crop": "full_visible_group",
+      "master": {
+        "file": "docs/mascot-cutout-masters/rii/rii-wave.png",
+        "dimensions": [1024, 1536],
+        "bytes": 1656666,
+        "sha256": "aa305235e011e1bbbc734c04c7e3b6913a2ee769fd2db273f69e237ad17815aa",
+        "alpha_range": [0, 254],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [38, 46, 1004, 1503],
+        "desktop_file": "高解像度PNG/リイ/リイ_手を振る.png"
+      },
+      "web": {
+        "file": "public/assets/mascots/cutouts/rii/rii-wave.png",
+        "dimensions": [512, 768],
+        "bytes": 401023,
+        "sha256": "d22aa40b62cd76beaf726eb0bdbdab3da8f6c2d4c3411c87139411209ff5c8d1",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [19, 23, 502, 751],
+        "desktop_file": "サイト用PNG/リイ/リイ_手を振る.png"
+      }
+    },
+    {
+      "key": "duo-laptop",
+      "label": "2人・パソコン",
+      "prompt": "Use case: background-extraction. Edit target: the supplied official mascot image. This is precise background removal and character cutout preparation for a website, NOT a redesign. Preserve the selected character's original facial expression, pose, proportions, line colour and illustration style, clothing colours and small garment details. Remove all page background, panels, borders, promotional text, captions, logos, QR codes and unrelated subjects. Keep white clothing, skin and white hair opaque. Preserve the fine outlines, hair tips, ears, fingertips, sleeves and tail with clean antialiased edges. No white matte, no dark fringe, no glow, no drop shadow, no translucent mist or remaining background. All space outside the selected subject must be genuinely transparent alpha. Show only the subject centered, at useful large resolution with about 5% transparent padding on every side, no clipping. Do not add text, objects, expressions, body parts or clothing details not in the selected source. Do not turn this into a new illustration. Extract the entire foreground group exactly as shown: seated Rai smiling behind the small laptop, with tiny Rii perched on his head and the curled tail. Include the laptop as it is an integrated foreground prop covering Rai's lower body; preserve it unchanged. No other objects. Remove all white background including the gaps around and between the laptop and characters.",
+      "source_file": "public/assets/mascots/official/c-contest-03.png",
+      "source_page": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/",
+      "source_image": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/images/c_contest_03.png",
+      "crop": "full_visible_group",
+      "master": {
+        "file": "docs/mascot-cutout-masters/rai-rii/rai-rii-laptop.png",
+        "dimensions": [1086, 1448],
+        "bytes": 1219475,
+        "sha256": "b0ce1185b38b4686621f72f36584c4aa211ae38da4251d67e6455e4be8ce29ae",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 1, 0],
+        "subject_bbox_alpha128": [52, 19, 966, 1442],
+        "desktop_file": "高解像度PNG/ライとリイ/ライとリイ_パソコン.png"
+      },
+      "web": {
+        "file": "public/assets/mascots/cutouts/rai-rii/rai-rii-laptop.png",
+        "dimensions": [576, 768],
+        "bytes": 447596,
+        "sha256": "f86a81b0a60aa97664318aa96feaec124c38f25911df4c67832b5a9518ca99a5",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [28, 10, 512, 765],
+        "desktop_file": "サイト用PNG/ライとリイ/ライとリイ_パソコン.png"
+      }
+    },
+    {
+      "key": "duo-jump",
+      "label": "2人・ジャンプ",
+      "prompt": "Use case: background-extraction. Edit target: the supplied official mascot image. This is precise background removal and character cutout preparation for a website, NOT a redesign. Preserve the selected character's original facial expression, pose, proportions, line colour and illustration style, clothing colours and small garment details. Remove all page background, panels, borders, promotional text, captions, logos, QR codes and unrelated subjects. Keep white clothing, skin and white hair opaque. Preserve the fine outlines, hair tips, ears, fingertips, sleeves and tail with clean antialiased edges. No white matte, no dark fringe, no glow, no drop shadow, no translucent mist or remaining background. All space outside the selected subject must be genuinely transparent alpha. Show only the subject centered, at useful large resolution with about 5% transparent padding on every side, no clipping. Do not add text, objects, expressions, body parts or clothing details not in the selected source. Do not turn this into a new illustration. Extract BOTH jumping characters together in the exact original arrangement: delighted Rai in the lower-left/front and floating Rii above-right/behind. Keep their current expressions and full original silhouettes. Remove surrounding white background, including all gaps between limbs and the two characters. Keep the exact '1337' hoodie text.",
+      "source_file": "public/assets/mascots/official/c-contest-04.png",
+      "source_page": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/",
+      "source_image": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/images/c_contest_04.png",
+      "crop": "full_visible_group",
+      "master": {
+        "file": "docs/mascot-cutout-masters/rai-rii/rai-rii-smile-jump.png",
+        "dimensions": [1086, 1448],
+        "bytes": 1006231,
+        "sha256": "807ec66e96adef379a7fff4c1b40828a05e159402313f435714efa7174333dfe",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [96, 13, 966, 1439],
+        "desktop_file": "高解像度PNG/ライとリイ/ライとリイ_笑顔_ジャンプ.png"
+      },
+      "web": {
+        "file": "public/assets/mascots/cutouts/rai-rii/rai-rii-smile-jump.png",
+        "dimensions": [576, 768],
+        "bytes": 346754,
+        "sha256": "91d99313fb4a8487e8e17e1e2234b9c416dbc395d624cf17a5345924ac86398c",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [51, 7, 512, 763],
+        "desktop_file": "サイト用PNG/ライとリイ/ライとリイ_笑顔_ジャンプ.png"
+      }
+    },
+    {
+      "key": "rai-jump",
+      "label": "ライ・ジャンプ",
+      "prompt": "Use case: background-extraction. Edit target: the supplied official mascot image. This is precise background removal and character cutout preparation for a website, NOT a redesign. Preserve the selected character's original facial expression, pose, proportions, line colour and illustration style, clothing colours and small garment details. Remove all page background, panels, borders, promotional text, captions, logos, QR codes and unrelated subjects. Keep white clothing, skin and white hair opaque. Preserve the fine outlines, hair tips, ears, fingertips, sleeves and tail with clean antialiased edges. No white matte, no dark fringe, no glow, no drop shadow, no translucent mist or remaining background. All space outside the selected subject must be genuinely transparent alpha. Show only the subject centered, at useful large resolution with about 5% transparent padding on every side, no clipping. Do not add text, objects, expressions, body parts or clothing details not in the selected source. Do not turn this into a new illustration. Select ONLY the full-body joyful jumping boy Rai in the LOWER-LEFT/front. Remove Rii completely along with the white background. Preserve Rai's exact joyful open mouth, raised arms and spread fingers, tousled navy hair with green/blue/cyan fringe, white hoodie with exact '1337', purple cuffs, navy trousers and shoes. Do not add or change his pose.",
+      "source_file": "public/assets/mascots/official/c-contest-04.png",
+      "source_page": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/",
+      "source_image": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/images/c_contest_04.png",
+      "crop": "full_visible_group",
+      "master": {
+        "file": "docs/mascot-cutout-masters/rai/rai-smile-jump.png",
+        "dimensions": [1086, 1448],
+        "bytes": 935209,
+        "sha256": "1cca9fe97fb40f75c66a3d23a7d5b5e76d8fbcad3bc277a7c1fa8f363955165f",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [93, 49, 1009, 1403],
+        "desktop_file": "高解像度PNG/ライ/ライ_笑顔_ジャンプ.png"
+      },
+      "web": {
+        "file": "public/assets/mascots/cutouts/rai/rai-smile-jump.png",
+        "dimensions": [576, 768],
+        "bytes": 313112,
+        "sha256": "8b2765fb29a8e524614f4c8cf71674b6834b188b0e408cf5effc1faed1473ced",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [49, 26, 535, 744],
+        "desktop_file": "サイト用PNG/ライ/ライ_笑顔_ジャンプ.png"
+      }
+    },
+    {
+      "key": "rii-jump",
+      "label": "リイ・ジャンプ",
+      "prompt": "Use case: background-extraction. Edit target: the supplied official mascot image. This is precise background removal and character cutout preparation for a website, NOT a redesign. Preserve the selected character's original facial expression, pose, proportions, line colour and illustration style, clothing colours and small garment details. Remove all page background, panels, borders, promotional text, captions, logos, QR codes and unrelated subjects. Keep white clothing, skin and white hair opaque. Preserve the fine outlines, hair tips, ears, fingertips, sleeves and tail with clean antialiased edges. No white matte, no dark fringe, no glow, no drop shadow, no translucent mist or remaining background. All space outside the selected subject must be genuinely transparent alpha. Show only the subject centered, at useful large resolution with about 5% transparent padding on every side, no clipping. Do not add text, objects, expressions, body parts or clothing details not in the selected source. Do not turn this into a new illustration. Select ONLY the full-body floating white-haired cat-eared girl Rii in the UPPER-RIGHT/back. Remove the boy Rai entirely and remove white background. Keep Rii's exact gentle expression and flying/jumping pose, full ears, forelock, arms, light blue hoodie, dark blue skirt, legs and striped white/cyan tail. No boy, no invented body parts.",
+      "source_file": "public/assets/mascots/official/c-contest-04.png",
+      "source_page": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/",
+      "source_image": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/images/c_contest_04.png",
+      "crop": "full_visible_group",
+      "master": {
+        "file": "docs/mascot-cutout-masters/rii/rii-jump.png",
+        "dimensions": [1278, 1230],
+        "bytes": 1160177,
+        "sha256": "94d9ef9d4375e0bd7ebfc1712171da0f7b0567b6dcf6e1cbaf185e4a72fad762",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [143, 34, 1160, 1183],
+        "desktop_file": "高解像度PNG/リイ/リイ_ジャンプ.png"
+      },
+      "web": {
+        "file": "public/assets/mascots/cutouts/rii/rii-jump.png",
+        "dimensions": [768, 739],
+        "bytes": 487378,
+        "sha256": "bc896d7b447b96f4cf9b70dac754c2574018013dbb673c51869be41db4faafe7",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [86, 21, 697, 711],
+        "desktop_file": "サイト用PNG/リイ/リイ_ジャンプ.png"
+      }
+    },
+    {
+      "key": "rii-worried",
+      "label": "リイ・困った表情",
+      "prompt": "Use case: background-extraction. Edit target: the supplied official mascot image. This is precise background removal and character cutout preparation for a website, NOT a redesign. Preserve the selected character's original facial expression, pose, proportions, line colour and illustration style, clothing colours and small garment details. Remove all page background, panels, borders, promotional text, captions, logos, QR codes and unrelated subjects. Keep white clothing, skin and white hair opaque. Preserve the fine outlines, hair tips, ears, fingertips, sleeves and tail with clean antialiased edges. No white matte, no dark fringe, no glow, no drop shadow, no translucent mist or remaining background. All space outside the selected subject must be genuinely transparent alpha. Show only the subject centered, at useful large resolution with about 5% transparent padding on every side, no clipping. Do not add text, objects, expressions, body parts or clothing details not in the selected source. Do not turn this into a new illustration. Select ONLY Rii, the nervous/anxious white-haired blue cat-eared mascot drawn in the TOP-RIGHT corner of the information card. Extract her visible bust/body down to the same lower crop shown in the source, including both hands at her sides, ears, hair, big nervous blue/cyan eyes, tiny worried mouth, hoodie and dark skirt portion. Remove surrounding hand-written Japanese notes, all table/text/background and page. Preserve her anxious expression and the original slightly sketchier style; do not make her smile, do not add legs or complete any body beyond the source crop. Keep the character's original drawing colours; remove the grey rectangular backdrop.",
+      "revision_prompt": "Edit this existing cutout only. Preserve the character(s), exact facial expression, pose, body crop, internal shading, colours and drawing style. Clean the alpha boundary precisely: remove the thin ragged white/cyan matte, outer glow, stray pixels and fragments outside the actual contour. Outside every character silhouette must be fully transparent, no haze or glow or shadow. Preserve white hair and clothing as opaque. Keep smooth, crisp antialiased dark/blue outlines and fine tips. No background, no sticker border. Do not redraw the face. Keep all original visible parts, do not extend the body.",
+      "source_file": "public/assets/mascots/official/x/modjapan_jp-2100770029818228921-1.jpg",
+      "source_page": "https://x.com/ModJapan_jp/status/2100770029818228921",
+      "source_image": "https://pbs.twimg.com/media/HSdKgFZbwAASKaV?format=jpg&name=orig",
+      "crop": "visible_upper_body",
+      "master": {
+        "file": "docs/mascot-cutout-masters/rii/rii-worried-upper-body.png",
+        "dimensions": [1169, 1345],
+        "bytes": 1460019,
+        "sha256": "fbbf635cd53d4adf6369636c32546c6638f61687209eb671623b7eae83212ab4",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [63, 33, 1094, 1300],
+        "desktop_file": "高解像度PNG/リイ/リイ_困った表情_上半身.png"
+      },
+      "web": {
+        "file": "public/assets/mascots/cutouts/rii/rii-worried-upper-body.png",
+        "dimensions": [668, 768],
+        "bytes": 553269,
+        "sha256": "ee697241a8ca039d2a7a1242d2b55db39396e54540456bf3477b3d7c234a4665",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [36, 19, 625, 743],
+        "desktop_file": "サイト用PNG/リイ/リイ_困った表情_上半身.png"
+      }
+    },
+    {
+      "key": "rii-guide",
+      "label": "リイ・案内する",
+      "prompt": "Use case: background-extraction. Edit target: the supplied official mascot image. This is precise background removal and character cutout preparation for a website, NOT a redesign. Preserve the selected character's original facial expression, pose, proportions, line colour and illustration style, clothing colours and small garment details. Remove all page background, panels, borders, promotional text, captions, logos, QR codes and unrelated subjects. Keep white clothing, skin and white hair opaque. Preserve the fine outlines, hair tips, ears, fingertips, sleeves and tail with clean antialiased edges. No white matte, no dark fringe, no glow, no drop shadow, no translucent mist or remaining background. All space outside the selected subject must be genuinely transparent alpha. Show only the subject centered, at useful large resolution with about 5% transparent padding on every side, no clipping. Do not add text, objects, expressions, body parts or clothing details not in the selected source. Do not turn this into a new illustration. Select ONLY Rii, the white-haired cat-eared mascot at the UPPER-RIGHT of the page, holding a thin black pointer raised in her hand. Extract her entire visible original figure, including ears, forelock, tail, hoodie, skirt and the pointer she is holding, with no page content. Preserve the pointer as the only held prop, keep both its ends fully inside the output. Remove all printed Japanese text, rectangles and background, including the text overlapping the page behind her. Keep her original lively teaching pose and face unchanged.",
+      "revision_prompt": "Edit this existing cutout only. Preserve the character(s), exact facial expression, pose, body crop, internal shading, colours and drawing style. Clean the alpha boundary precisely: remove the thin ragged white/cyan matte, outer glow, stray pixels and fragments outside the actual contour. Outside every character silhouette must be fully transparent, no haze or glow or shadow. Preserve white hair and clothing as opaque. Keep smooth, crisp antialiased dark/blue outlines and fine tips. No background, no sticker border. Do not redraw the face. Keep all original visible parts, do not extend the body.",
+      "source_file": "public/assets/mascots/official/x/modjapan_jp-2113453605219160373-1.jpg",
+      "source_page": "https://x.com/ModJapan_jp/status/2113453605219160373",
+      "source_image": "https://pbs.twimg.com/media/HVRvrfLaQAAFsGE?format=jpg&name=orig",
+      "crop": "visible_upper_body",
+      "master": {
+        "file": "docs/mascot-cutout-masters/rii/rii-guide-pointer.png",
+        "dimensions": [1222, 1287],
+        "bytes": 936704,
+        "sha256": "26023e5e6975d31f6a323fd9d7601d04c3f54fef149b6714ede1ff64a3b1cab8",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [166, 25, 1046, 1275],
+        "desktop_file": "高解像度PNG/リイ/リイ_案内_指示棒.png"
+      },
+      "web": {
+        "file": "public/assets/mascots/cutouts/rii/rii-guide-pointer.png",
+        "dimensions": [729, 768],
+        "bytes": 397592,
+        "sha256": "67869f388b3aa18850caa409f4cf65b7c05926f7e8cec27e7e3eb3c952965c91",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [99, 15, 624, 761],
+        "desktop_file": "サイト用PNG/リイ/リイ_案内_指示棒.png"
+      }
+    },
+    {
+      "key": "rai-sorry",
+      "label": "ライ・申し訳なさそうな表情",
+      "prompt": "Use case: background-extraction. Edit target: the supplied official mascot image. This is precise background removal and character cutout preparation for a website, NOT a redesign. Preserve the selected character's original facial expression, pose, proportions, line colour and illustration style, clothing colours and small garment details. Remove all page background, panels, borders, promotional text, captions, logos, QR codes and unrelated subjects. Keep white clothing, skin and white hair opaque. Preserve the fine outlines, hair tips, ears, fingertips, sleeves and tail with clean antialiased edges. No white matte, no dark fringe, no glow, no drop shadow, no translucent mist or remaining background. All space outside the selected subject must be genuinely transparent alpha. Show only the subject centered, at useful large resolution with about 5% transparent padding on every side, no clipping. Do not add text, objects, expressions, body parts or clothing details not in the selected source. Do not turn this into a new illustration. Select ONLY the small boy Rai bust in the EXTREME TOP-RIGHT of the page. Extract ONLY his original visible head, torso and two clenched hands. He has eyes squeezed shut with an apologetic strained smile, dark navy hair with green/blue/cyan streaks, white hoodie and purple cuffs. Preserve this exact facial expression, body pose and visible crop at the waist; do not invent legs or extend the body. Remove the chalkboard, all Japanese text and banner, background, floating sweat/squiggle marks and every other subject including Rii and the movie poster.",
+      "revision_prompt": "Edit this existing cutout only. Preserve the character(s), exact facial expression, pose, body crop, internal shading, colours and drawing style. Clean the alpha boundary precisely: remove the thin ragged white/cyan matte, outer glow, stray pixels and fragments outside the actual contour. Outside every character silhouette must be fully transparent, no haze or glow or shadow. Preserve white hair and clothing as opaque. Keep smooth, crisp antialiased dark/blue outlines and fine tips. No background, no sticker border. Do not redraw the face. Correct the erroneous purple letter B on his hoodie to the small purple digits '1337', naturally partly occluded by his fist. Keep the waist crop and both fists.",
+      "source_file": "public/assets/mascots/official/x/modjapan_jp-2114540768874688945-1.jpg",
+      "source_page": "https://x.com/ModJapan_jp/status/2114540768874688945",
+      "source_image": "https://pbs.twimg.com/media/HVhbDgCaMAA-fOn?format=jpg&name=orig",
+      "crop": "visible_upper_body",
+      "master": {
+        "file": "docs/mascot-cutout-masters/rai/rai-apologetic-upper-body.png",
+        "dimensions": [1172, 1342],
+        "bytes": 895424,
+        "sha256": "08ad9c68145658f463cd7eec8a1f106ee508d08ffeffe798104b19d07e86a0c3",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [226, 83, 913, 1289],
+        "desktop_file": "高解像度PNG/ライ/ライ_申し訳ない表情_上半身.png"
+      },
+      "web": {
+        "file": "public/assets/mascots/cutouts/rai/rai-apologetic-upper-body.png",
+        "dimensions": [671, 768],
+        "bytes": 376472,
+        "sha256": "479466129e9ec9f11a8b082efceacc9c1287f3ac07f3082da3a8e9df8a372241",
+        "alpha_range": [0, 255],
+        "corner_alpha": [0, 0, 0, 0],
+        "subject_bbox_alpha128": [129, 47, 523, 738],
+        "desktop_file": "サイト用PNG/ライ/ライ_申し訳ない表情_上半身.png"
+      }
+    }
+  ]
+}
