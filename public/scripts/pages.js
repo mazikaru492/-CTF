@@ -1,4 +1,4 @@
-import { escape, icons, mascot } from './ui.js';
+import { escape, icons, character } from './ui.js';
 import { material } from './materials.js';
 export const official = 'https://www.mod.go.jp/j/approach/defense/cyber/c_contest/';
 const previousExam = `${official}previous_exam.html`;
@@ -167,7 +167,9 @@ export function homePage(data, progress) {
         <p class="hero-note">登録・インストール不要。１問だけの挑戦でもOK。</p>
       </div>
       <div class="mascot-welcome">
-        <div class="mascot-duo">${mascot('rai')}${mascot('rii')}</div>
+        <div class="mascot-duo">
+          ${character('rai-wave', '', true)}${character('rii-wave', '', true)}
+        </div>
         <p class="mascot-greeting">ひらめきを、一緒に見つけよう。</p>
         <p class="mascot-caption">防衛省サイバーコンテストの<br />マスコット「ライ」「リイ」</p>
         <p class="mascot-caption">この体験は学生企画・非公式です。</p>
@@ -181,9 +183,12 @@ export function homePage(data, progress) {
       <div class="stat"><strong>ヒント無料</strong><span>全問にヒントと解説付き</span></div>
     </section>
     <section class="intro-strip">
-      <div>
-        <p class="eyebrow">はじめての方へ</p>
-        <h3>遊び方は、３ステップ。</h3>
+      <div class="intro-guide">
+        ${character('rii-guide')}
+        <div>
+          <p class="eyebrow">はじめての方へ</p>
+          <h3>遊び方は、３ステップ。</h3>
+        </div>
       </div>
       <div class="steps">
         <div>
@@ -330,7 +335,7 @@ export function missionPage(c, data, progress) {
         <section class="hints-panel" aria-labelledby="hints-title">
           <div class="hint-actions">
             <div class="hint-guide">
-              ${mascot('rii')}
+              ${character('rii-guide')}
               <div>
                 <h2 id="hints-title">困ったら、ここでヒント</h2>
                 <p>２段階のヒントでお手伝い。無料・減点なしです。</p>
@@ -376,7 +381,7 @@ export function resultPage(data, progress) {
         ${
           complete
             ? '<img class="result-duo" src="/assets/mascots/duo-clear.png" srcset="/assets/mascots/duo-clear-480.png 480w, /assets/mascots/duo-clear.png 960w" sizes="(max-width: 700px) 85vw, 480px" width="960" height="640" alt="笑顔でハイタッチして全問正解を祝うライとリイ" />'
-            : '<img src="/assets/mascots/official/c-contest-03.png" width="300" height="400" alt="パソコンを開いて次の挑戦を応援するライとリイ" />'
+            : character('duo-study', '', true)
         }
         ${complete ? '<div class="confetti" aria-hidden="true">' + '<i></i>'.repeat(12) + '</div>' : ''}
       </div>

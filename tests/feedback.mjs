@@ -65,10 +65,8 @@ for (const engine of [chromium, webkit]) {
         await page.locator('#submit-answer').click();
         await page.locator('.result-visual.is-correct').waitFor();
         assert.match(
-          await page
-            .locator('.is-correct .mascot')
-            .evaluate((el) => getComputedStyle(el).backgroundImage),
-          /rai-success\.png/,
+          await page.locator('.is-correct .character-art').getAttribute('src'),
+          /rai-smile-jump\.png/,
         );
         assert.equal(await page.locator('#header-score').textContent(), `1 / ${challengeCount}`);
         assert.equal(await page.locator('#flag-input').getAttribute('aria-invalid'), null);

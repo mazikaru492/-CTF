@@ -1,4 +1,4 @@
-import { escape, mascot, animateResult } from './scripts/ui.js';
+import { escape, mascot, character, animateResult } from './scripts/ui.js';
 import { setupMaterials } from './scripts/materials.js';
 import { createDialogs } from './scripts/dialogs.js';
 import {
@@ -229,11 +229,13 @@ function showHints(hints) {
 function showExplanation(c, result, shouldFocus) {
   const el = document.querySelector('#explanation');
   const next = nextId(data, progress, c.id);
+  const celebration =
+    progress.solved.length === data.length ? 'duo-jump' : c.id % 2 ? 'rai-jump' : 'rii-jump';
   el.classList.remove('hidden');
   el.innerHTML = /* HTML */ `<div
       class="result-visual ${result.assisted ? 'is-learned' : 'is-correct'}"
     >
-      ${mascot(result.assisted ? 'rii' : 'rai', result.assisted ? '' : 'mascot-success')}
+      ${character(result.assisted ? 'rii-wave' : celebration, result.assisted ? '' : 'mascot-success', true)}
       <div>
         <span class="result-symbol" aria-hidden="true"
           >${
@@ -244,9 +246,7 @@ function showExplanation(c, result, shouldFocus) {
         >
         <p class="eyebrow">${result.assisted ? '解説で学習' : '正解！'}</p>
         <h2>${result.assisted ? '新しい発見を、次の一歩へ。' : 'フラグを発見！'}</h2>
-        <p>
-          ${result.assisted ? '答えの理由を、一緒に確認しよう。' : '手がかりをつなげられたね！'}
-        </p>
+        <p>${result.assisted ? '答えの理由を、一緒に確認しよう。' : 'いいひらめきだね！'}</p>
       </div>
       ${shouldFocus && !result.assisted ? '<div class="confetti" aria-hidden="true">' + '<i></i>'.repeat(12) + '</div>' : ''}
     </div>

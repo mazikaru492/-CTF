@@ -30,6 +30,26 @@ export const icons = Object.fromEntries(
 export const mascot = (name, extra = '') =>
   `<span class="mascot mascot-${name} ${extra}" role="img" aria-label="${name === 'rai' ? 'ライ' : 'リイ'}"></span>`;
 
+const characters = {
+  'rai-wave': ['rai/rai-smile-wave.png', 512, 768, '笑顔で手を振って迎えるライ'],
+  'rii-wave': ['rii/rii-wave.png', 512, 768, '手を振って寄り添うリイ'],
+  'rii-guide': ['rii/rii-guide-pointer.png', 729, 768, '指示棒で案内するリイ'],
+  'rai-jump': ['rai/rai-smile-jump.png', 576, 768, 'ジャンプして正解を喜ぶライ'],
+  'rii-jump': ['rii/rii-jump.png', 768, 739, 'ジャンプして正解を喜ぶリイ'],
+  'duo-jump': [
+    'rai-rii/rai-rii-smile-jump.png',
+    576,
+    768,
+    '2人で跳び上がって全問正解を喜ぶライとリイ',
+  ],
+  'duo-study': ['rai-rii/rai-rii-laptop.png', 576, 768, 'パソコンを囲んで一緒に振り返るライとリイ'],
+};
+
+export function character(name, extra = '', eager = false) {
+  const [file, width, height, alt] = characters[name];
+  return `<img class="character-art ${extra}" src="/assets/mascots/cutouts/${file}" width="${width}" height="${height}" alt="${alt}" loading="${eager ? 'eager' : 'lazy'}" decoding="async" />`;
+}
+
 export function animateResult(correct) {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const target = document.querySelector(correct ? '#explanation .result-visual' : '#answer-form');
@@ -51,8 +71,8 @@ export function animateResult(correct) {
     { duration: correct ? 650 : 360, easing: 'ease-out' },
   );
   if (correct) {
-    const character = target?.querySelector('.mascot');
-    character?.animate(
+    const image = target?.querySelector('.character-art, .mascot');
+    image?.animate(
       [
         { transform: 'translateY(0)' },
         { transform: 'translateY(-12px)', offset: 0.4 },

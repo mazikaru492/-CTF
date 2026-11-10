@@ -3199,3 +3199,39 @@ dialog,
     font-size: 10px;
   }
 }
+
+.character-art {
+  display: block;
+  flex: 0 0 auto;
+  width: 116px;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+.mascot-duo .character-art {
+  width: min(44%, 220px);
+}
+.intro-guide {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+.intro-guide .character-art {
+  width: 72px;
+}
+.hint-guide .character-art {
+  width: 88px;
+}
+.result-visual > .character-art {
+  position: relative;
+  z-index: 1;
+  width: 132px;
+  height: 160px;
+}
+@media (max-width: 700px) {
+  .result-visual > .character-art {
+    width: 100px;
+    height: 128px;
+  }
+}

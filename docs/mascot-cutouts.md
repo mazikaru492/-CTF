@@ -20,7 +20,7 @@
 
 線画2点は濃色背景で青いにじみが残ったため、完成素材に含めていません。元画像で見切れている人物には足などを描き足さず、上半身として用意しました。パソコンと指示棒はポーズの一部として残しています。
 
-使用したツールは組み込みのimagegen（画像編集モード、`transparent_background: true`）。各素材の元画像・出典URL・編集プロンプト・追加補整プロンプト・寸法・SHA256は[加工記録](mascot-cutouts.json)に保存しています。サイト用の縮小にはSystem.Drawingを使用しました。今回の素材へのサイト内差し替えと公開環境への反映は行っていません。
+使用したツールは組み込みのimagegen（画像編集モード、`transparent_background: true`）。各素材の元画像・出典URL・編集プロンプト・追加補整プロンプト・寸法・SHA256は[加工記録](mascot-cutouts.json)に保存しています。サイト用の縮小にはSystem.Drawingを使用しました。サイト内での使い分けは[配置方針](mascot-assets.md)を参照してください。
 
 サイトからは `/assets/mascots/cutouts/rai/rai-smile-jump.png` のように参照できます。表示幅と高さを指定し、縦横比を保って使用してください。
 
