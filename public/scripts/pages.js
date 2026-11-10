@@ -342,10 +342,10 @@ export function missionPage(c, data, progress) {
               </div>
             </div>
             <button id="hint-button" class="btn small" aria-controls="hint-items">
-              ヒントを見る（0 / 2）
+              ヒントを開く ＋
             </button>
           </div>
-          <div id="hint-items" aria-live="polite" aria-atomic="true"></div>
+          <div id="hint-items" class="hidden" aria-live="polite" aria-atomic="true"></div>
           <p id="hint-feedback" class="hint-feedback" role="status"></p>
         </section>
         <button id="explanation-button" class="explanation-link">

@@ -67,7 +67,7 @@ async function layout(page, name) {
   const undersized = await page.evaluate(() =>
     [
       ...document.querySelectorAll(
-        '.btn,.icon-btn,.order-controls button,.device-btn,.segmented button,.mission-picker>summary',
+        '.btn,.icon-btn,.order-controls button,.device-btn,.segmented button,.mission-picker>summary,.hint-close,.hint-reopen',
       ),
     ]
       .filter((el) => {
@@ -77,6 +77,24 @@ async function layout(page, name) {
       .map((el) => el.outerHTML.slice(0, 120)),
   );
   assert.deepEqual(undersized, [], `${name}: small touch targets`);
+  const clippedHintControls = await page.locator('.hint-close').evaluateAll((buttons) =>
+    buttons
+      .filter((button) => {
+        const box = button.getBoundingClientRect();
+        if (!box.width || !box.height) return false;
+        const range = document.createRange();
+        range.selectNodeContents(button);
+        const text = range.getBoundingClientRect();
+        return (
+          text.left < box.left - 1 ||
+          text.right > box.right + 1 ||
+          text.top < box.top - 1 ||
+          text.bottom > box.bottom + 1
+        );
+      })
+      .map((button) => button.getAttribute('aria-label')),
+  );
+  assert.deepEqual(clippedHintControls, [], `${name}: clipped hint controls`);
   const input = page.locator('#flag-input');
   if (await input.count())
     assert.ok(
@@ -96,6 +114,28 @@ async function dialogBounds(page, name) {
     `${name}: cropped dialog ${JSON.stringify(box)}`,
   );
   await page.locator('#close-image').click({ trial: true });
+}
+async function hints(page, name) {
+  await page.locator('#hint-button').tap();
+  await page.locator('.hint-card').first().waitFor();
+  await page.locator('#hint-button').tap();
+  await page.locator('.hint-card').nth(1).waitFor();
+  await layout(page, `${name}-hints-open`);
+  await page.getByRole('button', { name: 'ヒント 1を閉じる' }).tap();
+  assert.ok(await page.locator('.hint-card').first().isHidden());
+  assert.ok(await page.locator('.hint-card').nth(1).isVisible());
+  await page.getByRole('button', { name: 'ヒント 2を閉じる' }).tap();
+  await layout(page, `${name}-hints-closed`);
+  await page.getByRole('button', { name: 'ヒント 2を開く' }).tap();
+  assert.ok(await page.locator('.hint-card').first().isHidden());
+  assert.ok(await page.locator('.hint-card').nth(1).isVisible());
+  await page.getByRole('button', { name: 'ヒント 1を開く' }).tap();
+  assert.ok(await page.locator('.hint-card').first().isVisible());
+  await page.reload();
+  await page.locator('.hint-reopen').first().waitFor();
+  assert.equal(await page.locator('.hint-card:not(.hidden)').count(), 0);
+  assert.equal(await page.getByRole('button', { name: /ヒント [12]を開く/ }).count(), 2);
+  report.checks.push(`${name}: independent touch toggles and closed hints after reload`);
 }
 const browsers = {};
 try {
@@ -139,6 +179,7 @@ try {
           ]) {
             await route(page, hash);
             await layout(page, `${name}${hash}`);
+            if (hash.startsWith('#mission-')) await hints(page, `${name}${hash}`);
             if (imageQuestion && hash === `#mission-${imageQuestion.id}`) {
               await page.locator('.image-open').click();
               await dialogBounds(page, name);
@@ -162,7 +203,7 @@ try {
             // inline `body {}` stylesheet in WebKit, which our CSP correctly blocks.
           }
           console.log(
-            `PASS ${name}: ${challengeCount + 3} screens, touch targets${imageQuestion ? ', image zoom and rotation' : ''}`,
+            `PASS ${name}: ${challengeCount + 3} screens, all hints with touch/reload, touch targets${imageQuestion ? ', image zoom and rotation' : ''}`,
           );
         } finally {
           await context.close();

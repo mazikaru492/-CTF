@@ -526,6 +526,24 @@ main:focus {
 .mobile-missions {
   display: none;
 }
+.challenge {
+  animation: mission-enter 320ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+@keyframes mission-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .challenge {
+    animation: none;
+  }
+}
 .challenge-topline {
   display: flex;
   align-items: center;
@@ -898,6 +916,7 @@ main:focus {
 }
 .hint-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
@@ -1923,6 +1942,113 @@ body.is-modal-open > :not(dialog) {
   font-size: 0.875rem;
   color: #75450d;
 }
+#hint-items {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+#hint-items .hint-item {
+  padding: 0;
+  min-width: 0;
+}
+.hint-card {
+  padding: 14px 16px 18px;
+  border: 1px solid #d7b77e;
+  border-radius: 12px;
+  background: #fffaf0;
+  animation: hint-open 180ms ease-out;
+}
+.hint-card-heading,
+.hint-reopen {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hint-number {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #ffe5b7;
+  color: #75450d;
+  font-size: 0.75rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.hint-card-heading strong {
+  margin: 0;
+}
+.hint-close {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
+  margin-left: auto;
+  border: 1px solid #d7b77e;
+  border-radius: 50%;
+  background: transparent;
+  color: #75450d;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.hint-body {
+  margin-top: 10px;
+  overflow-wrap: anywhere;
+}
+.hint-reopen {
+  width: 100%;
+  min-height: 64px;
+  padding: 12px 16px;
+  border: 1px dashed #b78643;
+  border-radius: 12px;
+  background: transparent;
+  color: #75450d;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.hint-open-icon {
+  margin-left: auto;
+  font-size: 1.25rem;
+}
+.hint-close,
+.hint-reopen {
+  transition:
+    background-color 160ms,
+    border-color 160ms,
+    transform 160ms;
+}
+.hint-close:hover,
+.hint-reopen:hover {
+  border-color: #96601e;
+  background: #ffe5b7;
+}
+.hint-close:active,
+.hint-reopen:active {
+  transform: translateY(1px);
+}
+@keyframes hint-open {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hint-card {
+    animation: none;
+  }
+  .hint-close,
+  .hint-reopen {
+    transition: none;
+  }
+}
 .hint-feedback:not(:empty) {
   margin-top: 12px;
   color: #9b2c20;
@@ -2399,6 +2525,41 @@ body {
   border-top: 1px solid var(--line);
   font-size: 0.875rem;
   color: var(--muted);
+}
+.character-art {
+  display: block;
+  flex: 0 0 auto;
+  width: 116px;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+.mascot-duo .character-art {
+  width: min(44%, 220px);
+}
+.intro-guide {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+.intro-guide .character-art {
+  width: 72px;
+}
+.hint-guide .character-art {
+  width: 88px;
+}
+.result-visual > .character-art {
+  position: relative;
+  z-index: 1;
+  width: 132px;
+  height: 160px;
+}
+@media (max-width: 700px) {
+  .result-visual > .character-art {
+    width: 100px;
+    height: 128px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -3197,41 +3358,5 @@ dialog,
   }
   .site-header .brand-wordmark .brand-sub {
     font-size: 10px;
-  }
-}
-
-.character-art {
-  display: block;
-  flex: 0 0 auto;
-  width: 116px;
-  height: auto;
-  object-fit: contain;
-  pointer-events: none;
-}
-.mascot-duo .character-art {
-  width: min(44%, 220px);
-}
-.intro-guide {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  min-width: 0;
-}
-.intro-guide .character-art {
-  width: 72px;
-}
-.hint-guide .character-art {
-  width: 88px;
-}
-.result-visual > .character-art {
-  position: relative;
-  z-index: 1;
-  width: 132px;
-  height: 160px;
-}
-@media (max-width: 700px) {
-  .result-visual > .character-art {
-    width: 100px;
-    height: 128px;
   }
 }

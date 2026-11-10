@@ -156,13 +156,27 @@ async function mission(id, token) {
       }
     }
   });
+  document.querySelector('#hint-items').addEventListener('click', (event) => {
+    const button = event.target.closest('[data-hint-action]');
+    if (!button) return;
+    const item = button.closest('.hint-item');
+    const close = button.dataset.hintAction === 'close';
+    item.querySelector('.hint-card').classList.toggle('hidden', close);
+    const reopen = item.querySelector('.hint-reopen');
+    reopen.classList.toggle('hidden', !close);
+    reopen.setAttribute('aria-expanded', String(!close));
+    (close ? reopen : item.querySelector('.hint-close')).focus({ preventScroll: true });
+  });
   document.querySelector('#hint-button').addEventListener('click', async () => {
     const button = document.querySelector('#hint-button');
     button.disabled = true;
     document.querySelector('#hint-feedback').textContent = '';
     try {
       const result = await api('hint', id);
-      if (token === renderId) showHints(result.hints);
+      if (token === renderId) {
+        showHints(result.hints, false);
+        document.querySelector('.hint-item:last-child .hint-close').focus({ preventScroll: true });
+      }
     } catch (error) {
       if (token === renderId) document.querySelector('#hint-feedback').textContent = error.message;
     } finally {
@@ -214,17 +228,50 @@ function refreshProgress(id) {
     mobile.querySelector('.mission-picker').open = open;
   }
 }
-function showHints(hints) {
-  document.querySelector('#hint-items').innerHTML = hints
-    .map(
-      (hint, i) =>
-        /* HTML */ `<p class="hint-item"><strong>ヒント ${i + 1}</strong>${escape(hint)}</p>`,
-    )
+function showHints(hints, initiallyClosed = true) {
+  const items = document.querySelector('#hint-items');
+  const closed = new Set([...items.querySelectorAll('.hint-card.hidden')].map((card) => card.id));
+  items.classList.toggle('hidden', hints.length === 0);
+  items.innerHTML = hints
+    .map((hint, i) => {
+      const id = `hint-card-${i + 1}`;
+      const hidden = initiallyClosed || closed.has(id);
+      return /* HTML */ `<div class="hint-item">
+        <button
+          type="button"
+          class="hint-reopen${hidden ? '' : ' hidden'}"
+          data-hint-action="open"
+          aria-label="ヒント ${i + 1}を開く"
+          aria-controls="${id}"
+          aria-expanded="${!hidden}"
+        >
+          <span class="hint-number" aria-hidden="true">0${i + 1}</span>
+          <span>ヒント ${i + 1}を開く</span>
+          <span class="hint-open-icon" aria-hidden="true">＋</span>
+        </button>
+        <div id="${id}" class="hint-card${hidden ? ' hidden' : ''}">
+          <div class="hint-card-heading">
+            <span class="hint-number" aria-hidden="true">0${i + 1}</span>
+            <strong>ヒント ${i + 1}</strong>
+            <button
+              type="button"
+              class="hint-close"
+              data-hint-action="close"
+              aria-label="ヒント ${i + 1}を閉じる"
+              aria-controls="${id}"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <p class="hint-body">${escape(hint)}</p>
+        </div>
+      </div>`;
+    })
     .join('');
   const button = document.querySelector('#hint-button');
-  button.textContent =
-    hints.length >= 2 ? 'すべてのヒントを表示中' : `ヒントを見る（${hints.length} / 2）`;
+  button.textContent = hints.length === 0 ? 'ヒントを開く ＋' : 'ヒント２を開く ＋';
   button.disabled = hints.length >= 2;
+  button.classList.toggle('hidden', hints.length >= 2);
 }
 function showExplanation(c, result, shouldFocus) {
   const el = document.querySelector('#explanation');

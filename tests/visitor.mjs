@@ -112,7 +112,19 @@ async function auditMaterials(page, question) {
             rows.findIndex((row) => row.querySelector('[data-move]').dataset.move === id),
           id,
         );
-      while (position-- > target) await page.locator(`[data-move="${id}"][data-dir="up"]`).click();
+      while (position > target) {
+        const control = page.locator(`[data-move="${id}"][data-dir="up"]`);
+        if (page.viewportSize().width === 390) await control.tap();
+        else await control.click();
+        position--;
+        await page.waitForFunction(
+          ({ id, position }) =>
+            [...document.querySelectorAll('.order-card')].findIndex(
+              (row) => row.querySelector('[data-move]').dataset.move === id,
+            ) === position,
+          { id, position },
+        );
+      }
     }
     assert.equal(await page.locator('#order-result').textContent(), question.answer);
     assert.ok(await page.locator('.order-card').first().locator('[data-dir="up"]').isDisabled());
@@ -120,10 +132,10 @@ async function auditMaterials(page, question) {
   }
 }
 
-for (const engine of [chromium, webkit]) {
+for (const engine of process.argv.includes('--webkit') ? [webkit] : [chromium, webkit]) {
   const browser = await engine.launch();
   try {
-    for (const width of [390, 1440]) {
+    for (const width of process.argv.includes('--mobile') ? [390] : [390, 1440]) {
       const context = await browser.newContext({
         viewport: { width, height: 900 },
         isMobile: width === 390,
@@ -211,14 +223,31 @@ for (const engine of [chromium, webkit]) {
         for (const question of challenges) {
           await mission(page, question.id);
           await auditMaterials(page, question);
-          await page.locator('#hint-button').click();
-          await page.waitForFunction(() => document.querySelectorAll('.hint-item').length === 1);
+          if (width === 390) await page.locator('#hint-button').tap();
+          else await page.locator('#hint-button').click();
+          await page
+            .waitForFunction(() => document.querySelectorAll('.hint-item').length === 1)
+            .catch(async (error) => {
+              error.stack += JSON.stringify({
+                engine: engine.name(),
+                width,
+                questionId: question.id,
+                state: await page.evaluate(() => ({
+                  hash: location.hash,
+                  hints: document.querySelectorAll('.hint-item').length,
+                  button: document.querySelector('#hint-button')?.textContent,
+                  feedback: document.querySelector('#hint-feedback')?.textContent,
+                })),
+              });
+              throw error;
+            });
           assert.ok((await page.locator('.hint-item').textContent()).includes(question.hints[0]));
           if (question.id === 2) {
             await page.reload();
             await page.waitForFunction(() => document.querySelectorAll('.hint-item').length === 1);
           }
-          await page.locator('#hint-button').click();
+          if (width === 390) await page.locator('#hint-button').tap();
+          else await page.locator('#hint-button').click();
           await page.waitForFunction(() => document.querySelectorAll('.hint-item').length === 2);
           assert.ok(await page.locator('#hint-button').isDisabled());
           const input = page.locator('#flag-input');
@@ -227,6 +256,9 @@ for (const engine of [chromium, webkit]) {
             await page.locator('#submit-answer').click();
             assert.equal(await input.evaluate((el) => el.validity.valueMissing), true);
             assert.equal(answerRequests.length, before);
+            // Dismiss native validation as a user would before entering another answer.
+            if (width === 390) await input.tap();
+            else await input.click();
             await input.fill('WRONG');
             await page.locator('#submit-answer').click();
             await page.locator('.feedback.retry').waitFor();
