@@ -160,7 +160,22 @@ export function homePage(data, progress) {
             <span class="arrow" aria-hidden="true">→</span></a
           ><a class="btn secondary" href="#missions"
             >問題一覧から選ぶ <span aria-hidden="true">↓</span></a
-          ><a class="text-link" href="${official}" target="_blank" rel="noopener noreferrer"
+          >
+          <div class="hero-reset">
+            <p id="reset-description">
+              正解・解説・ヒントなど、このブラウザの記録を消して1問目からやり直せます。
+            </p>
+            <button
+              type="button"
+              id="reset-progress"
+              class="reset-btn"
+              aria-describedby="reset-description"
+            >
+              進捗をリセット
+            </button>
+            <p id="reset-message" role="status"></p>
+          </div>
+          <a class="text-link" href="${official}" target="_blank" rel="noopener noreferrer"
             >大会の公式案内を見る ↗</a
           >
         </div>
@@ -200,8 +215,10 @@ export function homePage(data, progress) {
           <p>フラグ提出欄のすぐ下にあるボタンから、２段階のヒントを表示。無料・減点なしです。</p>
         </div>
         <div>
-          <span class="step-num">03</span><strong>合言葉を入力する</strong>
-          <p>回答欄に入力して「フラグを提出」を押します。解けなくても解説を見て進めます。</p>
+          <span class="step-num">03</span><strong>回答する</strong>
+          <p>
+            合言葉を入力するか、選択肢を選んで「フラグを提出」を押します。解けなくても解説を見て進めます。
+          </p>
         </div>
       </div>
     </section>
@@ -267,6 +284,7 @@ export function mobileMissionNavigation(id, data, progress) {
 
 export function missionPage(c, data, progress) {
   const id = c.id;
+  const emailQuestion = c.kind === 'phishing';
   return /* HTML */ `<div class="container">
     <div class="workspace">
       <aside class="mission-sidebar" aria-label="ミッション一覧">
@@ -287,35 +305,56 @@ export function missionPage(c, data, progress) {
         <h2 class="flow-heading question-heading">
           <span class="flow-number" aria-hidden="true">1</span>問題を読む
         </h2>
-        <div class="mission-instruction">${escape(c.instruction)}</div>
+        <div class="mission-instruction">
+          ${
+            emailQuestion
+              ? `公式ドメインは${escape(c.material.officialDomain)}です。送信元かリンク先のドメインが公式と異なるメールを2件選び、「フラグを提出」を押してください。`
+              : escape(c.instruction)
+          }
+        </div>
         <section id="mission-material" class="material-box" aria-label="調査素材">
           ${material(c)}
         </section>
         <form id="answer-form" class="answer-panel" aria-labelledby="answer-title">
           <h2 id="answer-title" class="flow-heading">
-            <span class="flow-number" aria-hidden="true">3</span>合言葉を入力して提出
+            <span class="flow-number" aria-hidden="true">3</span
+            >${emailQuestion ? 'メールを選んで提出' : '合言葉を入力して提出'}
           </h2>
-          <label for="flag-input">合言葉（フラグ）の入力欄</label>
+          ${
+            emailQuestion
+              ? /* HTML */ `<fieldset class="email-answer" aria-describedby="feedback">
+                  <legend>不審なメールを2件選んでください</legend>
+                  <div class="email-choices">
+                    ${c.material.emails.map(({ id }) => /* HTML */ `<label><input type="checkbox" name="email" value="${escape(id)}" />${escape(id)}</label>`).join('')}
+                  </div>
+                </fieldset>`
+              : '<label for="flag-input">合言葉（フラグ）の入力欄</label>'
+          }
           <div class="answer-row">
-            <input
-              id="flag-input"
-              name="flag"
-              type="text"
-              placeholder="合言葉を入力"
-              maxlength="100"
-              autocomplete="off"
-              autocapitalize="characters"
-              spellcheck="false"
-              required
-              aria-describedby="input-note feedback"
-            /><button id="submit-answer" class="btn primary" type="submit">
+            ${
+              emailQuestion
+                ? ''
+                : /* HTML */ `<input
+                    id="flag-input"
+                    name="flag"
+                    type="text"
+                    inputmode="text"
+                    enterkeyhint="send"
+                    autocorrect="off"
+                    placeholder="合言葉を入力"
+                    maxlength="100"
+                    autocomplete="off"
+                    autocapitalize="characters"
+                    spellcheck="false"
+                    required
+                    aria-describedby="input-note feedback"
+                  />`
+            }
+            <button id="submit-answer" class="btn primary" type="submit">
               フラグを提出 <span aria-hidden="true">→</span>
             </button>
           </div>
-          <p id="input-note" class="input-note">
-            ${c.kind === 'phishing' ? '入力例　不審なメールがAとCなら「AC」。IDをアルファベット順につなげた２文字を入力します。' : ''}
-            大文字・小文字、全角英数字の違いは気にしなくてOK。
-          </p>
+          ${emailQuestion ? '' : /* HTML */ `<p id="input-note" class="input-note">大文字・小文字、全角英数字の違いは気にしなくてOK。</p>`}
           <button
             id="material-shortcut"
             class="answer-back"
@@ -407,10 +446,20 @@ export function resultPage(data, progress) {
       <p class="notice">
         同じブラウザで30日間、進捗を保存します。Cookieの削除や別の端末では引き継がれません。
       </p>
-      <button id="reset-progress" class="reset-btn">この端末の進捗をリセット</button>
+      <button id="reset-progress" class="reset-btn">
+        <span class="reset-face">この端末の進捗をリセット</span>
+      </button>
       <p id="reset-message" role="status"></p>
     </div>
     ${officialCta()}
+    <aside class="result-popup" aria-labelledby="result-popup-title">
+      <div class="result-popup-heading">
+        <h2 id="result-popup-title">防衛省サイバーコンテスト</h2>
+        <a class="result-popup-close" href="${official}" aria-label="× 公式サイトへ移動">×</a>
+      </div>
+      <a class="result-popup-url" href="${official}">${official}</a>
+      <p>×を押すと公式サイトへ移動します。</p>
+    </aside>
   </div>`;
 }
 

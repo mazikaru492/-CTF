@@ -793,23 +793,6 @@ main:focus {
   font: 700 11px monospace;
   color: var(--muted);
 }
-.code-copy {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 16px;
-  margin-top: 12px;
-}
-.code-copy .material-tip {
-  flex: 1 1 200px;
-  margin: 0;
-  text-align: left;
-}
-@media (max-width: 700px) {
-  .code-copy .btn {
-    width: 100%;
-  }
-}
 .record-list {
   display: flex;
   gap: 8px;
@@ -1030,6 +1013,53 @@ main:focus {
 .result-row .state {
   color: var(--muted);
 }
+.result-popup {
+  position: fixed;
+  z-index: 90;
+  inset: 0;
+  width: min(380px, calc(100% - 32px));
+  height: fit-content;
+  max-height: calc(100% - 32px);
+  margin: auto;
+  overflow: auto;
+  padding: 14px 16px 16px;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--mission-action);
+  border-radius: 12px;
+  background: var(--bg);
+  box-shadow: 0 8px 28px #172c4333;
+}
+.result-popup-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.result-popup h2 {
+  margin: 0;
+  font-size: clamp(1rem, 4vw, 1.125rem);
+}
+.result-popup-close {
+  display: grid;
+  flex: 0 0 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 6px;
+  background: var(--panel2);
+  font-size: 1.5rem;
+  line-height: 1;
+  text-decoration: none;
+}
+.result-popup-url {
+  display: inline-block;
+  margin: 8px 0 4px;
+  overflow-wrap: anywhere;
+  font-size: 0.875rem;
+}
+.result-popup p {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
 .about {
   max-width: 790px;
   padding: 50px 0;
@@ -1085,6 +1115,43 @@ main:focus {
   min-height: 44px;
   font-size: 12px;
   margin-top: 25px;
+}
+.result-list .reset-btn {
+  padding: 0;
+  background: transparent;
+}
+.reset-face {
+  display: grid;
+  place-items: center;
+  min-height: inherit;
+  padding: 10px 15px;
+  border-radius: inherit;
+  background: var(--panel2);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .reset-btn.is-pulsing .reset-face {
+    animation: reset-button-pulse 1.6s ease-in-out infinite;
+  }
+}
+@keyframes reset-button-pulse {
+  35% {
+    transform: scale(1.03, 1.3);
+  }
+  70% {
+    transform: scale(0.97, 0.88);
+  }
+}
+.hero-reset {
+  flex-basis: 100%;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+.hero-reset .reset-btn {
+  margin-top: 8px;
+  font-size: inherit;
+}
+.hero-reset #reset-message:not(:empty) {
+  margin-top: 8px;
 }
 .initial-loading {
   padding: 90px 24px;
@@ -2391,6 +2458,42 @@ body.is-modal-open > :not(dialog) {
   }
 }
 
+.confetti-burst {
+  position: fixed;
+  z-index: 110;
+}
+.confetti-burst span {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 8px;
+  height: 13px;
+  border-radius: 1px;
+  background: #d99a19;
+  animation: confetti-burst 1.35s cubic-bezier(0.14, 0.66, 0.46, 1) both;
+}
+.confetti-burst span:nth-child(3n) {
+  width: 7px;
+  height: 9px;
+  background: #253047;
+}
+.confetti-burst span:nth-child(3n + 1) {
+  background: #f5c642;
+}
+@keyframes confetti-burst {
+  0% {
+    transform: scale(0.45);
+  }
+  65% {
+    opacity: 1;
+    transform: translate(var(--x), var(--y)) rotate(var(--spin));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), calc(var(--y) + 18vh)) rotate(var(--spin));
+  }
+}
+
 @media (max-width: 700px) {
   .mascot-welcome {
     margin-top: 18px;
@@ -3098,6 +3201,43 @@ dialog,
 .answer-panel label {
   font-size: 1rem;
   margin: 20px 0 10px;
+}
+.email-answer {
+  min-width: 0;
+  border: 0;
+  margin: 20px 0 14px;
+  padding: 0;
+}
+.email-answer legend {
+  padding: 0;
+}
+.email-choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(54px, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+.email-choices label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  margin: 0;
+  border: 1px solid var(--control-border);
+  border-radius: 6px;
+  background: var(--bg);
+  cursor: pointer;
+}
+.email-choices input {
+  appearance: auto;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  accent-color: var(--mission-action);
+}
+.email-choices label:has(:checked) {
+  border-color: var(--mission-action);
 }
 .answer-row {
   gap: 14px;

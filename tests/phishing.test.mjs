@@ -79,14 +79,28 @@ test('question eight is solved by checking sender and link hostnames', () => {
   assert.equal(last.answer, 'BD');
 });
 
-test('phishing evidence leads directly to the same answer input as question one', () => {
+test('question eight presents four labeled checkboxes instead of a text field', () => {
   const last = challenges.find((c) => c.id === 8);
   const evidence = material(last);
   assert.doesNotMatch(evidence, /<button|data-email-select|email-built-flag|use-email-flag/);
   const progress = { solved: [], learned: [], viewed: [], hints: Array(challenges.length).fill(0) };
   const firstPage = missionPage(challenges[0], challenges, progress);
   const lastPage = missionPage(last, challenges, progress);
-  const input = /<input[\s\S]*?id="flag-input"[\s\S]*?\/>/;
-  assert.equal(lastPage.match(input)[0], firstPage.match(input)[0]);
-  assert.match(lastPage, /入力例/);
+  assert.match(firstPage, /id="flag-input"/);
+  assert.doesNotMatch(lastPage, /id="flag-input"|入力例|入力欄/);
+  assert.match(lastPage, /不審なメールを2件選んでください/);
+  assert.deepEqual(
+    Array.from(
+      lastPage.matchAll(
+        /<label><input type="checkbox" name="email" value="([A-D])" \/>([A-D])<\/label>/g,
+      ),
+      ([, value, label]) => [value, label],
+    ),
+    [
+      ['A', 'A'],
+      ['B', 'B'],
+      ['C', 'C'],
+      ['D', 'D'],
+    ],
+  );
 });

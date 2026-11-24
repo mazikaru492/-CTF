@@ -81,7 +81,7 @@ for (const engine of [chromium, webkit]) {
       'none',
     );
     assert.equal(await page.evaluate(() => window.missionEntrances), 0);
-    assert.ok(await page.locator('#flag-input').isVisible());
+    assert.ok(await page.locator('#answer-form').isVisible());
     assert.deepEqual(errors, []);
     console.log(
       `PASS ${engine.name()}: all ${challenges.length} missions animate on navigation, restored hints start closed, reduced motion supported`,

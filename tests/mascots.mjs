@@ -111,7 +111,10 @@ for (const engine of engines) {
       const celebrationImages = new Set();
       for (const [index, question] of challenges.entries()) {
         await visitMission(page, question.id);
-        await page.locator('#flag-input').fill(question.answer);
+        if (question.kind === 'phishing') {
+          for (const id of question.answer)
+            await page.getByRole('checkbox', { name: id, exact: true }).check();
+        } else await page.locator('#flag-input').fill(question.answer);
         // Match the server's answer rate limit while using the real submit flow.
         if (index) await page.waitForTimeout(800);
         const response = page.waitForResponse(

@@ -54,6 +54,7 @@ for (const engine of [chromium, webkit]) {
         );
         assert.equal(await page.locator('#flag-input').getAttribute('aria-invalid'), 'true');
         assert.match(await page.locator('#feedback').textContent(), /不正解/);
+        assert.equal(await page.locator('.confetti-burst').count(), 0);
         const retryAnimations = await page.evaluate(() => window.resultAnimationCount);
         assert.equal(retryAnimations, reducedMotion === 'reduce' ? 0 : 1);
         if (engine === chromium && theme === 'light' && reducedMotion === 'no-preference') {
@@ -75,7 +76,27 @@ for (const engine of [chromium, webkit]) {
           await page.evaluate(() => window.resultAnimationCount),
           reducedMotion === 'reduce' ? 0 : 3,
         );
-        assert.equal(await page.locator('.confetti').isVisible(), reducedMotion !== 'reduce');
+        const burst = page.locator('.confetti-burst');
+        if (reducedMotion === 'reduce') {
+          assert.equal(await burst.count(), 0);
+        } else {
+          await burst.waitFor();
+          assert.equal(await burst.getAttribute('aria-hidden'), 'true');
+          assert.ok(
+            await burst.evaluate((el) => {
+              const { width, height, x, y } = el.getBoundingClientRect();
+              return (
+                x === 0 &&
+                y === 0 &&
+                width === innerWidth &&
+                height === innerHeight &&
+                getComputedStyle(el).pointerEvents === 'none' &&
+                el.getAnimations({ subtree: true }).length > 12
+              );
+            }),
+          );
+          await burst.waitFor({ state: 'detached' });
+        }
         for (const width of [320, 390, 768, 1440]) {
           await page.setViewportSize({ width, height: 844 });
           assert.ok(

@@ -160,6 +160,16 @@ for (const engine of process.argv.includes('--webkit') ? [webkit] : [chromium, w
         await page.goto(base);
         await page.locator('.hero').waitFor();
         assert.equal(await page.locator('#header-score').textContent(), `0 / ${challengeCount}`);
+        const resetButton = page.getByRole('button', { name: '進捗をリセット' });
+        const [resetBounds, actionsBounds] = await Promise.all([
+          resetButton.boundingBox(),
+          page.locator('.hero-actions .btn.secondary').boundingBox(),
+        ]);
+        assert.ok(resetBounds.y >= actionsBounds.y + actionsBounds.height);
+        assert.match(
+          await page.locator('#reset-description').textContent(),
+          /1問目からやり直せます/,
+        );
         await page.locator('.site-header .brand').click();
         await page.locator('.hero').waitFor();
         await page.locator('.site-footer .footer-brand').click();
@@ -264,20 +274,25 @@ for (const engine of process.argv.includes('--webkit') ? [webkit] : [chromium, w
             await page.locator('.feedback.retry').waitFor();
             assert.equal(await input.getAttribute('aria-invalid'), 'true');
           }
-          await input.fill(question.answer);
+          if (question.kind !== 'phishing') await input.fill(question.answer);
           await page.locator('#material-shortcut').click();
           await page.waitForFunction(() => {
             const bounds = document.querySelector('#mission-material').getBoundingClientRect();
             return bounds.top >= 0 && bounds.top < innerHeight;
           });
           await page.waitForTimeout(800);
-          const normalized =
-            question.id === 2
-              ? ` flag{${question.answer.toLowerCase()}} `
-              : question.answer
-                  .toLowerCase()
-                  .replace(/[a-z]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0xfee0));
-          await input.fill(normalized);
+          if (question.kind === 'phishing') {
+            for (const id of question.answer)
+              await page.getByRole('checkbox', { name: id, exact: true }).check();
+          } else {
+            const normalized =
+              question.id === 2
+                ? ` flag{${question.answer.toLowerCase()}} `
+                : question.answer
+                    .toLowerCase()
+                    .replace(/[a-z]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0xfee0));
+            await input.fill(normalized);
+          }
           await page.locator('#submit-answer').click();
           await page.locator('.result-visual.is-correct').waitFor();
           assert.equal(
@@ -392,8 +407,14 @@ for (const engine of process.argv.includes('--webkit') ? [webkit] : [chromium, w
       await page.locator('#explanation-button').click();
       await page.locator('#confirm-ok').click();
       await page.locator('.result-visual.is-learned').waitFor();
-      await page.locator('.site-header a[href="#result"]').click();
-      await page.locator('.result-hero').waitFor();
+      await page.locator('.site-header .brand').click();
+      const restart = page.locator('.hero-actions .btn.primary');
+      const firstCard = page.locator('.mission-card[href="#mission-1"]');
+      await restart.waitFor();
+      assert.match(await restart.textContent(), /続きの問題を開く/);
+      await page.locator('#reset-progress').click();
+      await page.locator('#confirm-cancel').click();
+      assert.match(await firstCard.textContent(), /解説で学習/);
       blocked = 'reset';
       await page.locator('#reset-progress').click();
       await page.locator('#confirm-ok').click();
@@ -401,13 +422,19 @@ for (const engine of process.argv.includes('--webkit') ? [webkit] : [chromium, w
         document.querySelector('#reset-message').textContent.includes('通信環境'),
       );
       assert.ok(await page.locator('#reset-progress').isEnabled());
-      assert.match(await page.locator('.result-hero').textContent(), /解説で学習：1問/);
+      assert.match(await firstCard.textContent(), /解説で学習/);
       blocked = '';
       await page.locator('#reset-progress').click();
       await page.locator('#confirm-ok').click();
       await page.waitForFunction(() =>
-        document.querySelector('.result-hero').textContent.includes('解説で学習：0問'),
+        document.querySelector('#reset-message').textContent.includes('進捗をリセットしました'),
       );
+      assert.match(await firstCard.textContent(), /未挑戦/);
+      await page.reload();
+      await restart.waitFor();
+      assert.match(await restart.textContent(), /1問目に挑戦する/);
+      await restart.click();
+      await mission(page, 1);
       report.checks.push(
         `${engine.name()}: initial load, hint, explanation and reset recover after network failure`,
       );

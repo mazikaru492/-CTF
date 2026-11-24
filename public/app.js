@@ -18,6 +18,7 @@ let data;
 let progress;
 let catalogVersion;
 let renderId = 0;
+let resetPulseObserver;
 const { openImage, confirmAction, closeAll } = createDialogs(() => renderId);
 let queue = Promise.resolve();
 async function api(action, id, extra = {}) {
@@ -79,9 +80,20 @@ async function mission(id, token) {
   }
   main.innerHTML = missionPage(c, data, progress);
   setupMaterials(c, main, openImage);
+  const form = document.querySelector('#answer-form');
   const input = document.querySelector('#flag-input');
+  const emailAnswer = form.querySelector('.email-answer');
+  const answerControl = input ?? emailAnswer;
+  const feedback = document.querySelector('#feedback');
+  emailAnswer?.addEventListener('change', () => {
+    if (!emailAnswer.hasAttribute('aria-invalid')) return;
+    emailAnswer.removeAttribute('aria-invalid');
+    form.classList.remove('answer-incorrect');
+    feedback.className = 'feedback';
+    feedback.textContent = '';
+  });
   document.querySelector('#material-shortcut').addEventListener('click', () => {
-    input.blur();
+    input?.blur();
     const heading = document.querySelector('#mission-material .flow-heading');
     heading.tabIndex = -1;
     heading.focus({ preventScroll: true });
@@ -89,19 +101,16 @@ async function mission(id, token) {
       .querySelector('#mission-material')
       .scrollIntoView({ behavior: 'instant', block: 'start' });
   });
-  input.setAttribute('inputmode', 'text');
-  input.setAttribute('enterkeyhint', 'send');
-  input.setAttribute('autocorrect', 'off');
   let composing = false;
   let compositionEnded = 0;
-  input.addEventListener('compositionstart', () => {
+  input?.addEventListener('compositionstart', () => {
     composing = true;
   });
-  input.addEventListener('compositionend', () => {
+  input?.addEventListener('compositionend', () => {
     composing = false;
     compositionEnded = performance.now();
   });
-  input.addEventListener('keydown', (event) => {
+  input?.addEventListener('keydown', (event) => {
     if (
       event.key === 'Enter' &&
       (event.isComposing ||
@@ -111,18 +120,27 @@ async function mission(id, token) {
     )
       event.preventDefault();
   });
-  document.querySelector('#answer-form').addEventListener('submit', async (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const button = document.querySelector('#submit-answer');
     if (composing || button.disabled) return;
-    const feedback = document.querySelector('#feedback');
-    const value = document.querySelector('#flag-input').value;
+    form.classList.remove('answer-correct', 'answer-incorrect');
+    answerControl.removeAttribute('aria-invalid');
+    let value = input?.value;
+    if (!input) {
+      const selected = new FormData(form).getAll('email');
+      if (selected.length !== 2) {
+        feedback.className = 'feedback error';
+        feedback.textContent = '不審なメールを2件選んでから提出してください。';
+        answerControl.setAttribute('aria-invalid', 'true');
+        return;
+      }
+      value = selected.sort().join('');
+    }
     button.disabled = true;
     button.textContent = '確認しています…';
     feedback.className = 'feedback';
     feedback.textContent = '回答を確認しています…';
-    document.querySelector('#answer-form').classList.remove('answer-correct', 'answer-incorrect');
-    input.removeAttribute('aria-invalid');
     try {
       const result = await api('answer', id, { answer: value });
       if (token !== renderId) return;
@@ -133,15 +151,14 @@ async function mission(id, token) {
         : '';
       feedback.className = result.correct ? 'feedback success' : 'feedback retry';
       if (!result.correct)
-        feedback.innerHTML = `${mascot('rii', 'mascot-retry')}<span><strong>もう一歩！</strong><span>今回は不正解です。入力した合言葉と手がかりを、もう一度見比べてみよう。下のヒントも使えます。</span></span>`;
-      document
-        .querySelector('#answer-form')
-        .classList.add(result.correct ? 'answer-correct' : 'answer-incorrect');
-      if (!result.correct) input.setAttribute('aria-invalid', 'true');
+        feedback.innerHTML = `${mascot('rii', 'mascot-retry')}<span><strong>もう一歩！</strong><span>今回は不正解です。${input ? '入力した合言葉' : '選んだメール'}と手がかりを、もう一度見比べてみよう。下のヒントも使えます。</span></span>`;
+      form.classList.add(result.correct ? 'answer-correct' : 'answer-incorrect');
+      if (!result.correct) answerControl.setAttribute('aria-invalid', 'true');
       refreshProgress(id);
       if (result.correct) {
-        input.blur();
+        input?.blur();
         showExplanation(c, result, true);
+        if (!result.assisted) burstConfetti();
       }
       animateResult(result.correct);
     } catch (error) {
@@ -273,6 +290,27 @@ function showHints(hints, initiallyClosed = true) {
   button.disabled = hints.length >= 2;
   button.classList.toggle('hidden', hints.length >= 2);
 }
+function burstConfetti() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  main.querySelector('.confetti-burst')?.remove();
+  const burst = document.createElement('div');
+  burst.className = 'confetti confetti-burst';
+  burst.setAttribute('aria-hidden', 'true');
+  const count = 56;
+  for (let index = 0; index < count; index++) {
+    const piece = document.createElement('span');
+    const angle = ((index + Math.random()) / count) * 2 * Math.PI;
+    const distance = 0.35 + Math.random() * 0.65;
+    piece.style.setProperty('--x', `${Math.cos(angle) * distance * 65}vw`);
+    piece.style.setProperty('--y', `${Math.sin(angle) * distance * 60}vh`);
+    piece.style.setProperty('--spin', `${(Math.random() - 0.5) * 960}deg`);
+    burst.append(piece);
+  }
+  burst.addEventListener('animationend', () => burst.remove(), { once: true });
+  burst.addEventListener('animationcancel', () => burst.remove(), { once: true });
+  main.append(burst);
+}
 function showExplanation(c, result, shouldFocus) {
   const el = document.querySelector('#explanation');
   const next = nextId(data, progress, c.id);
@@ -295,7 +333,6 @@ function showExplanation(c, result, shouldFocus) {
         <h2>${result.assisted ? '新しい発見を、次の一歩へ。' : 'フラグを発見！'}</h2>
         <p>${result.assisted ? '答えの理由を、一緒に確認しよう。' : 'いいひらめきだね！'}</p>
       </div>
-      ${shouldFocus && !result.assisted ? '<div class="confetti" aria-hidden="true">' + '<i></i>'.repeat(12) + '</div>' : ''}
     </div>
     <div class="answer-display">${escape(result.answer)}</div>
     <p>${escape(result.explanation)}</p>
@@ -315,28 +352,47 @@ function showExplanation(c, result, shouldFocus) {
     });
   }
 }
-function results() {
-  const token = renderId;
-  main.innerHTML = resultPage(data, progress);
-  document.querySelector('#reset-progress').addEventListener('click', async (event) => {
+function bindProgressReset(token) {
+  resetPulseObserver?.disconnect();
+  const button = main.querySelector('#reset-progress');
+  if (button?.closest('.result-list') && 'IntersectionObserver' in window) {
+    resetPulseObserver ??= new IntersectionObserver(
+      (entries, observer) => {
+        for (const { target, intersectionRatio } of entries) {
+          if (intersectionRatio < 0.5 || !target.isConnected) continue;
+          target.classList.add('is-pulsing');
+          observer.unobserve(target);
+        }
+      },
+      { threshold: 0.5 },
+    );
+    resetPulseObserver.observe(button);
+  }
+  button?.addEventListener('click', async () => {
     if (
       !(await confirmAction(
         '進捗をリセットしますか？',
-        'このブラウザの正解・学習・ヒントの記録を消し、最初から挑戦できる状態に戻します。',
+        'このブラウザの挑戦・正解・学習・ヒントの記録を消し、1問目からやり直せる状態に戻します。',
         'リセットする',
-        event.currentTarget,
+        button,
       ))
     )
       return;
-    if (token !== renderId) return;
-    const button = document.querySelector('#reset-progress');
-    if (button.disabled) return;
+    if (token !== renderId || button.disabled) return;
+    const message = main.querySelector('#reset-message');
+    message.textContent = '';
     button.disabled = true;
     try {
       await api('reset');
-      if (token === renderId) await render();
+      if (token !== renderId) return;
+      await render();
+      if (token + 1 === renderId) {
+        const status = main.querySelector('#reset-message');
+        if (status) status.textContent = '進捗をリセットしました。1問目からやり直せます。';
+        main.querySelector('.hero .hero-actions .primary')?.focus({ preventScroll: true });
+      }
     } catch (error) {
-      if (token === renderId) document.querySelector('#reset-message').textContent = error.message;
+      if (token === renderId) message.textContent = error.message;
     } finally {
       if (token === renderId) button.disabled = false;
     }
@@ -354,7 +410,7 @@ async function render() {
     pendingMission = mission(id, token);
   } else if (route === '#result') {
     document.title = '結果・復習 — CYBER FIRST STEP';
-    results();
+    main.innerHTML = resultPage(data, progress);
   } else if (route === '#about') {
     document.title = 'この体験について — CYBER FIRST STEP';
     main.innerHTML = aboutPage();
@@ -363,6 +419,7 @@ async function render() {
     main.innerHTML = homePage(data, progress);
     if (route === '#missions') document.querySelector('#missions-section').scrollIntoView();
   }
+  bindProgressReset(token);
   if (route !== '#missions')
     requestAnimationFrame(() => {
       if (token === renderId) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });

@@ -15,11 +15,17 @@ for (const engine of [chromium, webkit]) {
     await page.locator('.email-card').first().waitFor();
     assert.equal(await page.locator('.email-card').count(), 4);
     assert.equal(await page.locator('.email-card a,.cipher,.alphabet,.image-open').count(), 0);
-    assert.equal(await page.locator('#flag-input').inputValue(), '');
-    assert.equal(await page.locator('#flag-input').getAttribute('placeholder'), '合言葉を入力');
-    assert.ok((await page.locator('#input-note').textContent()).includes('入力例'));
-    assert.ok((await page.locator('#input-note').textContent()).includes('AC'));
-    assert.equal(await page.locator('[data-email-select],#use-email-flag').count(), 0);
+    assert.equal(await page.locator('#flag-input').count(), 0);
+    const choice = (id) => page.getByRole('checkbox', { name: id, exact: true });
+    assert.equal(await choice('A').evaluate((el) => getComputedStyle(el).appearance), 'auto');
+    const submit = page.locator('#submit-answer');
+    const feedback = page.locator('#feedback');
+    assert.deepEqual(
+      await page
+        .locator('[name="email"]')
+        .evaluateAll((inputs) => inputs.map((input) => input.value)),
+      ['A', 'B', 'C', 'D'],
+    );
     assert.ok(!(await page.locator('#mission-material').textContent()).includes('BD'));
     for (const [width, height] of [
       [320, 640],
@@ -64,23 +70,36 @@ for (const engine of [chromium, webkit]) {
           .screenshot({ path: `test-results/phishing-${engine.name()}-${width}.png` });
     }
     await page.setViewportSize({ width: 390, height: 844 });
-    for (const wrong of ['SAFE', 'AC']) {
-      await page.locator('#flag-input').fill(wrong);
-      await page.locator('#submit-answer').tap();
-      await page.waitForFunction(
-        () => document.querySelector('#submit-answer')?.disabled === false,
-      );
-      await page.locator('.feedback.retry').waitFor();
-      await page.waitForTimeout(800);
+    const answers = [];
+    page.on('request', (request) => {
+      const body = request.postDataJSON();
+      if (body?.action === 'answer') answers.push(body.answer);
+    });
+    for (const ids of [[], ['A'], ['A', 'B', 'C'], ['A', 'B', 'C', 'D']]) {
+      for (const id of ['A', 'B', 'C', 'D']) await choice(id).setChecked(ids.includes(id));
+      await submit.tap();
+      assert.match(await feedback.textContent(), /2件選んで/);
+      assert.deepEqual(answers, []);
     }
-    await page.locator('#flag-input').fill('BD');
-    assert.equal(await page.locator('#flag-input').inputValue(), 'BD');
+    await choice('B').uncheck();
+    await choice('D').uncheck();
+    await submit.tap();
+    await page.locator('.feedback.retry').waitFor();
+    assert.equal(await page.locator('.email-answer').getAttribute('aria-invalid'), 'true');
+    await page.waitForTimeout(800);
+    await choice('A').uncheck();
+    await choice('C').uncheck();
+    await choice('D').press('Space');
+    await choice('B').check();
+    assert.ok(await choice('D').isChecked());
+    assert.equal(await feedback.textContent(), '');
     await page
       .locator('#answer-form')
       .screenshot({ path: `test-results/phishing-filled-answer-${engine.name()}.png` });
-    await page.locator('#submit-answer').tap();
+    await submit.tap();
     await page.locator('.result-visual.is-correct').waitFor();
-    assert.equal(await page.locator('#flag-input').getAttribute('aria-invalid'), null);
+    assert.deepEqual(answers, ['AC', 'BD']);
+    assert.equal(await page.locator('.email-answer').getAttribute('aria-invalid'), null);
     await page.reload();
     await page.locator('.result-visual.is-correct').waitFor();
     assert.deepEqual(errors, []);
@@ -93,7 +112,7 @@ for (const engine of [chromium, webkit]) {
     assert.ok(await page.locator('#hint-button').isDisabled());
     assert.ok(await page.locator('#explanation').isHidden());
     console.log(
-      `PASS ${engine.name()}: 6 phone/tablet sizes, direct text entry, sample/old answers rejected, correct answer/restoration, two hints`,
+      `PASS ${engine.name()}: 6 phone/tablet sizes, exactly two selections, keyboard, grading and restoration, two hints`,
     );
   } finally {
     await browser.close();
