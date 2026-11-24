@@ -65,6 +65,43 @@
         ><button id="confirm-ok" class="btn primary">解説を見る</button>
       </div>
     </dialog>
+    <dialog
+      id="contest-promo"
+      aria-labelledby="contest-promo-title"
+      aria-describedby="contest-promo-description"
+    >
+      <div class="contest-promo-card">
+        <button
+          class="contest-promo-close"
+          type="button"
+          aria-label="× 97%の確率で防衛省の公式サイトへ移動します。残り3%で案内を閉じます"
+          autofocus
+        >
+          ×
+        </button>
+        <div class="contest-promo-art">
+          <img
+            src="/assets/mascots/duo-clear-480.png"
+            alt=""
+            width="480"
+            height="320"
+            loading="lazy"
+          />
+        </div>
+        <div class="contest-promo-content">
+          <h2 id="contest-promo-title">防衛省のサイトに<br />行ってみませんか？</h2>
+          <p id="contest-promo-description">
+            防衛省サイバーコンテストの開催情報や過去問をチェックできます。
+          </p>
+          <a
+            class="btn primary contest-promo-cta"
+            href="https://www.mod.go.jp/j/approach/defense/cyber/c_contest/"
+          >
+            公式サイトを開く <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </dialog>
     <noscript
       >このCTFではJavaScriptを使用します。ブラウザのJavaScriptを有効にしてください。大会情報は
       https://www.mod.go.jp/j/approach/defense/cyber/c_contest/ から確認できます。</noscript

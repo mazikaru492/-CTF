@@ -220,7 +220,17 @@ for (const engine of process.argv.includes('--webkit') ? [webkit] : [chromium, w
         await page.locator('.site-header a[href="#result"]').click();
         await page.locator('.result-hero').waitFor();
         assert.match(await page.locator('.result-score').textContent(), /^0/);
+        await page.evaluate(() => {
+          const midpoint = Math.ceil((document.documentElement.scrollHeight - innerHeight) / 2);
+          window.scrollTo({ top: midpoint, behavior: 'instant' });
+        });
+        await page.locator('#contest-promo[open]').waitFor();
+        await page.keyboard.press('Escape');
+        await page.locator('#contest-promo').waitFor({ state: 'hidden' });
         await page.locator('.site-footer').scrollIntoViewIfNeeded();
+        await page.locator('#contest-promo[open]').waitFor();
+        await page.keyboard.press('Escape');
+        await page.locator('#contest-promo').waitFor({ state: 'hidden' });
         await page.locator('.site-header a[href="#result"]').click();
         await atTop(page);
         await page.locator('.result-hero .primary').click();

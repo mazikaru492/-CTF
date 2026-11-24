@@ -48,6 +48,13 @@ async function route(page, hash) {
       .locator(hash === '#about' ? '.about' : hash === '#result' ? '.result-hero' : '.hero')
       .waitFor();
 }
+async function openResultsForReset(page) {
+  await route(page, '#result');
+  await page.locator('#reset-progress').scrollIntoViewIfNeeded();
+  await page.locator('#contest-promo[open]').waitFor();
+  await page.keyboard.press('Escape');
+  await page.locator('#contest-promo').waitFor({ state: 'hidden' });
+}
 async function layout(page, name) {
   const metrics = await page.evaluate(() => {
     const width = innerWidth;
@@ -289,7 +296,7 @@ try {
           assert.notEqual(await page.locator('#order-list').innerHTML(), order);
         }
       }
-      await route(page, '#result');
+      await openResultsForReset(page);
       await page.locator('#reset-progress').click();
       await page.locator('#confirm-cancel').click();
       assert.equal(
@@ -344,7 +351,7 @@ try {
   await page.unroute('**/api/game');
   await page.locator('#submit-answer').click();
   await page.locator('#explanation:not(.hidden)').waitFor();
-  await route(page, '#result');
+  await openResultsForReset(page);
   await page.route('**/api/game', async (route) => {
     if (route.request().postDataJSON()?.action === 'reset')
       await new Promise((resolve) => setTimeout(resolve, 400));

@@ -14,12 +14,28 @@ import {
 } from './scripts/pages.js';
 
 const main = document.querySelector('#main');
+const promotionCooldownMs = 45 * 1000;
+const legacyPromotionCooldownMs = 30 * 60 * 1000;
+const midpointPromotion = {
+  url: official,
+  shownAtKey: 'ctf-contest-promo-shown-at',
+  legacyCooldownKey: 'ctf-contest-promo-next-at',
+  shownAt: 0,
+  shown: false,
+};
+const bottomPromotion = {
+  url: 'https://www.mod.go.jp/dih/',
+  shownAtKey: 'ctf-contest-promo-bottom-shown-at',
+  legacyCooldownKey: 'ctf-contest-promo-bottom-next-at',
+  shownAt: 0,
+  shown: false,
+};
 let data;
 let progress;
 let catalogVersion;
 let renderId = 0;
 let resetPulseObserver;
-const { openImage, confirmAction, closeAll } = createDialogs(() => renderId);
+const { openImage, confirmAction, openPromotion, closeAll } = createDialogs(() => renderId);
 let queue = Promise.resolve();
 async function api(action, id, extra = {}) {
   const request = async () => {
@@ -400,6 +416,9 @@ function bindProgressReset(token) {
 }
 async function render() {
   if (!data) return;
+  window.removeEventListener('scroll', showPromotionOnScroll);
+  midpointPromotion.shown = false;
+  bottomPromotion.shown = false;
   const token = ++renderId;
   const route = location.hash || '#home';
   closeAll();
@@ -422,11 +441,41 @@ async function render() {
   bindProgressReset(token);
   if (route !== '#missions')
     requestAnimationFrame(() => {
-      if (token === renderId) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      if (token !== renderId) return;
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      if (route === '#result')
+        window.addEventListener('scroll', showPromotionOnScroll, { passive: true });
     });
   await pendingMission;
 }
 window.addEventListener('hashchange', render);
+function showPromotionOnScroll() {
+  if (location.hash !== '#result' || document.body.classList.contains('is-modal-open')) return;
+  const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const atBottom = scrollableHeight - window.scrollY <= 2;
+  if (!atBottom) bottomPromotion.shown = false;
+  if (scrollableHeight <= 0 || window.scrollY < scrollableHeight / 2) {
+    midpointPromotion.shown = false;
+    return;
+  }
+  const promotion = atBottom ? bottomPromotion : midpointPromotion;
+  const now = Date.now();
+  if (promotion.shown || now - promotion.shownAt < promotionCooldownMs) return;
+  try {
+    const shownAt = localStorage.getItem(promotion.shownAtKey);
+    promotion.shownAt =
+      shownAt === null
+        ? (Number(localStorage.getItem(promotion.legacyCooldownKey)) || 0) -
+          legacyPromotionCooldownMs
+        : Number(shownAt) || 0;
+  } catch {}
+  if (now - promotion.shownAt < promotionCooldownMs || !openPromotion(promotion.url)) return;
+  promotion.shown = true;
+  promotion.shownAt = now;
+  try {
+    localStorage.setItem(promotion.shownAtKey, String(now));
+  } catch {}
+}
 document.addEventListener('click', (event) => {
   const link = event.target.closest('a');
   if (link?.classList.contains('skip-link')) {

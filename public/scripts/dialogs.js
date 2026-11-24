@@ -1,6 +1,8 @@
 export function createDialogs(getRenderId) {
   // Native dialogs plus a small fallback for older browser versions.
   let modalState;
+  const promotion = document.querySelector('#contest-promo');
+  let promotionCloseTimer;
   function showDialog(dialog, opener = document.activeElement) {
     if (dialog.open) return;
     modalState = { top: window.scrollY, opener, token: getRenderId() };
@@ -23,7 +25,7 @@ export function createDialogs(getRenderId) {
     document.body.classList.remove('is-modal-open');
     document.body.style.top = '';
     if (saved.token === getRenderId()) {
-      window.scrollTo(0, saved.top);
+      window.scrollTo({ top: saved.top, behavior: 'instant' });
       if (saved.opener?.isConnected) saved.opener.focus({ preventScroll: true });
     }
   }
@@ -46,7 +48,8 @@ export function createDialogs(getRenderId) {
     if (!dialog) return;
     if (event.key === 'Escape') {
       event.preventDefault();
-      closeDialog(dialog, 'cancel');
+      if (dialog === promotion) dismissPromotion();
+      else closeDialog(dialog, 'cancel');
     }
     if (event.key === 'Tab') {
       const items = [...dialog.querySelectorAll('button:not(:disabled), a[href], [tabindex="0"]')];
@@ -60,6 +63,50 @@ export function createDialogs(getRenderId) {
         first?.focus();
       }
     }
+  });
+  function openPromotion(url) {
+    if (document.querySelector('dialog[open]')) return false;
+    promotionLink.href = url;
+    const active = document.activeElement;
+    showDialog(promotion, active === document.body ? document.querySelector('#main') : active);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (promotion.open) promotion.classList.add('is-visible');
+      });
+    });
+    return true;
+  }
+  function closePromotion() {
+    clearTimeout(promotionCloseTimer);
+    promotionCloseTimer = undefined;
+    promotion.classList.remove('is-visible');
+    closeDialog(promotion, 'cancel');
+  }
+  function dismissPromotion() {
+    if (promotionCloseTimer !== undefined) return;
+    if (
+      !promotion.classList.contains('is-visible') ||
+      matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
+      closePromotion();
+      return;
+    }
+    promotion.classList.remove('is-visible');
+    promotionCloseTimer = setTimeout(closePromotion, 300);
+  }
+  promotion.addEventListener('click', (event) => {
+    if (event.target === promotion) dismissPromotion();
+  });
+  promotion.addEventListener('cancel', (event) => {
+    event.preventDefault();
+    dismissPromotion();
+  });
+  const promotionLink = promotion.querySelector('.contest-promo-cta');
+  promotionLink.addEventListener('click', closePromotion);
+  promotion.querySelector('.contest-promo-close').addEventListener('click', () => {
+    if (!promotion.open || promotionCloseTimer !== undefined) return;
+    if (Math.random() < 0.03) dismissPromotion();
+    else promotionLink.click();
   });
   let zoom = 1;
   function openImage(src, alt, opener) {
@@ -106,9 +153,11 @@ export function createDialogs(getRenderId) {
   return {
     openImage,
     confirmAction,
+    openPromotion,
     closeAll() {
       closeDialog(document.querySelector('#image-dialog'));
       closeDialog(document.querySelector('#confirm-dialog'), 'cancel');
+      closePromotion();
     },
   };
 }

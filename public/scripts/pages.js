@@ -452,14 +452,6 @@ export function resultPage(data, progress) {
       <p id="reset-message" role="status"></p>
     </div>
     ${officialCta()}
-    <aside class="result-popup" aria-labelledby="result-popup-title">
-      <div class="result-popup-heading">
-        <h2 id="result-popup-title">防衛省サイバーコンテスト</h2>
-        <a class="result-popup-close" href="${official}" aria-label="× 公式サイトへ移動">×</a>
-      </div>
-      <a class="result-popup-url" href="${official}">${official}</a>
-      <p>×を押すと公式サイトへ移動します。</p>
-    </aside>
   </div>`;
 }
 
