@@ -27,8 +27,8 @@ export const icons = Object.fromEntries(
     `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">${paths}</svg>`,
   ]),
 );
-export const mascot = (name, extra = '') =>
-  `<span class="mascot mascot-${name} ${extra}" role="img" aria-label="${name === 'rai' ? 'ライ' : 'リイ'}"></span>`;
+export const mascot = () =>
+  '<span class="mascot mascot-rii mascot-retry" role="img" aria-label="リイ"></span>';
 
 const characters = {
   'rai-wave': ['rai/rai-smile-wave.png', 512, 768, '笑顔で手を振って迎えるライ'],
@@ -71,7 +71,7 @@ export function animateResult(correct) {
     { duration: correct ? 650 : 360, easing: 'ease-out' },
   );
   if (correct) {
-    const image = target?.querySelector('.character-art, .mascot');
+    const image = target?.querySelector('.character-art');
     image?.animate(
       [
         { transform: 'translateY(0)' },

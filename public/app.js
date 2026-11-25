@@ -1,6 +1,7 @@
 import { escape, mascot, character, animateResult } from './scripts/ui.js';
 import { setupMaterials } from './scripts/materials.js';
 import { createDialogs } from './scripts/dialogs.js';
+import { animateScoreMark } from './scripts/result-grading.js';
 import {
   official,
   nextId,
@@ -167,7 +168,7 @@ async function mission(id, token) {
         : '';
       feedback.className = result.correct ? 'feedback success' : 'feedback retry';
       if (!result.correct)
-        feedback.innerHTML = `${mascot('rii', 'mascot-retry')}<span><strong>もう一歩！</strong><span>今回は不正解です。${input ? '入力した合言葉' : '選んだメール'}と手がかりを、もう一度見比べてみよう。下のヒントも使えます。</span></span>`;
+        feedback.innerHTML = `${mascot()}<span><strong>もう一歩！</strong><span>今回は不正解です。${input ? '入力した合言葉' : '選んだメール'}と手がかりを、もう一度見比べてみよう。下のヒントも使えます。</span></span>`;
       form.classList.add(result.correct ? 'answer-correct' : 'answer-incorrect');
       if (!result.correct) answerControl.setAttribute('aria-invalid', 'true');
       refreshProgress(id);
@@ -430,6 +431,7 @@ async function render() {
   } else if (route === '#result') {
     document.title = '結果・復習 — CYBER FIRST STEP';
     main.innerHTML = resultPage(data, progress);
+    animateScoreMark(main.querySelector('.result-grading'));
   } else if (route === '#about') {
     document.title = 'この体験について — CYBER FIRST STEP';
     main.innerHTML = aboutPage();

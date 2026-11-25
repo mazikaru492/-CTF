@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url('./theme.css');
 
 * {
   box-sizing: border-box;
@@ -138,9 +137,6 @@ main:focus {
   height: 2px;
   background: var(--accent);
 }
-.muted {
-  color: var(--muted);
-}
 .hero {
   position: relative;
   padding-top: 68px;
@@ -223,50 +219,6 @@ main:focus {
   font-size: 11px;
   color: var(--muted);
   margin-top: 14px;
-}
-.hero-art {
-  position: relative;
-  aspect-ratio: 1;
-  background: radial-gradient(ellipse at center, #dde7f0 0, transparent 69%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-art:before,
-.hero-art:after {
-  content: '';
-  position: absolute;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  width: 86%;
-  height: 86%;
-}
-.hero-art:after {
-  width: 65%;
-  height: 65%;
-  border-style: dashed;
-}
-.hero-art img {
-  position: relative;
-  width: 74%;
-  z-index: 1;
-}
-.art-label {
-  position: absolute;
-  font: 700 10px monospace;
-  color: var(--muted);
-  letter-spacing: 1px;
-  bottom: 22px;
-  right: 12px;
-}
-.mini-tag {
-  position: absolute;
-  top: 24px;
-  right: 12px;
-  border: 1px solid var(--line);
-  padding: 4px 10px;
-  font-size: 10px;
-  letter-spacing: 1px;
 }
 .hero-stats {
   display: grid;
@@ -405,12 +357,6 @@ main:focus {
 .official-cta h2 {
   margin-bottom: 8px;
 }
-.official-cta .eyebrow {
-  margin-bottom: 10px;
-}
-.official-cta .btn {
-  white-space: nowrap;
-}
 .site-footer {
   max-width: 1168px;
   margin: auto;
@@ -431,13 +377,6 @@ main:focus {
 }
 .site-footer > a:last-child {
   white-space: nowrap;
-}
-.page-head {
-  padding: 40px 0 25px;
-}
-.page-head h1 {
-  font-size: 36px;
-  margin-top: 12px;
 }
 .workspace {
   display: grid;
@@ -562,15 +501,6 @@ main:focus {
   font-size: 32px;
   letter-spacing: -0.03em;
   margin-bottom: 8px;
-}
-.challenge-header .subtitle {
-  font-size: 13px;
-  color: var(--muted);
-}
-.story {
-  font-size: 14px;
-  color: var(--muted);
-  margin: 22px 0;
 }
 .mission-instruction {
   padding: 20px;
@@ -1248,26 +1178,6 @@ dialog::backdrop {
   .hero-note {
     font-size: 10px;
   }
-  .hero-art {
-    align-self: center;
-    width: 270px;
-    height: 250px;
-    aspect-ratio: auto;
-    margin-top: 2px;
-  }
-  .hero-art img {
-    width: 70%;
-  }
-  .art-label {
-    bottom: 2px;
-    right: 6px;
-    font-size: 8px;
-  }
-  .mini-tag {
-    top: 9px;
-    right: 0;
-    font-size: 8px;
-  }
   .stat {
     flex-direction: column;
   }
@@ -1333,9 +1243,6 @@ dialog::backdrop {
   .official-cta p {
     font-size: 12px;
   }
-  .official-cta .btn {
-    width: 100%;
-  }
   .site-footer {
     padding: 26px 20px;
     flex-direction: column;
@@ -1356,27 +1263,8 @@ dialog::backdrop {
     border-radius: 10px;
     padding: 0 14px;
   }
-  .mobile-missions > summary {
-    display: flex;
-    min-height: 50px;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    font-size: 12px;
-  }
-  .mobile-missions > summary:after {
-    content: '＋';
-    font-size: 16px;
-  }
-  .mobile-missions[open] > summary:after {
-    content: '−';
-  }
   .mobile-missions .sidebar-list {
     padding-bottom: 12px;
-  }
-  .story {
-    font-size: 13px;
-    margin: 17px 0;
   }
   .mission-instruction {
     font-size: 13px;
@@ -1496,9 +1384,6 @@ dialog::backdrop {
   #confirm-dialog h2 {
     font-size: 20px;
   }
-  .page-head h1 {
-    font-size: 28px;
-  }
   .eyebrow {
     font-size: 9px;
   }
@@ -1581,7 +1466,6 @@ input {
   white-space: normal;
 }
 .hero-copy,
-.story,
 .mission-instruction,
 .hint-item,
 .explanation p,
@@ -1614,7 +1498,6 @@ input {
 .category-label,
 .card-status,
 .challenge-topline,
-.challenge-header .subtitle,
 .sidebar-list a,
 .device-btn,
 .device-code,
@@ -1633,7 +1516,6 @@ input {
   max-width: 100%;
 }
 .btn,
-.official-cta .btn,
 .answer-row .btn {
   white-space: normal;
 }
@@ -1913,22 +1795,6 @@ body.is-modal-open > :not(dialog) {
     border: 1px solid var(--line);
     border-radius: 10px;
   }
-  .mobile-missions > summary {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    min-height: 52px;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    font-size: 0.875rem;
-  }
-  .mobile-missions > summary:after {
-    content: '＋';
-  }
-  .mobile-missions[open] > summary:after {
-    content: '−';
-  }
   .mobile-missions .sidebar-list {
     padding-bottom: 12px;
   }
@@ -1937,9 +1803,6 @@ body.is-modal-open > :not(dialog) {
   }
   .hint-actions {
     flex-wrap: wrap;
-  }
-  .hero-art {
-    max-width: 100%;
   }
 }
 @media (max-width: 700px) {
@@ -2180,7 +2043,6 @@ body.is-modal-open > :not(dialog) {
   color: #9b2c20;
   font-size: 0.875rem;
 }
-.story,
 .mission-instruction,
 .explanation p {
   line-height: 1.95;
@@ -2231,9 +2093,6 @@ body.is-modal-open > :not(dialog) {
   background-size: auto 100%;
   pointer-events: none;
 }
-.mascot-rai {
-  background-position: 14% 50%;
-}
 .mascot-rii {
   background-position: 87% 50%;
 }
@@ -2246,10 +2105,6 @@ body.is-modal-open > :not(dialog) {
   justify-content: center;
   gap: 18px;
   align-items: end;
-}
-.mascot-duo .mascot {
-  width: min(44%, 220px);
-  background-image: url('/assets/rai-rii-cutout.png');
 }
 .mascot-greeting {
   font-weight: 700;
@@ -2287,6 +2142,96 @@ body.is-modal-open > :not(dialog) {
 }
 .result-copy {
   min-width: 0;
+}
+.result-score-row {
+  display: grid;
+  width: min(100%, 480px);
+  align-items: center;
+}
+.result-score-row .result-score {
+  align-self: start;
+  text-align: left;
+}
+.result-grading {
+  display: grid;
+  grid-template-columns: minmax(0, 69%) minmax(0, 1fr);
+  row-gap: 8px;
+  min-width: 0;
+  pointer-events: none;
+}
+.result-grading-art {
+  grid-column: 1 / -1;
+  position: relative;
+  aspect-ratio: 176 / 124;
+  isolation: isolate;
+}
+.result-grader {
+  position: absolute;
+  top: 6.45%;
+  left: 21%;
+  z-index: 1;
+  width: 27.27%;
+  transform-origin: bottom center;
+}
+.result-grader img,
+.result-grading canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.result-grading canvas {
+  position: relative;
+  z-index: 2;
+}
+.result-copy .result-grading-message {
+  position: relative;
+  justify-self: center;
+  z-index: 3;
+  margin: 0;
+  padding: 8px 12px;
+  border: 1px solid #a91f30;
+  border-radius: 16px;
+  background: #fff4f4;
+  color: #a91f30;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.result-grading.is-grading .result-grading-message {
+  visibility: hidden;
+}
+.result-grading-message::before {
+  position: absolute;
+  bottom: -6px;
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid #a91f30;
+  border-bottom: 1px solid #a91f30;
+  background: #fff4f4;
+  content: '';
+  transform: rotate(45deg);
+}
+.result-red-pen {
+  position: absolute;
+  top: 60%;
+  left: 77%;
+  width: 50%;
+  height: 7%;
+  background: linear-gradient(90deg, #931b29 0 16%, #d52234 16% 75%, #f06661 75% 88%, #9f1726 88%);
+  clip-path: polygon(0 0, 82% 0, 100% 50%, 82% 100%, 0 100%);
+  transform: translate(-12%, -50%) rotate(-22deg);
+  transition: opacity 0.16s ease;
+}
+.result-grader.is-walking .result-red-pen {
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .result-red-pen {
+    transition: none;
+  }
 }
 .result-hero .eyebrow {
   justify-content: flex-start;
@@ -2330,6 +2275,9 @@ body.is-modal-open > :not(dialog) {
   .result-hero .result-score {
     margin: 12px 0;
   }
+  .result-score-row {
+    margin-inline: auto;
+  }
 }
 .hint-guide {
   display: flex;
@@ -2337,10 +2285,6 @@ body.is-modal-open > :not(dialog) {
   align-items: center;
   min-width: 0;
 }
-.hint-guide .mascot {
-  width: 68px;
-}
-.hint-guide .mascot,
 .feedback.retry .mascot {
   background-image: image-set(
     url('/assets/rai-rii-126.webp') 1x,
@@ -2363,13 +2307,9 @@ body.is-modal-open > :not(dialog) {
 .feedback.retry .mascot {
   width: 92px;
 }
-.mascot.mascot-success,
 .feedback.retry .mascot.mascot-retry {
   background-position: center;
   background-size: contain;
-}
-.mascot.mascot-success {
-  background-image: url('/assets/mascots/rai-success.png');
 }
 .feedback.retry .mascot.mascot-retry {
   background-image: url('/assets/mascots/rii-retry.png');
@@ -2407,8 +2347,7 @@ body.is-modal-open > :not(dialog) {
   color: #164b34;
   isolation: isolate;
 }
-.result-visual > div:not(.confetti),
-.result-visual > .mascot {
+.result-visual > div:not(.confetti) {
   position: relative;
   z-index: 1;
 }
@@ -2561,9 +2500,6 @@ body.is-modal-open > :not(dialog) {
     padding: 14px;
     gap: 10px;
   }
-  .result-visual > .mascot {
-    width: 84px;
-  }
   .result-visual > div:not(.confetti) {
     min-width: 0;
   }
@@ -2659,6 +2595,23 @@ body {
 .official-link:hover {
   background: var(--panel2);
 }
+.official-link.is-recommended {
+  position: relative;
+  padding-top: 38px;
+}
+.recommendation-note {
+  position: absolute;
+  top: 8px;
+  left: -4px;
+  padding: 3px 12px;
+  background: #ad2633;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  box-shadow: 2px 2px 0 #6b1c25;
+  transform: rotate(-2deg);
+}
 .official-link-text {
   font-size: 1rem;
   text-decoration: underline;
@@ -2737,6 +2690,9 @@ body {
     flex-direction: column;
     gap: 12px;
     padding: 16px;
+  }
+  .official-link.is-recommended {
+    padding-top: 38px;
   }
   .official-external {
     align-self: flex-end;

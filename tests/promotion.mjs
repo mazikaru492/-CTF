@@ -142,7 +142,7 @@ for (const engine of [chromium, webkit]) {
             (randomValue) => {
               Math.random = () => randomValue;
             },
-            method.endsWith('redirect') ? 0.03 : 0.029999,
+            method.endsWith('redirect') ? 0.51 : 0.509999,
           );
         }
         if (method.endsWith('redirect') || method === 'cta') {

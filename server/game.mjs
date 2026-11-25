@@ -267,7 +267,7 @@ export function createGameHandler(loadCatalog = getCatalog) {
       }
       setCookie();
       send(200, { ...result, progress: summary(state) });
-    } catch (error) {
+    } catch {
       console.error('CTF service failure');
       send(503, { error: 'ただいま接続できません。少し待ってから再試行してください。' });
     }

@@ -105,23 +105,29 @@ export function createDialogs(getRenderId) {
   promotionLink.addEventListener('click', closePromotion);
   promotion.querySelector('.contest-promo-close').addEventListener('click', () => {
     if (!promotion.open || promotionCloseTimer !== undefined) return;
-    if (Math.random() < 0.03) dismissPromotion();
+    if (Math.random() < 0.51) dismissPromotion();
     else promotionLink.click();
   });
   let zoom = 1;
   function openImage(src, alt, opener) {
-    const image = document.querySelector('#zoom-image');
+    const scroll = document.querySelector('#image-scroll');
+    const previousImage = scroll.querySelector('#zoom-image');
+    const image = previousImage ?? document.createElement('img');
     image.src = src;
     image.alt = alt;
+    if (!previousImage) {
+      image.id = 'zoom-image';
+      scroll.append(image);
+    }
     zoom = 1;
     setZoom();
-    const scroll = document.querySelector('#image-scroll');
     scroll.scrollTop = 0;
     scroll.scrollLeft = 0;
     showDialog(document.querySelector('#image-dialog'), opener);
   }
   function setZoom() {
-    document.querySelector('#zoom-image').style.width = `${zoom * 100}%`;
+    const image = document.querySelector('#zoom-image');
+    if (image) image.style.width = `${zoom * 100}%`;
     document.querySelector('#zoom-label').textContent = `${Math.round(zoom * 100)}%`;
     document.querySelector('#zoom-out').disabled = zoom <= 1;
     document.querySelector('#zoom-in').disabled = zoom >= 4;

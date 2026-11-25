@@ -3,7 +3,7 @@ import { material } from './materials.js';
 export const official = 'https://www.mod.go.jp/j/approach/defense/cyber/c_contest/';
 const previousExam = `${official}previous_exam.html`;
 
-export function stateLabel(id, progress) {
+function stateLabel(id, progress) {
   return progress.solved.includes(id)
     ? '✓ 正解'
     : progress.learned.includes(id)
@@ -49,6 +49,70 @@ function missionCards(data, progress) {
     )
     .join('');
 }
+function resourceLinks(links) {
+  return links
+    .map(
+      (link) =>
+        /* HTML */ `<a
+          class="official-link${link.recommended ? ' is-recommended' : ''}"
+          href="${link.href}"
+          target="_blank"
+          rel="noopener noreferrer"
+          >${link.recommended ? '<span class="recommendation-note">オススメ</span>' : ''}<span
+            class="official-link-text"
+            >${link.title}<span class="official-domain">${link.description}</span></span
+          ><span class="official-external"
+            >外部サイト
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M14 3h7v7m0-7L10 14M10 5H4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-6"
+              /></svg></span
+        ></a>`,
+    )
+    .join('');
+}
+function learningCta() {
+  const links = [
+    {
+      href: 'https://2026.ctf.sekai.team/',
+      title: 'SEKAI CTF 2026',
+      recommended: true,
+      description: 'CTF大会ページ ／ 2026.ctf.sekai.team',
+    },
+    {
+      href: 'https://tryhackme.com/',
+      title: 'TryHackMe',
+      recommended: true,
+      description: '解説付きの演習で、ネットワークやセキュリティの基礎を学ぶ ／ tryhackme.com',
+    },
+    {
+      href: 'https://cylabacademy.org/',
+      title: 'CyLab Security Academy（旧picoCTF）',
+      description:
+        'カーネギーメロン大学の学習サイトで、暗号やWebなどのCTF問題に挑戦 ／ cylabacademy.org',
+    },
+  ];
+  return /* HTML */ `<section class="official-cta" aria-labelledby="learning-title">
+    <h2 id="learning-title">CTF・セキュリティ学習サイトのご案内</h2>
+    <div class="official-body">
+      <p>もっと学んでみたい方へ。解説付きの演習やCTF問題で、次の一歩を踏み出してみませんか。</p>
+      <div class="official-links">${resourceLinks(links)}</div>
+      <p>
+        英語が分からなくても大丈夫！ ブラウザーの翻訳機能を使えば、日本語で読みながら学べます！！
+      </p>
+      <p class="official-note">
+        リンクは新しいタブで開きます。利用条件や料金は、各サイトでご確認ください。
+      </p>
+    </div>
+  </section>`;
+}
 function officialCta() {
   const links = [
     {
@@ -67,37 +131,8 @@ function officialCta() {
     <div class="official-body">
       <p>暗号やネットワークなど、情報セキュリティに関する問題に挑戦するコンテストです。</p>
       <p>開催情報・参加条件・募集状況は、防衛省ホームページをご確認ください。</p>
-      <div class="official-links">
-        ${links
-          .map(
-            (link) =>
-              /* HTML */ `<a
-                class="official-link"
-                href="${link.href}"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><span class="official-link-text"
-                  >${link.title}<span class="official-domain">${link.description}</span></span
-                ><span class="official-external"
-                  >外部サイト
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <path
-                      d="M14 3h7v7m0-7L10 14M10 5H4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-6"
-                    /></svg></span
-              ></a>`,
-          )
-          .join('')}
-      </div>
-      <p class="official-note">
-        この練習のクリアは、大会の参加条件ではありません。<br />本サイトは学生企画の体験サイトです。
-      </p>
+      <div class="official-links">${resourceLinks(links)}</div>
+      <p class="official-note">この練習のクリアは、大会の参加条件ではありません。</p>
     </div>
   </section>`;
 }
@@ -187,7 +222,6 @@ export function homePage(data, progress) {
         </div>
         <p class="mascot-greeting">ひらめきを、一緒に見つけよう。</p>
         <p class="mascot-caption">防衛省サイバーコンテストの<br />マスコット「ライ」「リイ」</p>
-        <p class="mascot-caption">この体験は学生企画・非公式です。</p>
       </div>
     </section>
     <section class="hero-stats" aria-label="体験の概要">
@@ -414,6 +448,21 @@ export function resultPage(data, progress) {
   const learned = progress.learned.length;
   const resume = nextId(data, progress);
   const complete = data.length > 0 && solved === data.length;
+  const mark =
+    solved === 0
+      ? 'message'
+      : complete
+        ? 'flower'
+        : solved * 2 >= data.length
+          ? 'double'
+          : 'single';
+  const markLabel = {
+    flower: '赤ペンの花丸',
+    double: '赤ペンの二重丸',
+    single: '赤ペンの丸',
+  }[mark];
+  const gradingMessage =
+    solved * 2 >= data.length && solved > 0 ? 'よくできました！' : '頑張りましょう';
   return /* HTML */ `<div class="container">
     <section class="result-hero${complete ? ' is-complete' : ''}">
       <div class="result-characters">
@@ -432,7 +481,23 @@ export function resultPage(data, progress) {
         <p class="result-cheer">
           ${complete ? '全問正解、おめでとう！ ライとリイも大喜び。' : 'ライとリイと、自分のペースで進もう。'}
         </p>
-        <div class="result-score">${solved}<span> / ${data.length} 正解</span></div>
+        <div class="result-score-row">
+          <div class="result-score">${solved}<span> / ${data.length} 正解</span></div>
+          <div class="result-grading" data-mark="${mark}">
+            <p class="result-grading-message" aria-live="polite">${gradingMessage}</p>
+            <div class="result-grading-art">
+              <div class="result-grader" aria-hidden="true">
+                ${character('rii-wave', '', true)}
+                <span class="result-red-pen"></span>
+              </div>
+              <canvas
+                width="1056"
+                height="744"
+                ${markLabel ? `role="img" aria-label="${markLabel}"` : 'aria-hidden="true"'}
+              ></canvas>
+            </div>
+          </div>
+        </div>
         <p>
           解説で学習：${learned}問 ／ 未完了：${data.length - solved - learned}問<br />ヒントを使って解いた問題も正解に含みます。
         </p>
@@ -441,6 +506,7 @@ export function resultPage(data, progress) {
         </div>
       </div>
     </section>
+    ${learningCta()}
     <div class="result-list">
       ${data.map((c) => /* HTML */ `<div class="result-row"><span class="num">${String(c.id).padStart(2, '0')}</span><a href="#mission-${c.id}">${escape(c.title)}</a><span class="state">${stateLabel(c.id, progress)}</span></div>`).join('')}
       <p class="notice">
@@ -496,7 +562,7 @@ export function aboutPage() {
       <p>
         ライ・リイは、<a href="${official}" target="_blank" rel="noopener noreferrer"
           >防衛省サイバーコンテストのマスコットキャラクター</a
-        >です。本サイトでは公式サイトの公開画像と、提供画像・公式画像を参考にAIで背景透過や表情・ポーズを加工した素材を使用しています。加工した表情・ポーズや応援メッセージは、この学生企画のために作成したものです。防衛省の公式サービス・公認を示すものではありません。
+        >です。本サイトでは公式サイトの公開画像と、提供画像・公式画像を参考にAIで背景透過や表情・ポーズを加工した素材を使用しています。防衛省の公式サービス・公認を示すものではありません。
       </p>
       <h2>制作時に参考にした公開資料</h2>
       <ul>
