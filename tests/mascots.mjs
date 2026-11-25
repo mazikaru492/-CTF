@@ -17,6 +17,15 @@ async function checkResultImage(page, complete) {
     complete ? /duo-clear\.png/ : /rai-rii-laptop\.png/,
   );
   assert.ok(await page.locator('.result-characters img').getAttribute('alt'));
+  const speech = page.locator('.result-grading-message');
+  await speech.waitFor();
+  assert.match(await speech.textContent(), complete ? /よくできました！/ : /頑張りましょう/);
+  assert.ok(
+    await page
+      .locator('.result-grader')
+      .evaluate((grader) => grader.offsetParent === grader.closest('.result-grading-art')),
+    'the grading mascot is positioned inside its artwork',
+  );
 }
 
 async function visitMission(page, id) {

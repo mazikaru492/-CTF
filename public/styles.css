@@ -2153,6 +2153,7 @@ body.is-modal-open > :not(dialog) {
   text-align: left;
 }
 .result-grading {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 69%) minmax(0, 1fr);
   row-gap: 8px;
@@ -2250,7 +2251,7 @@ body.is-modal-open > :not(dialog) {
 @media (max-width: 700px) {
   .result-hero {
     grid-template-columns: minmax(0, 1fr);
-    gap: 18px;
+    gap: 16px;
     text-align: center;
     padding-top: 24px;
   }
@@ -2259,10 +2260,10 @@ body.is-modal-open > :not(dialog) {
     margin: auto;
   }
   .result-characters > img {
-    max-height: 190px;
+    max-height: 160px;
   }
   .is-complete .result-characters > img {
-    max-height: 250px;
+    max-height: 200px;
   }
   .result-hero .eyebrow,
   .result-hero .hero-actions {
@@ -2276,6 +2277,7 @@ body.is-modal-open > :not(dialog) {
     margin: 12px 0;
   }
   .result-score-row {
+    width: min(100%, 352px);
     margin-inline: auto;
   }
 }

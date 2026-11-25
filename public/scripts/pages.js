@@ -54,11 +54,12 @@ function resourceLinks(links) {
     .map(
       (link) =>
         /* HTML */ `<a
-          class="official-link"
+          class="official-link${link.recommended ? ' is-recommended' : ''}"
           href="${link.href}"
           target="_blank"
           rel="noopener noreferrer"
-          ><span class="official-link-text"
+          >${link.recommended ? '<span class="recommendation-note">オススメ</span>' : ''}<span
+            class="official-link-text"
             >${link.title}<span class="official-domain">${link.description}</span></span
           ><span class="official-external"
             >外部サイト
@@ -82,11 +83,13 @@ function learningCta() {
     {
       href: 'https://2026.ctf.sekai.team/',
       title: 'SEKAI CTF 2026',
+      recommended: true,
       description: 'プロセカ風のCTF大会で、暗号やWebなどの問題に挑戦 ／ 2026.ctf.sekai.team',
     },
     {
       href: 'https://tryhackme.com/',
       title: 'TryHackMe',
+      recommended: true,
       description: '解説付きの演習で、ネットワークやセキュリティの基礎を学ぶ ／ tryhackme.com',
     },
     {
@@ -464,8 +467,9 @@ export function resultPage(data, progress) {
     flower: '赤ペンの花丸',
     double: '赤ペンの二重丸',
     single: '赤ペンの丸',
-    message: '頑張りましょう',
   }[mark];
+  const gradingMessage =
+    solved * 2 >= data.length && solved > 0 ? 'よくできました！' : '頑張りましょう';
   return /* HTML */ `<div class="container">
     <section class="result-hero${complete ? ' is-complete' : ''}">
       <div class="result-characters">
@@ -486,12 +490,19 @@ export function resultPage(data, progress) {
         </p>
         <div class="result-score-row">
           <div class="result-score">${solved}<span> / ${data.length} 正解</span></div>
-          <div class="result-grading" data-mark="${mark}" role="img" aria-label="${markLabel}">
-            <div class="result-grader" aria-hidden="true">
-              ${character('rii-wave', '', true)}
-              <span class="result-red-pen"></span>
+          <div class="result-grading" data-mark="${mark}">
+            <p class="result-grading-message" aria-live="polite">${gradingMessage}</p>
+            <div class="result-grading-art">
+              <div class="result-grader" aria-hidden="true">
+                ${character('rii-wave', '', true)}
+                <span class="result-red-pen"></span>
+              </div>
+              <canvas
+                width="1056"
+                height="744"
+                ${markLabel ? `role="img" aria-label="${markLabel}"` : 'aria-hidden="true"'}
+              ></canvas>
             </div>
-            <canvas width="1056" height="744" aria-hidden="true"></canvas>
           </div>
         </div>
         <p>
