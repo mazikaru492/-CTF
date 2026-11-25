@@ -1,77 +1,204 @@
-# CYBER FIRST STEP
+﻿# CYBER FIRST STEP
 
-スマホで体験できる、学生企画・非公式の初心者向けCTFです。現在は８問を公開しています。
+![Node.js](https://img.shields.io/badge/Node.js-24.x-339933)
+![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E)
+![microCMS](https://img.shields.io/badge/CMS-microCMS-blue)
+![Vercel](https://img.shields.io/badge/Hosting-Vercel-black)
 
-## 普段の変更はこの３か所
+スマホのブラウザから暗号・画像・記録などの問題に挑戦できる、学生企画・非公式の初心者向けCTFです。
 
-| 変更したいもの                             | 編集するファイル                       |
-| ------------------------------------------ | -------------------------------------- |
-| 問題文・答え・ヒント・解説・使用画像       | microCMSの「問題」管理画面             |
-| 配色・共通フォント・トップの小見出しサイズ | [public/theme.css](public/theme.css)   |
-| 余白・ボタン・スマホの配置                 | [public/styles.css](public/styles.css) |
+**公開サイト → [CYBER FIRST STEP](https://cyber-first-step-ctf.vercel.app/)**
 
-問題画像はmicroCMSへアップロードします。既存の問題画像は `public/assets/` を参照しています。トップや紹介ページの文章は `public/scripts/pages.js`、ヘッダー・フッターの文章は `public/index.html` です。
+- スマホの縦横表示、画像拡大、タップによる選択・並べ替えに対応。
+- 問題・正解はmicroCMSで管理し、サーバー側で取得・回答判定します。
+- 公開する問題数から一覧・移動・進捗表示を自動計算。1〜32問に対応します。
+- 無料の2段階ヒントと解説を用意し、同じブラウザの進捗を署名付きCookieで30日保存します。
 
-詳しい手順と各項目の意味は **[運用・編集ガイド](docs/maintenance.md)** にまとめています。
+> [!NOTE]
+> 防衛省の公式サービスではありません。素材の出典と運用上の制限は [公開運用の詳細](docs/operations.md) を参照してください。
 
-## 起動
+## 技術スタック・アーキテクチャ概要
 
-Node.js 24を使用します。初回だけ実行してください。
+| 領域           | 使用技術・役割                                         |
+| -------------- | ------------------------------------------------------ |
+| 実行環境       | Node.js 24.x、JavaScript ES Modules                    |
+| 画面           | Vanilla JavaScript、HTML、CSS                          |
+| コンテンツ管理 | microCMS Content API。サーバーからGETで取得            |
+| ホスティング   | Vercel Functions、静的ファイル配信                     |
+| 検証           | Node標準テスト、PlaywrightのChromium・WebKit、Prettier |
 
-```sh
+```text
+ブラウザ
+  ├─ HTML・CSS・JS・画像 ← public/（公開時はdist/）
+  └─ /api/game → api/game.js → server/game.mjs
+                                  ├─ catalog.mjs → microCMS
+                                  └─ 回答判定・進捗Cookie・表示用データ
+
+npm run build
+  ├─ microCMSから取得した問題設定と既存画像を検証
+  └─ public/をdist/へコピー
+```
+
+問題・正解一覧・APIキーを静的なビルド成果物へ含めません。問題一覧の初回取得には正解・ヒント・解説・学習内容を含めず、ヒントや解説は操作に応じて返します。画像や素材は解くための公開情報です。
+
+取得結果はサーバーのインスタンス内で30秒保持します。通常の問題編集はCMSで公開すると反映され、表示コードの変更は再ビルド・再デプロイが必要です。
+
+## ディレクトリ構成
+
+```text
+.
+├─ public/                  ブラウザへ配信するファイル
+│  ├─ index.html            HTMLの土台・ヘッダー・フッター
+│  ├─ app.js                通信・画面切り替え・回答提出
+│  ├─ theme.css             共通の配色・フォント
+│  ├─ styles.css            レイアウト・余白・スマホ配置
+│  ├─ scripts/              ページ表示・素材操作・ダイアログ・演出
+│  └─ assets/               画像・マスコットなど
+├─ server/                  回答判定・Cookie・CMS取得・データ検証
+├─ api/game.js              Vercel Functionの入口
+├─ scripts/                 ローカル起動・チェック・ビルド
+├─ tests/                   Nodeテスト・ブラウザテスト
+│  └─ fixtures/             配信対象外の回帰確認用データ
+├─ docs/                    運用資料・出典・検証記録
+├─ .env.example             microCMS接続項目の見本
+├─ package.json             コマンド・Nodeバージョン・開発依存
+├─ vercel.json              ビルド・出力先・セキュリティヘッダー
+├─ dist/                    ビルド時に生成される静的ファイル
+└─ test-results/            テストで生成される結果
+```
+
+`dist/` は毎回作り直します。画面や素材は元の `public/` を編集してください。
+
+## 日常の運用・編集早見表
+
+| 変更したい内容                                 | 編集対象                                                   |
+| ---------------------------------------------- | ---------------------------------------------------------- |
+| 問題文・正解・ヒント・解説・学習内容・問題画像 | microCMSの「問題」管理画面                                 |
+| 配色・共通フォント・トップの小見出しサイズ     | [public/theme.css](public/theme.css)                       |
+| レイアウト・余白・ボタンサイズ・スマホ配置     | [public/styles.css](public/styles.css)                     |
+| トップ・問題・結果・紹介ページの文言と表示     | [public/scripts/pages.js](public/scripts/pages.js)         |
+| ヘッダー・フッター・固定ダイアログの文言       | [public/index.html](public/index.html)                     |
+| 画像切り替え・選択・並べ替えの操作             | [public/scripts/materials.js](public/scripts/materials.js) |
+| 画像拡大・確認ダイアログ                       | [public/scripts/dialogs.js](public/scripts/dialogs.js)     |
+
+### 問題を追加・変更する
+
+1. microCMSの「問題」で新規登録、または既存問題を開きます。
+2. 問題番号・問題名・問題文・正解・ヒント1と2・解説・学習内容を入力します。「問題の形式・素材」は1つ選択して入力します。
+3. 画像はCMSの画像欄からアップロードします。PNG・JPEG・WebP・AVIFに対応します。画像説明・手がかり・正解も実物に合わせます。
+4. 公開する番号を1からの連番にそろえ、「公開」を押します。公開終了・削除時も連番を確認します。
+5. `npm run check:microcms:content` と `npm run check` を実行し、スマホで素材・正答・誤答・ヒント・解説を確認します。
+
+正解は100文字以内の半角大文字で登録します。問題数は自動計算されます。詳細は [運用・編集ガイド](docs/maintenance.md) を参照してください。
+
+> [!IMPORTANT]
+> 問題文・正解・素材など内容を変更すると全体の既存進捗がリセットされます。更新日時だけの変更ではリセットされません。変更前の画面から回答した場合は再読み込みを案内します。
+
+## 環境構築・ローカル起動手順
+
+### 1. 依存パッケージをインストールする
+
+Node.js 24.xと付属のnpm、Gitを用意します。リポジトリ直下で実行してください。
+
+```bash
+node --version
 npm ci
 ```
 
-```sh
+### 2. microCMSを設定する
+
+[microCMS接続ガイド](docs/microcms.md) に従ってリスト形式のAPIとGET専用キーを用意します。直下に `.env.local` を作成し、`.env.example` の3項目を入力します。
+
+```dotenv
+MICROCMS_SERVICE_DOMAIN=your-service-id
+MICROCMS_ENDPOINT=questions
+MICROCMS_API_KEY=実際の読み取り専用APIキー
+```
+
+既存の `.env.local` がある場合は項目を追加・修正し、既存の署名鍵を保持してください。
+
+```bash
+npm run check:microcms
+```
+
+接続確認は公開コンテンツ0件でも成功します。サイト起動には必須項目がそろった公開済み問題が1問以上必要です。
+
+### 3. 起動してブラウザで確認する
+
+```bash
 npm run dev
 ```
 
-http://127.0.0.1:3000 を開きます。問題設定やサーバーを保存すると自動で再起動します。画面はブラウザで再読み込みしてください。CSSだけの変更はサーバー再起動不要です。
+**http://127.0.0.1:3000** を開きます。署名鍵が未設定なら、初回起動時に `CTF_SESSION_SECRET` が生成され、`.env.local` に保存されます。
 
-ローカルの進捗用署名鍵は初回に `.env.local` へ保存され、再起動でも維持されます。このファイルはGit・公開対象から除外します。
+`dev` はNodeの監視機能でサーバーと読み込まれたモジュールの変更を検知して再起動します。ブラウザは手動で再読み込みしてください。CSS・HTMLだけの変更はサーバー再起動不要です。環境変数の変更後はサーバーを起動し直してください。監視なしで起動する場合は `npm start` を使えます。
 
-## microCMSの接続準備
+> [!WARNING]
+> `.env.local` や秘密値をGit・公開素材へ追加しないでください。CMSの内容が不正・空・取得不能の場合、起動・ビルドが失敗し、実行中のAPIは503を返します。接続先・公開状態・必須項目を確認してください。
 
-サービス・API・読み取り専用キーの作成手順は [microCMS接続ガイド](docs/microcms.md) を参照してください。
-`.env.example` の3項目を `.env.local` に追加し、`npm run check:microcms` で接続を確認できます。
-問題データはmicroCMSから取得します。`npm run check:microcms:content` で公開済みの問題を検証できます。起動・設定チェック・ビルドには接続設定が必要です。問題の編集と公開の手順は接続ガイドを参照してください。
+## 環境変数一覧（`.env.local` / Vercel設定）
 
-## 変更後の確認
+| 変数名                    | 必須／任意                                         | 用途                                                         | 設定例                          |
+| ------------------------- | -------------------------------------------------- | ------------------------------------------------------------ | ------------------------------- |
+| `MICROCMS_SERVICE_DOMAIN` | 必須                                               | URLの接頭辞・末尾を含めないサービスID                        | `your-service-id`               |
+| `MICROCMS_ENDPOINT`       | 必須                                               | リスト形式APIのエンドポイント名                              | `questions`                     |
+| `MICROCMS_API_KEY`        | 必須                                               | 対象APIのGET専用キー。下書き取得・書き込み権限は無効         | 管理画面で発行した値            |
+| `CTF_SESSION_SECRET`      | 公開環境で必須。ローカル起動時に未設定なら自動生成 | 32文字以上のランダムな秘密値。Cookie署名・問題版の識別に使用 | 環境ごとに生成した秘密値        |
+| `PORT`                    | 任意                                               | ローカルサーバーのポート                                     | `3000`（既定）                  |
+| `CTF_TEST_URL`            | 任意                                               | ブラウザテストの接続先                                       | `http://127.0.0.1:3000`（既定） |
 
-```sh
+`.env.example` はmicroCMSの3項目を記載しています。署名鍵を変更・削除すると既存進捗が無効になります。`check`・問題内容検証・`build` を初回起動より先に実行する場合も、32文字以上の署名鍵を設定しておいてください。
+
+### Vercelへデプロイする
+
+1. Vercelへリポジトリをインポートします。既存サイトを更新する場合は対象プロジェクトが `cyber-first-step-ctf` であることを確認します。
+2. Node.jsを24.x、FrameworkをOther、Build Commandを `npm run build`、Output Directoryを `dist` に設定します。ビルド・出力先は `vercel.json` にも定義されています。
+3. プロジェクトの環境変数にmicroCMSの3項目と `CTF_SESSION_SECRET` を設定します。Productionと、プレビューを利用する場合はPreviewにも設定します。
+4. デプロイを実行し、ビルド成功を確認します。環境変数の変更後は再デプロイしてください。
+5. 公開サイトでトップ・問題・画像・回答判定・ヒント・解説・進捗復元を確認します。
+
+ビルド時にもmicroCMSへの接続が必要です。Vercel Functionは実行時に問題を取得するため、公開環境にも接続設定が必要です。APIキー・署名鍵・正解一覧を `public/` や `dist/` へコピーしないでください。
+
+## テスト・品質チェックコマンド一覧
+
+| コマンド                         | 役割・実行タイミング                                         |
+| -------------------------------- | ------------------------------------------------------------ |
+| `npm run check`                  | 問題形式・必須項目・ヒント数・既存画像パスを検証。問題変更後 |
+| `npm run check:microcms`         | 接続先と読み取りキーの疎通確認。初回設定・接続障害時         |
+| `npm run check:microcms:content` | 公開済み全問題の形式・連番・素材を検証。CMS公開後            |
+| `npm test`                       | Node標準テスト。判定・Cookie・検証ルールなどの回帰確認       |
+| `npm run build`                  | 問題設定を検証し、`public/` を `dist/` にコピー。公開前      |
+| `npm run test:mobile`            | Chromium・WebKitでスマホ表示・操作を確認。画面変更後         |
+| `npm run test:devices`           | タブレット・PCを含む表示・操作確認                           |
+| `npm run test:feedback`          | 正解・不正解表示、配色、動きを減らす設定を確認               |
+| `npm run test:selection`         | 選択操作の回帰確認                                           |
+| `npm run test:compare`           | 画像比較操作の回帰確認                                       |
+| `npm run test:phishing`          | メール調査問題の回帰確認                                     |
+| `npm run format`                 | 対象コード・README・運用ガイドをPrettierで書き換えて整形     |
+| `npm run format:check`           | 同じ対象が整形済みか確認。共有・公開前                       |
+
+ブラウザテストの初回準備を行います。
+
+```bash
+npx playwright install chromium webkit
+```
+
+`npm run dev` を起動したまま別ターミナルで実行します。ブラウザテストはCMSの公開済み問題とローカル接続設定も使用します。
+
+```bash
 npm run check
 npm test
 npm run build
-```
-
-`check` はIDの重複・必須項目・ヒント数・素材の形式・画像ファイルの存在を確認します。設定が不正ならビルドも停止します。画像内の文字と答えが合っているかは、画面で確認してください。
-
-スマホの操作確認は、サーバーを起動したまま別のターミナルで実行します。
-
-```sh
-npx playwright install chromium webkit
 npm run test:mobile
 npm run test:feedback
+npm run format:check
 ```
 
-コードを読みやすくそろえる場合は `npm run format`、整形済みか確認する場合は `npm run format:check` を使います。テスト結果は `test-results/` に出力され、Gitには入りません。
+結果・スクリーンショットなどは `test-results/` に保存され、Gitの対象外です。画像内の文字と正解の一致は画面で確認してください。自動テストに加え、公開前は実機でもキーボード・画像の読みやすさ・タップ操作を確認します。
 
-## 構成
+## 関連ドキュメントへのリンク
 
-```text
-public/        ブラウザに配信する画面・CSS・画像
-  scripts/     表示、素材操作、ダイアログなどの画面処理
-server/        回答判定・Cookie・問題設定の検証
-api/           Vercel用の入口
-scripts/       起動・設定チェック・ビルド
-tests/         自動テスト。fixtures/は配信対象外の回帰確認用データ
-docs/          運用資料と検証記録
-```
-
-`dist/` はビルド結果です。直接編集しません。問題数は設定から計算されるため、問題の追加時に画面・判定処理の数字を書き換える必要はありません。
-
-## 公開運用
-
-Vercelで `CTF_SESSION_SECRET` に32文字以上の秘密値と、microCMSの接続先・読み取りキーを設定します。問題と答えはサーバーからmicroCMSへ取得し、`public/` や `dist/` へコピーしません。
-
-問題の差し替え・進捗の扱い・公開時の注意点は [運用・編集ガイド](docs/maintenance.md)、素材の出典・計測・運用上の制限は [公開運用の詳細](docs/operations.md) を参照してください。
+- [運用・編集ガイド](docs/maintenance.md) — 問題追加・変更、画像、配色、進捗の扱い。
+- [microCMS接続ガイド](docs/microcms.md) — サービス・API・キーの設定と接続エラーの切り分け。
+- [公開運用の詳細](docs/operations.md) — Vercel設定、公開後の確認、計測、素材出典、運用上の制限。
+- [マスコット素材一覧](docs/mascot-assets.md) — 素材の出典と制作条件。
