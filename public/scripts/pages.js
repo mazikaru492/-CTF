@@ -514,7 +514,8 @@ export function resultPage(data, progress) {
       </div>
     </section>
     ${learningCta()}
-    <div class="result-list">
+    <section class="result-list" aria-labelledby="result-list-title">
+      <h2 id="result-list-title" class="result-list-title">問題の結果</h2>
       ${data.map((c) => /* HTML */ `<div class="result-row"><span class="num">${String(c.id).padStart(2, '0')}</span><a href="#mission-${c.id}">${escape(c.title)}</a><span class="state">${stateLabel(c.id, progress)}</span></div>`).join('')}
       <p class="notice">
         同じブラウザで30日間、進捗を保存します。Cookieの削除や別の端末では引き継がれません。
@@ -523,7 +524,7 @@ export function resultPage(data, progress) {
         <span class="reset-face">この端末の進捗をリセット</span>
       </button>
       <p id="reset-message" role="status"></p>
-    </div>
+    </section>
     ${officialCta()}
   </div>`;
 }

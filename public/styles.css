@@ -2554,7 +2554,8 @@ body {
   margin: 45px 0 60px;
 }
 
-.official-cta h2 {
+.official-cta h2,
+.result-list-title {
   padding: 18px 24px;
   margin: 0;
   background: #173e64;
@@ -2690,7 +2691,8 @@ body {
 }
 
 @media (max-width: 700px) {
-  .official-cta h2 {
+  .official-cta h2,
+  .result-list-title {
     padding: 16px;
     font-size: 1.125rem;
   }
@@ -2909,9 +2911,9 @@ html {
   gap: 10px;
 }
 .result-row {
-  border: 0;
+  border: 1px solid var(--line);
   padding: 18px;
-  background: var(--panel);
+  background: var(--panel2);
   border-radius: 4px;
 }
 .btn,
