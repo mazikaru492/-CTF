@@ -54,12 +54,11 @@ function resourceLinks(links) {
     .map(
       (link) =>
         /* HTML */ `<a
-          class="official-link${link.recommended ? ' is-recommended' : ''}"
+          class="official-link"
           href="${link.href}"
           target="_blank"
           rel="noopener noreferrer"
-          >${link.recommended ? '<span class="recommendation-note">オススメ</span>' : ''}<span
-            class="official-link-text"
+          ><span class="official-link-text"
             >${link.title}<span class="official-domain">${link.description}</span></span
           ><span class="official-external"
             >外部サイト
@@ -83,13 +82,11 @@ function learningCta() {
     {
       href: 'https://2026.ctf.sekai.team/',
       title: 'SEKAI CTF 2026',
-      recommended: true,
-      description: 'CTF大会ページ ／ 2026.ctf.sekai.team',
+      description: 'プロセカ風のCTF大会で、暗号やWebなどの問題に挑戦 ／ 2026.ctf.sekai.team',
     },
     {
       href: 'https://tryhackme.com/',
       title: 'TryHackMe',
-      recommended: true,
       description: '解説付きの演習で、ネットワークやセキュリティの基礎を学ぶ ／ tryhackme.com',
     },
     {
@@ -218,10 +215,17 @@ export function homePage(data, progress) {
       </div>
       <div class="mascot-welcome">
         <div class="mascot-duo">
-          ${character('rai-wave', '', true)}${character('rii-wave', '', true)}
+          <figure>
+            ${character('rai-wave', '', true)}
+            <figcaption>ライ</figcaption>
+          </figure>
+          <figure>
+            ${character('rii-wave', '', true)}
+            <figcaption>リイ</figcaption>
+          </figure>
         </div>
         <p class="mascot-greeting">ひらめきを、一緒に見つけよう。</p>
-        <p class="mascot-caption">防衛省サイバーコンテストの<br />マスコット「ライ」「リイ」</p>
+        <p class="mascot-caption">防衛省サイバーコンテストのマスコットキャラクター</p>
       </div>
     </section>
     <section class="hero-stats" aria-label="体験の概要">
@@ -460,9 +464,8 @@ export function resultPage(data, progress) {
     flower: '赤ペンの花丸',
     double: '赤ペンの二重丸',
     single: '赤ペンの丸',
+    message: '頑張りましょう',
   }[mark];
-  const gradingMessage =
-    solved * 2 >= data.length && solved > 0 ? 'よくできました！' : '頑張りましょう';
   return /* HTML */ `<div class="container">
     <section class="result-hero${complete ? ' is-complete' : ''}">
       <div class="result-characters">
@@ -483,19 +486,12 @@ export function resultPage(data, progress) {
         </p>
         <div class="result-score-row">
           <div class="result-score">${solved}<span> / ${data.length} 正解</span></div>
-          <div class="result-grading" data-mark="${mark}">
-            <p class="result-grading-message" aria-live="polite">${gradingMessage}</p>
-            <div class="result-grading-art">
-              <div class="result-grader" aria-hidden="true">
-                ${character('rii-wave', '', true)}
-                <span class="result-red-pen"></span>
-              </div>
-              <canvas
-                width="1056"
-                height="744"
-                ${markLabel ? `role="img" aria-label="${markLabel}"` : 'aria-hidden="true"'}
-              ></canvas>
+          <div class="result-grading" data-mark="${mark}" role="img" aria-label="${markLabel}">
+            <div class="result-grader" aria-hidden="true">
+              ${character('rii-wave', '', true)}
+              <span class="result-red-pen"></span>
             </div>
+            <canvas width="1056" height="744" aria-hidden="true"></canvas>
           </div>
         </div>
         <p>
